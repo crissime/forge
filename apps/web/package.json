@@ -1,0 +1,20 @@
+{
+  "name": "@forge-master/web",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -p tsconfig.json && vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.2.7",
+    "@fontsource/manrope": "^5.2.8",
+    "@forge-master/simulator": "0.2.0",
+    "@tanstack/react-query": "^5.101.1",
+    "@xyflow/react": "^12.11.1",
+    "react-router-dom": "^7.18.0",
+    "zustand": "^5.0.14"
+  }
+}

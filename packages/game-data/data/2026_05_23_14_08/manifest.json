@@ -1,0 +1,134 @@
+{
+  "version": "2026_05_23_14_08",
+  "sourceRepo": "https://github.com/1vcian/fm",
+  "sourceRef": "main",
+  "generatedAt": "2026-06-24T16:52:17.177Z",
+  "files": [
+    {
+      "file": "SecondaryStatLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/SecondaryStatLibrary.json",
+      "sha256": "b1f2fc131738094428f941d9f39c9f1d734324cf49f8760c1518ecf5b71a33c8",
+      "bytes": 5387
+    },
+    {
+      "file": "SkillLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/SkillLibrary.json",
+      "sha256": "ce35177fe509549b6c2649e4977db85c841c4601550b19acbfa217d354278205",
+      "bytes": 36495
+    },
+    {
+      "file": "TechTreeLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/TechTreeLibrary.json",
+      "sha256": "e6b029cc1d84a11e4504721bb3b2d22a1f896405a747ce4aa3e8ec4680026a42",
+      "bytes": 22853
+    },
+    {
+      "file": "ItemBalancingLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/ItemBalancingLibrary.json",
+      "sha256": "e1f906e7017db09d3641a28641ee57608dce336b4d53b43e7fa7c928b7aee7fa",
+      "bytes": 99232
+    },
+    {
+      "file": "ItemBalancingConfig.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/ItemBalancingConfig.json",
+      "sha256": "1d1703f8a2f7d6d7ae9ecf2f86ea6085251219eeaea9cb8bf2a6bf10d0f95ec0",
+      "bytes": 344
+    },
+    {
+      "file": "WeaponLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/WeaponLibrary.json",
+      "sha256": "ad884931668b3ef67ece13930955e5ba1ce90b35a38e86908d5f4cbf5af5fb7f",
+      "bytes": 37795
+    },
+    {
+      "file": "PetLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/PetLibrary.json",
+      "sha256": "361bc83f57412b3a1b578084719ccce5a51b94d375e27edfda3ae35d36780ca3",
+      "bytes": 3133
+    },
+    {
+      "file": "PetUpgradeLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/PetUpgradeLibrary.json",
+      "sha256": "c2c6118545b1273c61fc4a8f8a1fd4c0448f401a7491d71fdac3a6cc420eee31",
+      "bytes": 502144
+    },
+    {
+      "file": "PetBalancingLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/PetBalancingLibrary.json",
+      "sha256": "dbea6f96ca687dee85986c2d59733ddcbd62a9755249748741ccff923e0cc475",
+      "bytes": 300
+    },
+    {
+      "file": "PetBaseConfig.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/PetBaseConfig.json",
+      "sha256": "50b92a95f4ec9d097e93b7c7a0651810a6a4ce87553f664de4d9ec16beeef486",
+      "bytes": 147
+    },
+    {
+      "file": "MountLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/MountLibrary.json",
+      "sha256": "b7970b96ffcbee43f0417e73de697c09ef3fd28b41dad973dcb3f23190392757",
+      "bytes": 4740
+    },
+    {
+      "file": "MountUpgradeLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/MountUpgradeLibrary.json",
+      "sha256": "69e1ec367e18d2e8ea35c1ef6d97bb4da316b8f881e2807738ff1e48cf3467a9",
+      "bytes": 503799
+    },
+    {
+      "file": "PvpBaseConfig.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/PvpBaseConfig.json",
+      "sha256": "2f1e0c1cdd7ac29051b790cd2fd8ec5f8b69e1af060e3a0af5ddc75419deea06",
+      "bytes": 269
+    },
+    {
+      "file": "MainBattleConfig.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/MainBattleConfig.json",
+      "sha256": "b4f7478aa1d3e7a0d77144775a63a5dbea4b0c9fd98924f97e45a9f7ba8b11b4",
+      "bytes": 103
+    },
+    {
+      "file": "MainBattleLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/MainBattleLibrary.json",
+      "sha256": "b3b434c4cfc3fcec6a71789879001e4230d0ad9e7d20f63892d2b4ec8e3890ed",
+      "bytes": 119579
+    },
+    {
+      "file": "EnemyAgeScalingLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/EnemyAgeScalingLibrary.json",
+      "sha256": "9b0bb82f189611e0910a3e50dcc894aa520cac07e17cb2a1d3ce04a0ad633462",
+      "bytes": 1289
+    },
+    {
+      "file": "EnemyLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/EnemyLibrary.json",
+      "sha256": "1f10ba6c284798771f1ab7eb9ed1cf4abae963c409c7c53cc1dc2b0c847111f2",
+      "bytes": 17156
+    },
+    {
+      "file": "ProjectilesLibrary.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/2026_05_23_14_08/ProjectilesLibrary.json",
+      "sha256": "19f7ab4f6f19cd1d312e39e9b3698fcaddfc82772421f54fa2eb3d742d51c35d",
+      "bytes": 1933
+    },
+    {
+      "file": "TechTreeMapping.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/TechTreeMapping.json",
+      "sha256": "a1c8d631eee67e7873839537546c7adbc9b38922862b426dc02af5850ebdaa17",
+      "bytes": 91649
+    },
+    {
+      "file": "ManualSpriteMapping.json",
+      "sourceUrl": "https://raw.githubusercontent.com/1vcian/fm/main/public/parsed_configs/ManualSpriteMapping.json",
+      "sha256": "6286ac6f809e7e6f18467c412cbb31d5615a235c9d3898e82e7058f66d64f5a7",
+      "bytes": 8213
+    },
+    {
+      "file": "SkillMechanics.json",
+      "sourceUrl": "https://github.com/1vcian/fm/blob/main/src/utils/constants.ts",
+      "sha256": "fb09d61f6fe9dde329c437fd1178521c0cbedeb78c6e31dbf86a185095efaf79",
+      "bytes": 2861
+    }
+  ]
+}

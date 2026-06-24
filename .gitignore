@@ -1,0 +1,14 @@
+/data/
+dist/
+apps/*/dist/
+apps/*/dist-types/
+packages/*/dist/
+node_modules/
+npm-debug.log
+*.tmp
+*.log
+.env
+.env.*
+!.env.example
+/k8s/*.secret.yaml
+/apps/web/reference/

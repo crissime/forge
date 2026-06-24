@@ -1,0 +1,293 @@
+.controls {
+  display: grid;
+  grid-template-columns: minmax(300px, 1.2fr) repeat(3, minmax(120px, .5fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.controls > * { min-width: 0; }
+
+.verdict {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, .6fr);
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--green);
+  border-radius: var(--radius);
+  padding: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.verdictFail { border-left-color: var(--red); }
+.verdict h2 { margin-top: 5px; font-size: clamp(1.6rem, 3vw, 2.5rem); letter-spacing: -.04em; }
+.verdictScore { align-self: center; text-align: right; }
+.verdictScore strong { display: block; font-family: "IBM Plex Mono", monospace; font-size: 2rem; }
+.verdictScore span { color: var(--muted); font-size: .78rem; }
+
+.resultCard {
+  display: grid;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: var(--surface);
+}
+
+.resultCard header { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.resultCard p { color: var(--muted); font-size: .82rem; line-height: 1.45; }
+.resultCard strong { font-family: "IBM Plex Mono", monospace; }
+
+.bisSection {
+  display: grid;
+  gap: 16px;
+  border-block: 1px solid var(--line);
+  padding: 22px 0;
+}
+
+.bisHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.bisHeader h2 {
+  margin: 3px 0 5px;
+  font-size: 1.45rem;
+}
+
+.bisHeader button { flex: 0 0 auto; }
+
+.accessGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.accessGroup {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: var(--surface);
+}
+
+.accessGroup legend {
+  padding: 0 5px;
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 800;
+}
+
+.accessGroup > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.accessGroup label {
+  display: inline-flex;
+  min-height: 31px;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 5px 8px;
+  color: var(--muted);
+  background: var(--surface-subtle);
+  cursor: pointer;
+  font-size: .7rem;
+  font-weight: 750;
+}
+
+.accessGroup input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--teal);
+}
+
+.accessGroup label:focus-within {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.accessGroup .accessChecked {
+  border-color: var(--teal);
+  color: var(--teal-dark);
+  background: var(--teal-soft);
+}
+
+.bisTargets {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.bisTarget {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  gap: 11px;
+  align-items: center;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 13px;
+  background: var(--surface);
+}
+
+.bisTarget > div:nth-child(2) {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.bisTarget span,
+.bisTarget small {
+  color: var(--muted);
+  font-size: .72rem;
+  font-weight: 750;
+}
+
+.bisTarget strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: .88rem;
+}
+
+.bisTarget small {
+  color: var(--copper);
+  text-align: right;
+}
+
+.bisComplete small { color: var(--green); }
+
+.bisIcon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 7px;
+  color: var(--teal-dark);
+  background: var(--teal-soft);
+}
+
+.bisStats {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.bisStats > strong {
+  font-size: .78rem;
+  text-transform: uppercase;
+}
+
+.bisStats > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.bisStats span {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 5px 9px;
+  background: var(--surface);
+  font-size: .76rem;
+  font-weight: 750;
+}
+
+.bisStats b {
+  color: var(--teal-dark);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: .7rem;
+}
+
+.bisNote {
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+.recommendations {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+  gap: 18px;
+}
+
+.priority {
+  counter-reset: priority;
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.priority li {
+  counter-increment: priority;
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  gap: 10px;
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
+}
+
+.priority li::before {
+  content: counter(priority);
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: var(--copper);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: .78rem;
+}
+
+.priority small { display: block; margin-top: 4px; color: var(--muted); line-height: 1.4; }
+.gain { color: var(--green); font-family: "IBM Plex Mono", monospace; font-size: .78rem; }
+
+.experts summary, .calculation summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.experts[open] summary, .calculation[open] summary { margin-bottom: 14px; color: var(--ink); }
+
+@media (max-width: 900px) {
+  .controls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .controls > :first-child { grid-column: 1 / -1; }
+  .verdict, .recommendations { grid-template-columns: 1fr; }
+  .verdictScore { text-align: left; }
+  .accessGrid { grid-template-columns: 1fr; }
+  .bisTargets { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .controls { grid-template-columns: 1fr; }
+  .controls > :first-child { grid-column: auto; }
+  .objectives {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .objectives button { min-width: 0; padding-inline: 8px; }
+  .bisHeader {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .bisTarget { grid-template-columns: 42px minmax(0, 1fr); }
+  .bisTarget small { grid-column: 2; text-align: left; }
+  .bisStats { grid-template-columns: 1fr; }
+}

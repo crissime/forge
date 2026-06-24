@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: forge-master-postgres
+type: Opaque
+stringData:
+  POSTGRES_USER: forge
+  POSTGRES_PASSWORD: change-me
+  POSTGRES_DB: forge_master
+  DATABASE_URL: postgresql://forge:change-me@forge-master-postgres:5432/forge_master?schema=public
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: forge-master-postgres
+spec:
+  selector:
+    app: forge-master-postgres
+  ports:
+    - name: postgres
+      port: 5432
+      targetPort: postgres
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: forge-master-postgres
+spec:
+  serviceName: forge-master-postgres
+  replicas: 1
+  selector:
+    matchLabels:
+      app: forge-master-postgres
+  template:
+    metadata:
+      labels:
+        app: forge-master-postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:16-alpine
+          ports:
+            - name: postgres
+              containerPort: 5432
+          envFrom:
+            - secretRef:
+                name: forge-master-postgres
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 1Gi
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/data
+              subPath: postgres
+          readinessProbe:
+            exec:
+              command: ["pg_isready", "-U", "forge", "-d", "forge_master"]
+            initialDelaySeconds: 5
+            periodSeconds: 10
+  volumeClaimTemplates:
+    - metadata:
+        name: data
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 5Gi

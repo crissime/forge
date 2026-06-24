@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "source": "community-analysis",
+  "sourceUrl": "https://github.com/1vcian/fm/blob/main/src/utils/constants.ts",
+  "notes": "Curated factual mechanics only. No source code is imported.",
+  "startupDelay": 3.2,
+  "spells": {
+    "Meat": { "kind": "buff", "targetMode": "self", "hitCount": 0, "confidence": "high" },
+    "Berserk": { "kind": "buff", "targetMode": "self", "hitCount": 0, "confidence": "high" },
+    "Buff": { "kind": "buff", "targetMode": "self", "hitCount": 0, "confidence": "high" },
+    "Morale": { "kind": "buff", "targetMode": "self", "hitCount": 0, "confidence": "high" },
+    "HigherMorale": { "kind": "buff", "targetMode": "self", "hitCount": 0, "confidence": "high" },
+
+    "Arrows": { "kind": "damage", "targetMode": "single", "hitCount": 3, "hitInterval": 0.1, "castDelay": 0.2, "damageValueMode": "total", "confidence": "medium" },
+    "Shuriken": { "kind": "damage", "targetMode": "single", "hitCount": 5, "hitInterval": 0.1, "castDelay": 0.2, "damageValueMode": "total", "confidence": "medium" },
+    "Drone": { "kind": "damage", "targetMode": "single", "hitCount": 10, "hitInterval": 0.8, "castDelay": 0, "damageValueMode": "per_hit", "confidence": "medium" },
+
+    "Shout": { "kind": "damage", "targetMode": "all", "hitCount": 8, "hitInterval": 0.15, "castDelay": 0, "damageValueMode": "total", "confidence": "medium" },
+    "Meteorite": { "kind": "damage", "targetMode": "all", "hitCount": 5, "hitInterval": 0.3, "castDelay": 1, "damageValueMode": "total", "confidence": "medium" },
+    "CannonBarrage": { "kind": "damage", "targetMode": "all", "hitCount": 3, "hitInterval": 0.3, "castDelay": 0.5, "damageValueMode": "total", "confidence": "medium" },
+    "Lightning": { "kind": "damage", "targetMode": "all", "hitCount": 3.5, "hitInterval": 0.2, "castDelay": 0.1, "damageValueMode": "total", "confidence": "medium" },
+    "RainOfArrows": { "kind": "damage", "targetMode": "all", "hitCount": 15, "hitInterval": 0.2, "castDelay": 0.5, "damageValueMode": "total", "confidence": "medium" },
+    "StrafeRun": { "kind": "damage", "targetMode": "all", "hitCount": 3, "hitInterval": 0.25, "castDelay": 0.5, "damageValueMode": "per_hit", "confidence": "medium" },
+
+    "Stampede": { "kind": "damage", "targetMode": "all", "hitCount": 2, "hitInterval": 0.1, "castDelay": 0.25, "damageValueMode": "per_hit", "confidence": "medium" },
+    "Thorns": { "kind": "damage", "targetMode": "all", "hitCount": 1, "hitInterval": 0, "castDelay": 0.5, "damageValueMode": "total", "confidence": "medium" },
+    "Bomb": { "kind": "damage", "targetMode": "all", "hitCount": 1, "hitInterval": 0, "castDelay": 1.5, "damageValueMode": "total", "confidence": "medium" },
+    "Worm": { "kind": "damage", "targetMode": "all", "hitCount": 1, "hitInterval": 0, "castDelay": 0.5, "damageValueMode": "total", "confidence": "medium" }
+  }
+}

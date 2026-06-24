@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @default(cuid())
+  username     String    @unique
+  salt         String
+  passwordHash String
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  sessions     Session[]
+  profiles     Profile[]
+  opponents    Opponent[]
+
+  @@map("users")
+}
+
+model Session {
+  id        String   @id
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("sessions")
+}
+
+model Profile {
+  id              String   @id @default(cuid())
+  userId          String?
+  name            String
+  source          String   @default("guest")
+  rawProfile      Json?
+  normalized      Json
+  dataVersion     String
+  confidence      String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  user            User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([dataVersion])
+  @@map("profiles")
+}
+
+model Opponent {
+  id          String   @id @default(cuid())
+  userId      String?
+  name        String
+  normalized  Json
+  dataVersion String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  user        User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("opponents")
+}
+
+model GameDataVersion {
+  version     String   @id
+  sourceRepo  String
+  sourceRef   String
+  manifest    Json
+  sha256       String
+  importedAt  DateTime @default(now())
+
+  @@map("game_data_versions")
+}

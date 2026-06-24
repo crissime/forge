@@ -1,0 +1,15 @@
+{
+  "name": "@forge-master/simulator",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@forge-master/game-data": "0.2.0"
+  }
+}

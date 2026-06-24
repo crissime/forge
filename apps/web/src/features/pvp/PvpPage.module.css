@@ -1,0 +1,135 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr);
+  gap: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.chance {
+  align-self: center;
+  text-align: right;
+}
+.chance strong { display: block; font-family: "IBM Plex Mono", monospace; font-size: clamp(2.2rem, 6vw, 4.6rem); line-height: 1; }
+.chance span { color: var(--muted); font-size: .78rem; }
+
+.fighters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.fighter {
+  display: grid;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: var(--surface);
+}
+
+.fighter header { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+
+.hpBar {
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #e5e8e4;
+}
+.hpBar span { display: block; height: 100%; border-radius: inherit; background: var(--green); }
+.enemy .hpBar span { background: var(--red); }
+
+.compact {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) repeat(3, minmax(140px, .45fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.editorLayout {
+  display: grid;
+  gap: 18px;
+}
+
+.sectionIntro {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.4;
+}
+
+.spellsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.spellCard {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  background: var(--surface-subtle);
+}
+
+.spellCard > strong {
+  color: var(--copper);
+  font-size: .82rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.unitInput {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 7px;
+  background: var(--surface);
+}
+
+.unitInput input {
+  min-width: 0;
+  border: 0;
+  background: transparent;
+}
+
+.unitInput > span {
+  padding-right: 10px;
+  color: var(--muted);
+  font-size: .8rem;
+  font-weight: 800;
+}
+
+.tags {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+.modal {
+  display: grid;
+  gap: 16px;
+}
+
+@media (max-width: 800px) {
+  .hero, .fighters { grid-template-columns: 1fr; }
+  .chance { text-align: left; }
+  .compact { grid-template-columns: 1fr 1fr; }
+  .compact > :first-child { grid-column: 1 / -1; }
+  .spellsGrid { grid-template-columns: 1fr; }
+  .statsGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  .compact, .statsGrid { grid-template-columns: 1fr; }
+}

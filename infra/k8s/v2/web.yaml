@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: forge-master-web
+  labels:
+    app: forge-master-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: forge-master-web
+  template:
+    metadata:
+      labels:
+        app: forge-master-web
+    spec:
+      containers:
+        - name: web
+          image: crissime/forge-master-web:2.0.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 3000
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: PORT
+              value: "3000"
+            - name: API_ORIGIN
+              value: http://forge-master-api:3001
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 3
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 50m
+              memory: 96Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: forge-master-web
+spec:
+  type: ClusterIP
+  selector:
+    app: forge-master-web
+  ports:
+    - name: http
+      port: 80
+      targetPort: http

@@ -1,0 +1,9 @@
+.git
+data
+dist
+apps/*/dist
+apps/*/dist-types
+packages/*/dist
+node_modules
+npm-debug.log
+*.tmp

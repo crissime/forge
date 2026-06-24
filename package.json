@@ -1,0 +1,47 @@
+{
+  "name": "forge-master-simulator",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Forge Master V2 simulator with web, API, Postgres and a pure simulation engine",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run build -w packages/game-data && npm run build -w packages/simulator && npm run dev -w apps/web",
+    "dev:api": "npm run build -w packages/game-data && npm run build -w packages/simulator && npm run dev -w apps/api",
+    "build": "npm run build -w packages/game-data && npm run build -w packages/simulator && npm run build -w apps/api && npm run build -w apps/web",
+    "check": "npm run test && npm run build",
+    "test": "vitest run",
+    "game-data:update": "npm run update -w packages/game-data",
+    "db:migrate": "prisma migrate dev",
+    "db:generate": "prisma generate",
+    "migrate:legacy-users": "node scripts/migrate-legacy-users.mjs",
+    "legacy:build": "vite build",
+    "legacy:start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@prisma/client": "6.19.3",
+    "fastify": "^5.6.2",
+    "lucide-react": "^0.561.0",
+    "prisma": "6.19.3",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.6",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vite": "6.4.3",
+    "vitest": "3.2.6"
+  }
+}
