@@ -28,6 +28,7 @@ const EXHAUSTIVE_STATS = process.env.FM_BIS_EXHAUSTIVE_STATS === "1";
 const CONTROLLED_EXHAUSTIVE = process.env.FM_BIS_CONTROLLED === "1";
 const PET_MODE = process.env.FM_BIS_PET_MODE || (CONTROLLED_EXHAUSTIVE ? "type-archetypes" : "all");
 const STAT_RULES = process.env.FM_BIS_STAT_RULES || (CONTROLLED_EXHAUSTIVE ? "controlled" : "none");
+const CASE_SHARDS = Math.max(1, Math.round(Number(process.env.FM_BIS_CASE_SHARDS || 1)));
 const requestedWorkers = Number(process.env.FM_BIS_WORKERS || Math.max(1, availableParallelism() - 1));
 const maxWorkers = Number(process.env.FM_BIS_MAX_WORKERS || 9);
 const WORKERS = Math.max(1, Math.min(
@@ -51,6 +52,7 @@ async function main() {
   let jobs = caseJobs(data).filter((job) => !completed.has(job.key));
   const explicitCases = String(process.env.FM_BIS_CASES || "").split(",").map((entry) => entry.trim()).filter(Boolean);
   if (explicitCases.length) jobs = jobs.filter((job) => explicitCases.includes(job.key));
+  jobs = shardJobs(jobs, CASE_SHARDS).filter((job) => !completed.has(checkpointKey(job)));
   const limitCases = Number(process.env.FM_BIS_LIMIT_CASES || (SMOKE ? 4 : 0));
   if (limitCases > 0) jobs = jobs.slice(0, limitCases);
 
@@ -73,19 +75,19 @@ async function main() {
   if (chunks.length <= 1) {
     for (const job of jobs) {
       const result = exhaustiveCase(job, data, options);
-      results.set(result.key, result);
+      results.set(result.checkpointKey || result.key, result);
       if (CHECKPOINT) await appendCheckpoint(CHECKPOINT, result);
       console.log(`BIS ${result.key}: ${result.winner.score.toFixed(4)} from ${result.candidateCount} candidates`);
     }
   } else {
     await Promise.all(chunks.map((chunk) => runWorker(chunk, options, async (result) => {
-      results.set(result.key, result);
+      results.set(result.checkpointKey || result.key, result);
       if (CHECKPOINT) await appendCheckpoint(CHECKPOINT, result);
       console.log(`BIS ${result.key}: ${result.winner.score.toFixed(4)} from ${result.candidateCount} candidates`);
     })));
   }
 
-  const output = buildOutput(data, results, options);
+  const output = buildOutput(data, mergeShardResults(data, results, options), options);
   const tmp = `${OUTPUT}.tmp`;
   await writeFile(tmp, `${JSON.stringify(output, null, 2)}\n`);
   await rename(tmp, OUTPUT);
@@ -110,6 +112,19 @@ export function caseJobs(data) {
   return jobs;
 }
 
+function shardJobs(jobs, shardCount) {
+  if (shardCount <= 1) return jobs;
+  return jobs.flatMap((job) => Array.from({ length: shardCount }, (_, shardIndex) => ({
+    ...job,
+    shardIndex,
+    shardCount
+  })));
+}
+
+function checkpointKey(job) {
+  return job.shardCount > 1 ? `${job.key}#${job.shardIndex + 1}-${job.shardCount}` : job.key;
+}
+
 export function exhaustiveCase(job, data, options = {}) {
   const topN = options.topN || TOP_N;
   const choiceLimit = options.choiceLimit ?? Infinity;
@@ -120,11 +135,13 @@ export function exhaustiveCase(job, data, options = {}) {
   const top = [];
   let candidateCount = 0;
   let statAllocationCount = 0;
+  let groupIndex = 0;
 
   for (const equipment of equipmentCombos(job.age, data, choiceLimit)) {
     for (const pets of bestPetTriples(job.petRarity, data, choiceLimit, options.petMode)) {
       for (const mount of limited(bestMountChoices(job.mountRarity, data), choiceLimit)) {
         for (const spells of bestSpellSets(job.spellRarity, data, choiceLimit)) {
+          if (job.shardCount > 1 && groupIndex++ % job.shardCount !== job.shardIndex) continue;
           const base = buildProfile(job, data, equipment, pets, mount, spells);
           const carrierCount = SLOTS.length + pets.length + (mount ? 1 : 0);
           const lineCount = secondaryLineCount(equipment, pets, mount);
@@ -157,9 +174,14 @@ export function exhaustiveCase(job, data, options = {}) {
   }
 
   const winner = top[0] || emptyWinner();
-  const reach = !options.smoke && winner.equipment.length ? reachFor(profileFromWinner(job, data, winner), data, job.objective) : null;
+  const reach = !options.smoke && winner.equipment.length && !(job.shardCount > 1)
+    ? reachFor(profileFromWinner(job, data, winner), data, job.objective)
+    : null;
   return {
     key: job.key,
+    checkpointKey: checkpointKey(job),
+    shardIndex: job.shardIndex,
+    shardCount: job.shardCount,
     objective: job.objective,
     access: {
       equipmentAge: job.age,
@@ -732,6 +754,51 @@ function emptyWinner() {
   return { score: 0, stats: [], equipment: [], pets: [], mount: null, spells: [], scenarios: [] };
 }
 
+function mergeShardResults(data, results, options) {
+  const groups = new Map();
+  for (const result of results.values()) {
+    const group = groups.get(result.key) || [];
+    group.push(result);
+    groups.set(result.key, group);
+  }
+
+  const merged = new Map();
+  for (const [key, group] of groups.entries()) {
+    if (!group.some((result) => result.shardCount > 1)) {
+      merged.set(key, group.at(-1));
+      continue;
+    }
+    const first = group[0];
+    const top = group.flatMap((result) => result.top || [])
+      .sort((left, right) => right.score - left.score)
+      .slice(0, options.topN || TOP_N);
+    const winner = top[0] || emptyWinner();
+    const job = {
+      key,
+      age: first.access.equipmentAge,
+      petRarity: first.access.petRarity,
+      mountRarity: first.access.mountRarity,
+      spellRarity: first.access.spellRarity,
+      objective: first.objective
+    };
+    merged.set(key, {
+      ...first,
+      checkpointKey: key,
+      shardIndex: undefined,
+      shardCount: group.length,
+      candidateCount: group.reduce((sum, result) => sum + Number(result.candidateCount || 0), 0),
+      statAllocationCount: Math.max(...group.map((result) => Number(result.statAllocationCount || 0))),
+      lineCount: winner.stats.reduce((sum, stat) => sum + stat.count, 0),
+      winner,
+      top,
+      reach: !options.smoke && winner.equipment.length
+        ? reachFor(profileFromWinner(job, data, winner), data, first.objective)
+        : null
+    });
+  }
+  return merged;
+}
+
 function buildOutput(data, results, options) {
   const cases = Object.fromEntries(Array.from(results.entries())
     .sort(([left], [right]) => left.localeCompare(right))
@@ -754,6 +821,7 @@ function buildOutput(data, results, options) {
       skippedAccess: SKIP_QUANTUM_LEGENDARY ? "equipment age Quantum+ with pet or mount Legendary+" : "none",
       buildCarrierSelection: "highest selected equipment age/rarity only; one canonical item per non-weapon slot, best melee/hybrid/ranged weapon variants, pet trio, mount and spell trio",
       petSelection: options.petMode || PET_MODE,
+      caseShards: CASE_SHARDS,
       talents: "none",
       secondaryValues: "maximum values from SecondaryStatLibrary.json",
       secondaryStatRules: options.statRules || STAT_RULES,
@@ -773,6 +841,9 @@ function compactCase(result) {
     frontier: result.frontier,
     reach: result.reach,
     lineCount: result.lineCount,
+    candidateCount: result.candidateCount,
+    statAllocationCount: result.statAllocationCount,
+    shardCount: result.shardCount,
     exhaustive: result.exhaustive,
     winner: {
       stats: result.winner?.stats || [],
@@ -789,7 +860,7 @@ async function readCheckpoint(file) {
     line = line.replace(/^\uFEFF/, "");
     if (!line.trim()) continue;
     const result = JSON.parse(line);
-    out.set(result.key, result);
+    out.set(result.checkpointKey || result.key, result);
   }
   return out;
 }
