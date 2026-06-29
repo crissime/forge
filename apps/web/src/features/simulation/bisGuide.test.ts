@@ -12,7 +12,7 @@ import {
 const ages = [
   "Primitive",
   "Medieval",
-  "Début moderne",
+  "Debut moderne",
   "Moderne",
   "Espace",
   "Interstellaire",
@@ -112,6 +112,56 @@ describe("BIS progression guide", () => {
     const progress = bisProgress(profile, bisReferenceForAge(0, ages));
 
     expect(progress.mount).toBe(false);
+  });
+
+  it("uses generated simulations and reports the audited context", () => {
+    const reference = bisReferenceForAge(5, ages, "progress");
+
+    expect(reference.stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0)).toBe(12);
+    expect(reference.note).toContain("BIS exhaustif");
+    expect(reference.note).toContain("lignes secondaires max");
+    expect(reference.note).toContain("Niveau de test");
+    expect(reference.note).toContain("Front max estime");
+    expect(reference.note).toContain("Pets BIS");
+    expect(reference.note).toContain("sans talents");
+  });
+
+  it("changes the simulated allocation with companion and spell access", () => {
+    const reference = bisReferenceForAccess({
+      equipmentAges: [5],
+      petRarities: ["Common"],
+      mountRarities: ["Common"],
+      spellRarities: ["Mythic"]
+    }, ages, "survival");
+
+    expect(reference.stats.some((stat) => stat.stat === "skillDamage")).toBe(true);
+    expect(reference.note).toContain("Pets Common, monture Common, sorts Mythic");
+    expect(reference.note).toContain("Dog (Degats)");
+  });
+
+  it("uses early-age generated cases from the full BIS run", () => {
+    const reference = bisReferenceForAccess({
+      equipmentAges: [0],
+      petRarities: ["Common"],
+      mountRarities: ["Common"],
+      spellRarities: ["Mythic"]
+    }, ages, "damage");
+
+    expect(reference.stats.length).toBeGreaterThan(0);
+    expect(reference.note).toContain("BIS exhaustif");
+    expect(reference.note).toContain("Niveau de test");
+  });
+
+  it("counts the second lines unlocked by legendary companions", () => {
+    const reference = bisReferenceForAccess({
+      equipmentAges: [5],
+      petRarities: ["Legendary"],
+      mountRarities: ["Legendary"],
+      spellRarities: ["Epic"]
+    }, ages, "progress");
+
+    expect(reference.stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0)).toBe(16);
+    expect(reference.note).toContain("16 lignes secondaires max");
   });
 });
 

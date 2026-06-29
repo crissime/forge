@@ -7,6 +7,9 @@ node_modules/
 npm-debug.log
 *.tmp
 *.log
+*.checkpoint.jsonl
+.bis-test-*
+apps/web/src/features/simulation/simulatedBis.before-*.json
 .env
 .env.*
 !.env.example

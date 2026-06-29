@@ -2,8 +2,13 @@
 data
 dist
 apps/*/dist
+!apps/web/dist
+!apps/web/dist/**
 apps/*/dist-types
 packages/*/dist
 node_modules
 npm-debug.log
 *.tmp
+*.checkpoint.jsonl
+.bis-test-*
+apps/web/src/features/simulation/simulatedBis.before-*.json

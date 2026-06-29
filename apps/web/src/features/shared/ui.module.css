@@ -1,10 +1,12 @@
 .page {
   display: grid;
+  min-width: 0;
   gap: 18px;
 }
 
 .heading {
   display: flex;
+  min-width: 0;
   align-items: end;
   justify-content: space-between;
   gap: 16px;
@@ -265,6 +267,6 @@
   .heading { align-items: stretch; flex-direction: column; }
   .grid2, .grid3, .grid4 { grid-template-columns: 1fr; }
   .drawer { width: 100%; border-left: 0; }
-  .segmented { overflow-x: auto; }
+  .segmented { width: 100%; min-width: 0; max-width: 100%; overflow-x: auto; }
   .tab { flex: 0 0 auto; }
 }

@@ -55,7 +55,7 @@ export type ItemConfig = {
 };
 export type PetType = "Balanced" | "Damage" | "Health";
 export type PetModel = { rarity: string; id: number; name: string; type: PetType };
-export type MountModel = { rarity: string; id: number };
+export type MountModel = { rarity: string; id: number; name: string };
 export type CompanionLevel = { level: number; attack: number; health: number };
 export type CompanionLevels = { rarity: string; levels: CompanionLevel[] };
 export type BisAccess = {
@@ -112,7 +112,8 @@ export const defaultScenarios: ScenarioState = {
     damageGrowthPct: 10,
     pauseSeconds: 1,
     maxSeconds: 900
-  }
+  },
+  model: { damageStacking: "additive", blockMode: "rng", trials: 64, seed: 1337 }
 };
 
 export const objectives: Array<{ id: Objective; label: string }> = [

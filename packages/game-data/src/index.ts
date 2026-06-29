@@ -118,6 +118,7 @@ export interface NormalizedPetModel {
 export interface NormalizedMountModel {
   rarity: string;
   id: number;
+  name: string;
 }
 
 export interface NormalizedCompanionLevel {
@@ -298,10 +299,15 @@ export function normalizeGameData(version: string, raw: Partial<Record<RawGameDa
       })
       .sort(sortCompanionModel),
     mountModels: Object.values<any>(mountLibrary)
-      .map((entry) => ({
-        rarity: String(entry.MountId?.Rarity || "Common"),
-        id: Number(entry.MountId?.Id || 0)
-      }))
+      .map((entry) => {
+        const rarity = String(entry.MountId?.Rarity || "Common");
+        const id = Number(entry.MountId?.Id || 0);
+        return {
+          rarity,
+          id,
+          name: companionModelName(spriteMapping, "mounts", rarity, id, "Mount")
+        };
+      })
       .sort(sortCompanionModel),
     petLevels: normalizeCompanionLevels(petUpgradeLibrary, "PetStats"),
     mountLevels: normalizeCompanionLevels(mountUpgradeLibrary, "MountStats"),
@@ -314,9 +320,13 @@ export function normalizeGameData(version: string, raw: Partial<Record<RawGameDa
 }
 
 function petModelName(spriteMapping: any, rarity: string, id: number): string {
-  const match = Object.values<any>(spriteMapping?.pets?.mapping || {})
+  return companionModelName(spriteMapping, "pets", rarity, id, "Pet");
+}
+
+function companionModelName(spriteMapping: any, group: "pets" | "mounts", rarity: string, id: number, fallback: string): string {
+  const match = Object.values<any>(spriteMapping?.[group]?.mapping || {})
     .find((entry) => String(entry.rarity) === rarity && Number(entry.id) === id);
-  return splitPascalCase(String(match?.name || `Pet ${id + 1}`));
+  return splitPascalCase(String(match?.name || `${fallback} ${id + 1}`));
 }
 
 function splitPascalCase(value: string): string {

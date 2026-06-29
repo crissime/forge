@@ -27,6 +27,7 @@ import {
   weaponKindOptions,
   type WeaponKind
 } from "../shared/gameData";
+import { NumericInput } from "../shared/NumericInput";
 import ui from "../shared/ui.module.css";
 import styles from "./ComparePage.module.css";
 
@@ -90,13 +91,15 @@ export function ComparePage() {
     form.rarity,
     form.level,
     ageOptions,
-    target === "pet" ? petPreview.name : undefined
+    target === "pet" ? petPreview.name : target === "mount" ? mountPreview.name : undefined
   );
 
   const drop: DropInput = {
     target,
     slot: target === "equipment" ? slot : undefined,
     name: candidateLabel,
+    age: target === "equipment" ? itemPreview.age : undefined,
+    idx: target === "equipment" ? itemPreview.idx : undefined,
     rarity: target === "pet" ? petPreview.rarity : target === "mount" ? mountPreview.rarity : undefined,
     id: target === "pet" ? petPreview.id : target === "mount" ? mountPreview.id : undefined,
     petType: target === "pet" ? petPreview.type : undefined,
@@ -149,7 +152,7 @@ export function ComparePage() {
       }
       if (target === "mount") {
         draft.mount = {
-          name: "Monture",
+          name: mountPreview.name,
           rarity: mountPreview.rarity,
           id: mountPreview.id,
           level: mountPreview.level,
@@ -230,7 +233,7 @@ export function ComparePage() {
                   setForm({ ...form, age: selected.age, idx: selected.idx });
                   setResult(null);
                 }}>{weaponKindOptions(form.age, itemBases).map((kind) => <option key={kind} value={kind}>{weaponKindLabel(kind)}</option>)}</select></label>}
-                <NumberField label="Niveau" value={form.level} min={1} max={itemConfig.maxLevel} onChange={(level) => { setForm({ ...form, level }); setResult(null); }} />
+                <NumberField label="Niveau" value={form.level} min={1} integer onChange={(level) => { setForm({ ...form, level }); setResult(null); }} />
               </div>
             </>
           ) : (
@@ -252,8 +255,8 @@ export function ComparePage() {
                   <strong>{petTypeLabel(petPreview.type)}</strong>
                 </div>
               </>}
-              {target === "mount" && <label className={ui.field}><span>Modèle</span><select value={mountPreview.id} onChange={(event) => { setForm({ ...form, id: Number(event.target.value) }); setResult(null); }}>{mountModelsFor(form.rarity, mountModels).map((model, index) => <option key={model.id} value={model.id}>Modèle {index + 1}</option>)}</select></label>}
-              <NumberField label="Niveau" value={form.level} min={1} max={100} onChange={(level) => { setForm({ ...form, level }); setResult(null); }} />
+              {target === "mount" && <label className={ui.field}><span>Monture</span><select value={mountPreview.id} onChange={(event) => { setForm({ ...form, id: Number(event.target.value) }); setResult(null); }}>{mountModelsFor(form.rarity, mountModels).map((model) => <option key={model.id} value={model.id}>{model.name}</option>)}</select></label>}
+              <NumberField label="Niveau" value={form.level} min={1} max={100} integer onChange={(level) => { setForm({ ...form, level }); setResult(null); }} />
             </div>
           )}
 
@@ -309,8 +312,8 @@ function RaritySelect({ value, onChange }: { value: string; onChange: (value: st
   </select></label>;
 }
 
-function NumberField({ label, value, min, max, onChange }: { label: string; value: number; min: number; max?: number; onChange: (value: number) => void }) {
-  return <label className={ui.field}><span>{label}</span><input type="number" min={min} max={max} value={value} onChange={(event) => onChange(Number(event.target.value) || min)} /></label>;
+function NumberField({ label, value, min, max, integer, onChange }: { label: string; value: number; min: number; max?: number; integer?: boolean; onChange: (value: number) => void }) {
+  return <label className={ui.field}><span>{label}</span><NumericInput value={value} min={min} max={max} integer={integer} onChange={onChange} /></label>;
 }
 
 function comparisonLabel(
@@ -320,11 +323,11 @@ function comparisonLabel(
   rarity: string,
   level: number,
   ages: Array<{ value: number; label: string }>,
-  petName?: string
+  companionName?: string
 ) {
   if (target === "equipment") return `${slotLabels[slot]} · ${ages.find((entry) => entry.value === age)?.label || `Âge ${age}`} · niv. ${level}`;
-  if (target === "pet") return `${petName || "Pet"} · ${rarityLabels[normalizeRarity(rarity)]} · niv. ${level}`;
-  return `Monture ${rarityLabels[normalizeRarity(rarity)]} · niv. ${level}`;
+  if (target === "pet") return `${companionName || "Pet"} · ${rarityLabels[normalizeRarity(rarity)]} · niv. ${level}`;
+  return `${companionName || "Monture"} · ${rarityLabels[normalizeRarity(rarity)]} · niv. ${level}`;
 }
 
 function verdict(value: DropComparisonResult["verdict"]) {

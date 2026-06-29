@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { loadGameData } from "@forge-master/game-data";
-import { compareDrop, createEmptyStats, evaluatePvp, evaluateProfile, manualProfile, normalizeOneVcianProfile } from "../src/index";
+import { combatProfile, compareDrop, createEmptyStats, evaluatePvp, evaluateProfile, evaluateProfileSnapshot, manualProfile, normalizeOneVcianProfile } from "../src/index";
 
 const slotToJsonType = {
   Weapon: "Weapon",
@@ -65,17 +65,120 @@ describe("game data integration", () => {
     ]);
     expect(data.manifest.files.some((file) => file.file === "ManualSpriteMapping.json" && file.sha256.length === 64)).toBe(true);
     expect(data.normalized.mountModels.filter((mount) => mount.rarity === "Common")).toHaveLength(3);
+    expect(data.normalized.mountModels.filter((mount) => mount.rarity === "Mythic").map((mount) => mount.name)).toEqual([
+      "Hover Disk",
+      "Hover Board"
+    ]);
     expect(data.normalized.petLevels.find((group) => group.rarity === "Common")?.levels).toHaveLength(100);
     expect(data.normalized.mountLevels.find((group) => group.rarity === "Common")?.levels[0].level).toBe(1);
   });
 });
 
 describe("simulator", () => {
+  it("uses V3 additive weapon damage buckets and keeps skill damage additive", async () => {
+    const data = await loadGameData();
+    const spell = data.normalized.spells.find((entry) => entry.id === "Arrows")!;
+    spell.damageByLevel = Array(100).fill(100);
+    spell.healthByLevel = Array(100).fill(0);
+    spell.cooldown = 10;
+    spell.activeDuration = 0;
+    spell.mechanics = { kind: "damage", targetMode: "single", hitCount: 1, confidence: "high" } as any;
+
+    const profile = manualProfile("Buckets", data);
+    profile.base.attack = 100;
+    profile.base.weaponStyle = "ranged";
+    profile.stats.damage = 14;
+    profile.stats.rangedDamage = 15;
+    profile.stats.skillDamage = 15.3;
+    profile.spells = [{ id: "Arrows", level: 1 }];
+    const combat = combatProfile(profile, data, 60, { damageStacking: "additive", blockMode: "average", trials: 1 });
+
+    expect(combat.breakdown.weaponDamage).toBeCloseTo(1.29, 5);
+    expect(combat.breakdown.weaponDamage).not.toBeCloseTo(1.14 * 1.15, 5);
+    expect(combat.skills[0].damagePerHit).toBeCloseTo(129.3, 5);
+  });
+
+  it("lets double chance benefit from the average crit factor", async () => {
+    const data = await loadGameData();
+    const profile = manualProfile("Double crit", data);
+    profile.base.attack = 100;
+    profile.stats.doubleChance = 100;
+    profile.stats.critChance = 100;
+    profile.stats.critDamage = 80;
+    const combat = combatProfile(profile, data, 60, { blockMode: "average", trials: 1 });
+
+    expect(combat.weaponDpsPerAttack).toBeCloseTo(4, 5);
+  });
+
+  it("runs seeded RNG block and exposes the observed block rate", async () => {
+    const data = await loadGameData();
+    data.raw["MainBattleLibrary.json"] = {};
+    const settings = {
+      model: { blockMode: "rng" as const, trials: 64, seed: 42 },
+      endurance: { startDamagePct: 100, growthPct: 0, maxSeconds: 10 }
+    };
+    const blocked = manualProfile("Blocked", data);
+    blocked.base.health = 1000;
+    blocked.breakdown.baseHealth = 1000;
+    blocked.stats.block = 100;
+    blocked.breakdown.secondaryStats.block = 100;
+    const open = structuredClone(blocked);
+    open.stats.block = 0;
+    open.breakdown.secondaryStats.block = 0;
+    const half = structuredClone(blocked);
+    half.stats.block = 50;
+    half.breakdown.secondaryStats.block = 50;
+
+    const blockedResult = evaluateProfileSnapshot(blocked, data, "survival", 60, settings);
+    const openResult = evaluateProfileSnapshot(open, data, "survival", 60, settings);
+    const halfA = evaluateProfileSnapshot(half, data, "survival", 60, settings);
+    const halfB = evaluateProfileSnapshot(half, data, "survival", 60, settings);
+
+    expect(blockedResult.scenarios[0].metrics.timeAlive).toBe(10);
+    expect(blockedResult.scenarios[0].metrics.blockRate).toBe(100);
+    expect(openResult.scenarios[0].metrics.timeAlive).toBeLessThan(2);
+    expect(openResult.scenarios[0].metrics.blockRate).toBe(0);
+    expect(halfA.scenarios[0].metrics.blockRate).toBe(halfB.scenarios[0].metrics.blockRate);
+    expect(Number(halfA.scenarios[0].metrics.blockRate)).toBeGreaterThan(35);
+    expect(Number(halfA.scenarios[0].metrics.blockRate)).toBeLessThan(65);
+  });
+
+  it("exposes melee and ranged mob metrics from real battle data", async () => {
+    const data = await loadGameData();
+    data.raw["MainBattleLibrary.json"] = {
+      test: { BattleId: { AgeIdx: 0, BattleIdx: 0 }, Waves: [{ Enemies: [{ Id: 1, Count: 2 }, { Id: 2, Count: 3 }] }] }
+    };
+    data.raw["EnemyAgeScalingLibrary.json"] = { 0: { Health: { Raw: 100 }, Damage: { Raw: 10 } } };
+    data.raw["EnemyLibrary.json"] = {
+      1: { WeaponId: { Age: 0, Idx: 0 } },
+      2: { WeaponId: { Age: 0, Idx: 1 } }
+    };
+    data.raw["WeaponLibrary.json"] = {
+      melee: { ItemId: { Age: 0, Type: "Weapon", Idx: 0 }, AttackRange: 0, AttackDuration: 1 },
+      ranged: { ItemId: { Age: 0, Type: "Weapon", Idx: 1 }, AttackRange: 5, AttackDuration: 2 }
+    };
+    const profile = manualProfile("Mixed mobs", data);
+    profile.base.attack = 1_000_000;
+    profile.base.health = 1_000_000;
+    const result = evaluateProfileSnapshot(profile, data, "progress", 60, {
+      levelRange: { age: 1, combat: 1 },
+      model: { trials: 2, seed: 7 }
+    });
+    const battle = result.scenarios.find((scenario) => scenario.label === "Combat cible")!;
+
+    expect(battle.metrics.enemyMode).toBe("mixed");
+    expect(battle.metrics.meleeEnemyCount).toBe(2);
+    expect(battle.metrics.rangedEnemyCount).toBe(3);
+    expect(Number(battle.metrics.meleeDps)).toBeGreaterThan(0);
+    expect(Number(battle.metrics.rangedDps)).toBeGreaterThan(0);
+  });
+
   it("reconstructs a 1vcian profile and evaluates recommendations", async () => {
     const data = await loadGameData();
     const raw = buildFixtureProfile(data);
     const profile = normalizeOneVcianProfile(raw, data);
     const result = evaluateProfile(profile, data, "progress");
+    const snapshot = evaluateProfileSnapshot(profile, data, "progress");
 
     expect(profile.confidence).not.toBe("manual_required");
     expect(profile.base.attack).toBeGreaterThan(10);
@@ -86,6 +189,9 @@ describe("simulator", () => {
     expect(result.profile.totalDps).toBeGreaterThan(0);
     expect(result.scenarios.map((scenario) => scenario.id)).toEqual(["endurance", "timeToKill", "gauntlet"]);
     expect(result.recommendations.length).toBeGreaterThan(0);
+    expect(result.recommendations.some((recommendation) => recommendation.source === "Sorts")).toBe(true);
+    expect(snapshot.score).toBeCloseTo(result.score, 8);
+    expect(Object.hasOwn(snapshot, "recommendations")).toBe(false);
   });
 
   it("evaluates variable scenarios and ranks one-line stat mutations", async () => {
@@ -118,6 +224,10 @@ describe("simulator", () => {
     expect(result.recommendations.filter((rec) => rec.source === "Pets").every((rec) => !rec.detail.includes("L2"))).toBe(true);
     expect(result.recommendations.filter((rec) => rec.source === "Monture").every((rec) => !rec.detail.includes("L2"))).toBe(true);
     expect(new Set(result.recommendations.map((rec) => rec.title)).size).toBe(result.recommendations.length);
+    const recommendedPlacements = result.recommendations
+      .map((recommendation) => recommendation.detail.match(/Meilleur changement: ([^,]+)/)?.[1])
+      .filter((placement): placement is string => Boolean(placement));
+    expect(new Set(recommendedPlacements).size).toBe(recommendedPlacements.length);
     expect(result.recommendations[0].gain).toBeGreaterThan(0);
     expect(result.recommendations[0].scenario).toBeTruthy();
   });
@@ -126,8 +236,7 @@ describe("simulator", () => {
     const data = await loadGameData();
     const player = normalizeOneVcianProfile(buildFixtureProfile(data), data);
     const enemy = normalizeOneVcianProfile(buildFixtureProfile(data, "Enemy"), data);
-    enemy.base.attack *= 0.8;
-    enemy.base.health *= 0.8;
+    weakenProfile(enemy, 0.8);
     const result = evaluatePvp(player, enemy, data);
 
     expect(result.pvp.chance).toBeGreaterThanOrEqual(1);
@@ -359,4 +468,20 @@ function buildFixtureProfile(data: Awaited<ReturnType<typeof loadGameData>>, nam
       SkillsPetTech: { 1: 2, 5: 1 }
     }
   };
+}
+
+function weakenProfile(profile: ReturnType<typeof normalizeOneVcianProfile>, factor: number) {
+  profile.breakdown.baseAttack = profile.base.attack * factor;
+  profile.breakdown.baseHealth = profile.base.health * factor;
+  profile.breakdown.equipmentAttack = 0;
+  profile.breakdown.equipmentHealth = 0;
+  profile.breakdown.petAttack = 0;
+  profile.breakdown.petHealth = 0;
+  profile.breakdown.mountAttack = 0;
+  profile.breakdown.mountHealth = 0;
+  for (const slot of Object.keys(profile.equipment) as Array<keyof typeof profile.equipment>) {
+    profile.equipment[slot] = null;
+  }
+  profile.pets = [];
+  profile.mount = null;
 }

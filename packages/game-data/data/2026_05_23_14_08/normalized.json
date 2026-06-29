@@ -8874,63 +8874,78 @@
   "mountModels": [
     {
       "rarity": "Common",
-      "id": 0
+      "id": 0,
+      "name": "Lily Pad"
     },
     {
       "rarity": "Common",
-      "id": 1
+      "id": 1,
+      "name": "Lily Leaf"
     },
     {
       "rarity": "Common",
-      "id": 2
+      "id": 2,
+      "name": "Brown Leaf"
     },
     {
       "rarity": "Rare",
-      "id": 0
+      "id": 0,
+      "name": "Brown Horse"
     },
     {
       "rarity": "Rare",
-      "id": 1
+      "id": 1,
+      "name": "Dino"
     },
     {
       "rarity": "Rare",
-      "id": 2
+      "id": 2,
+      "name": "Crab"
     },
     {
       "rarity": "Rare",
-      "id": 3
+      "id": 3,
+      "name": "Turtle"
     },
     {
       "rarity": "Epic",
-      "id": 0
+      "id": 0,
+      "name": "Pig"
     },
     {
       "rarity": "Epic",
-      "id": 1
+      "id": 1,
+      "name": "Goat"
     },
     {
       "rarity": "Legendary",
-      "id": 0
+      "id": 0,
+      "name": "Bike"
     },
     {
       "rarity": "Legendary",
-      "id": 1
+      "id": 1,
+      "name": "Giant Bee"
     },
     {
       "rarity": "Ultimate",
-      "id": 0
+      "id": 0,
+      "name": "One Wheel Droid"
     },
     {
       "rarity": "Ultimate",
-      "id": 1
+      "id": 1,
+      "name": "Mini Dragon"
     },
     {
       "rarity": "Mythic",
-      "id": 0
+      "id": 0,
+      "name": "Hover Disk"
     },
     {
       "rarity": "Mythic",
-      "id": 1
+      "id": 1,
+      "name": "Hover Board"
     }
   ],
   "petLevels": [

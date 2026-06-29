@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   Download,
   GitCompareArrows,
   Hammer,
+  Network,
   Redo2,
   Swords,
   Undo2,
@@ -16,7 +17,8 @@ import { emptyProfile, useWorkshop } from "../../store/workshop";
 import styles from "./Shell.module.css";
 
 const nav = [
-  { to: "/build", label: "Build", icon: Hammer },
+  { to: "/build", label: "Build", icon: Hammer, end: true },
+  { to: "/build/talents", label: "Talents", icon: Network },
   { to: "/simulate", label: "Simuler", icon: WandSparkles },
   { to: "/compare", label: "Comparer", icon: GitCompareArrows },
   { to: "/pvp", label: "PvP", icon: Swords }
@@ -53,8 +55,8 @@ export function Shell() {
           <span>Atelier</span>
         </NavLink>
         <nav className={styles.nav} aria-label="Navigation principale">
-          {nav.map(({ to, label, icon: Icon }) => (
-            <NavLink key={to} to={to} className={({ isActive }) => isActive ? styles.active : undefined}>
+          {nav.map(({ to, label, icon: Icon, end }) => (
+            <NavLink key={to} to={to} end={end} className={({ isActive }) => isActive ? styles.active : undefined}>
               <Icon size={21} aria-hidden />
               <span>{label}</span>
             </NavLink>
@@ -94,8 +96,8 @@ export function Shell() {
       </div>
 
       <nav className={styles.mobileNav} aria-label="Navigation mobile">
-        {mobileNav.map(({ to, label, icon: Icon }) => (
-          <NavLink key={to} to={to} className={({ isActive }) => isActive ? styles.active : undefined}>
+        {mobileNav.map(({ to, label, icon: Icon, end }) => (
+          <NavLink key={to} to={to} end={end} className={({ isActive }) => isActive ? styles.active : undefined}>
             <Icon size={20} aria-hidden />
             <span>{label}</span>
           </NavLink>
@@ -107,6 +109,7 @@ export function Shell() {
 }
 
 function Bootstrap() {
+  const queryClient = useQueryClient();
   const profile = useWorkshop((state) => state.profile);
   const opponent = useWorkshop((state) => state.opponent);
   const objective = useWorkshop((state) => state.objective);
@@ -198,6 +201,7 @@ function Bootstrap() {
           : await api.createProfile(profile);
         setCloudProfileId(saved.profile.id);
         setSyncStatus("synced");
+        await queryClient.invalidateQueries({ queryKey: ["profiles"] });
       } catch {
         setSyncStatus("error");
         notify("La synchronisation a échoué. La version locale est conservée.");
@@ -210,6 +214,7 @@ function Bootstrap() {
     cloudProfileId,
     onlineTick,
     notify,
+    queryClient,
     setCloudProfileId,
     setSyncStatus
   ]);

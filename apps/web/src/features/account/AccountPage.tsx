@@ -22,9 +22,25 @@ export function AccountPage() {
   });
 
   const authenticate = async (mode: "login" | "register") => {
+    const username = credentials.username.trim().toLowerCase();
+    if (!/^[a-z0-9_-]{3,24}$/.test(username)) {
+      notify("Pseudo : 3 à 24 caractères, avec lettres, chiffres, _ ou -.");
+      return;
+    }
+    if (credentials.password.length < 8) {
+      notify("Mot de passe : 8 caractères minimum.");
+      return;
+    }
     setBusy(true);
     try {
-      const result = await api.auth(mode, credentials.username, credentials.password);
+      const result = await api.auth(mode, username, credentials.password);
+      const cloud = await api.profiles();
+      if (mode === "login" && cloud.profiles[0]) {
+        setProfile(cloud.profiles[0].normalized);
+        setCloudProfileId(cloud.profiles[0].id);
+      } else {
+        setCloudProfileId(null);
+      }
       setSession({ authenticated: true, username: result.username });
       await queryClient.invalidateQueries({ queryKey: ["profiles"] });
       notify(mode === "login" ? "Connexion réussie." : "Compte créé.");
@@ -62,8 +78,8 @@ export function AccountPage() {
         <section className={ui.card}>
           <div className={ui.cardHeader}><h2>Synchroniser vos profils</h2><span className={ui.pill}>Optionnel</span></div>
           <div className={ui.grid2}>
-            <label className={ui.field}><span>Pseudo</span><input autoComplete="username" value={credentials.username} onChange={(event) => setCredentials({ ...credentials, username: event.target.value })} /></label>
-            <label className={ui.field}><span>Mot de passe</span><input type="password" autoComplete="current-password" value={credentials.password} onChange={(event) => setCredentials({ ...credentials, password: event.target.value })} /></label>
+            <label className={ui.field}><span>Pseudo</span><input autoComplete="username" minLength={3} maxLength={24} value={credentials.username} onChange={(event) => setCredentials({ ...credentials, username: event.target.value })} /></label>
+            <label className={ui.field}><span>Mot de passe</span><input type="password" autoComplete="current-password" minLength={8} value={credentials.password} onChange={(event) => setCredentials({ ...credentials, password: event.target.value })} /></label>
           </div>
           <div className={ui.buttonRow} style={{ marginTop: 14 }}>
             <button className={ui.primary} disabled={busy} onClick={() => authenticate("login")}><LogIn size={18} /> Se connecter</button>

@@ -987,10 +987,10 @@ function ScenarioSummary({ scenarios }: { scenarios: ScenarioResult[] }) {
           <span>{scenario.label}</span>
           <strong>{scenario.summary}</strong>
           <p>Score {format(scenario.score, 2)} - {scenario.metrics.difficulty ? "difficile" : "normal"} {format(scenario.metrics.age ?? scenario.metrics.levelMin)}-{format(scenario.metrics.combat ?? scenario.metrics.levelMax)}{scenario.metrics.realBattleData ? " - donnees jeu" : ""}</p>
-          {scenario.metrics.skillDamage > 0 && (
+          {Number(scenario.metrics.skillDamage || 0) > 0 && (
             <small>
               Sorts {format(scenario.metrics.skillDamage)} dmg
-              {scenario.metrics.aoeDamage > 0 ? `, dont ${format(scenario.metrics.aoeDamage)} en zone` : ""}
+              {Number(scenario.metrics.aoeDamage || 0) > 0 ? `, dont ${format(scenario.metrics.aoeDamage)} en zone` : ""}
             </small>
           )}
         </article>

@@ -11,10 +11,11 @@
   "scripts": {
     "dev:web": "npm run build -w packages/game-data && npm run build -w packages/simulator && npm run dev -w apps/web",
     "dev:api": "npm run build -w packages/game-data && npm run build -w packages/simulator && npm run dev -w apps/api",
-    "build": "npm run build -w packages/game-data && npm run build -w packages/simulator && npm run build -w apps/api && npm run build -w apps/web",
+    "build": "npm run build -w packages/game-data && npm run build -w packages/simulator && npm run build -w apps/api && node scripts/generate-simulated-bis.mjs && npm run build -w apps/web",
     "check": "npm run test && npm run build",
     "test": "vitest run",
     "game-data:update": "npm run update -w packages/game-data",
+    "bis:generate": "npm run build -w packages/game-data && npm run build -w packages/simulator && node scripts/generate-simulated-bis.mjs",
     "db:migrate": "prisma migrate dev",
     "db:generate": "prisma generate",
     "migrate:legacy-users": "node scripts/migrate-legacy-users.mjs",

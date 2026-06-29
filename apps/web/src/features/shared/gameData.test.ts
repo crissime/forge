@@ -1,7 +1,10 @@
 import { describe, expect, it } from "vitest";
 import {
   calculateItemValues,
+  calculateMountValues,
   calculatePetValues,
+  mountDisplayName,
+  mountModelsFor,
   petDisplayName,
   petModelsFor
 } from "./gameData";
@@ -18,6 +21,14 @@ describe("game-data presentation calculations", () => {
     );
     expect(item.attack).toBe(600);
     expect(item.health).toBe(80);
+    expect(calculateItemValues(
+      "Weapon",
+      2,
+      7,
+      108,
+      [{ slot: "Weapon", age: 2, idx: 7, attack: 100, health: 20, isRanged: false }],
+      { levelScalingBase: 2, meleeDamageMultiplier: 1.5, maxLevel: 98 }
+    ).level).toBe(108);
 
     const pet = calculatePetValues(
       "Rare",
@@ -75,5 +86,33 @@ describe("game-data presentation calculations", () => {
       secondaryStats: [],
       recognized: true
     }, [{ rarity: "Epic", id: 0, name: "Griffin", type: "Health" }])).toBe("Griffin");
+  });
+
+  it("lists and resolves mount names from rarity and id", () => {
+    const models = [
+      { rarity: "Rare", id: 0, name: "Brown Horse" },
+      { rarity: "Rare", id: 1, name: "Dino" },
+      { rarity: "Rare", id: 2, name: "Crab" },
+      { rarity: "Rare", id: 3, name: "Turtle" }
+    ];
+    const levels = [{ rarity: "Rare", levels: [{ level: 2, attack: 80, health: 60 }] }];
+
+    expect(mountModelsFor("Rare", models).map((model) => model.name)).toEqual([
+      "Brown Horse",
+      "Dino",
+      "Crab",
+      "Turtle"
+    ]);
+    expect(calculateMountValues("Rare", 1, 2, models, levels)).toMatchObject({
+      id: 1,
+      name: "Dino",
+      attack: 80,
+      health: 60
+    });
+    expect(mountDisplayName({
+      name: "Monture",
+      rarity: "Rare",
+      id: 1
+    }, models)).toBe("Dino");
   });
 });

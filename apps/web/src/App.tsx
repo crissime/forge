@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import { Shell } from "./features/shell/Shell";
 import { BuildPage } from "./features/build/BuildPage";
-import { SimulationPage } from "./features/simulation/SimulationPage";
 import { ComparePage } from "./features/compare/ComparePage";
 import { PvpPage } from "./features/pvp/PvpPage";
 import { AccountPage } from "./features/account/AccountPage";
@@ -17,6 +16,9 @@ import { AccountPage } from "./features/account/AccountPage";
 const LegacyApp = lazy(() => import("./legacy/LegacyApp"));
 const TalentsPage = lazy(() =>
   import("./features/talents/TalentsPage").then((module) => ({ default: module.TalentsPage }))
+);
+const SimulationPage = lazy(() =>
+  import("./features/simulation/SimulationPage").then((module) => ({ default: module.SimulationPage }))
 );
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -39,7 +41,7 @@ export default function App() {
           <Route element={<Shell />}>
             <Route path="/build" element={<BuildPage />} />
             <Route path="/build/talents" element={<Suspense fallback={null}><TalentsPage /></Suspense>} />
-            <Route path="/simulate" element={<SimulationPage />} />
+            <Route path="/simulate" element={<Suspense fallback={null}><SimulationPage /></Suspense>} />
             <Route path="/compare" element={<ComparePage />} />
             <Route path="/pvp" element={<PvpPage />} />
             <Route path="/account" element={<AccountPage />} />

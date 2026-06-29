@@ -16,6 +16,14 @@ export interface ScenarioSettings {
   endurance?: Partial<EnduranceScenarioSettings>;
   timeToKill?: Partial<TimeToKillScenarioSettings>;
   gauntlet?: Partial<GauntletScenarioSettings>;
+  model?: Partial<CombatModelSettings>;
+}
+
+export interface CombatModelSettings {
+  damageStacking: "additive" | "multiplicative";
+  blockMode: "rng" | "average";
+  trials: number;
+  seed: number;
 }
 
 export interface LevelRangeSettings {
@@ -49,6 +57,7 @@ export interface GauntletScenarioSettings {
 }
 
 interface ResolvedScenarioSet {
+  model: CombatModelSettings;
   levelRange: ResolvedLevelRange;
   endurance: EnduranceScenarioSettings & {
     startDamagePerSecond: number;
@@ -86,6 +95,11 @@ interface BattleWaveTarget {
   totalHealth: number;
   totalDps: number;
   enemyCount: number;
+  totalHitRate: number;
+  meleeEnemyCount: number;
+  rangedEnemyCount: number;
+  meleeDps: number;
+  rangedDps: number;
 }
 
 interface BattleTarget {
@@ -96,9 +110,13 @@ interface BattleTarget {
   difficulty: number;
   waveCount: number;
   enemyCount: number;
+  meleeEnemyCount: number;
+  rangedEnemyCount: number;
   totalHealth: number;
   peakDps: number;
   averageDps: number;
+  meleeDps: number;
+  rangedDps: number;
   waves: BattleWaveTarget[];
 }
 
@@ -109,7 +127,7 @@ export interface ScenarioResult {
   summary: string;
   score: number;
   success: boolean;
-  metrics: Record<string, number>;
+  metrics: Record<string, number | string>;
 }
 
 export interface StatMap extends Record<StatId, number> {}
@@ -244,6 +262,8 @@ export interface EvaluationResult {
   audit: AuditIssue[];
 }
 
+export type EvaluationSnapshot = Omit<EvaluationResult, "recommendations" | "audit" | "confidence">;
+
 export interface PvpResult extends EvaluationResult {
   pvp: {
     chance: number;
@@ -267,7 +287,7 @@ export interface PvpResult extends EvaluationResult {
 }
 
 export interface Recommendation {
-  kind: "stat" | "slot" | "talent" | "trade";
+  kind: "stat" | "slot" | "spell" | "talent" | "trade";
   title: string;
   detail: string;
   gain: number;
@@ -281,6 +301,8 @@ export interface DropInput {
   slot?: EquipmentSlot;
   petIndex?: number;
   name?: string;
+  age?: number;
+  idx?: number;
   rarity?: string;
   id?: number;
   petType?: "Balanced" | "Damage" | "Health";
@@ -324,11 +346,13 @@ const ITEM_SECONDARY_LINE_2_MIN_AGE = 7;
 const RARITY_ORDER = ["Common", "Rare", "Epic", "Legendary", "Ultimate", "Mythic"];
 const PET_MOUNT_SECONDARY_LINE_2_MIN_RARITY = "Legendary";
 const MAIN_BATTLE_ENEMY_SCALE = 0.02;
+const DEFAULT_MODEL: CombatModelSettings = { damageStacking: "additive", blockMode: "rng", trials: 64, seed: 1337 };
 const DEFAULT_SCENARIOS = {
   levelRange: { min: 1, max: 1, difficulty: 0 },
   endurance: { startDamagePct: 2, growthPct: 0.12, maxSeconds: 900 },
   timeToKill: { targetSeconds: 24, incomingDamagePct: 0.35, maxSeconds: 300 },
-  gauntlet: { mobCount: 8, firstMobSeconds: 8, firstDamagePct: 0.85, healthGrowthPct: 12, damageGrowthPct: 10, pauseSeconds: 1, maxSeconds: 900 }
+  gauntlet: { mobCount: 8, firstMobSeconds: 8, firstDamagePct: 0.85, healthGrowthPct: 12, damageGrowthPct: 10, pauseSeconds: 1, maxSeconds: 900 },
+  model: DEFAULT_MODEL
 } satisfies Required<ScenarioSettings>;
 
 export function createEmptyStats(): StatMap {
@@ -454,26 +478,204 @@ export function manualProfile(name: string, data: GameDataBundle, audit: AuditIs
   };
 }
 
-export function evaluateProfile(profile: NormalizedProfile, data: GameDataBundle, objective: Objective = "progress", fightDuration = 60, scenarioSettings?: ScenarioSettings): EvaluationResult {
-  const combat = combatProfile(profile, data, fightDuration);
-  const scenarioSet = resolveScenarioSet(combat, scenarioSettings, profile, data);
-  const scenarios = evaluateScenarios(combat, scenarioSet);
-  const score = scoreCombat(combat, objective, scenarios);
+function canonicalizeProfile(profile: NormalizedProfile, data: GameDataBundle): NormalizedProfile {
+  const audit = [...(profile.audit || [])];
+  const effects = computeTalentEffects(profile.talentTree || {}, data);
+  const secondaryStats = createEmptyStats();
+  const equipment = Object.fromEntries(EQUIPMENT_SLOTS.map((slot) => [slot, null])) as Record<EquipmentSlot, NormalizedItem | null>;
+  let equipmentAttack = 0;
+  let equipmentHealth = 0;
+  let petAttack = 0;
+  let petHealth = 0;
+  let mountAttack = 0;
+  let mountHealth = 0;
+  let weaponStyle = profile.base?.weaponStyle || "ranged";
+
+  for (const slot of EQUIPMENT_SLOTS) {
+    const source = profile.equipment?.[slot];
+    if (!source) continue;
+    const item = canRebuildItem(slot, source, data)
+      ? reconstructItem(slot, source, data, effects, audit)
+      : preserveItem(slot, source);
+    equipment[slot] = item;
+    equipmentAttack += item.attack;
+    equipmentHealth += item.health;
+    addLinesToStats(secondaryStats, item.secondaryStats);
+    if (slot === "Weapon" && item.recognized) weaponStyle = isRangedWeapon(item, data) ? "ranged" : "melee";
+  }
+
+  const pets = (profile.pets || []).slice(0, 3).map((source, index) => {
+    const pet = canRebuildPet(source, data)
+      ? reconstructPet(source, index, data, effects, audit)
+      : preservePet(source);
+    petAttack += pet.attack;
+    petHealth += pet.health;
+    addLinesToStats(secondaryStats, pet.secondaryStats);
+    return pet;
+  });
+
+  const mount = profile.mount
+    ? canRebuildMount(profile.mount, data)
+      ? reconstructMount(profile.mount, data, effects, audit)
+      : preserveMount(profile.mount)
+    : null;
+  if (mount) {
+    mountAttack = mount.attack;
+    mountHealth = mount.health;
+    addLinesToStats(secondaryStats, mount.secondaryStats);
+  }
+
+  const baseConfig = data.raw["ItemBalancingConfig.json"] || {};
+  const baseAttack = readNumber(profile.breakdown?.baseAttack) || Number(baseConfig.PlayerBaseDamage || 10);
+  const baseHealth = readNumber(profile.breakdown?.baseHealth) || Number(baseConfig.PlayerBaseHealth || 80);
+  const talentStats = effects.globalStats;
+  const finalSecondaryStats = sumStats(secondaryStats, positiveStatDelta(profile.breakdown?.secondaryStats, secondaryStats));
+  const stats = sumStats(finalSecondaryStats, talentStats);
+
   return {
-    objective,
-    score,
-    confidence: profile.confidence,
-    profile: combat,
-    scenarios,
-    recommendations: recommend(profile, data, objective, fightDuration, undefined, scenarioSet, scenarios).slice(0, 12),
-    audit: profile.audit
+    ...profile,
+    confidence: confidenceFromAudit(audit),
+    base: {
+      attack: baseAttack + equipmentAttack + petAttack + mountAttack,
+      health: baseHealth + equipmentHealth + petHealth + mountHealth,
+      weaponStyle
+    },
+    equipment,
+    pets,
+    mount,
+    stats,
+    breakdown: {
+      baseAttack,
+      baseHealth,
+      equipmentAttack,
+      equipmentHealth,
+      petAttack,
+      petHealth,
+      mountAttack,
+      mountHealth,
+      secondaryStats: finalSecondaryStats,
+      talentStats
+    },
+    audit
   };
 }
 
+function positiveStatDelta(left: StatMap | undefined, right: StatMap): StatMap {
+  const out = createEmptyStats();
+  for (const key of Object.keys(out) as StatId[]) {
+    out[key] = Math.max(0, readNumber(left?.[key]) - readNumber(right[key]));
+  }
+  return out;
+}
+
+function canRebuildItem(slot: EquipmentSlot, item: Pick<NormalizedItem, "age" | "idx">, data: GameDataBundle): boolean {
+  const age = readNumber(item.age);
+  const idx = readNumber(item.idx);
+  const key = `{'Age': ${age}, 'Type': '${SLOT_TO_JSON_TYPE[slot]}', 'Idx': ${idx}}`;
+  return Boolean(data.raw["ItemBalancingLibrary.json"]?.[key]);
+}
+
+function canRebuildPet(pet: Pick<NormalizedPet, "rarity" | "id" | "level">, data: GameDataBundle): boolean {
+  const rarity = String(pet.rarity || "Common");
+  const id = readNumber(pet.id);
+  const level = Math.max(1, Math.round(readNumber(pet.level) || 1));
+  return Boolean(
+    data.raw["PetLibrary.json"]?.[`{'Rarity': '${rarity}', 'Id': ${id}}`] &&
+    data.raw["PetUpgradeLibrary.json"]?.[rarity]?.LevelInfo?.[level - 1]
+  );
+}
+
+function canRebuildMount(mount: Pick<NormalizedMount, "rarity" | "id" | "level">, data: GameDataBundle): boolean {
+  const rarity = String(mount.rarity || "Common");
+  const id = readNumber(mount.id);
+  const level = Math.max(1, Math.round(readNumber(mount.level) || 1));
+  return Boolean(
+    data.normalized.mountModels.some((model) => model.rarity === rarity && model.id === id) &&
+    data.raw["MountUpgradeLibrary.json"]?.[rarity]?.LevelInfo?.[level - 1]
+  );
+}
+
+function preserveItem(slot: EquipmentSlot, item: NormalizedItem): NormalizedItem {
+  return {
+    ...item,
+    slot,
+    level: Math.max(1, Math.round(readNumber(item.level) || 1)),
+    attack: readNumber(item.attack),
+    health: readNumber(item.health),
+    secondaryStats: (item.secondaryStats || []).slice(0, itemSecondaryLineLimit(item))
+  };
+}
+
+function preservePet(pet: NormalizedPet): NormalizedPet {
+  return {
+    ...pet,
+    level: Math.max(1, Math.round(readNumber(pet.level) || 1)),
+    attack: readNumber(pet.attack),
+    health: readNumber(pet.health),
+    secondaryStats: (pet.secondaryStats || []).slice(0, petMountSecondaryLineLimit(pet))
+  };
+}
+
+function preserveMount(mount: NormalizedMount): NormalizedMount {
+  return {
+    ...preservePet(mount),
+    skills: Array.isArray(mount.skills) ? mount.skills.map(Number) : []
+  };
+}
+
+export function evaluateProfile(profile: NormalizedProfile, data: GameDataBundle, objective: Objective = "progress", fightDuration = 60, scenarioSettings?: ScenarioSettings): EvaluationResult {
+  const normalized = canonicalizeProfile(profile, data);
+  const snapshot = evaluateCanonicalProfileSnapshot(normalized, data, objective, fightDuration, scenarioSettings);
+  const scenarioSet = resolveScenarioSet(snapshot.profile, scenarioSettings, normalized, data);
+  return {
+    objective,
+    score: snapshot.score,
+    confidence: normalized.confidence,
+    profile: snapshot.profile,
+    scenarios: snapshot.scenarios,
+    recommendations: recommend(
+      normalized,
+      data,
+      objective,
+      fightDuration,
+      undefined,
+      scenarioSet,
+      snapshot.scenarios
+    ).slice(0, 12),
+    audit: normalized.audit
+  };
+}
+
+export function evaluateProfileSnapshot(
+  profile: NormalizedProfile,
+  data: GameDataBundle,
+  objective: Objective = "progress",
+  fightDuration = 60,
+  scenarioSettings?: ScenarioSettings
+): EvaluationSnapshot {
+  return evaluateCanonicalProfileSnapshot(canonicalizeProfile(profile, data), data, objective, fightDuration, scenarioSettings);
+}
+
+function evaluateCanonicalProfileSnapshot(
+  profile: NormalizedProfile,
+  data: GameDataBundle,
+  objective: Objective,
+  fightDuration: number,
+  scenarioSettings?: ScenarioSettings
+): EvaluationSnapshot {
+  const model = resolveModel(scenarioSettings?.model);
+  const combat = combatProfile(profile, data, fightDuration, model);
+  const scenarios = evaluateScenarios(combat, resolveScenarioSet(combat, scenarioSettings, profile, data));
+  return { objective, score: scoreCombat(combat, objective, scenarios), profile: combat, scenarios };
+}
+
 export function evaluatePvp(player: NormalizedProfile, opponent: NormalizedProfile, data: GameDataBundle, objective: Objective = "pvp", fightDuration = 60, scenarioSettings?: ScenarioSettings): PvpResult {
-  const duel = simulatePvpDuel(player, opponent, data, fightDuration);
+  const normalizedPlayer = canonicalizeProfile(player, data);
+  const normalizedOpponent = canonicalizeProfile(opponent, data);
+  const model = resolveModel(scenarioSettings?.model);
+  const duel = simulatePvpDuel(normalizedPlayer, normalizedOpponent, data, fightDuration, model);
   const { playerCombat, opponentCombat } = duel;
-  const scenarioSet = resolveScenarioSet(playerCombat, scenarioSettings, player, data);
+  const scenarioSet = resolveScenarioSet(playerCombat, scenarioSettings, normalizedPlayer, data);
   const scenarios = evaluateScenarios(playerCombat, scenarioSet);
   const chance = duel.chance;
   const score = objective === "balanced" ? scoreCombat(playerCombat, "progress", scenarios) * 0.55 + (chance / 10) * 0.45 : chance / 10;
@@ -481,11 +683,11 @@ export function evaluatePvp(player: NormalizedProfile, opponent: NormalizedProfi
   return {
     objective,
     score,
-    confidence: weakerConfidence(player.confidence, opponent.confidence),
+    confidence: weakerConfidence(normalizedPlayer.confidence, normalizedOpponent.confidence),
     profile: playerCombat,
     scenarios,
-    recommendations: recommend(player, data, objective, fightDuration, opponent, scenarioSet, scenarios).slice(0, 12),
-    audit: [...player.audit, ...opponent.audit.map((issue) => ({ ...issue, path: issue.path ? `opponent.${issue.path}` : "opponent" }))],
+    recommendations: recommend(normalizedPlayer, data, objective, fightDuration, normalizedOpponent, scenarioSet, scenarios).slice(0, 12),
+    audit: [...normalizedPlayer.audit, ...normalizedOpponent.audit.map((issue) => ({ ...issue, path: issue.path ? `opponent.${issue.path}` : "opponent" }))],
     pvp: {
       chance,
       timeToWin: duel.winner === "player" ? duel.duration : null,
@@ -509,10 +711,11 @@ export function evaluatePvp(player: NormalizedProfile, opponent: NormalizedProfi
 }
 
 export function compareDrop(profile: NormalizedProfile, drop: DropInput, data: GameDataBundle, objective: Objective = "progress"): DropComparisonResult {
-  const current = evaluateProfile(profile, data, objective).score;
+  const normalized = canonicalizeProfile(profile, data);
+  const current = evaluateProfile(normalized, data, objective).score;
   if ((drop.target || "equipment") === "pet" && drop.petIndex === undefined) {
     const candidates = [0, 1, 2].map((petIndex) => {
-      const result = compareDropAtTarget(profile, { ...drop, petIndex }, data, objective, current);
+      const result = compareDropAtTarget(normalized, { ...drop, petIndex }, data, objective, current);
       return {
         petIndex,
         currentScore: result.currentScore,
@@ -528,7 +731,7 @@ export function compareDrop(profile: NormalizedProfile, drop: DropInput, data: G
       candidates
     };
   }
-  return compareDropAtTarget(profile, drop, data, objective, current);
+  return compareDropAtTarget(normalized, drop, data, objective, current);
 }
 
 function compareDropAtTarget(
@@ -612,18 +815,22 @@ function replaceDropTarget(
     return;
   }
   if (!drop.slot) throw new Error("Un slot est requis pour comparer un objet.");
-  profile.equipment[drop.slot] = { ...common, slot: drop.slot };
+  profile.equipment[drop.slot] = { ...common, slot: drop.slot, age: drop.age, idx: drop.idx };
 }
 
-export function combatProfile(profile: NormalizedProfile, data: GameDataBundle, fightDuration = 60): CombatProfile {
+export function combatProfile(profile: NormalizedProfile, data: GameDataBundle, fightDuration = 60, modelInput?: Partial<CombatModelSettings>): CombatProfile {
+  const model = resolveModel(modelInput);
   const stats = profile.stats;
-  const globalDamage = 1 + active(stats, "damage") / 100;
-  const weaponSpecific = profile.base.weaponStyle === "ranged" ? 1 + active(stats, "rangedDamage") / 100 : 1 + active(stats, "meleeDamage") / 100;
+  const globalDamageBonus = active(stats, "damage") / 100;
+  const weaponSpecificBonus = profile.base.weaponStyle === "ranged" ? active(stats, "rangedDamage") / 100 : active(stats, "meleeDamage") / 100;
+  const globalDamage = 1 + globalDamageBonus;
+  const weaponSpecific = 1 + weaponSpecificBonus;
+  const weaponDamage = model.damageStacking === "multiplicative" ? globalDamage * weaponSpecific : 1 + globalDamageBonus + weaponSpecificBonus;
   const attackSpeed = 1 + active(stats, "attackSpeed") / 100;
   const doubleHit = 1 + active(stats, "doubleChance") / 100;
   const critChance = active(stats, "critChance") / 100;
   const critMultiplier = 1.2 + active(stats, "critDamage") / 100;
-  const weaponDpsPerAttack = globalDamage * weaponSpecific * attackSpeed * doubleHit * (1 + critChance * (critMultiplier - 1));
+  const weaponDpsPerAttack = weaponDamage * attackSpeed * doubleHit * (1 + critChance * (critMultiplier - 1));
   const baseWeaponDps = profile.base.attack * weaponDpsPerAttack;
   const skill = spellContribution(profile.spells, stats, data, weaponDpsPerAttack);
   const weaponDps = baseWeaponDps + skill.averageBuffWeaponDps;
@@ -651,6 +858,8 @@ export function combatProfile(profile: NormalizedProfile, data: GameDataBundle, 
       baseHealth: profile.base.health,
       globalDamage,
       weaponSpecific,
+      weaponDamage,
+      damageStacking: model.damageStacking === "additive" ? 1 : 0,
       attackSpeed,
       doubleHit,
       critMultiplier,
@@ -750,6 +959,7 @@ function reconstructMount(mount: any, data: GameDataBundle, effects: TalentEffec
   let attack = 0;
   let health = 0;
   let recognized = Boolean(levelInfo);
+  const modelName = data.normalized.mountModels.find((model) => model.rarity === rarity && model.id === id)?.name;
 
   if (!levelInfo?.MountStats?.Stats) {
     audit.push({ severity: "warning", code: "mount_unresolved", message: "Monture: niveau ou rareté non reconstruit.", path: "mount.active" });
@@ -762,7 +972,7 @@ function reconstructMount(mount: any, data: GameDataBundle, effects: TalentEffec
   }
 
   return {
-    name: mount.customName || `${rarity} mount ${id}`,
+    name: mount.customName || modelName || `${rarity} mount ${id}`,
     rarity,
     id,
     level,
@@ -859,7 +1069,7 @@ function readSecondaryLines(lines: any, audit: AuditIssue[], path: string): Seco
   if (!Array.isArray(lines)) return [];
   return lines.flatMap((line, index) => {
     const sourceId = String(line?.statId || line?.Stat || line?.stat || line?.id || "");
-    const stat = STAT_ID_MAP[sourceId] || STAT_ID_MAP[sourceId.replace(/\s+/g, "")];
+    const stat = statIdFromSource(sourceId);
     if (!stat) {
       if (sourceId) audit.push({ severity: "warning", code: "secondary_stat_unknown", message: `Stat secondaire ignorée: ${sourceId}.`, path: `${path}.${index}` });
       return [];
@@ -867,6 +1077,11 @@ function readSecondaryLines(lines: any, audit: AuditIssue[], path: string): Seco
     const rawValue = readNumber(line.value ?? line.Value ?? line.statValue);
     return [{ stat, sourceId, value: Math.abs(rawValue) <= 1 ? rawValue * 100 : rawValue }];
   });
+}
+
+function statIdFromSource(sourceId: string): StatId | undefined {
+  if ((Object.values(STAT_ID_MAP) as string[]).includes(sourceId)) return sourceId as StatId;
+  return STAT_ID_MAP[sourceId] || STAT_ID_MAP[sourceId.replace(/\s+/g, "")];
 }
 
 function spellContribution(selected: NormalizedSpellSelection[], stats: StatMap, data: GameDataBundle, weaponDpsPerAttack: number) {
@@ -932,6 +1147,11 @@ interface EncounterWave {
   enemyCount: number;
   totalHealth: number;
   totalDps: number;
+  totalHitRate?: number;
+  meleeEnemyCount?: number;
+  rangedEnemyCount?: number;
+  meleeDps?: number;
+  rangedDps?: number;
 }
 
 interface EncounterResult {
@@ -948,10 +1168,13 @@ interface EncounterResult {
   aoeDamage: number;
   skillCasts: number;
   skillHits: number;
+  blockedHits: number;
+  totalIncomingHits: number;
 }
 
-function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSeconds: number, pauseSeconds = 0): EncounterResult {
+function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSeconds: number, pauseSeconds = 0, model: CombatModelSettings = DEFAULT_MODEL, seed = model.seed): EncounterResult {
   const epsilon = 0.000001;
+  const rng = seededRandom(seed);
   const runtimes = combat.skills.map((skill) => ({ skill, nextCast: Math.max(0, skill.startupDelay) }));
   const pendingHits: Array<{ time: number; skill: CombatSkill; weight: number }> = [];
   const activeBuffs: Array<{ skillId: string; expiresAt: number; bonusAttack: number; bonusHealth: number }> = [];
@@ -960,6 +1183,7 @@ function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSec
   let currentMaxHealth = combat.baseMaxHealth;
   let enemies: number[] = [];
   let currentWaveDpsPerEnemy = 0;
+  let currentWaveHitRatePerEnemy = 1;
   let pauseUntil: number | null = null;
   let clearedWaves = 0;
   let killedEnemies = 0;
@@ -969,6 +1193,8 @@ function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSec
   let aoeDamage = 0;
   let skillCasts = 0;
   let skillHits = 0;
+  let blockedHits = 0;
+  let totalIncomingHits = 0;
   let died = false;
   let safety = 0;
 
@@ -978,6 +1204,7 @@ function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSec
     const healthPerEnemy = Math.max(1, wave.totalHealth / count);
     enemies = Array.from({ length: count }, () => healthPerEnemy);
     currentWaveDpsPerEnemy = Math.max(0, wave.totalDps) / count;
+    currentWaveHitRatePerEnemy = Math.max(0.1, Number(wave.totalHitRate || count)) / count;
     pauseUntil = null;
   };
 
@@ -1071,9 +1298,8 @@ function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSec
     if (clearedWaves >= waves.length) break;
 
     const weaponDps = enemies.length ? currentWeaponDps() : 0;
-    const incomingDps = enemies.length
-      ? currentWaveDpsPerEnemy * enemies.length * Math.max(0.05, 1 - combat.block)
-      : 0;
+    const rawIncomingDps = enemies.length ? currentWaveDpsPerEnemy * enemies.length : 0;
+    const incomingDps = rawIncomingDps * averageBlockFactor(combat.block);
     const healingPerSecond = currentHealingPerSecond(weaponDps);
     const netIncoming = incomingDps - healingPerSecond;
     const nextCast = Math.min(...runtimes.map((runtime) => runtime.nextCast), Number.POSITIVE_INFINITY);
@@ -1086,7 +1312,10 @@ function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSec
     const delta = Math.max(epsilon, nextTime - time);
 
     if (weaponDps > 0 && enemies.length) dealSingle(weaponDps * delta, "weapon");
-    currentHealth = clamp(currentHealth + (healingPerSecond - incomingDps) * delta, 0, currentMaxHealth);
+    const incoming = blockedDamage(rawIncomingDps * delta, combat.block, currentWaveHitRatePerEnemy * enemies.length * delta, model, rng);
+    blockedHits += incoming.blockedHits;
+    totalIncomingHits += incoming.totalHits;
+    currentHealth = clamp(currentHealth + healingPerSecond * delta - incoming.damage, 0, currentMaxHealth);
     time = Math.min(maxSeconds, time + delta);
     if (currentHealth <= epsilon) died = true;
     removeDead();
@@ -1105,7 +1334,9 @@ function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSec
     skillDamage,
     aoeDamage,
     skillCasts,
-    skillHits
+    skillHits,
+    blockedHits,
+    totalIncomingHits
   };
 }
 
@@ -1146,16 +1377,23 @@ interface PvpDuelResult {
   opponentCombat: CombatProfile;
 }
 
-function simulatePvpDuel(player: NormalizedProfile, opponent: NormalizedProfile, data: GameDataBundle, requestedDuration: number): PvpDuelResult {
+function simulatePvpDuel(player: NormalizedProfile, opponent: NormalizedProfile, data: GameDataBundle, requestedDuration: number, modelInput?: Partial<CombatModelSettings>): PvpDuelResult {
+  const model = resolveModel(modelInput);
+  if (model.blockMode === "rng" && model.trials > 1) return simulatePvpDuelTrials(player, opponent, data, requestedDuration, model);
+  return simulatePvpDuelOnce(player, opponent, data, requestedDuration, model, model.seed);
+}
+
+function simulatePvpDuelOnce(player: NormalizedProfile, opponent: NormalizedProfile, data: GameDataBundle, requestedDuration: number, model: CombatModelSettings, seed: number): PvpDuelResult {
   const config = data.raw["PvpBaseConfig.json"] || {};
+  const rng = seededRandom(seed);
   const matchDuration = clamp(
     Math.min(readNumber(requestedDuration) || 60, readNumber(config.PvpMatchTimerSeconds) || 60),
     5,
     600
   );
   const skillHealthMultiplier = readNumber(config.PvpHpSkillMultiplier) || 0.5;
-  const playerCombat = combatProfile(pvpAdjustedProfile(player, config), data, matchDuration);
-  const opponentCombat = combatProfile(pvpAdjustedProfile(opponent, config), data, matchDuration);
+  const playerCombat = combatProfile(pvpAdjustedProfile(player, config), data, matchDuration, model);
+  const opponentCombat = combatProfile(pvpAdjustedProfile(opponent, config), data, matchDuration, model);
   const playerActor = createPvpActor(playerCombat);
   const opponentActor = createPvpActor(opponentCombat);
   let time = 0;
@@ -1169,16 +1407,18 @@ function simulatePvpDuel(player: NormalizedProfile, opponent: NormalizedProfile,
     castPvpSkills(playerActor, time, skillHealthMultiplier);
     castPvpSkills(opponentActor, time, skillHealthMultiplier);
 
-    const playerHit = consumePvpHits(playerActor, opponentActor, time);
-    const opponentHit = consumePvpHits(opponentActor, playerActor, time);
+    const playerHit = consumePvpHits(playerActor, opponentActor, time, model, rng);
+    const opponentHit = consumePvpHits(opponentActor, playerActor, time, model, rng);
     if (playerHit.heal > 0) playerActor.health = Math.min(playerActor.maxHealth, playerActor.health + playerHit.heal);
     if (opponentHit.heal > 0) opponentActor.health = Math.min(opponentActor.maxHealth, opponentActor.health + opponentHit.heal);
     opponentActor.health = Math.max(0, opponentActor.health - playerHit.damage);
     playerActor.health = Math.max(0, playerActor.health - opponentHit.damage);
     if (playerActor.health <= epsilon || opponentActor.health <= epsilon) break;
 
-    const playerWeapon = pvpWeaponDps(playerActor) * Math.max(0.05, 1 - opponentActor.combat.block);
-    const opponentWeapon = pvpWeaponDps(opponentActor) * Math.max(0.05, 1 - playerActor.combat.block);
+    const playerRawWeapon = pvpWeaponDps(playerActor);
+    const opponentRawWeapon = pvpWeaponDps(opponentActor);
+    const playerWeapon = playerRawWeapon * averageBlockFactor(opponentActor.combat.block);
+    const opponentWeapon = opponentRawWeapon * averageBlockFactor(playerActor.combat.block);
     const playerHealing = playerActor.maxHealth * playerActor.combat.regenPct + playerWeapon * playerActor.combat.lifestealPct;
     const opponentHealing = opponentActor.maxHealth * opponentActor.combat.regenPct + opponentWeapon * opponentActor.combat.lifestealPct;
     const playerNetDamage = Math.max(0, opponentWeapon - playerHealing);
@@ -1187,16 +1427,17 @@ function simulatePvpDuel(player: NormalizedProfile, opponent: NormalizedProfile,
       matchDuration,
       nextPvpEvent(playerActor),
       nextPvpEvent(opponentActor),
+      time + 0.5,
       playerNetDamage > 0 ? time + playerActor.health / playerNetDamage : Number.POSITIVE_INFINITY,
       opponentNetDamage > 0 ? time + opponentActor.health / opponentNetDamage : Number.POSITIVE_INFINITY
     );
     const delta = Math.max(epsilon, nextEvent - time);
-    const dealtByPlayer = Math.min(opponentActor.health, playerWeapon * delta);
-    const dealtByOpponent = Math.min(playerActor.health, opponentWeapon * delta);
+    const dealtByPlayer = Math.min(opponentActor.health, blockedDamage(playerRawWeapon * delta, opponentActor.combat.block, weaponHitRate(playerActor.combat) * delta, model, rng).damage);
+    const dealtByOpponent = Math.min(playerActor.health, blockedDamage(opponentRawWeapon * delta, playerActor.combat.block, weaponHitRate(opponentActor.combat) * delta, model, rng).damage);
     playerActor.damage += dealtByPlayer;
     opponentActor.damage += dealtByOpponent;
-    opponentActor.health = clamp(opponentActor.health + (opponentHealing - playerWeapon) * delta, 0, opponentActor.maxHealth);
-    playerActor.health = clamp(playerActor.health + (playerHealing - opponentWeapon) * delta, 0, playerActor.maxHealth);
+    opponentActor.health = clamp(opponentActor.health + opponentActor.maxHealth * opponentActor.combat.regenPct * delta - dealtByPlayer + dealtByOpponent * opponentActor.combat.lifestealPct, 0, opponentActor.maxHealth);
+    playerActor.health = clamp(playerActor.health + playerActor.maxHealth * playerActor.combat.regenPct * delta - dealtByOpponent + dealtByPlayer * playerActor.combat.lifestealPct, 0, playerActor.maxHealth);
     time = Math.min(matchDuration, time + delta);
   }
 
@@ -1230,6 +1471,43 @@ function simulatePvpDuel(player: NormalizedProfile, opponent: NormalizedProfile,
     opponentSkillCasts: opponentActor.skillCasts,
     playerCombat,
     opponentCombat
+  };
+}
+
+function simulatePvpDuelTrials(player: NormalizedProfile, opponent: NormalizedProfile, data: GameDataBundle, requestedDuration: number, model: CombatModelSettings): PvpDuelResult {
+  const trials = Array.from({ length: model.trials }, (_, index) =>
+    simulatePvpDuelOnce(player, opponent, data, requestedDuration, { ...model, trials: 1 }, hashSeed(model.seed, "pvp", index))
+  );
+  const first = trials[0];
+  const avg = (pick: (trial: PvpDuelResult) => number) => trials.reduce((sum, trial) => sum + pick(trial), 0) / Math.max(1, trials.length);
+  const playerWins = trials.filter((trial) => trial.winner === "player").length;
+  const opponentWins = trials.filter((trial) => trial.winner === "opponent").length;
+  const playerHealth = avg((trial) => trial.playerHealth);
+  const opponentHealth = avg((trial) => trial.opponentHealth);
+  const playerDamage = avg((trial) => trial.playerDamage);
+  const opponentDamage = avg((trial) => trial.opponentDamage);
+  const playerSkillDamage = avg((trial) => trial.playerSkillDamage);
+  const opponentSkillDamage = avg((trial) => trial.opponentSkillDamage);
+  const playerHealthPct = playerHealth / Math.max(1, first.playerCombat.baseMaxHealth);
+  const opponentHealthPct = opponentHealth / Math.max(1, first.opponentCombat.baseMaxHealth);
+  const nearDraw = Math.abs(playerHealthPct - opponentHealthPct) < 0.01
+    && Math.abs(playerDamage - opponentDamage) / Math.max(1, playerDamage, opponentDamage) < 0.01;
+  const tieDamage = (playerDamage + opponentDamage) / 2;
+  const tieSkillDamage = (playerSkillDamage + opponentSkillDamage) / 2;
+  return {
+    winner: nearDraw || playerWins === opponentWins ? "draw" : playerWins > opponentWins ? "player" : "opponent",
+    chance: nearDraw ? 50 : avg((trial) => trial.chance),
+    duration: avg((trial) => trial.duration),
+    playerHealth: nearDraw ? (playerHealth + opponentHealth) / 2 : playerHealth,
+    opponentHealth: nearDraw ? (playerHealth + opponentHealth) / 2 : opponentHealth,
+    playerDamage: nearDraw ? tieDamage : playerDamage,
+    opponentDamage: nearDraw ? tieDamage : opponentDamage,
+    playerSkillDamage: nearDraw ? tieSkillDamage : playerSkillDamage,
+    opponentSkillDamage: nearDraw ? tieSkillDamage : opponentSkillDamage,
+    playerSkillCasts: avg((trial) => trial.playerSkillCasts),
+    opponentSkillCasts: avg((trial) => trial.opponentSkillCasts),
+    playerCombat: first.playerCombat,
+    opponentCombat: first.opponentCombat
   };
 }
 
@@ -1297,13 +1575,13 @@ function castPvpSkills(actor: PvpActor, time: number, skillHealthMultiplier: num
   }
 }
 
-function consumePvpHits(source: PvpActor, target: PvpActor, time: number): { damage: number; heal: number } {
+function consumePvpHits(source: PvpActor, target: PvpActor, time: number, model: CombatModelSettings, rng: () => number): { damage: number; heal: number } {
   let damage = 0;
   let heal = 0;
   for (let index = source.pendingHits.length - 1; index >= 0; index -= 1) {
     const hit = source.pendingHits[index];
     if (hit.time > time + 0.000001) continue;
-    const dealt = hit.skill.damagePerHit * hit.weight * Math.max(0.05, 1 - target.combat.block);
+    const dealt = blockedDamage(hit.skill.damagePerHit * hit.weight, target.combat.block, 1, model, rng).damage;
     damage += dealt;
     heal += hit.skill.healPerHit * hit.weight;
     source.skillDamage += Math.min(target.health, dealt);
@@ -1328,6 +1606,7 @@ function nextPvpEvent(actor: PvpActor): number {
 }
 
 function resolveScenarioSet(combat: CombatProfile, settings: ScenarioSettings = {}, profile?: NormalizedProfile, data?: GameDataBundle): ResolvedScenarioSet {
+  const model = resolveModel(settings.model);
   const levelRange = resolveLevelRange(settings.levelRange, profile, data);
   const endurance = { ...DEFAULT_SCENARIOS.endurance, ...(settings.endurance || {}) };
   const timeToKill = { ...DEFAULT_SCENARIOS.timeToKill, ...(settings.timeToKill || {}) };
@@ -1341,6 +1620,7 @@ function resolveScenarioSet(combat: CombatProfile, settings: ScenarioSettings = 
   const targetDps = target?.peakDps;
 
   return {
+    model,
     levelRange,
     endurance: {
       startDamagePct: enduranceStartPct,
@@ -1428,7 +1708,12 @@ function resolveBattleTarget(data: GameDataBundle, visibleAge: number, visibleCo
   const waves: BattleWaveTarget[] = battle.Waves.map((wave: any, waveIndex: number) => {
     let totalHealth = 0;
     let totalDps = 0;
+    let totalHitRate = 0;
     let enemyCount = 0;
+    let meleeEnemyCount = 0;
+    let rangedEnemyCount = 0;
+    let meleeDps = 0;
+    let rangedDps = 0;
     for (const enemy of wave.Enemies || []) {
       const count = Math.max(0, Math.round(readNumber(enemy.Count)));
       const enemyDefinition = enemyLibrary[String(enemy.Id)] || enemyLibrary[enemy.Id];
@@ -1437,11 +1722,20 @@ function resolveBattleTarget(data: GameDataBundle, visibleAge: number, visibleCo
       const attackDuration = Math.max(0.2, readNumber(weaponInfo?.AttackDuration) || 1.5);
       const health = baseHealth * MAIN_BATTLE_ENEMY_SCALE * healthDifficultyMultiplier;
       const damagePerHit = baseDamage * (isRanged ? enemyRangedMulti : 1) * MAIN_BATTLE_ENEMY_SCALE * damageDifficultyMultiplier;
+      const dps = (damagePerHit / attackDuration) * count;
       totalHealth += health * count;
-      totalDps += (damagePerHit / attackDuration) * count;
+      totalDps += dps;
+      totalHitRate += count / attackDuration;
       enemyCount += count;
+      if (isRanged) {
+        rangedEnemyCount += count;
+        rangedDps += dps;
+      } else {
+        meleeEnemyCount += count;
+        meleeDps += dps;
+      }
     }
-    return { waveIndex, totalHealth, totalDps, enemyCount };
+    return { waveIndex, totalHealth, totalDps, totalHitRate, enemyCount, meleeEnemyCount, rangedEnemyCount, meleeDps, rangedDps };
   });
 
   return {
@@ -1452,9 +1746,13 @@ function resolveBattleTarget(data: GameDataBundle, visibleAge: number, visibleCo
     difficulty,
     waveCount: waves.length,
     enemyCount: waves.reduce((sum, wave) => sum + wave.enemyCount, 0),
+    meleeEnemyCount: waves.reduce((sum, wave) => sum + wave.meleeEnemyCount, 0),
+    rangedEnemyCount: waves.reduce((sum, wave) => sum + wave.rangedEnemyCount, 0),
     totalHealth: waves.reduce((sum, wave) => sum + wave.totalHealth, 0),
     peakDps: Math.max(...waves.map((wave) => wave.totalDps), 0),
     averageDps: waves.reduce((sum, wave) => sum + wave.totalDps, 0) / Math.max(1, waves.length),
+    meleeDps: waves.reduce((sum, wave) => sum + wave.meleeDps, 0),
+    rangedDps: waves.reduce((sum, wave) => sum + wave.rangedDps, 0),
     waves
   };
 }
@@ -1513,17 +1811,21 @@ function progressMultiplier(age: number, combat: number, referenceAge: number, r
 
 function evaluateScenarios(combat: CombatProfile, scenarioSet: ResolvedScenarioSet): ScenarioResult[] {
   return [
-    simulateEndurance(combat, scenarioSet.endurance, scenarioSet.levelRange),
-    simulateTimeToKill(combat, scenarioSet.timeToKill, scenarioSet.levelRange),
-    simulateGauntlet(combat, scenarioSet.gauntlet, scenarioSet.levelRange)
+    simulateEndurance(combat, scenarioSet.endurance, scenarioSet.levelRange, scenarioSet.model),
+    simulateTimeToKill(combat, scenarioSet.timeToKill, scenarioSet.levelRange, scenarioSet.model),
+    simulateGauntlet(combat, scenarioSet.gauntlet, scenarioSet.levelRange, scenarioSet.model)
   ];
 }
 
-function simulateEndurance(combat: CombatProfile, scenario: ResolvedScenarioSet["endurance"], levelRange: ResolvedLevelRange): ScenarioResult {
-  const mitigation = Math.max(0.05, 1 - combat.block);
-  const startDamage = scenario.startDamagePerSecond * mitigation;
+function simulateEndurance(combat: CombatProfile, scenario: ResolvedScenarioSet["endurance"], levelRange: ResolvedLevelRange, model: CombatModelSettings): ScenarioResult {
+  return scenarioTrials(model, "endurance", (seed) => simulateEnduranceOnce(combat, scenario, levelRange, model, seed));
+}
+
+function simulateEnduranceOnce(combat: CombatProfile, scenario: ResolvedScenarioSet["endurance"], levelRange: ResolvedLevelRange, model: CombatModelSettings, seed: number): ScenarioResult {
+  const block = blockFactor(combat.block, Math.max(1, Math.round(scenario.maxSeconds)), model, seededRandom(seed));
+  const startDamage = scenario.startDamagePerSecond * block.factor;
   const levelGrowthDamage = combat.maxHealth * scenario.startDamagePct / 100 * Math.max(0, levelRange.endMultiplier - levelRange.startMultiplier) / Math.max(1, scenario.maxSeconds);
-  const growth = (scenario.growthDamagePerSecond + levelGrowthDamage) * mitigation;
+  const growth = (scenario.growthDamagePerSecond + levelGrowthDamage) * block.factor;
   const baseNet = startDamage - combat.healingPerSecond;
   let timeAlive = scenario.maxSeconds;
 
@@ -1550,6 +1852,8 @@ function simulateEndurance(combat: CombatProfile, scenario: ResolvedScenarioSet[
       startDamagePerSecond: startDamage,
       damagePerSecondAtEnd: incomingAtEnd,
       healingPerSecond: combat.healingPerSecond,
+      ...modelMetrics(model, block),
+      ...enemyMetrics(levelRange),
       targetEnemyDps: levelRange.battleTarget?.peakDps || 0,
       targetEnemyHealth: levelRange.battleTarget?.totalHealth || 0,
       realBattleData: levelRange.battleTarget ? 1 : 0,
@@ -1565,13 +1869,22 @@ function simulateEndurance(combat: CombatProfile, scenario: ResolvedScenarioSet[
   };
 }
 
-function simulateTimeToKill(combat: CombatProfile, scenario: ResolvedScenarioSet["timeToKill"], levelRange: ResolvedLevelRange): ScenarioResult {
-  const incoming = scenario.incomingDamagePerSecond * Math.max(0.05, 1 - combat.block);
+function simulateTimeToKill(combat: CombatProfile, scenario: ResolvedScenarioSet["timeToKill"], levelRange: ResolvedLevelRange, model: CombatModelSettings): ScenarioResult {
+  return scenarioTrials(model, "timeToKill", (seed) => simulateTimeToKillOnce(combat, scenario, levelRange, model, seed));
+}
+
+function simulateTimeToKillOnce(combat: CombatProfile, scenario: ResolvedScenarioSet["timeToKill"], levelRange: ResolvedLevelRange, model: CombatModelSettings, seed: number): ScenarioResult {
+  const incoming = scenario.incomingDamagePerSecond * averageBlockFactor(combat.block);
   const encounter = simulateEncounter(combat, [{
     enemyCount: 1,
     totalHealth: scenario.mobHealth,
-    totalDps: scenario.incomingDamagePerSecond
-  }], scenario.maxSeconds);
+    totalDps: scenario.incomingDamagePerSecond,
+    totalHitRate: 1,
+    meleeEnemyCount: 1,
+    rangedEnemyCount: 0,
+    meleeDps: scenario.incomingDamagePerSecond,
+    rangedDps: 0
+  }], scenario.maxSeconds, 0, model, seed);
   const killTime = encounter.success ? encounter.totalTime : scenario.maxSeconds;
   const deathTime = encounter.died ? encounter.totalTime : scenario.maxSeconds;
   const timeSpent = encounter.totalTime;
@@ -1597,6 +1910,17 @@ function simulateTimeToKill(combat: CombatProfile, scenario: ResolvedScenarioSet
       aoeDamage: encounter.aoeDamage,
       skillCasts: encounter.skillCasts,
       skillHits: encounter.skillHits,
+      ...modelMetrics(model, encounter),
+      ...enemyMetrics(levelRange, [{
+        enemyCount: 1,
+        totalHealth: scenario.mobHealth,
+        totalDps: scenario.incomingDamagePerSecond,
+        totalHitRate: 1,
+        meleeEnemyCount: 1,
+        rangedEnemyCount: 0,
+        meleeDps: scenario.incomingDamagePerSecond,
+        rangedDps: 0
+      }]),
       targetEnemyDps: levelRange.battleTarget?.peakDps || 0,
       targetEnemyHealth: levelRange.battleTarget?.totalHealth || 0,
       realBattleData: levelRange.battleTarget ? 1 : 0,
@@ -1612,21 +1936,31 @@ function simulateTimeToKill(combat: CombatProfile, scenario: ResolvedScenarioSet
   };
 }
 
-function simulateGauntlet(combat: CombatProfile, scenario: ResolvedScenarioSet["gauntlet"], levelRange: ResolvedLevelRange): ScenarioResult {
-  if (scenario.waves?.length) return simulateBattleWaves(combat, scenario, levelRange);
+function simulateGauntlet(combat: CombatProfile, scenario: ResolvedScenarioSet["gauntlet"], levelRange: ResolvedLevelRange, model: CombatModelSettings): ScenarioResult {
+  if (scenario.waves?.length) return simulateBattleWaves(combat, scenario, levelRange, model);
 
-  const mitigation = Math.max(0.05, 1 - combat.block);
+  const mitigation = averageBlockFactor(combat.block);
   const healthGrowth = 1 + scenario.healthGrowthPct / 100;
   const damageGrowth = 1 + scenario.damageGrowthPct / 100;
   const waves = Array.from({ length: scenario.mobCount }, (_, index) => {
     const mobLevelMultiplier = levelRange.averageMultiplier;
+    const totalDps = scenario.firstDamagePerSecond * Math.pow(damageGrowth, index) * mobLevelMultiplier;
     return {
       enemyCount: 1,
       totalHealth: scenario.firstMobHealth * Math.pow(healthGrowth, index) * mobLevelMultiplier,
-      totalDps: scenario.firstDamagePerSecond * Math.pow(damageGrowth, index) * mobLevelMultiplier
+      totalDps,
+      totalHitRate: 1,
+      meleeEnemyCount: 1,
+      rangedEnemyCount: 0,
+      meleeDps: totalDps,
+      rangedDps: 0
     };
   });
-  const encounter = simulateEncounter(combat, waves, scenario.maxSeconds, scenario.pauseSeconds);
+  return scenarioTrials(model, "gauntlet", (seed) => simulateGauntletOnce(combat, scenario, levelRange, model, seed, waves, mitigation, damageGrowth));
+}
+
+function simulateGauntletOnce(combat: CombatProfile, scenario: ResolvedScenarioSet["gauntlet"], levelRange: ResolvedLevelRange, model: CombatModelSettings, seed: number, waves: EncounterWave[], mitigation: number, damageGrowth: number): ScenarioResult {
+  const encounter = simulateEncounter(combat, waves, scenario.maxSeconds, scenario.pauseSeconds, model, seed);
   const killed = encounter.killedEnemies;
   const success = encounter.success;
   const remainingHealthPct = encounter.currentMaxHealth <= 0 ? 0 : encounter.currentHealth / encounter.currentMaxHealth;
@@ -1651,6 +1985,8 @@ function simulateGauntlet(combat: CombatProfile, scenario: ResolvedScenarioSet["
       aoeDamage: encounter.aoeDamage,
       skillCasts: encounter.skillCasts,
       skillHits: encounter.skillHits,
+      ...modelMetrics(model, encounter),
+      ...enemyMetrics(levelRange, waves),
       targetEnemyDps: levelRange.battleTarget?.peakDps || 0,
       targetEnemyHealth: levelRange.battleTarget?.totalHealth || 0,
       realBattleData: levelRange.battleTarget ? 1 : 0,
@@ -1666,10 +2002,14 @@ function simulateGauntlet(combat: CombatProfile, scenario: ResolvedScenarioSet["
   };
 }
 
-function simulateBattleWaves(combat: CombatProfile, scenario: ResolvedScenarioSet["gauntlet"], levelRange: ResolvedLevelRange): ScenarioResult {
+function simulateBattleWaves(combat: CombatProfile, scenario: ResolvedScenarioSet["gauntlet"], levelRange: ResolvedLevelRange, model: CombatModelSettings): ScenarioResult {
   const waves = scenario.waves || [];
-  const mitigation = Math.max(0.05, 1 - combat.block);
-  const encounter = simulateEncounter(combat, waves, scenario.maxSeconds, scenario.pauseSeconds);
+  return scenarioTrials(model, "gauntlet", (seed) => simulateBattleWavesOnce(combat, scenario, levelRange, model, seed, waves));
+}
+
+function simulateBattleWavesOnce(combat: CombatProfile, scenario: ResolvedScenarioSet["gauntlet"], levelRange: ResolvedLevelRange, model: CombatModelSettings, seed: number, waves: EncounterWave[]): ScenarioResult {
+  const mitigation = averageBlockFactor(combat.block);
+  const encounter = simulateEncounter(combat, waves, scenario.maxSeconds, scenario.pauseSeconds, model, seed);
   const success = encounter.success;
   const remainingHealthPct = encounter.currentMaxHealth <= 0 ? 0 : encounter.currentHealth / encounter.currentMaxHealth;
   const totalEnemyHealth = waves.reduce((sum, wave) => sum + wave.totalHealth, 0);
@@ -1700,6 +2040,8 @@ function simulateBattleWaves(combat: CombatProfile, scenario: ResolvedScenarioSe
       aoeDamage: encounter.aoeDamage,
       skillCasts: encounter.skillCasts,
       skillHits: encounter.skillHits,
+      ...modelMetrics(model, encounter),
+      ...enemyMetrics(levelRange, waves),
       realBattleData: 1,
       age: levelRange.age,
       combat: levelRange.combat,
@@ -1715,19 +2057,97 @@ function simulateBattleWaves(combat: CombatProfile, scenario: ResolvedScenarioSe
   };
 }
 
+function scenarioTrials(model: CombatModelSettings, id: ScenarioId, run: (seed: number) => ScenarioResult): ScenarioResult {
+  const trials = model.blockMode === "rng" ? model.trials : 1;
+  const results = Array.from({ length: trials }, (_, index) => run(hashSeed(model.seed, id, index)));
+  if (results.length === 1) return withTrialMetrics(results[0], 1);
+  const first = results[0];
+  const successRate = results.filter((result) => result.success).length / results.length * 100;
+  const metrics: Record<string, number | string> = {};
+  for (const key of new Set(results.flatMap((result) => Object.keys(result.metrics)))) {
+    const values = results.map((result) => result.metrics[key]);
+    metrics[key] = values.every((value) => typeof value === "number")
+      ? (values as number[]).reduce((sum, value) => sum + value, 0) / values.length
+      : values.find((value) => typeof value === "string") || "";
+  }
+  metrics.trials = results.length;
+  metrics.successRate = successRate;
+  const score = results.reduce((sum, result) => sum + result.score, 0) / results.length;
+  const success = successRate >= 50;
+  return { ...first, score, success, summary: scenarioSummary(first, metrics, success), metrics };
+}
+
+function withTrialMetrics(result: ScenarioResult, trials: number): ScenarioResult {
+  return {
+    ...result,
+    metrics: {
+      ...result.metrics,
+      trials,
+      successRate: result.success ? 100 : 0
+    }
+  };
+}
+
+function scenarioSummary(result: ScenarioResult, metrics: Record<string, number | string>, success: boolean): string {
+  const n = (key: string) => Number(metrics[key] || 0);
+  if (result.id === "endurance") return success ? `Tient ${format(n("timeAlive"), 1)}s+` : `Tombe a ${format(n("timeAlive"), 1)}s`;
+  if (result.id === "timeToKill") return success ? `Tue en ${format(n("killTime"), 1)}s` : `Echoue a ${format(n("totalTime") || n("killTime"), 1)}s`;
+  if (result.label === "Combat cible") return success ? `Passe ${battleModeLabel(n("difficulty"))} ${format(n("age"), 0)}-${format(n("combat"), 0)} en ${format(n("totalTime"), 1)}s` : `${format(n("clearedWaves"), 0)}/${format(n("waveCount"), 0)} vagues avant chute`;
+  return success ? `${format(n("killed"), 0)}/${format(n("mobCount"), 0)} en ${format(n("totalTime"), 1)}s` : `${format(n("killed"), 0)}/${format(n("mobCount"), 0)} avant chute`;
+}
+
+function modelMetrics(model: CombatModelSettings, source: { blockedHits?: number; totalHits?: number; totalIncomingHits?: number }): Record<string, number> {
+  const totalHits = Number(source.totalIncomingHits ?? source.totalHits ?? 0);
+  const blockedHits = Number(source.blockedHits || 0);
+  return {
+    trials: model.blockMode === "rng" ? model.trials : 1,
+    successRate: 0,
+    blockRate: totalHits > 0 ? blockedHits / totalHits * 100 : 0
+  };
+}
+
+function enemyMetrics(levelRange: ResolvedLevelRange, waves?: EncounterWave[]): Record<string, number | string> {
+  const target = levelRange.battleTarget;
+  const meleeEnemyCount = target?.meleeEnemyCount ?? sumWaveMetric(waves, "meleeEnemyCount");
+  const rangedEnemyCount = target?.rangedEnemyCount ?? sumWaveMetric(waves, "rangedEnemyCount");
+  const meleeDps = target?.meleeDps ?? sumWaveMetric(waves, "meleeDps");
+  const rangedDps = target?.rangedDps ?? sumWaveMetric(waves, "rangedDps");
+  return {
+    enemyMode: meleeEnemyCount > 0 && rangedEnemyCount > 0 ? "mixed" : rangedEnemyCount > 0 ? "ranged" : meleeEnemyCount > 0 ? "melee" : "unknown",
+    meleeEnemyCount,
+    rangedEnemyCount,
+    meleeDps,
+    rangedDps
+  };
+}
+
+function sumWaveMetric(waves: EncounterWave[] | undefined, key: keyof EncounterWave): number {
+  return (waves || []).reduce((sum, wave) => sum + Number(wave[key] || 0), 0);
+}
+
+function recommendationScenarioSet(scenarioSet: ResolvedScenarioSet): ResolvedScenarioSet {
+  if (scenarioSet.model.blockMode !== "rng" || scenarioSet.model.trials <= 4) return scenarioSet;
+  // ponytail: hundreds of candidates do not need 64 full RNG passes; same V3 formula, capped seed set.
+  return { ...scenarioSet, model: { ...scenarioSet.model, trials: 4 } };
+}
+
 function recommend(
   profile: NormalizedProfile,
   data: GameDataBundle,
   objective: Objective,
   fightDuration: number,
   opponent?: NormalizedProfile,
-  scenarioSet = resolveScenarioSet(combatProfile(profile, data, fightDuration), {}, profile, data),
-  baseScenarios = evaluateScenarios(combatProfile(profile, data, fightDuration), scenarioSet)
+  scenarioSet = resolveScenarioSet(combatProfile(profile, data, fightDuration, DEFAULT_MODEL), {}, profile, data),
+  baseScenarios = evaluateScenarios(combatProfile(profile, data, fightDuration, scenarioSet.model), scenarioSet)
 ): Recommendation[] {
-  const baseScore = scoreNormalized(profile, data, objective, fightDuration, opponent, scenarioSet);
-  const lineRecs = recommendSecondaryLines(profile, data, objective, fightDuration, baseScore, scenarioSet, baseScenarios, opponent);
+  const recScenarioSet = recommendationScenarioSet(scenarioSet);
+  const recBaseScenarios = recScenarioSet === scenarioSet
+    ? baseScenarios
+    : evaluateScenarios(combatProfile(profile, data, fightDuration, recScenarioSet.model), recScenarioSet);
+  const baseScore = scoreNormalized(profile, data, objective, fightDuration, opponent, recScenarioSet);
+  const lineRecs = recommendSecondaryLines(profile, data, objective, fightDuration, baseScore, recScenarioSet, recBaseScenarios, opponent);
   const pvpMode = Boolean(opponent && (objective === "pvp" || objective === "balanced"));
-  const baseChance = pvpMode ? simulatePvpDuel(profile, opponent!, data, fightDuration).chance : undefined;
+  const baseChance = pvpMode ? simulatePvpDuel(profile, opponent!, data, fightDuration, recScenarioSet.model).chance : undefined;
 
   const talentRecs = data.normalized.techNodes.flatMap((node) => {
     const currentLevel = readNumber(profile.talentTree?.[node.tree]?.[node.id]);
@@ -1736,8 +2156,8 @@ function recommend(
     if (!next.talentTree[node.tree]) next.talentTree[node.tree] = {};
     next.talentTree[node.tree][node.id] = currentLevel + 1;
     applyTalentDeltaForRecommendation(next, node);
-    const { score, scenarios, pvpChance } = scoreRecommendationCandidate(next, data, objective, fightDuration, opponent, scenarioSet);
-    const scenario = bestScenarioDelta(baseScenarios, scenarios);
+    const { score, scenarios, pvpChance } = scoreRecommendationCandidate(next, data, objective, fightDuration, opponent, recScenarioSet);
+    const scenario = bestScenarioDelta(recBaseScenarios, scenarios);
     const chanceDelta = pvpChance !== undefined && baseChance !== undefined ? pvpChance - baseChance : undefined;
     return [{
       kind: "talent" as const,
@@ -1752,7 +2172,35 @@ function recommend(
     }];
   });
 
-  return [...lineRecs, ...talentRecs.filter((rec) => rec.gain > 0)].sort((a, b) => b.gain - a.gain);
+  const spellRecs = profile.spells.flatMap((spell) => {
+    const currentLevel = clamp(Math.round(readNumber(spell.level)), 1, 100);
+    if (currentLevel >= 100) return [];
+    const next = cloneProfile(profile);
+    const selected = next.spells.find((entry) => entry.id === spell.id);
+    if (!selected) return [];
+    selected.level = currentLevel + 1;
+    const { score, scenarios } = scoreRecommendationCandidate(next, data, objective, fightDuration, opponent, recScenarioSet);
+    const gain = score - baseScore;
+    if (gain <= 0.0001) return [];
+    const scenario = bestScenarioDelta(recBaseScenarios, scenarios);
+    const name = data.normalized.spells.find((entry) => entry.id === spell.id)?.name || spell.id;
+    return [{
+      kind: "spell" as const,
+      title: `${name}: niveau ${currentLevel + 1}`,
+      detail: `Gain estime ${format(gain, 3)}. Impact principal: ${scenario.label} ${formatSigned(scenario.delta, 3)}.`,
+      gain,
+      scenario: scenario.label,
+      source: "Sorts"
+    }];
+  });
+
+  const ranked = [...lineRecs, ...spellRecs, ...talentRecs.filter((rec) => rec.gain > 0)].sort((a, b) => b.gain - a.gain);
+  const visible = ranked.slice(0, 3);
+  for (const kind of ["spell", "talent"] as const) {
+    const recommendation = ranked.find((entry) => entry.kind === kind && !visible.includes(entry));
+    if (recommendation) visible.push(recommendation);
+  }
+  return [...visible, ...ranked.filter((recommendation) => !visible.includes(recommendation))];
 }
 
 function recommendLegacy(profile: NormalizedProfile, data: GameDataBundle, objective: Objective, fightDuration: number, opponent?: NormalizedProfile): Recommendation[] {
@@ -1833,7 +2281,7 @@ function recommendSecondaryLines(
   const sources = secondaryRecommendationSources(profile);
   const recommendations = new Map<string, AggregatedLineRecommendation>();
   const pvpMode = Boolean(opponent && (objective === "pvp" || objective === "balanced"));
-  const baseChance = pvpMode ? simulatePvpDuel(profile, opponent!, data, fightDuration).chance : undefined;
+  const baseChance = pvpMode ? simulatePvpDuel(profile, opponent!, data, fightDuration, scenarioSet.model).chance : undefined;
 
   for (const source of sources) {
     const carrier = source.read(profile);
@@ -1878,12 +2326,18 @@ function recommendSecondaryLines(
     }
   }
 
+  const usedPlacements = new Set<string>();
   return Array.from(recommendations.values())
+    .sort((a, b) => b.gain - a.gain)
+    .filter((recommendation) => {
+      if (usedPlacements.has(recommendation.bestPlacement)) return false;
+      usedPlacements.add(recommendation.bestPlacement);
+      return true;
+    })
     .map(({ placements, bestPlacement: _bestPlacement, ...rec }) => ({
       ...rec,
       detail: `${rec.detail}${placements.length > 1 ? ` Emplacements equivalents: ${placements.slice(0, 6).join(", ")}${placements.length > 6 ? `, +${placements.length - 6}` : ""}.` : ""}`
-    }))
-    .sort((a, b) => b.gain - a.gain);
+    }));
 }
 
 function secondaryRecommendationSources(profile: NormalizedProfile): SecondaryRecommendationSource[] {
@@ -1968,10 +2422,10 @@ function scoreRecommendationCandidate(
   opponent: NormalizedProfile | undefined,
   scenarioSet: ResolvedScenarioSet
 ) {
-  const combat = combatProfile(profile, data, fightDuration);
+  const combat = combatProfile(profile, data, fightDuration, scenarioSet.model);
   const scenarios = evaluateScenarios(combat, scenarioSet);
   const pvpChance = opponent && (objective === "pvp" || objective === "balanced")
-    ? simulatePvpDuel(profile, opponent, data, fightDuration).chance
+    ? simulatePvpDuel(profile, opponent, data, fightDuration, scenarioSet.model).chance
     : undefined;
   const score = opponent && (objective === "pvp" || objective === "balanced")
     ? objective === "balanced"
@@ -2023,10 +2477,11 @@ function applyTalentSlotDelta(profile: NormalizedProfile, slot: EquipmentSlot, s
 }
 
 function scoreNormalized(profile: NormalizedProfile, data: GameDataBundle, objective: Objective, fightDuration: number, opponent?: NormalizedProfile, scenarioSet?: ResolvedScenarioSet): number {
-  const playerCombat = combatProfile(profile, data, fightDuration);
+  const model = scenarioSet?.model || DEFAULT_MODEL;
+  const playerCombat = combatProfile(profile, data, fightDuration, model);
   const scenarios = scenarioSet ? evaluateScenarios(playerCombat, scenarioSet) : undefined;
   if (opponent && (objective === "pvp" || objective === "balanced")) {
-    const chance = simulatePvpDuel(profile, opponent, data, fightDuration).chance;
+    const chance = simulatePvpDuel(profile, opponent, data, fightDuration, model).chance;
     return objective === "balanced" ? scoreCombat(playerCombat, "progress", scenarios) * 0.55 + (chance / 10) * 0.45 : chance / 10;
   }
   return scoreCombat(playerCombat, objective, scenarios);
@@ -2084,6 +2539,57 @@ function active(stats: StatMap, id: StatId): number {
   const value = Number(stats[id] || 0);
   const cap = HARD_CAPS[id];
   return cap ? Math.min(value, cap) : value;
+}
+
+function resolveModel(input?: Partial<CombatModelSettings>): CombatModelSettings {
+  return {
+    damageStacking: input?.damageStacking === "multiplicative" ? "multiplicative" : "additive",
+    blockMode: input?.blockMode === "average" ? "average" : "rng",
+    trials: clamp(Math.round(readNumber(input?.trials) || DEFAULT_MODEL.trials), 1, 200),
+    seed: Math.round(readNumber(input?.seed) || DEFAULT_MODEL.seed)
+  };
+}
+
+function averageBlockFactor(block: number): number {
+  return clamp(1 - block, 0, 1);
+}
+
+function blockFactor(block: number, hitCount: number, model: CombatModelSettings, rng: () => number) {
+  const totalHits = Math.max(1, Math.round(hitCount));
+  if (model.blockMode === "average") {
+    const blockedHits = clamp(block, 0, 1) * totalHits;
+    return { factor: averageBlockFactor(block), blockedHits, totalHits };
+  }
+  let blockedHits = 0;
+  const chance = clamp(block, 0, 1);
+  for (let index = 0; index < totalHits; index += 1) if (rng() < chance) blockedHits += 1;
+  return { factor: (totalHits - blockedHits) / totalHits, blockedHits, totalHits };
+}
+
+function blockedDamage(rawDamage: number, block: number, hitCount: number, model: CombatModelSettings, rng: () => number) {
+  const blockRoll = blockFactor(block, hitCount, model, rng);
+  return { damage: Math.max(0, rawDamage) * blockRoll.factor, blockedHits: blockRoll.blockedHits, totalHits: blockRoll.totalHits };
+}
+
+function weaponHitRate(combat: CombatProfile): number {
+  return Math.max(1, Number(combat.breakdown.attackSpeed || 1) * Number(combat.breakdown.doubleHit || 1));
+}
+
+function seededRandom(seed: number): () => number {
+  let state = seed >>> 0;
+  return () => {
+    state = (state + 0x6D2B79F5) >>> 0;
+    let value = state;
+    value = Math.imul(value ^ value >>> 15, value | 1);
+    value ^= value + Math.imul(value ^ value >>> 7, value | 61);
+    return ((value ^ value >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+function hashSeed(seed: number, label: string, index: number): number {
+  let hash = seed >>> 0;
+  for (const char of label) hash = Math.imul(hash ^ char.charCodeAt(0), 16777619);
+  return (hash ^ Math.imul(index + 1, 2246822519)) >>> 0;
 }
 
 function readNumber(value: unknown): number {

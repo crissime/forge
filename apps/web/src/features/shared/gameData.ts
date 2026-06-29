@@ -31,7 +31,7 @@ export function calculateItemValues(
 ) {
   const cleanAge = Math.round(Number(age || 0));
   const cleanIdx = Math.round(Number(idx || 0));
-  const cleanLevel = clamp(Math.round(Number(level || 1)), 1, itemConfig.maxLevel || 98);
+  const cleanLevel = Math.max(1, Math.round(Number(level || 1)));
   const base = resolveItemBase(slot, cleanAge, cleanIdx, itemBases);
   const levelMulti = Math.pow(Number(itemConfig.levelScalingBase || 1.01), cleanLevel - 1);
   const meleeMulti = slot === "Weapon" && base?.isRanged === false
@@ -88,6 +88,7 @@ export function calculateMountValues(
   return {
     rarity: cleanRarity,
     id: model?.id ?? Math.round(Number(id || 0)),
+    name: model?.name || `Monture ${Math.round(Number(id || 0)) + 1}`,
     level: cleanLevel,
     attack: Number(levelInfo?.attack || 0),
     health: Number(levelInfo?.health || 0),
@@ -134,6 +135,13 @@ export function firstMountModel(rarity: string, models: MountModel[]) {
     .sort((left, right) => left.id - right.id)[0];
 }
 
+export function mountModelFor(rarity: string, id: number, models: MountModel[]) {
+  return models.find((entry) =>
+    normalizeRarity(entry.rarity) === normalizeRarity(rarity) &&
+    entry.id === Math.round(Number(id || 0))
+  );
+}
+
 export function petModelsFor(rarity: string, models: PetModel[]) {
   return models
     .filter((model) => normalizeRarity(model.rarity) === normalizeRarity(rarity))
@@ -143,6 +151,11 @@ export function petModelsFor(rarity: string, models: PetModel[]) {
 export function petDisplayName(pet: NormalizedPet | undefined, models: PetModel[]) {
   if (!pet) return undefined;
   return petModelFor(normalizeRarity(pet.rarity), Number(pet.id ?? 0), models)?.name || pet.name;
+}
+
+export function mountDisplayName(mount: { name: string; rarity?: string; id?: number } | null, models: MountModel[]) {
+  if (!mount) return undefined;
+  return mountModelFor(normalizeRarity(mount.rarity), Number(mount.id ?? 0), models)?.name || mount.name;
 }
 
 export function mountModelsFor(rarity: string, models: MountModel[]) {

@@ -1,11 +1,13 @@
-import type { NormalizedProfile, StatMap } from "@forge-master/simulator";
+import type { NormalizedProfile, Objective, StatMap } from "@forge-master/simulator";
 import type { AgeOption, BisAccess } from "../../types";
 import { normalizeRarity, rarityValues } from "../shared/gameData";
+import simulatedBis from "./simulatedBis.json";
 
 export type BisStatTarget = {
   stat: keyof StatMap;
   label: string;
   target?: string;
+  count?: number;
 };
 
 export type BisReference = {
@@ -40,98 +42,51 @@ const EQUIPMENT_SLOTS = [
   "Shoe"
 ] as const;
 
-const EARLY_STATS: BisStatTarget[] = [
-  { stat: "attackSpeed", label: "Vitesse d'attaque" },
-  { stat: "lifesteal", label: "Vol de vie" },
-  { stat: "regen", label: "Régénération" }
-];
-
-const MODERN_STATS: BisStatTarget[] = [
-  { stat: "doubleChance", label: "Double attaque", target: "100%" },
-  { stat: "attackSpeed", label: "Vitesse d'attaque", target: "88%+" },
-  { stat: "lifesteal", label: "Vol de vie", target: "40%+" },
-  { stat: "regen", label: "Régénération", target: "5-20%" }
-];
-
-const MID_STATS: BisStatTarget[] = [
-  { stat: "doubleChance", label: "Double attaque", target: "100%" },
-  { stat: "attackSpeed", label: "Vitesse d'attaque", target: "88%+" },
-  { stat: "lifesteal", label: "Vol de vie", target: "40%+" },
-  { stat: "skillDamage", label: "Dégâts des sorts", target: "20-40%" }
-];
-
-const LATE_STATS: BisStatTarget[] = [
-  { stat: "critChance", label: "Chance critique", target: "50%+" },
-  { stat: "critDamage", label: "Dégâts critiques", target: "500%+" },
-  { stat: "doubleChance", label: "Double attaque", target: "100%" },
-  { stat: "attackSpeed", label: "Vitesse d'attaque", target: "115%+" },
-  { stat: "lifesteal", label: "Vol de vie", target: "50%+" }
-];
-
-export function bisReferenceForAge(age: number, ageOptions: AgeOption[]): BisReference {
-  const cleanAge = Math.min(9, Math.max(0, Math.round(Number(age || 0))));
-  const ageLabel = ageOptions.find((option) => option.value === cleanAge)?.label || `Âge ${cleanAge}`;
-
-  if (cleanAge <= 2) {
-    return {
-      age: cleanAge,
-      ageLabel,
-      phase: "Début de progression",
-      petRarity: cleanAge === 0 ? "Common" : "Rare",
-      mountRarity: cleanAge === 0 ? "Common" : "Rare",
-      spellRarity: cleanAge === 0 ? "Common" : "Rare",
-      stats: EARLY_STATS,
-      note: "Montez d'abord l'âge et le niveau des objets. Le sustain aide à pousser les premiers combats."
-    };
-  }
-
-  if (cleanAge <= 4) {
-    return {
-      age: cleanAge,
-      ageLabel,
-      phase: "Début de build",
-      petRarity: "Epic",
-      mountRarity: "Epic",
-      spellRarity: "Epic",
-      stats: MODERN_STATS,
-      note: "Les lignes secondaires commencent à compter davantage que quelques niveaux d'objet."
-    };
-  }
-
-  if (cleanAge <= 6) {
-    return {
-      age: cleanAge,
-      ageLabel,
-      phase: "Milieu de progression",
-      petRarity: "Epic",
-      mountRarity: "Epic",
-      spellRarity: "Epic",
-      stats: MID_STATS,
-      note: "Choisissez entre un build sorts ou un build polyvalent selon les recommandations du simulateur."
-    };
-  }
-
-  return {
-    age: cleanAge,
-    ageLabel,
-    phase: "Fin de progression",
-    petRarity: cleanAge === 7 ? "Legendary" : cleanAge === 8 ? "Ultimate" : "Mythic",
-    mountRarity: cleanAge === 7 ? "Legendary" : cleanAge === 8 ? "Ultimate" : "Mythic",
-    spellRarity: cleanAge === 7 ? "Legendary" : cleanAge === 8 ? "Ultimate" : "Mythic",
-    stats: LATE_STATS,
-    note: "Le critique devient prioritaire. Régénération et dégâts des sorts perdent généralement en rendement."
+type GeneratedCase = {
+  objective?: string;
+  lineCount?: number;
+  frontier?: { age: number; combat: number };
+  reach?: { age: number; combat: number; successCount?: number; scenarioCount?: number };
+  exhaustive?: boolean;
+  access?: { equipmentAge?: number };
+  winner?: {
+    stats?: Array<{ stat: string; label: string; count: number; total: number }>;
+    pets?: Array<{ name: string; type?: string }>;
   };
+};
+
+type GeneratedStat = { stat: string; label: string; count: number; total: number };
+type GeneratedPet = { name: string; type?: string };
+type FightPoint = { age: number; combat: number; successCount?: number; scenarioCount?: number };
+type GeneratedResult = {
+  objective: string;
+  lineCount: number;
+  stats: GeneratedStat[];
+  frontier?: FightPoint;
+  reach?: FightPoint;
+  pets: GeneratedPet[];
+  exhaustive: boolean;
+};
+
+export function bisReferenceForAge(age: number, ageOptions: AgeOption[], objective: Objective = "progress"): BisReference {
+  const cleanAge = Math.min(9, Math.max(0, Math.round(Number(age || 0))));
+  const ageLabel = ageOptions.find((option) => option.value === cleanAge)?.label || `Age ${cleanAge}`;
+  const rarity = rarityForAge(cleanAge);
+  return referenceForCase(cleanAge, ageLabel, objective, rarity, rarity, rarity);
 }
 
-export function bisReferenceForAccess(access: BisAccess, ageOptions: AgeOption[]): BisReference {
+export function bisReferenceForAccess(access: BisAccess, ageOptions: AgeOption[], objective: Objective = "progress"): BisReference {
   const age = highestNumber(access.equipmentAges || [], 0);
-  const baseline = bisReferenceForAge(age, ageOptions);
-  return {
-    ...baseline,
-    petRarity: highestRarity(access.petRarities || [], baseline.petRarity),
-    mountRarity: highestRarity(access.mountRarities || [], baseline.mountRarity),
-    spellRarity: highestRarity(access.spellRarities || [], baseline.spellRarity)
-  };
+  const ageLabel = ageOptions.find((option) => option.value === age)?.label || `Age ${age}`;
+  const baselineRarity = rarityForAge(age);
+  return referenceForCase(
+    age,
+    ageLabel,
+    objective,
+    highestRarity(access.petRarities || [], baselineRarity),
+    highestRarity(access.mountRarities || [], baselineRarity),
+    highestRarity(access.spellRarities || [], baselineRarity)
+  );
 }
 
 export function bisAccessFromProfile(
@@ -205,6 +160,105 @@ export function bisProgress(
   };
 }
 
+function referenceForCase(
+  age: number,
+  ageLabel: string,
+  objective: Objective,
+  petRarity: string,
+  mountRarity: string,
+  spellRarity: string
+): BisReference {
+  const result = simulatedResult(age, petRarity, mountRarity, spellRarity, objective);
+  const battle: FightPoint = result.frontier || { age: 1, combat: 1 };
+  const reach: FightPoint = result.reach || battle;
+  const stats = Array.isArray(result.stats) ? result.stats : [];
+  const lineCount = Number(result.lineCount || stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0));
+  const method = result.exhaustive ? "BIS exhaustif" : "Repartition simulee";
+  const reachText = `Front max estime : ${reach.age}-${reach.combat} normal${reach.successCount ? ` (${reach.successCount}/${reach.scenarioCount} scenarios reussis)` : ""}.`;
+  const petText = result.pets.length
+    ? ` Pets BIS : ${result.pets.map((pet) => `${pet.name} (${petTypeLabel(pet.type)})`).join(", ")}.`
+    : "";
+
+  return {
+    age,
+    ageLabel,
+    phase: age <= 2 ? "Debut de progression" : age <= 4 ? "Debut de build" : age <= 6 ? "Milieu de progression" : "Fin de progression",
+    petRarity,
+    mountRarity,
+    spellRarity,
+    stats: stats.map((stat) => ({
+      stat: stat.stat as keyof StatMap,
+      label: stat.label,
+      count: stat.count,
+      target: `${stat.count} ligne${stat.count > 1 ? "s" : ""} - ${formatPercent(stat.total)}`
+    })),
+    note: `${method} pour l'objectif ${objectiveLabel(result.objective)}, avec ${lineCount} lignes secondaires max. Niveau de test : ${battle.age}-${battle.combat} normal. ${reachText} Pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, niveaux max, sans talents.${petText}`
+  };
+}
+
+function simulatedResult(
+  age: number,
+  petRarity: string,
+  mountRarity: string,
+  spellRarity: string,
+  objective: Objective
+): GeneratedResult {
+  const normalizedObjective = objective === "damage" || objective === "survival" ? objective : "progress";
+  const key = [age, petRarity, mountRarity, spellRarity, normalizedObjective].join("|");
+  const generated = simulatedBis as { schema?: string; cases?: Record<string, GeneratedCase>; templates?: any[] };
+  const exhaustiveCase = generated.schema === "forge-master-exhaustive-bis-v1" ? generated.cases?.[key] : null;
+  if (exhaustiveCase?.winner) return exhaustiveResult(exhaustiveCase, true);
+
+  if (generated.schema === "forge-master-exhaustive-bis-v1") {
+    const cases = Object.values(generated.cases || {});
+    const fallback = cases.find((entry) =>
+      entry.objective === normalizedObjective && entry.access?.equipmentAge === age && entry.winner
+    ) || cases.find((entry) => entry.objective === normalizedObjective && entry.winner);
+    return fallback ? exhaustiveResult(fallback, false) : {
+      objective: normalizedObjective,
+      lineCount: 0,
+      stats: [],
+      frontier: undefined,
+      reach: undefined,
+      pets: [],
+      exhaustive: false
+    };
+  }
+
+  const templateId = generated.cases?.[key];
+  const template = generated.templates?.find((entry) => entry.id === templateId)
+    || generated.templates?.find((entry) => entry.objective === normalizedObjective)
+    || generated.templates?.[0];
+  return {
+    ...template,
+    frontier: undefined,
+    reach: undefined,
+    pets: [],
+    exhaustive: false
+  };
+}
+
+function exhaustiveResult(entry: GeneratedCase, exact: boolean) {
+  return {
+    objective: entry.objective || "progress",
+    lineCount: entry.lineCount || 0,
+    stats: entry.winner?.stats || [],
+    frontier: entry.frontier,
+    reach: entry.reach,
+    pets: entry.winner?.pets || [],
+    exhaustive: exact && entry.exhaustive !== false
+  };
+}
+
+function rarityForAge(age: number) {
+  if (age === 0) return "Common";
+  if (age <= 2) return "Rare";
+  if (age <= 6) return "Epic";
+  if (age === 7) return "Legendary";
+  if (age === 8) return "Ultimate";
+  return "Mythic";
+}
+
 function rarityRank(rarity?: string) {
   return rarityValues.indexOf(normalizeRarity(rarity));
 }
@@ -223,4 +277,21 @@ function raritiesThrough(rarity: string) {
 
 function highestNumber(values: number[], fallback: number) {
   return Math.max(fallback, ...values.map(Number));
+}
+
+function objectiveLabel(objective: string) {
+  if (objective === "damage") return "DPS";
+  if (objective === "survival") return "survie";
+  return "progression";
+}
+
+function formatPercent(value: number) {
+  return `${Number(value).toLocaleString("fr-FR", { maximumFractionDigits: 1 })}%`;
+}
+
+function petTypeLabel(type?: string) {
+  if (type === "Damage") return "Degats";
+  if (type === "Health") return "PV";
+  if (type === "Balanced") return "Equilibre";
+  return "type inconnu";
 }

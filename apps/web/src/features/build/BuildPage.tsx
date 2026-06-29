@@ -26,6 +26,7 @@ import {
   firstMountModel,
   firstPetModel,
   itemAllowsSecondLine,
+  mountDisplayName,
   mountModelsFor,
   normalizeRarity,
   petDisplayName,
@@ -39,6 +40,7 @@ import {
   weaponKindOptions,
   type WeaponKind
 } from "../shared/gameData";
+import { NumericInput } from "../shared/NumericInput";
 import ui from "../shared/ui.module.css";
 import styles from "./BuildPage.module.css";
 
@@ -80,6 +82,7 @@ export function BuildPage() {
   const setSelected = useWorkshop((state) => state.setSelected);
   const gameData = useWorkshop((state) => state.gameData);
   const petModels = gameData.normalized?.petModels || [];
+  const mountModels = gameData.normalized?.mountModels || [];
   if (!profile) return <BuildSkeleton />;
 
   const complete = [
@@ -153,7 +156,7 @@ export function BuildPage() {
         <CompanionButton
           kind="mount"
           label="Monture"
-          name={profile.mount?.name}
+          name={mountDisplayName(profile.mount, mountModels)}
           detail={profile.mount ? `Niv. ${profile.mount.level}` : "Vide"}
           onClick={() => setSelected({ kind: "mount", id: 0 })}
         />
@@ -366,7 +369,7 @@ function EquipmentEditor({
             </select>
           </label>
         )}
-        <NumberField label="Niveau" value={values.level} min={1} max={itemConfig.maxLevel} onChange={(level) => edit((draft) => {
+        <NumberField label="Niveau" value={values.level} min={1} integer onChange={(level) => edit((draft) => {
           applyItemSelection(draft, slot, values.age, weaponKind, level, itemBases, itemConfig, ageOptions);
         })} />
       </div>
@@ -425,7 +428,7 @@ function PetEditor({
             ))}
           </select>
         </label>
-        <NumberField label="Niveau" value={values.level} min={1} max={100} onChange={(level) => edit((draft) => {
+        <NumberField label="Niveau" value={values.level} min={1} max={100} integer onChange={(level) => edit((draft) => {
           applyPetSelection(draft, index, rarity, values.id, level, models, levels);
         })} />
         <div className={styles.petType}>
@@ -473,16 +476,16 @@ function MountEditor({
           if (model) edit((draft) => applyMountSelection(draft, nextRarity, model.id, values.level, models, levels));
         }} />
         <label className={ui.field}>
-          <span>Modèle</span>
+          <span>Monture</span>
           <select value={values.id} onChange={(event) => edit((draft) => {
             applyMountSelection(draft, rarity, Number(event.target.value), values.level, models, levels);
           })}>
-            {mountModelsFor(rarity, models).map((model, modelIndex) => (
-              <option key={model.id} value={model.id}>Modèle {modelIndex + 1}</option>
+            {mountModelsFor(rarity, models).map((model) => (
+              <option key={model.id} value={model.id}>{model.name}</option>
             ))}
           </select>
         </label>
-        <NumberField label="Niveau" value={values.level} min={1} max={100} onChange={(level) => edit((draft) => {
+        <NumberField label="Niveau" value={values.level} min={1} max={100} integer onChange={(level) => edit((draft) => {
           applyMountSelection(draft, rarity, values.id, level, models, levels);
         })} />
       </div>
@@ -519,7 +522,7 @@ function SpellEditor({
         <option value="">Aucun</option>
         {spells.map((spell) => <option key={spell.id} value={spell.id}>{spell.name} · {spell.rarity}</option>)}
       </select></label>
-      {current && <NumberField label="Niveau" value={current.level} onChange={(value) => edit((draft) => { draft.spells[index].level = value; })} />}
+      {current && <NumberField label="Niveau" value={current.level} integer onChange={(value) => edit((draft) => { draft.spells[index].level = value; })} />}
     </div>
   );
 }
@@ -570,15 +573,17 @@ function NumberField({
   value,
   min = 0,
   max,
+  integer,
   onChange
 }: {
   label: string;
   value: number;
   min?: number;
   max?: number;
+  integer?: boolean;
   onChange: (value: number) => void;
 }) {
-  return <label className={ui.field}><span>{label}</span><input type="number" min={min} max={max} value={Number.isFinite(value) ? value : min} onChange={(event) => onChange(Number(event.target.value) || min)} /></label>;
+  return <label className={ui.field}><span>{label}</span><NumericInput value={Number.isFinite(value) ? value : min} min={min} max={max} integer={integer} onChange={onChange} /></label>;
 }
 
 function RaritySelect({ value, onChange }: { value: string; onChange: (value: string) => void }) {
@@ -667,7 +672,7 @@ function applyMountSelection(
 ) {
   const values = calculateMountValues(rarity, id, level, models, levels);
   profile.mount = {
-    name: "Monture",
+    name: values.name,
     rarity: values.rarity,
     id: values.id,
     level: values.level,

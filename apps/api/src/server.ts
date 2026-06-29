@@ -49,6 +49,12 @@ const scenarioSettingsSchema = z.object({
     damageGrowthPct: z.number().min(-90).max(500).optional(),
     pauseSeconds: z.number().min(0).max(120).optional(),
     maxSeconds: z.number().min(5).max(7200).optional()
+  }).partial().optional(),
+  model: z.object({
+    damageStacking: z.enum(["additive", "multiplicative"]).optional(),
+    blockMode: z.enum(["rng", "average"]).optional(),
+    trials: z.number().int().min(1).max(200).optional(),
+    seed: z.number().int().optional()
   }).partial().optional()
 }).partial().optional();
 

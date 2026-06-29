@@ -4,12 +4,12 @@ import { Crown, PawPrint, ScanLine, ShieldCheck, WandSparkles } from "lucide-rea
 import { useWorkshop } from "../../store/workshop";
 import { objectives } from "../../types";
 import { rarityLabels, rarityValues } from "../shared/gameData";
+import { NumericInput } from "../shared/NumericInput";
 import ui from "../shared/ui.module.css";
 import {
   bisAccessFromProfile,
   bisProgress,
-  bisReferenceForAccess,
-  bisReferenceForAge
+  bisReferenceForAccess
 } from "./bisGuide";
 import styles from "./SimulationPage.module.css";
 
@@ -32,11 +32,11 @@ export function SimulationPage() {
     spellRarities: bisAccess.spellRarities?.length ? bisAccess.spellRarities : ["Common"]
   };
   const results = evaluation?.scenarios || [];
+  const modelTrials = Number(results[0]?.metrics.trials || scenarios.model?.trials || 64);
   const success = results.length > 0 && results.filter((result) => result.success).length >= Math.ceil(results.length / 2);
   const priorities = evaluation?.recommendations.slice(0, 3) || [];
   const grouped = groupRecommendations(evaluation?.recommendations.slice(3) || []);
-  const bisReference = bisReferenceForAccess(effectiveBisAccess, ageOptions);
-  const baselineReference = bisReferenceForAge(bisReference.age, ageOptions);
+  const bisReference = bisReferenceForAccess(effectiveBisAccess, ageOptions, objective);
   const currentBisProgress = bisProgress(profile, bisReference, spellOptions);
 
   useEffect(() => {
@@ -107,13 +107,44 @@ export function SimulationPage() {
           ["Endurance", "Temps pour tuer", "Série de mobs"].map((label) => <div className={styles.resultCard} key={label}><strong>{label}</strong><p>En attente du moteur.</p></div>)}
       </section>
 
+      <section className={styles.recommendations}>
+        <div className={ui.card}>
+          <div className={ui.cardHeader}><h2>Les 3 priorités</h2><span className={ui.pill}>Impact maximal</span></div>
+          <ol className={styles.priority}>
+            {priorities.length ? priorities.map((recommendation, index) => (
+              <li key={`${recommendation.title}-${index}`}>
+                <div><strong>{recommendation.title}</strong><small>{recommendation.detail}</small></div>
+                <span className={styles.gain}>+{format(recommendation.gain, 3)}</span>
+              </li>
+            )) : <li><div><strong>Aucune recommandation</strong><small>Le moteur n’a rien de significatif à proposer.</small></div></li>}
+          </ol>
+        </div>
+        <div className={ui.card}>
+          <div className={ui.cardHeader}><h2>Suite des améliorations</h2></div>
+          {Object.entries(grouped).map(([group, recommendations]) => (
+            <div key={group}>
+              <span className={ui.pill}>{group}</span>
+              <ul className={ui.list}>
+                {recommendations.map((recommendation, index) => (
+                  <li className={ui.listItem} key={`${recommendation.title}-${index}`}>
+                    <strong>{recommendation.title}</strong><small>{recommendation.detail}</small>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+          {!Object.keys(grouped).length && <p className={ui.muted}>Aucune recommandation secondaire.</p>}
+        </div>
+      </section>
+
       <section className={styles.bisSection} aria-labelledby="bis-title">
         <header className={styles.bisHeader}>
           <div>
-            <p className={ui.eyebrow}>Repères de progression</p>
-            <h2 id="bis-title">Objectifs BIS accessibles</h2>
+            <p className={ui.eyebrow}>Optimisation avancée</p>
+            <h2 id="bis-title">Repères BIS accessibles</h2>
             <p className={ui.muted}>
-              {bisReference.phase} · repère {bisReference.ageLabel} : pets, monture et sorts {rarityLabels[baselineReference.petRarity]}.
+              {bisReference.phase} · repère {bisReference.ageLabel} : pets {rarityLabels[bisReference.petRarity]},
+              monture {rarityLabels[bisReference.mountRarity]}, sorts {rarityLabels[bisReference.spellRarity]}.
             </p>
           </div>
           <button className={ui.button} onClick={() => setBisAccess(bisAccessFromProfile(profile, spellOptions))}>
@@ -193,7 +224,7 @@ export function SimulationPage() {
         </div>
 
         <div className={styles.bisStats}>
-          <strong>Stats à viser</strong>
+          <strong>Répartition simulée</strong>
           <div>
             {bisReference.stats.map((stat) => (
               <span key={stat.stat}>
@@ -227,38 +258,9 @@ export function SimulationPage() {
         </div>
       </details>
 
-      <section className={styles.recommendations}>
-        <div className={ui.card}>
-          <div className={ui.cardHeader}><h2>Les 3 priorités</h2><span className={ui.pill}>Impact maximal</span></div>
-          <ol className={styles.priority}>
-            {priorities.length ? priorities.map((recommendation, index) => (
-              <li key={`${recommendation.title}-${index}`}>
-                <div><strong>{recommendation.title}</strong><small>{recommendation.detail}</small></div>
-                <span className={styles.gain}>+{format(recommendation.gain, 3)}</span>
-              </li>
-            )) : <li><div><strong>Aucune recommandation</strong><small>Le moteur n’a rien de significatif à proposer.</small></div></li>}
-          </ol>
-        </div>
-        <div className={ui.card}>
-          <div className={ui.cardHeader}><h2>Suite des améliorations</h2></div>
-          {Object.entries(grouped).map(([group, recommendations]) => (
-            <div key={group}>
-              <span className={ui.pill}>{group}</span>
-              <ul className={ui.list}>
-                {recommendations.map((recommendation, index) => (
-                  <li className={ui.listItem} key={`${recommendation.title}-${index}`}>
-                    <strong>{recommendation.title}</strong><small>{recommendation.detail}</small>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          {!Object.keys(grouped).length && <p className={ui.muted}>Aucune recommandation secondaire.</p>}
-        </div>
-      </section>
-
       <details className={`${ui.card} ${styles.calculation}`}>
         <summary>Voir le calcul</summary>
+        <p className={ui.muted}>V3 · {format(modelTrials)} simulations · {enemySummary(results)}</p>
         <div className={ui.grid4}>
           <Metric label="DPS arme" value={evaluation?.profile.weaponDps} />
           <Metric label="DPS sorts" value={evaluation?.profile.skillDps} />
@@ -327,18 +329,21 @@ function BisTarget({
 
 function ScenarioCard({ result }: { result: ScenarioResult }) {
   const metric = Object.entries(result.metrics).find(([, value]) => Number(value) > 0);
+  const enemyMode = typeof result.metrics.enemyMode === "string" ? result.metrics.enemyMode : "";
+  const blockRate = Number(result.metrics.blockRate || 0);
   return (
     <article className={styles.resultCard}>
       <header><strong>{result.label}</strong><span className={`${ui.pill} ${result.success ? ui.pillGood : ui.pillBad}`}>{result.success ? "Réussi" : "Échec"}</span></header>
       <div className={ui.bar}><span style={{ width: `${Math.max(4, Math.min(100, result.score * 10))}%` }} /></div>
       {metric && <strong>{format(metric[1], 1)} <small>{metric[0]}</small></strong>}
+      {enemyMode && enemyMode !== "unknown" && <small>{enemyLabel(enemyMode)} · block {format(blockRate)}%</small>}
       <p>{result.summary}</p>
     </article>
   );
 }
 
 function CompactNumber({ label, value, suffix, onChange }: { label: string; value: number; suffix?: string; onChange: (value: number) => void }) {
-  return <label className={ui.field}><span>{label}</span><input type="number" value={value} onChange={(event) => onChange(Number(event.target.value) || 0)} aria-label={`${label}${suffix ? ` en ${suffix}` : ""}`} /></label>;
+  return <label className={ui.field}><span>{label}</span><NumericInput value={value} ariaLabel={`${label}${suffix ? ` en ${suffix}` : ""}`} onChange={onChange} /></label>;
 }
 
 function CompactSelect({
@@ -404,6 +409,18 @@ function toggleAccess<T>(values: T[], value: T): T[] {
     return values.length > 1 ? values.filter((entry) => entry !== value) : values;
   }
   return [...values, value];
+}
+
+function enemySummary(results: ScenarioResult[]) {
+  const mode = results.map((result) => result.metrics.enemyMode).find((value) => typeof value === "string" && value !== "unknown");
+  return typeof mode === "string" ? enemyLabel(mode) : "mobs non identifies";
+}
+
+function enemyLabel(mode: string) {
+  if (mode === "mixed") return "mobs mixtes";
+  if (mode === "ranged") return "mobs distance";
+  if (mode === "melee") return "mobs melee";
+  return "mobs non identifies";
 }
 
 function format(value: unknown, digits = 0) {

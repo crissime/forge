@@ -3,6 +3,7 @@ import { Copy, FileUp, Settings2, X } from "lucide-react";
 import type { StatMap } from "@forge-master/simulator";
 import { api } from "../../api/client";
 import { clone, emptyProfile, useWorkshop } from "../../store/workshop";
+import { NumericInput } from "../shared/NumericInput";
 import ui from "../shared/ui.module.css";
 import { setOpponentSpell, setOpponentStat, setOpponentTotal } from "./pvpProfile";
 import styles from "./PvpPage.module.css";
@@ -217,6 +218,7 @@ function SpellEditor({
         value={selected?.level || 1}
         min={1}
         max={100}
+        integer
         disabled={!selected}
         onChange={(level) => onChange(selected?.id || "", level)}
       />
@@ -266,6 +268,7 @@ function NumberField({
   unit,
   min = 0,
   max,
+  integer,
   disabled,
   onChange
 }: {
@@ -274,6 +277,7 @@ function NumberField({
   unit?: string;
   min?: number;
   max?: number;
+  integer?: boolean;
   disabled?: boolean;
   onChange: (value: number) => void;
 }) {
@@ -281,15 +285,13 @@ function NumberField({
     <label className={ui.field}>
       <span>{label}</span>
       <div className={unit ? styles.unitInput : undefined}>
-        <input
-          type="number"
-          inputMode="decimal"
-          step="any"
-          min={min}
-          max={max}
+        <NumericInput
           disabled={disabled}
           value={value}
-          onChange={(event) => onChange(Number(event.target.value) || min)}
+          min={min}
+          max={max}
+          integer={integer}
+          onChange={onChange}
         />
         {unit && <span>{unit}</span>}
       </div>
