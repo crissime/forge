@@ -45,9 +45,11 @@ const EQUIPMENT_SLOTS = [
 type GeneratedCase = {
   objective?: string;
   lineCount?: number;
+  candidateCount?: number;
   frontier?: { age: number; combat: number };
   reach?: { age: number; combat: number; successCount?: number; scenarioCount?: number };
   exhaustive?: boolean;
+  v3?: boolean;
   access?: { equipmentAge?: number };
   winner?: {
     stats?: Array<{ stat: string; label: string; count: number; total: number }>;
@@ -61,11 +63,13 @@ type FightPoint = { age: number; combat: number; successCount?: number; scenario
 type GeneratedResult = {
   objective: string;
   lineCount: number;
+  candidateCount?: number;
   stats: GeneratedStat[];
   frontier?: FightPoint;
   reach?: FightPoint;
   pets: GeneratedPet[];
   exhaustive: boolean;
+  v3?: boolean;
 };
 
 export function bisReferenceForAge(age: number, ageOptions: AgeOption[], objective: Objective = "progress"): BisReference {
@@ -173,8 +177,9 @@ function referenceForCase(
   const reach: FightPoint = result.reach || battle;
   const stats = Array.isArray(result.stats) ? result.stats : [];
   const lineCount = Number(result.lineCount || stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0));
-  const method = result.exhaustive ? "BIS exhaustif" : "Repartition simulee";
+  const method = result.v3 ? "BIS v3 exhaustif controle" : result.exhaustive ? "BIS exhaustif" : "Repartition simulee";
   const reachText = `Front max estime : ${reach.age}-${reach.combat} normal${reach.successCount ? ` (${reach.successCount}/${reach.scenarioCount} scenarios reussis)` : ""}.`;
+  const candidateText = result.candidateCount ? ` ${formatInteger(result.candidateCount)} candidats testes.` : "";
   const petText = result.pets.length
     ? ` Pets BIS : ${result.pets.map((pet) => `${pet.name} (${petTypeLabel(pet.type)})`).join(", ")}.`
     : "";
@@ -192,7 +197,7 @@ function referenceForCase(
       count: stat.count,
       target: `${stat.count} ligne${stat.count > 1 ? "s" : ""} - ${formatPercent(stat.total)}`
     })),
-    note: `${method} pour l'objectif ${objectiveLabel(result.objective)}, avec ${lineCount} lignes secondaires max. Niveau de test : ${battle.age}-${battle.combat} normal. ${reachText} Pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, niveaux max, sans talents.${petText}`
+    note: `${method} pour l'objectif ${objectiveLabel(result.objective)}, avec ${lineCount} lignes secondaires max. Niveau de test : ${battle.age}-${battle.combat} normal. ${reachText}${candidateText} Pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, niveaux max, sans talents.${petText}`
   };
 }
 
@@ -242,11 +247,13 @@ function exhaustiveResult(entry: GeneratedCase, exact: boolean) {
   return {
     objective: entry.objective || "progress",
     lineCount: entry.lineCount || 0,
+    candidateCount: entry.candidateCount,
     stats: entry.winner?.stats || [],
     frontier: entry.frontier,
     reach: entry.reach,
     pets: entry.winner?.pets || [],
-    exhaustive: exact && entry.exhaustive !== false
+    exhaustive: exact && entry.exhaustive !== false,
+    v3: entry.v3
   };
 }
 
@@ -287,6 +294,10 @@ function objectiveLabel(objective: string) {
 
 function formatPercent(value: number) {
   return `${Number(value).toLocaleString("fr-FR", { maximumFractionDigits: 1 })}%`;
+}
+
+function formatInteger(value: number) {
+  return Number(value).toLocaleString("fr-FR");
 }
 
 function petTypeLabel(type?: string) {
