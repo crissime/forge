@@ -1,0 +1,121 @@
+{
+  "schema": "forge-master-exhaustive-bis-v1",
+  "gameDataVersion": "2026_05_23_14_08",
+  "sourceGeneratedAt": "2026-06-24T16:52:17.177Z",
+  "generatedAt": "2026-06-30T09:34:20.075Z",
+  "method": "canonical best accessible build per case, beam search plus local swaps for secondary stat count vectors",
+  "assumptions": {
+    "equipmentLevel": 98,
+    "companionLevel": 100,
+    "spellLevel": 100,
+    "minimumEquipmentAge": 4,
+    "skippedAccess": "equipment age Quantum+ with pet or mount Legendary+",
+    "buildCarrierSelection": "highest selected equipment age/rarity only; one canonical item per non-weapon slot, best melee/hybrid/ranged weapon variants, pet trio, mount and spell trio",
+    "weaponStyle": "any",
+    "petSelection": "all",
+    "caseShards": 1,
+    "talents": "none",
+    "secondaryValues": "maximum values from SecondaryStatLibrary.json",
+    "secondaryStatRules": "none",
+    "secondaryPlacement": "beam search width 16, then one-line local swaps; counts are capped by carrier count",
+    "objectives": [
+      "progress",
+      "damage",
+      "survival"
+    ]
+  },
+  "cases": {
+    "5|Epic|Common|Epic|progress": {
+      "objective": "progress",
+      "access": {
+        "equipmentAge": 5,
+        "petRarity": "Epic",
+        "mountRarity": "Common",
+        "spellRarity": "Epic"
+      },
+      "frontier": {
+        "age": 8,
+        "combat": 4,
+        "min": 8,
+        "max": 4,
+        "difficulty": 0
+      },
+      "reach": {
+        "age": 9,
+        "combat": 14,
+        "min": 9,
+        "max": 14,
+        "difficulty": 0,
+        "successCount": 2,
+        "scenarioCount": 3,
+        "score": 11.349361
+      },
+      "lineCount": 12,
+      "candidateCount": 43640,
+      "statAllocationCount": 566,
+      "exhaustive": true,
+      "winner": {
+        "weaponStyle": "ranged",
+        "stats": [
+          {
+            "stat": "attackSpeed",
+            "label": "Attack Speed",
+            "count": 5,
+            "valuePerLine": 40,
+            "total": 200
+          },
+          {
+            "stat": "lifesteal",
+            "label": "Lifesteal",
+            "count": 3,
+            "valuePerLine": 20,
+            "total": 60
+          },
+          {
+            "stat": "damage",
+            "label": "Damage",
+            "count": 2,
+            "valuePerLine": 15,
+            "total": 30
+          },
+          {
+            "stat": "doubleChance",
+            "label": "Double Chance",
+            "count": 2,
+            "valuePerLine": 20,
+            "total": 40
+          }
+        ],
+        "pets": [
+          {
+            "name": "Saber Tooth",
+            "rarity": "Epic",
+            "id": 1,
+            "type": "Damage",
+            "level": 100,
+            "attack": 60256.5,
+            "health": 160684
+          },
+          {
+            "name": "Saber Tooth",
+            "rarity": "Epic",
+            "id": 1,
+            "type": "Damage",
+            "level": 100,
+            "attack": 60256.5,
+            "health": 160684
+          },
+          {
+            "name": "Saber Tooth",
+            "rarity": "Epic",
+            "id": 1,
+            "type": "Damage",
+            "level": 100,
+            "attack": 60256.5,
+            "health": 160684
+          }
+        ]
+      }
+    }
+  }
+}

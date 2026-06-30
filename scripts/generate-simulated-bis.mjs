@@ -28,6 +28,7 @@ const EXHAUSTIVE_STATS = process.env.FM_BIS_EXHAUSTIVE_STATS === "1";
 const CONTROLLED_EXHAUSTIVE = process.env.FM_BIS_CONTROLLED === "1";
 const PET_MODE = process.env.FM_BIS_PET_MODE || (CONTROLLED_EXHAUSTIVE ? "type-archetypes" : "all");
 const STAT_RULES = process.env.FM_BIS_STAT_RULES || (CONTROLLED_EXHAUSTIVE ? "controlled" : "none");
+const WEAPON_STYLE = process.env.FM_BIS_WEAPON_STYLE || "any";
 const CASE_SHARDS = Math.max(1, Math.round(Number(process.env.FM_BIS_CASE_SHARDS || 1)));
 const requestedWorkers = Number(process.env.FM_BIS_WORKERS || Math.max(1, availableParallelism() - 1));
 const maxWorkers = Number(process.env.FM_BIS_MAX_WORKERS || 9);
@@ -67,6 +68,7 @@ async function main() {
     exhaustiveStats: EXHAUSTIVE_STATS,
     petMode: PET_MODE,
     statRules: STAT_RULES,
+    weaponStyle: WEAPON_STYLE,
     smoke: SMOKE
   };
   const results = new Map(completed);
@@ -137,7 +139,7 @@ export function exhaustiveCase(job, data, options = {}) {
   let statAllocationCount = 0;
   let groupIndex = 0;
 
-  for (const equipment of equipmentCombos(job.age, data, choiceLimit)) {
+  for (const equipment of equipmentCombos(job.age, data, choiceLimit, options)) {
     for (const pets of bestPetTriples(job.petRarity, data, choiceLimit, options.petMode)) {
       for (const mount of limited(bestMountChoices(job.mountRarity, data), choiceLimit)) {
         for (const spells of bestSpellSets(job.spellRarity, data, choiceLimit)) {
@@ -426,8 +428,8 @@ export function bestSpellSets(rarity, data, limit = Infinity) {
   return [spells].slice(0, limit);
 }
 
-function* equipmentCombos(maxAge, data, limit = Infinity) {
-  const choices = SLOTS.map((slot) => limited(itemChoices(slot, maxAge, data), limit));
+function* equipmentCombos(maxAge, data, limit = Infinity, options = {}) {
+  const choices = SLOTS.map((slot) => limited(itemChoices(slot, maxAge, data, options), limit));
   const picked = [];
   let yielded = 0;
 
@@ -448,9 +450,14 @@ function* equipmentCombos(maxAge, data, limit = Infinity) {
   yield* visit(0);
 }
 
-export function itemChoices(slot, maxAge, data) {
+export function itemChoices(slot, maxAge, data, options = {}) {
   const bases = data.normalized.itemBases.filter((item) => item.slot === slot && item.age === maxAge);
-  if (slot === "Weapon") return bestWeaponChoices(bases, data).map((base) => itemCard(base, data));
+  if (slot === "Weapon") {
+    const choices = bestWeaponChoices(bases, data).map((base) => itemCard(base, data));
+    if (options.weaponStyle === "melee") return choices.filter((item) => item.isRanged === false);
+    if (options.weaponStyle === "ranged") return choices.filter((item) => item.isRanged === true);
+    return choices;
+  }
   return bases
     .sort((left, right) => itemPower(right) - itemPower(left) || left.idx - right.idx)
     .slice(0, 1)
@@ -690,7 +697,7 @@ function frontierFor(job, data, options = {}) {
   const profile = buildProfile(
     job,
     data,
-    SLOTS.map((slot) => itemChoices(slot, job.age, data).at(-1)),
+    SLOTS.map((slot) => itemChoices(slot, job.age, data, options).at(-1)),
     bestPetTriples(job.petRarity, data, Infinity, options.petMode).at(-1) || [],
     bestMountChoices(job.mountRarity, data).at(-1),
     bestSpellSets(job.spellRarity, data).at(-1) || []
@@ -820,6 +827,7 @@ function buildOutput(data, results, options) {
       minimumEquipmentAge: MIN_EQUIPMENT_AGE,
       skippedAccess: SKIP_QUANTUM_LEGENDARY ? "equipment age Quantum+ with pet or mount Legendary+" : "none",
       buildCarrierSelection: "highest selected equipment age/rarity only; one canonical item per non-weapon slot, best melee/hybrid/ranged weapon variants, pet trio, mount and spell trio",
+      weaponStyle: options.weaponStyle || WEAPON_STYLE,
       petSelection: options.petMode || PET_MODE,
       caseShards: CASE_SHARDS,
       talents: "none",
@@ -835,6 +843,7 @@ function buildOutput(data, results, options) {
 }
 
 function compactCase(result) {
+  const weapon = result.winner?.equipment?.find((item) => item.slot === "Weapon");
   return {
     objective: result.objective,
     access: result.access,
@@ -846,6 +855,7 @@ function compactCase(result) {
     shardCount: result.shardCount,
     exhaustive: result.exhaustive,
     winner: {
+      weaponStyle: weapon?.weaponStyle,
       stats: result.winner?.stats || [],
       pets: result.winner?.pets || []
     }

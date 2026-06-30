@@ -173,6 +173,71 @@ describe("simulator", () => {
     expect(Number(battle.metrics.rangedDps)).toBeGreaterThan(0);
   });
 
+  it("makes melee walk into ranged waves before weapon damage starts", async () => {
+    const data = await loadGameData();
+    data.raw["MainBattleLibrary.json"] = {
+      test: { BattleId: { AgeIdx: 0, BattleIdx: 0 }, Waves: [{ Enemies: [{ Id: 1, Count: 1 }] }] }
+    };
+    data.raw["EnemyAgeScalingLibrary.json"] = { 0: { Health: { Raw: 100 }, Damage: { Raw: 10_000 } } };
+    data.raw["EnemyLibrary.json"] = { 1: { WeaponId: { Age: 0, Idx: 0 } } };
+    data.raw["WeaponLibrary.json"] = {
+      ranged: { ItemId: { Age: 0, Type: "Weapon", Idx: 0 }, AttackRange: 5, AttackDuration: 1 }
+    };
+    data.raw["ItemBalancingConfig.json"] = { EnemyRangedDamageMultiplier: 1 };
+
+    const melee = manualProfile("Melee", data);
+    melee.base.attack = 1_000;
+    melee.base.health = 500;
+    melee.breakdown.baseAttack = 1_000;
+    melee.breakdown.baseHealth = 500;
+    melee.base.weaponStyle = "melee";
+    melee.spells = [];
+    const meleeBattle = evaluateProfileSnapshot(melee, data, "progress", 60, {
+      levelRange: { age: 1, combat: 1 },
+      model: { blockMode: "average", trials: 1 }
+    }).scenarios.find((scenario) => scenario.label === "Combat cible")!;
+
+    const ranged = structuredClone(melee);
+    ranged.base.weaponStyle = "ranged";
+    const rangedBattle = evaluateProfileSnapshot(ranged, data, "progress", 60, {
+      levelRange: { age: 1, combat: 1 },
+      model: { blockMode: "average", trials: 1 }
+    }).scenarios.find((scenario) => scenario.label === "Combat cible")!;
+
+    expect(meleeBattle.success).toBe(false);
+    expect(meleeBattle.metrics.clearedWaves).toBe(0);
+    expect(meleeBattle.metrics.totalTime).toBeCloseTo(2.5, 3);
+    expect(rangedBattle.success).toBe(true);
+  });
+
+  it("delays melee against melee waves without melee damage during approach", async () => {
+    const data = await loadGameData();
+    data.raw["MainBattleLibrary.json"] = {
+      test: { BattleId: { AgeIdx: 0, BattleIdx: 0 }, Waves: [{ Enemies: [{ Id: 1, Count: 1 }] }] }
+    };
+    data.raw["EnemyAgeScalingLibrary.json"] = { 0: { Health: { Raw: 100 }, Damage: { Raw: 10_000 } } };
+    data.raw["EnemyLibrary.json"] = { 1: { WeaponId: { Age: 0, Idx: 0 } } };
+    data.raw["WeaponLibrary.json"] = {
+      melee: { ItemId: { Age: 0, Type: "Weapon", Idx: 0 }, AttackRange: 0, AttackDuration: 1 }
+    };
+
+    const profile = manualProfile("Melee mirror", data);
+    profile.base.attack = 1_000;
+    profile.base.health = 500;
+    profile.breakdown.baseAttack = 1_000;
+    profile.breakdown.baseHealth = 500;
+    profile.base.weaponStyle = "melee";
+    profile.spells = [];
+    const battle = evaluateProfileSnapshot(profile, data, "progress", 60, {
+      levelRange: { age: 1, combat: 1 },
+      model: { blockMode: "average", trials: 1 }
+    }).scenarios.find((scenario) => scenario.label === "Combat cible")!;
+
+    expect(battle.success).toBe(true);
+    expect(Number(battle.metrics.totalTime)).toBeGreaterThan(2);
+    expect(Number(battle.metrics.totalTime)).toBeLessThan(2.1);
+  });
+
   it("reconstructs a 1vcian profile and evaluates recommendations", async () => {
     const data = await loadGameData();
     const raw = buildFixtureProfile(data);

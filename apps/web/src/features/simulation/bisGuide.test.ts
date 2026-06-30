@@ -122,6 +122,7 @@ describe("BIS progression guide", () => {
     expect(reference.note).toContain("lignes secondaires max");
     expect(reference.note).toContain("Niveau de test");
     expect(reference.note).toContain("Front max estime");
+    expect(reference.note).toContain("Arme BIS");
     expect(reference.note).toContain("Pets BIS");
     expect(reference.note).toContain("sans talents");
   });

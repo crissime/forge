@@ -52,6 +52,7 @@ type GeneratedCase = {
   v3?: boolean;
   access?: { equipmentAge?: number };
   winner?: {
+    weaponStyle?: string;
     stats?: Array<{ stat: string; label: string; count: number; total: number }>;
     pets?: Array<{ name: string; type?: string }>;
   };
@@ -68,6 +69,7 @@ type GeneratedResult = {
   frontier?: FightPoint;
   reach?: FightPoint;
   pets: GeneratedPet[];
+  weaponStyle?: string;
   exhaustive: boolean;
   v3?: boolean;
 };
@@ -183,6 +185,8 @@ function referenceForCase(
   const petText = result.pets.length
     ? ` Pets BIS : ${result.pets.map((pet) => `${pet.name} (${petTypeLabel(pet.type)})`).join(", ")}.`
     : "";
+  const weaponStyle = result.weaponStyle || inferredWeaponStyle(stats);
+  const weaponText = weaponStyle ? ` Arme BIS : ${weaponStyleLabel(weaponStyle)}.` : "";
 
   return {
     age,
@@ -197,7 +201,7 @@ function referenceForCase(
       count: stat.count,
       target: `${stat.count} ligne${stat.count > 1 ? "s" : ""} - ${formatPercent(stat.total)}`
     })),
-    note: `${method} pour l'objectif ${objectiveLabel(result.objective)}, avec ${lineCount} lignes secondaires max. Niveau de test : ${battle.age}-${battle.combat} normal. ${reachText}${candidateText} Pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, niveaux max, sans talents.${petText}`
+    note: `${method} pour l'objectif ${objectiveLabel(result.objective)}, avec ${lineCount} lignes secondaires max. Niveau de test : ${battle.age}-${battle.combat} normal. ${reachText}${candidateText} Pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, niveaux max, sans talents.${weaponText}${petText}`
   };
 }
 
@@ -226,6 +230,7 @@ function simulatedResult(
       frontier: undefined,
       reach: undefined,
       pets: [],
+      weaponStyle: undefined,
       exhaustive: false
     };
   }
@@ -239,6 +244,7 @@ function simulatedResult(
     frontier: undefined,
     reach: undefined,
     pets: [],
+    weaponStyle: undefined,
     exhaustive: false
   };
 }
@@ -252,9 +258,20 @@ function exhaustiveResult(entry: GeneratedCase, exact: boolean) {
     frontier: entry.frontier,
     reach: entry.reach,
     pets: entry.winner?.pets || [],
+    weaponStyle: entry.winner?.weaponStyle,
     exhaustive: exact && entry.exhaustive !== false,
     v3: entry.v3
   };
+}
+
+function inferredWeaponStyle(stats: GeneratedStat[]) {
+  if (stats.some((stat) => stat.stat === "meleeDamage")) return "melee";
+  if (stats.some((stat) => stat.stat === "rangedDamage")) return "ranged";
+  return undefined;
+}
+
+function weaponStyleLabel(style: string) {
+  return style === "ranged" ? "distance" : style === "melee" ? "melee" : style;
 }
 
 function rarityForAge(age: number) {

@@ -100,6 +100,7 @@ interface BattleWaveTarget {
   rangedEnemyCount: number;
   meleeDps: number;
   rangedDps: number;
+  rangedHitRate: number;
 }
 
 interface BattleTarget {
@@ -223,6 +224,7 @@ export interface CombatProfile {
   weaponDps: number;
   skillDps: number;
   totalDps: number;
+  weaponStyle: "melee" | "ranged";
   baseMaxHealth: number;
   maxHealth: number;
   healingPerSecond: number;
@@ -346,6 +348,8 @@ const ITEM_SECONDARY_LINE_2_MIN_AGE = 7;
 const RARITY_ORDER = ["Common", "Rare", "Epic", "Legendary", "Ultimate", "Mythic"];
 const PET_MOUNT_SECONDARY_LINE_2_MIN_RARITY = "Legendary";
 const MAIN_BATTLE_ENEMY_SCALE = 0.02;
+const MELEE_RANGED_APPROACH_SECONDS = 3;
+const MELEE_MELEE_APPROACH_SECONDS = 2;
 const DEFAULT_MODEL: CombatModelSettings = { damageStacking: "additive", blockMode: "rng", trials: 64, seed: 1337 };
 const DEFAULT_SCENARIOS = {
   levelRange: { min: 1, max: 1, difficulty: 0 },
@@ -844,6 +848,7 @@ export function combatProfile(profile: NormalizedProfile, data: GameDataBundle, 
     weaponDps,
     skillDps: skill.damagePerSecond,
     totalDps: weaponDps + skill.damagePerSecond,
+    weaponStyle: profile.base.weaponStyle,
     baseMaxHealth,
     maxHealth,
     healingPerSecond,
@@ -1152,6 +1157,7 @@ interface EncounterWave {
   rangedEnemyCount?: number;
   meleeDps?: number;
   rangedDps?: number;
+  rangedHitRate?: number;
 }
 
 interface EncounterResult {
@@ -1184,7 +1190,10 @@ function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSec
   let enemies: number[] = [];
   let currentWaveDpsPerEnemy = 0;
   let currentWaveHitRatePerEnemy = 1;
+  let currentWaveRangedDps = 0;
+  let currentWaveRangedHitRate = 0;
   let pauseUntil: number | null = null;
+  let approachUntil: number | null = null;
   let clearedWaves = 0;
   let killedEnemies = 0;
   let damageDone = 0;
@@ -1205,7 +1214,15 @@ function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSec
     enemies = Array.from({ length: count }, () => healthPerEnemy);
     currentWaveDpsPerEnemy = Math.max(0, wave.totalDps) / count;
     currentWaveHitRatePerEnemy = Math.max(0.1, Number(wave.totalHitRate || count)) / count;
+    const rangedShare = clamp(Number(wave.rangedEnemyCount || 0) / count, 0, 1);
+    currentWaveRangedDps = Math.max(0, Number(wave.rangedDps || 0) || wave.totalDps * rangedShare);
+    currentWaveRangedHitRate = Math.max(0, Number(wave.rangedHitRate || 0) || Number(wave.totalHitRate || count) * rangedShare);
     pauseUntil = null;
+    if (combat.weaponStyle === "melee" && Number(wave.rangedEnemyCount || wave.meleeEnemyCount || 0) > 0) {
+      approachUntil = time + (Number(wave.rangedEnemyCount || 0) > 0 ? MELEE_RANGED_APPROACH_SECONDS : MELEE_MELEE_APPROACH_SECONDS);
+    } else {
+      approachUntil = null;
+    }
   };
 
   const removeDead = () => {
@@ -1297,8 +1314,9 @@ function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSec
     removeDead();
     if (clearedWaves >= waves.length) break;
 
-    const weaponDps = enemies.length ? currentWeaponDps() : 0;
-    const rawIncomingDps = enemies.length ? currentWaveDpsPerEnemy * enemies.length : 0;
+    const approaching = approachUntil !== null && time < approachUntil - epsilon;
+    const weaponDps = enemies.length && !approaching ? currentWeaponDps() : 0;
+    const rawIncomingDps = enemies.length ? approaching ? currentWaveRangedDps : currentWaveDpsPerEnemy * enemies.length : 0;
     const incomingDps = rawIncomingDps * averageBlockFactor(combat.block);
     const healingPerSecond = currentHealingPerSecond(weaponDps);
     const netIncoming = incomingDps - healingPerSecond;
@@ -1306,13 +1324,15 @@ function simulateEncounter(combat: CombatProfile, waves: EncounterWave[], maxSec
     const nextHit = Math.min(...pendingHits.map((hit) => hit.time), Number.POSITIVE_INFINITY);
     const nextExpiry = Math.min(...activeBuffs.map((buff) => buff.expiresAt), Number.POSITIVE_INFINITY);
     const nextPause = pauseUntil ?? Number.POSITIVE_INFINITY;
+    const nextApproach = approaching ? approachUntil! : Number.POSITIVE_INFINITY;
     const enemyDeathTime = enemies.length && weaponDps > 0 ? time + enemies[0] / weaponDps : Number.POSITIVE_INFINITY;
     const playerDeathTime = netIncoming > 0 ? time + currentHealth / netIncoming : Number.POSITIVE_INFINITY;
-    const nextTime = Math.min(maxSeconds, nextCast, nextHit, nextExpiry, nextPause, enemyDeathTime, playerDeathTime);
+    const nextTime = Math.min(maxSeconds, nextCast, nextHit, nextExpiry, nextPause, nextApproach, enemyDeathTime, playerDeathTime);
     const delta = Math.max(epsilon, nextTime - time);
 
     if (weaponDps > 0 && enemies.length) dealSingle(weaponDps * delta, "weapon");
-    const incoming = blockedDamage(rawIncomingDps * delta, combat.block, currentWaveHitRatePerEnemy * enemies.length * delta, model, rng);
+    const incomingHitRate = approaching ? currentWaveRangedHitRate : currentWaveHitRatePerEnemy * enemies.length;
+    const incoming = blockedDamage(rawIncomingDps * delta, combat.block, incomingHitRate * delta, model, rng);
     blockedHits += incoming.blockedHits;
     totalIncomingHits += incoming.totalHits;
     currentHealth = clamp(currentHealth + healingPerSecond * delta - incoming.damage, 0, currentMaxHealth);
@@ -1714,6 +1734,7 @@ function resolveBattleTarget(data: GameDataBundle, visibleAge: number, visibleCo
     let rangedEnemyCount = 0;
     let meleeDps = 0;
     let rangedDps = 0;
+    let rangedHitRate = 0;
     for (const enemy of wave.Enemies || []) {
       const count = Math.max(0, Math.round(readNumber(enemy.Count)));
       const enemyDefinition = enemyLibrary[String(enemy.Id)] || enemyLibrary[enemy.Id];
@@ -1730,12 +1751,13 @@ function resolveBattleTarget(data: GameDataBundle, visibleAge: number, visibleCo
       if (isRanged) {
         rangedEnemyCount += count;
         rangedDps += dps;
+        rangedHitRate += count / attackDuration;
       } else {
         meleeEnemyCount += count;
         meleeDps += dps;
       }
     }
-    return { waveIndex, totalHealth, totalDps, totalHitRate, enemyCount, meleeEnemyCount, rangedEnemyCount, meleeDps, rangedDps };
+    return { waveIndex, totalHealth, totalDps, totalHitRate, enemyCount, meleeEnemyCount, rangedEnemyCount, meleeDps, rangedDps, rangedHitRate };
   });
 
   return {
