@@ -13,9 +13,12 @@ const OBJECTIVES = ["progress", "damage", "survival"];
 const SLOTS = ["Weapon", "Helmet", "Body", "Gloves", "Belt", "Necklace", "Ring", "Shoe"];
 const RARITIES = ["Common", "Rare", "Epic", "Legendary", "Ultimate", "Mythic"];
 const MIN_EQUIPMENT_AGE = Math.max(0, Math.round(Number(process.env.FM_BIS_MIN_EQUIPMENT_AGE ?? 4)));
+const MAX_EQUIPMENT_AGE = process.env.FM_BIS_MAX_EQUIPMENT_AGE
+  ? Math.max(MIN_EQUIPMENT_AGE, Math.round(Number(process.env.FM_BIS_MAX_EQUIPMENT_AGE)))
+  : Infinity;
 const QUANTUM_AGE = 7;
 const LEGENDARY_RARITY = "Legendary";
-const SKIP_QUANTUM_LEGENDARY = process.env.FM_BIS_SKIP_QUANTUM_LEGENDARY !== "0";
+const SKIP_QUANTUM_LEGENDARY = process.env.FM_BIS_SKIP_QUANTUM_LEGENDARY === "1";
 const BUILD_MODEL = { damageStacking: "additive", blockMode: "average", trials: 1, seed: 1337 };
 const TOP_N = Math.max(1, Math.round(Number(process.env.FM_BIS_TOP_N || 10)));
 const SMOKE = process.env.FM_BIS_SMOKE === "1";
@@ -98,11 +101,11 @@ async function main() {
 
 export function caseJobs(data) {
   const jobs = [];
-  for (const age of data.normalized.ageOptions.map((entry) => entry.value).filter((value) => value >= MIN_EQUIPMENT_AGE)) {
+  for (const age of data.normalized.ageOptions.map((entry) => entry.value).filter((value) => value >= MIN_EQUIPMENT_AGE && value <= MAX_EQUIPMENT_AGE)) {
     for (const petRarity of RARITIES) {
       for (const mountRarity of RARITIES) {
-        if (skipAccessCase(age, petRarity, mountRarity)) continue;
         for (const spellRarity of RARITIES) {
+          if (skipAccessCase(age, petRarity, mountRarity, spellRarity)) continue;
           for (const objective of OBJECTIVES) {
             const key = caseKey(age, petRarity, mountRarity, spellRarity, objective);
             jobs.push({ key, age, petRarity, mountRarity, spellRarity, objective });
@@ -825,7 +828,9 @@ function buildOutput(data, results, options) {
       companionLevel: 100,
       spellLevel: 100,
       minimumEquipmentAge: MIN_EQUIPMENT_AGE,
+      maximumEquipmentAge: Number.isFinite(MAX_EQUIPMENT_AGE) ? MAX_EQUIPMENT_AGE : "none",
       skippedAccess: SKIP_QUANTUM_LEGENDARY ? "equipment age Quantum+ with pet or mount Legendary+" : "none",
+      accessRules: "age 4-5: normal pet/spell Epic and mount Common, +/-1 rarity; age 6-7: normal pet/spell Legendary and mount Rare, +/-1 rarity; age 8-9: normal pet/spell Ultimate and mount Legendary, +/-1 rarity",
       buildCarrierSelection: "highest selected equipment age/rarity only; one canonical item per non-weapon slot, best melee/hybrid/ranged weapon variants, pet trio, mount and spell trio",
       weaponStyle: options.weaponStyle || WEAPON_STYLE,
       petSelection: options.petMode || PET_MODE,
@@ -907,12 +912,46 @@ function caseKey(age, petRarity, mountRarity, spellRarity, objective) {
   return [age, petRarity, mountRarity, spellRarity, objective].join("|");
 }
 
-function skipAccessCase(age, petRarity, mountRarity) {
-  if (!SKIP_QUANTUM_LEGENDARY) return false;
-  return age >= QUANTUM_AGE && (
+export function skipAccessCase(age, petRarity, mountRarity, spellRarity) {
+  if (SKIP_QUANTUM_LEGENDARY && age >= QUANTUM_AGE && (
     rarityRank(petRarity) >= rarityRank(LEGENDARY_RARITY) ||
     rarityRank(mountRarity) >= rarityRank(LEGENDARY_RARITY)
-  );
+  )) return true;
+  const rule = accessRuleForAge(age);
+  if (!rule) return false;
+  return below(petRarity, rule.petMin) || above(petRarity, rule.petMax) ||
+    below(mountRarity, rule.mountMin) || above(mountRarity, rule.mountMax) ||
+    below(spellRarity, rule.spellMin) || above(spellRarity, rule.spellMax);
+}
+
+function accessRuleForAge(age) {
+  if (age === 4 || age === 5) return rarityWindowRule("Epic", "Common", "Epic");
+  if (age === 6 || age === 7) return rarityWindowRule("Legendary", "Rare", "Legendary");
+  if (age === 8 || age === 9) return { petMin: "Legendary", petMax: "Mythic", mountMin: "Epic", mountMax: "Mythic", spellMin: "Legendary", spellMax: "Mythic" };
+  return null;
+}
+
+function rarityWindowRule(petRarity, mountRarity, spellRarity) {
+  return {
+    petMin: rarityAt(rarityRank(petRarity) - 1),
+    petMax: rarityAt(rarityRank(petRarity) + 1),
+    mountMin: rarityAt(rarityRank(mountRarity) - 1),
+    mountMax: rarityAt(rarityRank(mountRarity) + 1),
+    spellMin: rarityAt(rarityRank(spellRarity) - 1),
+    spellMax: rarityAt(rarityRank(spellRarity) + 1)
+  };
+}
+
+function rarityAt(index) {
+  return RARITIES[Math.max(0, Math.min(RARITIES.length - 1, index))];
+}
+
+function below(rarity, min) {
+  return min ? rarityRank(rarity) < rarityRank(min) : false;
+}
+
+function above(rarity, max) {
+  return max ? rarityRank(rarity) > rarityRank(max) : false;
 }
 
 function rarityRank(rarity) {

@@ -91,4 +91,22 @@ describe("exhaustive BIS generator", () => {
       expect.objectContaining({ critChance: 1 })
     ]));
   });
+
+  it("skips impossible accessibility cases by equipment age", async () => {
+    const { skipAccessCase } = await import("../../../scripts/generate-simulated-bis.mjs");
+
+    expect(skipAccessCase(6, "Ultimate", "Common", "Epic")).toBe(false);
+    expect(skipAccessCase(6, "Ultimate", "Legendary", "Ultimate")).toBe(true);
+    expect(skipAccessCase(6, "Ultimate", "Epic", "Ultimate")).toBe(false);
+    expect(skipAccessCase(6, "Epic", "Rare", "Epic")).toBe(false);
+    expect(skipAccessCase(5, "Legendary", "Rare", "Legendary")).toBe(false);
+    expect(skipAccessCase(5, "Rare", "Common", "Rare")).toBe(false);
+    expect(skipAccessCase(5, "Epic", "Rare", "Legendary")).toBe(false);
+    expect(skipAccessCase(5, "Ultimate", "Rare", "Legendary")).toBe(true);
+    expect(skipAccessCase(8, "Ultimate", "Legendary", "Ultimate")).toBe(false);
+    expect(skipAccessCase(8, "Legendary", "Epic", "Legendary")).toBe(false);
+    expect(skipAccessCase(8, "Mythic", "Mythic", "Mythic")).toBe(false);
+    expect(skipAccessCase(8, "Legendary", "Rare", "Legendary")).toBe(true);
+    expect(skipAccessCase(8, "Epic", "Legendary", "Ultimate")).toBe(true);
+  });
 });
