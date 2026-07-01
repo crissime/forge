@@ -20,6 +20,8 @@ const QUANTUM_AGE = 7;
 const LEGENDARY_RARITY = "Legendary";
 const SKIP_QUANTUM_LEGENDARY = process.env.FM_BIS_SKIP_QUANTUM_LEGENDARY === "1";
 const BUILD_MODEL = { damageStacking: "additive", blockMode: "average", trials: 1, seed: 1337 };
+const COMPANION_LEVEL = Math.max(1, Math.round(Number(process.env.FM_BIS_COMPANION_LEVEL || 1)));
+const SPELL_LEVEL = Math.max(1, Math.round(Number(process.env.FM_BIS_SPELL_LEVEL || 1)));
 const TOP_N = Math.max(1, Math.round(Number(process.env.FM_BIS_TOP_N || 10)));
 const SMOKE = process.env.FM_BIS_SMOKE === "1";
 const CHOICE_LIMIT = SMOKE ? Math.max(1, Math.round(Number(process.env.FM_BIS_CHOICE_LIMIT || 1))) : Infinity;
@@ -173,7 +175,7 @@ export function exhaustiveCase(job, data, options = {}) {
               equipment: equipment.map(publicItem),
               pets: pets.map(publicCompanion),
               mount: publicCompanion(mount),
-              spells: spells.map((spell) => ({ id: spell.id, name: spell.name, rarity: spell.rarity, level: 100 })),
+              spells: spells.map((spell) => ({ id: spell.id, name: spell.name, rarity: spell.rarity, level: SPELL_LEVEL })),
               scenarios: result.scenarios.map((scenario) => ({
                 id: scenario.id,
                 score: round(scenario.score, 6),
@@ -395,7 +397,7 @@ export function spellSets(maxRarity, data, limit = Infinity) {
     .sort((left, right) => rarityRank(left.rarity) - rarityRank(right.rarity) || left.id.localeCompare(right.id));
   const sets = [[]];
   for (let size = 1; size <= 3; size += 1) {
-    choose(spells, size, (picked) => sets.push(picked.map((spell) => ({ ...spell, level: 100 }))), limit - sets.length);
+    choose(spells, size, (picked) => sets.push(picked.map((spell) => ({ ...spell, level: SPELL_LEVEL }))), limit - sets.length);
     if (sets.length >= limit) return sets.slice(0, limit);
   }
   return sets;
@@ -440,7 +442,7 @@ export function bestSpellSets(rarity, data, limit = Infinity) {
     .filter((spell) => spell.rarity === rarity)
     .sort((left, right) => spellRank(left) - spellRank(right) || left.id.localeCompare(right.id))
     .slice(0, 3)
-    .map((spell) => ({ ...spell, level: 100 }));
+    .map((spell) => ({ ...spell, level: SPELL_LEVEL }));
   return [spells].slice(0, limit);
 }
 
@@ -542,7 +544,7 @@ function buildProfile(job, data, equipment, pets, mount, spells) {
     equipment: Object.fromEntries(equipment.map((item) => [item.slot, { ...item, secondaryStats: [] }])),
     pets: pets.map((pet) => ({ ...pet, secondaryStats: [] })),
     mount: mount ? { ...mount, secondaryStats: [], skills: [] } : null,
-    spells: spells.map((spell) => ({ id: spell.id, level: 100, rarity: spell.rarity })),
+    spells: spells.map((spell) => ({ id: spell.id, level: SPELL_LEVEL, rarity: spell.rarity })),
     talentTree: { Forge: {}, Power: {}, SkillsPetTech: {} },
     stats: createEmptyStats(),
     breakdown: {
@@ -651,7 +653,7 @@ function itemCard(base, data) {
 }
 
 function petCard(model, data) {
-  const level = levelAt(data.normalized.petLevels, model.rarity, 100);
+  const level = levelAt(data.normalized.petLevels, model.rarity, COMPANION_LEVEL);
   const multiplier = model.type === "Damage"
     ? { attack: 1.5, health: 0.5 }
     : model.type === "Health"
@@ -662,7 +664,7 @@ function petCard(model, data) {
     rarity: model.rarity,
     id: model.id,
     type: model.type,
-    level: 100,
+    level: COMPANION_LEVEL,
     attack: Number(level?.attack || 0) * multiplier.attack,
     health: Number(level?.health || 0) * multiplier.health,
     recognized: true
@@ -670,12 +672,12 @@ function petCard(model, data) {
 }
 
 function mountCard(model, data) {
-  const level = levelAt(data.normalized.mountLevels, model.rarity, 100);
+  const level = levelAt(data.normalized.mountLevels, model.rarity, COMPANION_LEVEL);
   return {
     name: model.name,
     rarity: model.rarity,
     id: model.id,
-    level: 100,
+    level: COMPANION_LEVEL,
     attack: Number(level?.attack || 0),
     health: Number(level?.health || 0),
     recognized: true,
@@ -859,8 +861,8 @@ function buildOutput(data, results, options) {
         : "canonical best accessible build per case, beam search plus local swaps for secondary stat count vectors",
     assumptions: {
       equipmentLevel: data.normalized.itemConfig.maxLevel,
-      companionLevel: 100,
-      spellLevel: 100,
+      companionLevel: COMPANION_LEVEL,
+      spellLevel: SPELL_LEVEL,
       minimumEquipmentAge: MIN_EQUIPMENT_AGE,
       maximumEquipmentAge: Number.isFinite(MAX_EQUIPMENT_AGE) ? MAX_EQUIPMENT_AGE : "none",
       skippedAccess: SKIP_QUANTUM_LEGENDARY ? "equipment age Quantum+ with pet or mount Legendary+" : "none",

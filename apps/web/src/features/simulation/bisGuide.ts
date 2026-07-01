@@ -66,6 +66,8 @@ type GeneratedResult = {
   objective: string;
   lineCount: number;
   candidateCount?: number;
+  companionLevel?: number;
+  spellLevel?: number;
   stats: GeneratedStat[];
   frontier?: FightPoint;
   reach?: FightPoint;
@@ -202,6 +204,11 @@ function referenceForCase(
     : "";
   const reachText = `Score progression max : ${reach.age}-${reach.combat} normal${reachScenarios}.`;
   const candidateText = result.candidateCount ? ` ${formatInteger(result.candidateCount)} candidats testes.` : "";
+  const companionLevel = Number(result.companionLevel || 100);
+  const spellLevel = Number(result.spellLevel || 100);
+  const levelText = companionLevel === 1 && spellLevel === 1
+    ? "Objets max, pets/monture niveau 1, sorts niveau 1"
+    : `Ancienne generation a regenerer: pets/monture niveau ${companionLevel}, sorts niveau ${spellLevel}`;
   const petText = result.pets.length
     ? ` Pets BIS : ${result.pets.map((pet) => `${pet.name} (${petTypeLabel(pet.type)})`).join(", ")}.`
     : "";
@@ -221,7 +228,7 @@ function referenceForCase(
       count: stat.count,
       target: `${stat.count} ligne${stat.count > 1 ? "s" : ""} - ${formatPercent(stat.total)}`
     })),
-    note: `${method} pour l'objectif ${objectiveLabel(result.objective)}, avec ${lineCount} lignes secondaires max. ${battleText} ${reachText}${candidateText} Pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, niveaux max, sans talents.${weaponText}${petText}`
+    note: `${method} pour l'objectif ${objectiveLabel(result.objective)}, avec ${lineCount} lignes secondaires max. ${battleText} ${reachText}${candidateText} Pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}. ${levelText}, sans talents.${weaponText}${petText}`
   };
 }
 
@@ -234,14 +241,21 @@ function simulatedResult(
 ): GeneratedResult {
   const normalizedObjective = objective === "damage" || objective === "survival" ? objective : "progress";
   const key = [age, petRarity, mountRarity, spellRarity, normalizedObjective].join("|");
-  const generated = simulatedBis as { schema?: string; cases?: Record<string, GeneratedCase>; templates?: any[] };
+  const generated = simulatedBis as {
+    schema?: string;
+    assumptions?: { companionLevel?: number; spellLevel?: number };
+    cases?: Record<string, GeneratedCase>;
+    templates?: any[];
+  };
   const exhaustiveCase = generated.schema === "forge-master-exhaustive-bis-v1" ? generated.cases?.[key] : null;
-  if (exhaustiveCase?.winner) return exhaustiveResult(exhaustiveCase, true);
+  if (exhaustiveCase?.winner) return exhaustiveResult(exhaustiveCase, true, generated.assumptions);
 
   if (generated.schema === "forge-master-exhaustive-bis-v1") {
     return {
       objective: normalizedObjective,
       lineCount: 0,
+      companionLevel: generated.assumptions?.companionLevel,
+      spellLevel: generated.assumptions?.spellLevel,
       stats: [],
       frontier: undefined,
       reach: undefined,
@@ -268,11 +282,13 @@ function simulatedResult(
   };
 }
 
-function exhaustiveResult(entry: GeneratedCase, exact: boolean) {
+function exhaustiveResult(entry: GeneratedCase, exact: boolean, assumptions?: { companionLevel?: number; spellLevel?: number }) {
   return {
     objective: entry.objective || "progress",
     lineCount: entry.lineCount || 0,
     candidateCount: entry.candidateCount,
+    companionLevel: assumptions?.companionLevel,
+    spellLevel: assumptions?.spellLevel,
     stats: entry.winner?.stats || [],
     frontier: entry.frontier,
     reach: entry.reach,

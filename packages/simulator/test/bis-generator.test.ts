@@ -37,6 +37,9 @@ describe("exhaustive BIS generator", () => {
     expect(result.exhaustive).toBe(false);
     expect(result.candidateCount).toBeGreaterThan(0);
     expect(result.top.length).toBeGreaterThan(0);
+    expect(result.winner.pets.every((pet) => pet.level === 1)).toBe(true);
+    expect(result.winner.mount?.level).toBe(1);
+    expect(result.winner.spells.every((spell) => spell.level === 1)).toBe(true);
     expect(result.winner.stats.reduce((sum, stat) => sum + stat.count, 0)).toBe(result.lineCount);
   });
 
