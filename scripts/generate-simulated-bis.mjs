@@ -9,7 +9,10 @@ import { createEmptyStats, evaluateProfileSnapshot } from "../packages/simulator
 
 const OUTPUT = path.resolve(process.env.FM_BIS_OUTPUT || "apps/web/src/features/simulation/simulatedBis.json");
 const CHECKPOINT = process.env.FM_BIS_CHECKPOINT ? path.resolve(process.env.FM_BIS_CHECKPOINT) : null;
-const OBJECTIVES = ["progress", "damage", "survival"];
+const OBJECTIVES = String(process.env.FM_BIS_OBJECTIVES || "progress,damage,survival")
+  .split(",")
+  .map(normalizeObjective)
+  .filter(Boolean);
 const SLOTS = ["Weapon", "Helmet", "Body", "Gloves", "Belt", "Necklace", "Ring", "Shoe"];
 const RARITIES = ["Common", "Rare", "Epic", "Legendary", "Ultimate", "Mythic"];
 const MIN_EQUIPMENT_AGE = Math.max(0, Math.round(Number(process.env.FM_BIS_MIN_EQUIPMENT_AGE ?? 4)));
@@ -23,6 +26,7 @@ const BUILD_MODEL = { damageStacking: "additive", blockMode: "average", trials: 
 const COMPANION_LEVEL = Math.max(1, Math.round(Number(process.env.FM_BIS_COMPANION_LEVEL || 1)));
 const SPELL_LEVEL = Math.max(1, Math.round(Number(process.env.FM_BIS_SPELL_LEVEL || 1)));
 const TOP_N = Math.max(1, Math.round(Number(process.env.FM_BIS_TOP_N || 10)));
+const REACH_VERIFY_TOP_N = Math.max(TOP_N, Math.round(Number(process.env.FM_BIS_REACH_VERIFY_TOP_N || 100)));
 const SMOKE = process.env.FM_BIS_SMOKE === "1";
 const CHOICE_LIMIT = SMOKE ? Math.max(1, Math.round(Number(process.env.FM_BIS_CHOICE_LIMIT || 1))) : Infinity;
 const STAT_ALLOCATION_LIMIT = process.env.FM_BIS_STAT_ALLOCATIONS
@@ -79,6 +83,7 @@ async function main() {
     choiceLimit: CHOICE_LIMIT,
     statAllocationLimit: STAT_ALLOCATION_LIMIT,
     beamWidth: BEAM_WIDTH,
+    reachVerifyTopN: REACH_VERIFY_TOP_N,
     exhaustiveStats: EXHAUSTIVE_STATS,
     petMode: PET_MODE,
     statRules: STAT_RULES,
@@ -143,6 +148,7 @@ function checkpointKey(job) {
 
 export function exhaustiveCase(job, data, options = {}) {
   const topN = options.topN || TOP_N;
+  const keptTopN = job.objective === "reach" ? Math.max(topN, options.reachVerifyTopN || REACH_VERIFY_TOP_N) : topN;
   const choiceLimit = options.choiceLimit ?? Infinity;
   const statAllocationLimit = options.statAllocationLimit ?? Infinity;
   const beamWidth = options.beamWidth || (options.smoke ? 1 : BEAM_WIDTH);
@@ -152,6 +158,7 @@ export function exhaustiveCase(job, data, options = {}) {
   let candidateCount = 0;
   let statAllocationCount = 0;
   let groupIndex = 0;
+  let verifiedBestBattleReach = null;
 
   for (const equipment of equipmentCombos(job.age, data, choiceLimit, options)) {
     for (const pets of bestPetTriples(job.petRarity, data, choiceLimit, options.petMode)) {
@@ -163,14 +170,19 @@ export function exhaustiveCase(job, data, options = {}) {
           const lineCount = secondaryLineCount(equipment, pets, mount);
           const countVectors = options.exhaustiveStats
             ? Array.from(statCountVectors(stats, lineCount, carrierCount, statAllocationLimit, options))
-            : optimizedStatCountVectors(base, stats, lineCount, carrierCount, data, job, frontier, beamWidth, statAllocationLimit, options);
+            : optimizedStatCountVectorsForJob(base, stats, lineCount, carrierCount, data, job, frontier, beamWidth, statAllocationLimit, options);
           statAllocationCount = Math.max(statAllocationCount, countVectors.length);
           for (const counts of countVectors) {
             const profile = applyStatCounts(base, stats, counts);
-            const result = evaluateProfileSnapshot(profile, data, job.objective, 60, { levelRange: frontier, model: BUILD_MODEL });
+            const scored = scoreCandidate(profile, data, job, frontier, verifiedBestBattleReach);
+            const result = scored.result;
+            if (job.objective === "reach" && !verifiedBestBattleReach && scored.battleReach) {
+              verifiedBestBattleReach = scored.battleReach;
+            }
             candidateCount += 1;
             pushTop(top, {
-              score: result.score,
+              score: scored.score,
+              battleReach: scored.battleReach,
               stats: summarizeStats(stats, counts),
               equipment: equipment.map(publicItem),
               pets: pets.map(publicCompanion),
@@ -182,14 +194,15 @@ export function exhaustiveCase(job, data, options = {}) {
                 success: scenario.success,
                 summary: scenario.summary
               }))
-            }, topN);
+            }, keptTopN);
           }
         }
       }
     }
   }
 
-  const winner = top[0] || emptyWinner();
+  const finalTop = job.objective === "reach" ? verifyReachTop(top, job, data, keptTopN) : top;
+  const winner = finalTop[0] || emptyWinner();
   const reach = !options.smoke && winner.equipment.length && !(job.shardCount > 1)
     ? reachFor(profileFromWinner(job, data, winner), data, job.objective)
     : null;
@@ -216,7 +229,7 @@ export function exhaustiveCase(job, data, options = {}) {
     statAllocationCount,
     exhaustive: !options.smoke,
     winner,
-    top
+    top: finalTop.slice(0, topN)
   };
 }
 
@@ -305,6 +318,19 @@ export function optimizedStatCountVectors(base, stats, lineCount, carrierCount, 
     .map((entry) => entry.counts);
 }
 
+function optimizedStatCountVectorsForJob(base, stats, lineCount, carrierCount, data, job, frontier, beamWidth, limit, options) {
+  if (job.objective !== "reach") return optimizedStatCountVectors(base, stats, lineCount, carrierCount, data, job, frontier, beamWidth, limit, options);
+  const ids = stats.map((stat) => stat.id);
+  const vectors = new Map();
+  for (const objective of ["progress", "survival", "damage"]) {
+    for (const counts of optimizedStatCountVectors(base, stats, lineCount, carrierCount, data, { ...job, objective }, frontier, beamWidth, limit, options)) {
+      vectors.set(countKey(ids, counts), counts);
+      if (vectors.size >= limit) return Array.from(vectors.values());
+    }
+  }
+  return Array.from(vectors.values());
+}
+
 function archetypeCountVectors(ids, lineCount, carrierCount, job) {
   const archetypes = [
     ["health", "regen", "block", "lifesteal"],
@@ -350,7 +376,7 @@ function distributeLines(ids, wanted, lineCount, carrierCount) {
 
 function scoreCounts(base, stats, counts, data, job, frontier) {
   const profile = applyStatCounts(base, stats, counts);
-  return evaluateProfileSnapshot(profile, data, job.objective, 60, { levelRange: frontier, model: BUILD_MODEL }).score;
+  return evaluateProfileSnapshot(profile, data, simulationObjective(job.objective), 60, { levelRange: frontier, model: BUILD_MODEL }).score;
 }
 
 function countKey(ids, counts) {
@@ -588,10 +614,11 @@ function profileFromWinner(job, data, winner) {
 
 function reachFor(profile, data, objective) {
   let best = null;
+  const simulatedObjective = simulationObjective(objective);
   for (let age = 1; age <= 11; age += 1) {
     for (let combat = 1; combat <= 20; combat += 1) {
       const levelRange = { age, combat, min: age, max: combat, difficulty: 0 };
-      const result = evaluateProfileSnapshot(profile, data, objective, 60, { levelRange, model: BUILD_MODEL });
+      const result = evaluateProfileSnapshot(profile, data, simulatedObjective, 60, { levelRange, model: BUILD_MODEL });
       const successCount = result.scenarios.filter((scenario) => scenario.success).length;
       if (successCount >= 2) {
         best = {
@@ -608,10 +635,11 @@ function reachFor(profile, data, objective) {
 
 function battleReachFor(profile, data, objective) {
   let best = null;
+  const simulatedObjective = simulationObjective(objective);
   for (let age = 1; age <= 11; age += 1) {
     for (let combat = 1; combat <= 20; combat += 1) {
       const levelRange = { age, combat, min: age, max: combat, difficulty: 0 };
-      const result = evaluateProfileSnapshot(profile, data, objective, 60, { levelRange, model: BUILD_MODEL });
+      const result = evaluateProfileSnapshot(profile, data, simulatedObjective, 60, { levelRange, model: BUILD_MODEL });
       const gauntlet = result.scenarios.find((scenario) => scenario.id === "gauntlet");
       if (!gauntlet?.success) return best;
       best = {
@@ -622,6 +650,85 @@ function battleReachFor(profile, data, objective) {
     }
   }
   return best;
+}
+
+function scoreCandidate(profile, data, job, frontier, bestBattleReach) {
+  if (job.objective !== "reach") {
+    const result = evaluateProfileSnapshot(profile, data, simulationObjective(job.objective), 60, { levelRange: frontier, model: BUILD_MODEL });
+    return { score: result.score, result, battleReach: null };
+  }
+  const scored = reachScoreFor(profile, data, bestBattleReach);
+  return { score: scored.score, result: scored.result, battleReach: scored.battleReach };
+}
+
+function reachScoreFor(profile, data, bestBattleReach) {
+  if (!bestBattleReach) {
+    const battleReach = battleReachFor(profile, data, "progress");
+    const result = battleReach
+      ? evaluateProfileSnapshot(profile, data, "progress", 60, { levelRange: levelRangeForPoint(battleReach), model: BUILD_MODEL })
+      : evaluateProfileSnapshot(profile, data, "progress", 60, { levelRange: { age: 1, combat: 1, min: 1, max: 1, difficulty: 0 }, model: BUILD_MODEL });
+    return { score: pointScore(battleReach), result, battleReach };
+  }
+
+  const gate = levelRangeForPoint(bestBattleReach);
+  let result = evaluateProfileSnapshot(profile, data, "progress", 60, { levelRange: gate, model: BUILD_MODEL });
+  const gateGauntlet = result.scenarios.find((scenario) => scenario.id === "gauntlet");
+  if (!gateGauntlet?.success) return { score: 0, result, battleReach: null };
+
+  let best = bestBattleReach;
+  for (const point of battlePointsAfter(bestBattleReach)) {
+    const levelRange = levelRangeForPoint(point);
+    result = evaluateProfileSnapshot(profile, data, "progress", 60, { levelRange, model: BUILD_MODEL });
+    const gauntlet = result.scenarios.find((scenario) => scenario.id === "gauntlet");
+    if (!gauntlet?.success) break;
+    best = { ...levelRange, score: round(gauntlet.score, 6), summary: gauntlet.summary };
+  }
+  return { score: pointScore(best), result, battleReach: best };
+}
+
+function verifyReachTop(top, job, data, limit) {
+  return top
+    .map((candidate) => {
+      const profile = profileFromWinner(job, data, candidate);
+      const battleReach = battleReachFor(profile, data, "progress");
+      const result = battleReach
+        ? evaluateProfileSnapshot(profile, data, "progress", 60, { levelRange: levelRangeForPoint(battleReach), model: BUILD_MODEL })
+        : null;
+      return {
+        ...candidate,
+        score: pointScore(battleReach),
+        battleReach,
+        scenarios: result?.scenarios.map((scenario) => ({
+          id: scenario.id,
+          score: round(scenario.score, 6),
+          success: scenario.success,
+          summary: scenario.summary
+        })) || candidate.scenarios
+      };
+    })
+    .sort((left, right) => right.score - left.score)
+    .slice(0, limit);
+}
+
+function* battlePointsAfter(point) {
+  let skip = Boolean(point);
+  for (let age = 1; age <= 11; age += 1) {
+    for (let combat = 1; combat <= 20; combat += 1) {
+      if (skip) {
+        skip = !(age === point.age && combat === point.combat);
+        continue;
+      }
+      yield { age, combat };
+    }
+  }
+}
+
+function levelRangeForPoint(point) {
+  return { age: point.age, combat: point.combat, min: point.age, max: point.combat, difficulty: 0 };
+}
+
+function pointScore(point) {
+  return point ? (point.age - 1) * 20 + point.combat + Number(point.score || 0) / 100 : 0;
 }
 
 function applyStatCounts(base, stats, counts) {
@@ -961,6 +1068,18 @@ function limited(values, limit = Infinity) {
 
 function caseKey(age, petRarity, mountRarity, spellRarity, objective) {
   return [age, petRarity, mountRarity, spellRarity, objective].join("|");
+}
+
+function normalizeObjective(objective) {
+  const value = String(objective || "").trim().toLowerCase();
+  if (value === "dps") return "damage";
+  if (value === "survie") return "survival";
+  if (value === "max" || value === "avance" || value === "reach") return "reach";
+  return ["progress", "damage", "survival"].includes(value) ? value : "";
+}
+
+function simulationObjective(objective) {
+  return objective === "reach" ? "progress" : objective;
 }
 
 export function skipAccessCase(age, petRarity, mountRarity, spellRarity) {

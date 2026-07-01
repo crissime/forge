@@ -43,6 +43,28 @@ describe("exhaustive BIS generator", () => {
     expect(result.winner.stats.reduce((sum, stat) => sum + stat.count, 0)).toBe(result.lineCount);
   });
 
+  it("can score a case by sequential max reach", async () => {
+    const data = await loadGameData();
+    const { exhaustiveCase } = await import("../../../scripts/generate-simulated-bis.mjs");
+    const result = exhaustiveCase({
+      key: "4|Epic|Common|Epic|reach",
+      age: 4,
+      petRarity: "Epic",
+      mountRarity: "Common",
+      spellRarity: "Epic",
+      objective: "reach"
+    }, data, {
+      topN: 1,
+      choiceLimit: 1,
+      statAllocationLimit: 1,
+      beamWidth: 1
+    });
+
+    expect(result.objective).toBe("reach");
+    expect(result.winner.score).toBeGreaterThan(0);
+    expect(result.battleReach?.age).toBeGreaterThanOrEqual(1);
+  });
+
   it("keeps melee, hybrid and ranged weapon variants", async () => {
     const data = await loadGameData();
     const { itemChoices } = await import("../../../scripts/generate-simulated-bis.mjs");

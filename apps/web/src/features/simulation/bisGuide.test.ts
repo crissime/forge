@@ -33,6 +33,12 @@ const generatedBis = {
       ["damage", "Damage", 2, 30],
       ["lifesteal", "Lifesteal", 2, 40]
     ]),
+    "4|Epic|Common|Epic|reach": generatedCase("reach", 12, [
+      ["lifesteal", "Lifesteal", 5, 100],
+      ["attackSpeed", "Attack Speed", 4, 160],
+      ["doubleChance", "Double Chance", 2, 40],
+      ["damage", "Damage", 1, 15]
+    ]),
     "4|Epic|Common|Legendary|damage": generatedCase("damage", 12, [
       ["skillDamage", "Skill Damage", 4, 120],
       ["meleeDamage", "Melee Damage", 4, 200],
@@ -158,6 +164,13 @@ describe("BIS progression guide", () => {
     expect(reference.note).toContain("Arme BIS");
     expect(reference.note).toContain("Pets BIS");
     expect(reference.note).toContain("sans talents");
+  });
+
+  it("prefers reach BIS when objective-specific BIS was removed", () => {
+    const reference = bisReferenceForAge(4, ages, "progress", generatedBis);
+
+    expect(reference.note).toContain("objectif avance max");
+    expect(reference.stats[0]).toMatchObject({ stat: "lifesteal", count: 5 });
   });
 
   it("changes the simulated allocation with companion and spell access", () => {

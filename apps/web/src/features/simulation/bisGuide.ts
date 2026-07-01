@@ -262,6 +262,7 @@ function simulatedResult(
 ): GeneratedResult {
   const normalizedObjective = objective === "damage" || objective === "survival" ? objective : "progress";
   const key = [age, petRarity, mountRarity, spellRarity, normalizedObjective].join("|");
+  const reachKey = [age, petRarity, mountRarity, spellRarity, "reach"].join("|");
   if (!isCurrentGeneratedBis(generated)) {
     return {
       objective: normalizedObjective,
@@ -274,7 +275,7 @@ function simulatedResult(
     };
   }
 
-  const exhaustiveCase = generated.cases?.[key] || null;
+  const exhaustiveCase = generated.cases?.[reachKey] || generated.cases?.[key] || null;
   if (exhaustiveCase?.winner) return exhaustiveResult(exhaustiveCase, true, generated.assumptions);
 
   return {
@@ -364,6 +365,7 @@ function highestNumber(values: number[], fallback: number) {
 }
 
 function objectiveLabel(objective: string) {
+  if (objective === "reach") return "avance max";
   if (objective === "damage") return "DPS";
   if (objective === "survival") return "survie";
   return "progression";
