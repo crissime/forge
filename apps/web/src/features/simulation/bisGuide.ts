@@ -48,6 +48,7 @@ type GeneratedCase = {
   candidateCount?: number;
   frontier?: { age: number; combat: number };
   reach?: { age: number; combat: number; successCount?: number; scenarioCount?: number };
+  battleReach?: { age: number; combat: number; summary?: string };
   exhaustive?: boolean;
   v3?: boolean;
   access?: { equipmentAge?: number; petRarity?: string; mountRarity?: string; spellRarity?: string };
@@ -60,7 +61,7 @@ type GeneratedCase = {
 
 type GeneratedStat = { stat: string; label: string; count: number; total: number };
 type GeneratedPet = { name: string; type?: string };
-type FightPoint = { age: number; combat: number; successCount?: number; scenarioCount?: number };
+type FightPoint = { age: number; combat: number; successCount?: number; scenarioCount?: number; summary?: string };
 type GeneratedResult = {
   objective: string;
   lineCount: number;
@@ -68,6 +69,7 @@ type GeneratedResult = {
   stats: GeneratedStat[];
   frontier?: FightPoint;
   reach?: FightPoint;
+  battleReach?: FightPoint;
   pets: GeneratedPet[];
   weaponStyle?: string;
   missing?: boolean;
@@ -190,10 +192,15 @@ function referenceForCase(
   }
   const battle: FightPoint = result.frontier || { age: 1, combat: 1 };
   const reach: FightPoint = result.reach || battle;
+  const battleReach: FightPoint = result.battleReach || battle;
   const stats = Array.isArray(result.stats) ? result.stats : [];
   const lineCount = Number(result.lineCount || stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0));
   const method = result.v3 ? "BIS v3 exhaustif controle" : result.exhaustive ? "BIS exhaustif" : "Repartition simulee";
-  const reachText = `Front max estime : ${reach.age}-${reach.combat} normal${reach.successCount ? ` (${reach.successCount}/${reach.scenarioCount} scenarios reussis)` : ""}.`;
+  const battleText = `Max bataille atteint : ${battleReach.age}-${battleReach.combat} normal.`;
+  const reachScenarios = reach.successCount
+    ? ` (${reach.successCount}/${reach.scenarioCount} scenarios reussis)`
+    : "";
+  const reachText = `Score progression max : ${reach.age}-${reach.combat} normal${reachScenarios}.`;
   const candidateText = result.candidateCount ? ` ${formatInteger(result.candidateCount)} candidats testes.` : "";
   const petText = result.pets.length
     ? ` Pets BIS : ${result.pets.map((pet) => `${pet.name} (${petTypeLabel(pet.type)})`).join(", ")}.`
@@ -214,7 +221,7 @@ function referenceForCase(
       count: stat.count,
       target: `${stat.count} ligne${stat.count > 1 ? "s" : ""} - ${formatPercent(stat.total)}`
     })),
-    note: `${method} pour l'objectif ${objectiveLabel(result.objective)}, avec ${lineCount} lignes secondaires max. Niveau de test : ${battle.age}-${battle.combat} normal. ${reachText}${candidateText} Pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, niveaux max, sans talents.${weaponText}${petText}`
+    note: `${method} pour l'objectif ${objectiveLabel(result.objective)}, avec ${lineCount} lignes secondaires max. ${battleText} ${reachText}${candidateText} Pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, niveaux max, sans talents.${weaponText}${petText}`
   };
 }
 
@@ -238,6 +245,7 @@ function simulatedResult(
       stats: [],
       frontier: undefined,
       reach: undefined,
+      battleReach: undefined,
       pets: [],
       weaponStyle: undefined,
       missing: true,
@@ -253,6 +261,7 @@ function simulatedResult(
     ...template,
     frontier: undefined,
     reach: undefined,
+    battleReach: undefined,
     pets: [],
     weaponStyle: undefined,
     exhaustive: false
@@ -267,6 +276,7 @@ function exhaustiveResult(entry: GeneratedCase, exact: boolean) {
     stats: entry.winner?.stats || [],
     frontier: entry.frontier,
     reach: entry.reach,
+    battleReach: entry.battleReach,
     pets: entry.winner?.pets || [],
     weaponStyle: entry.winner?.weaponStyle,
     exhaustive: exact && entry.exhaustive !== false,

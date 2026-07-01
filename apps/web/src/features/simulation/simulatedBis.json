@@ -110,6 +110,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 2,
+        "min": 9,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.045857,
+        "summary": "Passe Normal 9-2 en 6,3s"
       }
     },
     "4|Epic|Common|Epic|progress": {
@@ -202,6 +211,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.931304,
+        "summary": "Passe Normal 9-12 en 18,0s"
       }
     },
     "4|Epic|Common|Epic|survival": {
@@ -294,6 +312,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 14,
+        "min": 9,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.394439,
+        "summary": "Passe Normal 9-14 en 31,3s"
       }
     },
     "4|Epic|Common|Legendary|damage": {
@@ -386,6 +413,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 6,
+        "min": 9,
+        "max": 6,
+        "difficulty": 0,
+        "score": 15.367363,
+        "summary": "Passe Normal 9-6 en 8,6s"
       }
     },
     "4|Epic|Common|Legendary|progress": {
@@ -478,6 +514,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 19,
+        "min": 9,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.214594,
+        "summary": "Passe Normal 9-19 en 13,5s"
       }
     },
     "4|Epic|Common|Legendary|survival": {
@@ -563,6 +608,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.558614,
+        "summary": "Passe Normal 10-2 en 20,5s"
       }
     },
     "4|Epic|Common|Rare|damage": {
@@ -648,6 +702,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 12,
+        "min": 8,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.667159,
+        "summary": "Passe Normal 8-12 en 5,8s"
       }
     },
     "4|Epic|Common|Rare|progress": {
@@ -740,6 +803,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.772562,
+        "summary": "Passe Normal 9-12 en 21,2s"
       }
     },
     "4|Epic|Common|Rare|survival": {
@@ -825,6 +897,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 14,
+        "min": 9,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.156464,
+        "summary": "Passe Normal 9-14 en 40,0s"
       }
     },
     "4|Epic|Rare|Epic|damage": {
@@ -910,6 +991,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 2,
+        "min": 9,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.42689,
+        "summary": "Passe Normal 9-2 en 6,1s"
       }
     },
     "4|Epic|Rare|Epic|progress": {
@@ -1002,6 +1092,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.994418,
+        "summary": "Passe Normal 9-12 en 16,9s"
       }
     },
     "4|Epic|Rare|Epic|survival": {
@@ -1094,6 +1193,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 17,
+        "min": 9,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.207726,
+        "summary": "Passe Normal 9-17 en 37,9s"
       }
     },
     "4|Epic|Rare|Legendary|damage": {
@@ -1186,6 +1294,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 6,
+        "min": 9,
+        "max": 6,
+        "difficulty": 0,
+        "score": 15.35024,
+        "summary": "Passe Normal 9-6 en 8,5s"
       }
     },
     "4|Epic|Rare|Legendary|progress": {
@@ -1278,6 +1395,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 1,
+        "min": 10,
+        "max": 1,
+        "difficulty": 0,
+        "score": 15.450884,
+        "summary": "Passe Normal 10-1 en 10,6s"
       }
     },
     "4|Epic|Rare|Legendary|survival": {
@@ -1363,6 +1489,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.834576,
+        "summary": "Passe Normal 10-2 en 19,9s"
       }
     },
     "4|Epic|Rare|Rare|damage": {
@@ -1448,6 +1583,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 1,
+        "min": 9,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.566044,
+        "summary": "Passe Normal 9-1 en 4,1s"
       }
     },
     "4|Epic|Rare|Rare|progress": {
@@ -1540,6 +1684,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.848186,
+        "summary": "Passe Normal 9-12 en 19,6s"
       }
     },
     "4|Epic|Rare|Rare|survival": {
@@ -1625,6 +1778,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 14,
+        "min": 9,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.23379,
+        "summary": "Passe Normal 9-14 en 36,9s"
       }
     },
     "4|Legendary|Common|Epic|damage": {
@@ -1710,6 +1872,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 3,
+        "min": 10,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.305713,
+        "summary": "Passe Normal 10-3 en 5,1s"
       }
     },
     "4|Legendary|Common|Epic|progress": {
@@ -1802,6 +1973,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.978252,
+        "summary": "Passe Normal 10-17 en 17,2s"
       }
     },
     "4|Legendary|Common|Epic|survival": {
@@ -1894,6 +2074,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.182477,
+        "summary": "Passe Normal 11-2 en 39,0s"
       }
     },
     "4|Legendary|Common|Legendary|damage": {
@@ -1979,6 +2168,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 7,
+        "min": 10,
+        "max": 7,
+        "difficulty": 0,
+        "score": 14.131285,
+        "summary": "Passe Normal 10-7 en 7,2s"
       }
     },
     "4|Legendary|Common|Legendary|progress": {
@@ -2071,6 +2269,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.15104,
+        "summary": "Passe Normal 10-19 en 14,4s"
       }
     },
     "4|Legendary|Common|Legendary|survival": {
@@ -2163,6 +2370,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.070601,
+        "summary": "Passe Normal 11-5 en 43,8s"
       }
     },
     "4|Legendary|Common|Rare|damage": {
@@ -2248,6 +2464,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 15.089486,
+        "summary": "Passe Normal 10-2 en 4,3s"
       }
     },
     "4|Legendary|Common|Rare|progress": {
@@ -2340,6 +2565,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.95698,
+        "summary": "Passe Normal 10-17 en 17,5s"
       }
     },
     "4|Legendary|Common|Rare|survival": {
@@ -2432,6 +2666,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.16914,
+        "summary": "Passe Normal 11-2 en 39,5s"
       }
     },
     "4|Legendary|Rare|Epic|damage": {
@@ -2517,6 +2760,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 3,
+        "min": 10,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.375045,
+        "summary": "Passe Normal 10-3 en 5,0s"
       }
     },
     "4|Legendary|Rare|Epic|progress": {
@@ -2609,6 +2861,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.986324,
+        "summary": "Passe Normal 10-17 en 17,0s"
       }
     },
     "4|Legendary|Rare|Epic|survival": {
@@ -2701,6 +2962,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.19096,
+        "summary": "Passe Normal 11-2 en 38,6s"
       }
     },
     "4|Legendary|Rare|Legendary|damage": {
@@ -2786,6 +3056,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 7,
+        "min": 10,
+        "max": 7,
+        "difficulty": 0,
+        "score": 14.170705,
+        "summary": "Passe Normal 10-7 en 7,1s"
       }
     },
     "4|Legendary|Rare|Legendary|progress": {
@@ -2878,6 +3157,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.156142,
+        "summary": "Passe Normal 10-19 en 14,3s"
       }
     },
     "4|Legendary|Rare|Legendary|survival": {
@@ -2970,6 +3258,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.076875,
+        "summary": "Passe Normal 11-5 en 43,5s"
       }
     },
     "4|Legendary|Rare|Rare|damage": {
@@ -3055,6 +3352,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 15.140698,
+        "summary": "Passe Normal 10-2 en 4,3s"
       }
     },
     "4|Legendary|Rare|Rare|progress": {
@@ -3147,6 +3453,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.965301,
+        "summary": "Passe Normal 10-17 en 17,4s"
       }
     },
     "4|Legendary|Rare|Rare|survival": {
@@ -3239,6 +3554,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.177828,
+        "summary": "Passe Normal 11-2 en 39,1s"
       }
     },
     "4|Rare|Common|Epic|damage": {
@@ -3324,6 +3648,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 4,
+        "min": 8,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.070024,
+        "summary": "Passe Normal 8-4 en 12,8s"
       }
     },
     "4|Rare|Common|Epic|progress": {
@@ -3423,6 +3756,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 12,
+        "min": 8,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.079804,
+        "summary": "Passe Normal 8-12 en 17,2s"
       }
     },
     "4|Rare|Common|Epic|survival": {
@@ -3515,6 +3857,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 12,
+        "min": 8,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.737534,
+        "summary": "Passe Normal 8-12 en 22,0s"
       }
     },
     "4|Rare|Common|Legendary|damage": {
@@ -3600,6 +3951,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 4,
+        "min": 8,
+        "max": 4,
+        "difficulty": 0,
+        "score": 15.746114,
+        "summary": "Passe Normal 8-4 en 7,7s"
       }
     },
     "4|Rare|Common|Legendary|progress": {
@@ -3692,6 +4052,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 12,
+        "min": 8,
+        "max": 12,
+        "difficulty": 0,
+        "score": 15.688612,
+        "summary": "Passe Normal 8-12 en 8,4s"
       }
     },
     "4|Rare|Common|Legendary|survival": {
@@ -3784,6 +4153,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 12,
+        "min": 8,
+        "max": 12,
+        "difficulty": 0,
+        "score": 15.642198,
+        "summary": "Passe Normal 8-12 en 8,8s"
       }
     },
     "4|Rare|Common|Rare|damage": {
@@ -3869,6 +4247,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 7,
+        "combat": 7,
+        "min": 7,
+        "max": 7,
+        "difficulty": 0,
+        "score": 13.744902,
+        "summary": "Passe Normal 7-7 en 9,0s"
       }
     },
     "4|Rare|Common|Rare|progress": {
@@ -3961,6 +4348,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 5,
+        "min": 8,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.694805,
+        "summary": "Passe Normal 8-5 en 22,9s"
       }
     },
     "4|Rare|Common|Rare|survival": {
@@ -4046,6 +4442,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 12,
+        "min": 8,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.053693,
+        "summary": "Passe Normal 8-12 en 44,6s"
       }
     },
     "4|Rare|Rare|Epic|damage": {
@@ -4138,6 +4543,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 12,
+        "min": 8,
+        "max": 12,
+        "difficulty": 0,
+        "score": 13.596928,
+        "summary": "Passe Normal 8-12 en 13,6s"
       }
     },
     "4|Rare|Rare|Epic|progress": {
@@ -4230,6 +4644,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 2,
+        "min": 9,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.766436,
+        "summary": "Passe Normal 9-2 en 21,3s"
       }
     },
     "4|Rare|Rare|Epic|survival": {
@@ -4315,6 +4738,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 2,
+        "min": 9,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.616578,
+        "summary": "Passe Normal 9-2 en 24,9s"
       }
     },
     "4|Rare|Rare|Legendary|damage": {
@@ -4400,6 +4832,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 4,
+        "min": 9,
+        "max": 4,
+        "difficulty": 0,
+        "score": 15.529392,
+        "summary": "Passe Normal 9-4 en 8,5s"
       }
     },
     "4|Rare|Rare|Legendary|progress": {
@@ -4492,6 +4933,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 4,
+        "min": 9,
+        "max": 4,
+        "difficulty": 0,
+        "score": 15.586472,
+        "summary": "Passe Normal 9-4 en 9,3s"
       }
     },
     "4|Rare|Rare|Legendary|survival": {
@@ -4584,6 +5034,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 4,
+        "min": 9,
+        "max": 4,
+        "difficulty": 0,
+        "score": 15.500278,
+        "summary": "Passe Normal 9-4 en 10,1s"
       }
     },
     "4|Rare|Rare|Rare|damage": {
@@ -4669,6 +5128,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 1,
+        "min": 8,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.483654,
+        "summary": "Passe Normal 8-1 en 5,1s"
       }
     },
     "4|Rare|Rare|Rare|progress": {
@@ -4761,6 +5229,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 13,
+        "min": 8,
+        "max": 13,
+        "difficulty": 0,
+        "score": 14.552299,
+        "summary": "Passe Normal 8-13 en 26,6s"
       }
     },
     "4|Rare|Rare|Rare|survival": {
@@ -4846,6 +5323,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 2,
+        "min": 9,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.239396,
+        "summary": "Passe Normal 9-2 en 36,7s"
       }
     },
     "5|Epic|Common|Epic|damage": {
@@ -4931,6 +5417,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 3,
+        "min": 9,
+        "max": 3,
+        "difficulty": 0,
+        "score": 13.924868,
+        "summary": "Passe Normal 9-3 en 6,8s"
       }
     },
     "5|Epic|Common|Epic|progress": {
@@ -5023,6 +5518,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 14,
+        "min": 9,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.709679,
+        "summary": "Passe Normal 9-14 en 22,6s"
       }
     },
     "5|Epic|Common|Epic|survival": {
@@ -5108,6 +5612,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.299408,
+        "summary": "Passe Normal 10-2 en 34,5s"
       }
     },
     "5|Epic|Common|Legendary|damage": {
@@ -5200,6 +5713,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 15.258489,
+        "summary": "Passe Normal 9-12 en 8,5s"
       }
     },
     "5|Epic|Common|Legendary|progress": {
@@ -5299,6 +5821,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 1,
+        "min": 10,
+        "max": 1,
+        "difficulty": 0,
+        "score": 15.525064,
+        "summary": "Passe Normal 10-1 en 9,9s"
       }
     },
     "5|Epic|Common|Legendary|survival": {
@@ -5384,6 +5915,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.876539,
+        "summary": "Passe Normal 10-2 en 19,0s"
       }
     },
     "5|Epic|Common|Rare|damage": {
@@ -5469,6 +6009,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 2,
+        "min": 9,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.003499,
+        "summary": "Passe Normal 9-2 en 6,2s"
       }
     },
     "5|Epic|Common|Rare|progress": {
@@ -5561,6 +6110,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 14,
+        "min": 9,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.683174,
+        "summary": "Passe Normal 9-14 en 23,2s"
       }
     },
     "5|Epic|Common|Rare|survival": {
@@ -5646,6 +6204,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 14,
+        "min": 9,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.326262,
+        "summary": "Passe Normal 9-14 en 33,5s"
       }
     },
     "5|Epic|Rare|Epic|damage": {
@@ -5731,6 +6298,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 3,
+        "min": 9,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.241793,
+        "summary": "Passe Normal 9-3 en 6,6s"
       }
     },
     "5|Epic|Rare|Epic|progress": {
@@ -5823,6 +6399,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 13.15599,
+        "summary": "Passe Normal 10-2 en 23,1s"
       }
     },
     "5|Epic|Rare|Epic|survival": {
@@ -5908,6 +6493,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.34828,
+        "summary": "Passe Normal 10-2 en 32,8s"
       }
     },
     "5|Epic|Rare|Legendary|damage": {
@@ -6000,6 +6594,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 15,
+        "min": 9,
+        "max": 15,
+        "difficulty": 0,
+        "score": 14.170038,
+        "summary": "Passe Normal 9-15 en 10,7s"
       }
     },
     "5|Epic|Rare|Legendary|progress": {
@@ -6099,6 +6702,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 13.480303,
+        "summary": "Passe Normal 10-2 en 15,7s"
       }
     },
     "5|Epic|Rare|Legendary|survival": {
@@ -6184,6 +6796,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.902324,
+        "summary": "Passe Normal 10-2 en 18,6s"
       }
     },
     "5|Epic|Rare|Rare|damage": {
@@ -6269,6 +6890,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 2,
+        "min": 9,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.431166,
+        "summary": "Passe Normal 9-2 en 5,9s"
       }
     },
     "5|Epic|Rare|Rare|progress": {
@@ -6361,6 +6991,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 14,
+        "min": 9,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.63715,
+        "summary": "Passe Normal 9-14 en 24,3s"
       }
     },
     "5|Epic|Rare|Rare|survival": {
@@ -6446,6 +7085,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.279173,
+        "summary": "Passe Normal 10-2 en 35,2s"
       }
     },
     "5|Legendary|Common|Epic|damage": {
@@ -6531,6 +7179,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 3,
+        "min": 10,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.462117,
+        "summary": "Passe Normal 10-3 en 5,0s"
       }
     },
     "5|Legendary|Common|Epic|progress": {
@@ -6623,6 +7280,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.997213,
+        "summary": "Passe Normal 10-17 en 16,8s"
       }
     },
     "5|Legendary|Common|Epic|survival": {
@@ -6715,6 +7381,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.202154,
+        "summary": "Passe Normal 11-2 en 38,2s"
       }
     },
     "5|Legendary|Common|Legendary|damage": {
@@ -6800,6 +7475,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 7,
+        "min": 10,
+        "max": 7,
+        "difficulty": 0,
+        "score": 14.301791,
+        "summary": "Passe Normal 10-7 en 6,9s"
       }
     },
     "5|Legendary|Common|Legendary|progress": {
@@ -6892,6 +7576,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.160661,
+        "summary": "Passe Normal 10-19 en 14,3s"
       }
     },
     "5|Legendary|Common|Legendary|survival": {
@@ -6984,6 +7677,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.082928,
+        "summary": "Passe Normal 11-5 en 43,2s"
       }
     },
     "5|Legendary|Common|Rare|damage": {
@@ -7069,6 +7771,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 3,
+        "min": 10,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.277607,
+        "summary": "Passe Normal 10-3 en 5,1s"
       }
     },
     "5|Legendary|Common|Rare|progress": {
@@ -7161,6 +7872,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.975988,
+        "summary": "Passe Normal 10-17 en 17,2s"
       }
     },
     "5|Legendary|Common|Rare|survival": {
@@ -7253,6 +7973,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.189011,
+        "summary": "Passe Normal 11-2 en 38,7s"
       }
     },
     "5|Legendary|Rare|Epic|damage": {
@@ -7338,6 +8067,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 3,
+        "min": 10,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.525292,
+        "summary": "Passe Normal 10-3 en 5,0s"
       }
     },
     "5|Legendary|Rare|Epic|progress": {
@@ -7430,6 +8168,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 15.005089,
+        "summary": "Passe Normal 10-17 en 16,7s"
       }
     },
     "5|Legendary|Rare|Epic|survival": {
@@ -7522,6 +8269,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.210676,
+        "summary": "Passe Normal 11-2 en 37,8s"
       }
     },
     "5|Legendary|Rare|Legendary|damage": {
@@ -7607,6 +8363,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 7,
+        "min": 10,
+        "max": 7,
+        "difficulty": 0,
+        "score": 14.337524,
+        "summary": "Passe Normal 10-7 en 6,9s"
       }
     },
     "5|Legendary|Rare|Legendary|progress": {
@@ -7699,6 +8464,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.168139,
+        "summary": "Passe Normal 10-19 en 14,2s"
       }
     },
     "5|Legendary|Rare|Legendary|survival": {
@@ -7791,6 +8565,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.090347,
+        "summary": "Passe Normal 11-5 en 42,9s"
       }
     },
     "5|Legendary|Rare|Rare|damage": {
@@ -7876,6 +8659,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 3,
+        "min": 10,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.350185,
+        "summary": "Passe Normal 10-3 en 5,0s"
       }
     },
     "5|Legendary|Rare|Rare|progress": {
@@ -7968,6 +8760,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.984112,
+        "summary": "Passe Normal 10-17 en 17,1s"
       }
     },
     "5|Legendary|Rare|Rare|survival": {
@@ -8060,6 +8861,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.197533,
+        "summary": "Passe Normal 11-2 en 38,3s"
       }
     },
     "5|Rare|Common|Epic|damage": {
@@ -8145,6 +8955,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 12,
+        "min": 8,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.188757,
+        "summary": "Passe Normal 8-12 en 11,7s"
       }
     },
     "5|Rare|Common|Epic|progress": {
@@ -8237,6 +9056,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 5,
+        "min": 9,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.692683,
+        "summary": "Passe Normal 9-5 en 23,0s"
       }
     },
     "5|Rare|Common|Epic|survival": {
@@ -8322,6 +9150,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 6,
+        "min": 9,
+        "max": 6,
+        "difficulty": 0,
+        "score": 14.295712,
+        "summary": "Passe Normal 9-6 en 34,6s"
       }
     },
     "5|Rare|Common|Legendary|damage": {
@@ -8414,6 +9251,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 4,
+        "min": 9,
+        "max": 4,
+        "difficulty": 0,
+        "score": 15.519958,
+        "summary": "Passe Normal 9-4 en 8,4s"
       }
     },
     "5|Rare|Common|Legendary|progress": {
@@ -8506,6 +9352,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 6,
+        "min": 9,
+        "max": 6,
+        "difficulty": 0,
+        "score": 15.44397,
+        "summary": "Passe Normal 9-6 en 10,7s"
       }
     },
     "5|Rare|Common|Legendary|survival": {
@@ -8598,6 +9453,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.751852,
+        "summary": "Passe Normal 9-12 en 13,5s"
       }
     },
     "5|Rare|Common|Rare|damage": {
@@ -8683,6 +9547,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 4,
+        "min": 8,
+        "max": 4,
+        "difficulty": 0,
+        "score": 13.777545,
+        "summary": "Passe Normal 8-4 en 8,5s"
       }
     },
     "5|Rare|Common|Rare|progress": {
@@ -8775,6 +9648,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 2,
+        "min": 9,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.91887,
+        "summary": "Passe Normal 9-2 en 18,2s"
       }
     },
     "5|Rare|Common|Rare|survival": {
@@ -8860,6 +9742,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 5,
+        "min": 9,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.115374,
+        "summary": "Passe Normal 9-5 en 41,8s"
       }
     },
     "5|Rare|Rare|Epic|damage": {
@@ -8945,6 +9836,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 1,
+        "min": 9,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.114373,
+        "summary": "Passe Normal 9-1 en 8,2s"
       }
     },
     "5|Rare|Rare|Epic|progress": {
@@ -9037,6 +9937,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.574057,
+        "summary": "Passe Normal 9-12 en 26,0s"
       }
     },
     "5|Rare|Rare|Epic|survival": {
@@ -9122,6 +10031,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.227487,
+        "summary": "Passe Normal 9-12 en 37,2s"
       }
     },
     "5|Rare|Rare|Legendary|damage": {
@@ -9214,6 +10132,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 6,
+        "min": 9,
+        "max": 6,
+        "difficulty": 0,
+        "score": 15.301636,
+        "summary": "Passe Normal 9-6 en 9,1s"
       }
     },
     "5|Rare|Rare|Legendary|progress": {
@@ -9306,6 +10233,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 15.44397,
+        "summary": "Passe Normal 9-12 en 10,7s"
       }
     },
     "5|Rare|Rare|Legendary|survival": {
@@ -9398,6 +10334,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 15,
+        "min": 9,
+        "max": 15,
+        "difficulty": 0,
+        "score": 14.004024,
+        "summary": "Passe Normal 9-15 en 13,8s"
       }
     },
     "5|Rare|Rare|Rare|damage": {
@@ -9483,6 +10428,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 8,
+        "combat": 7,
+        "min": 8,
+        "max": 7,
+        "difficulty": 0,
+        "score": 13.624467,
+        "summary": "Passe Normal 8-7 en 10,1s"
       }
     },
     "5|Rare|Rare|Rare|progress": {
@@ -9575,6 +10529,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 5,
+        "min": 9,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.637102,
+        "summary": "Passe Normal 9-5 en 24,3s"
       }
     },
     "5|Rare|Rare|Rare|survival": {
@@ -9660,6 +10623,15 @@
             "health": 5356
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 13.976545,
+        "summary": "Passe Normal 9-12 en 48,3s"
       }
     },
     "6|Epic|Common|Epic|damage": {
@@ -9745,6 +10717,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 7,
+        "min": 9,
+        "max": 7,
+        "difficulty": 0,
+        "score": 14.446057,
+        "summary": "Passe Normal 9-7 en 8,0s"
       }
     },
     "6|Epic|Common|Epic|progress": {
@@ -9837,6 +10818,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 5,
+        "min": 10,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.544266,
+        "summary": "Passe Normal 10-5 en 26,8s"
       }
     },
     "6|Epic|Common|Epic|survival": {
@@ -9922,6 +10912,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 5,
+        "min": 10,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.1789,
+        "summary": "Passe Normal 10-5 en 39,1s"
       }
     },
     "6|Epic|Common|Legendary|damage": {
@@ -10007,6 +11006,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 2,
+        "min": 10,
+        "max": 2,
+        "difficulty": 0,
+        "score": 13.368889,
+        "summary": "Passe Normal 10-2 en 12,0s"
       }
     },
     "6|Epic|Common|Legendary|progress": {
@@ -10099,6 +11107,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 5,
+        "min": 10,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.200638,
+        "summary": "Passe Normal 10-5 en 18,4s"
       }
     },
     "6|Epic|Common|Legendary|survival": {
@@ -10184,6 +11201,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 5,
+        "min": 10,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.704939,
+        "summary": "Passe Normal 10-5 en 22,7s"
       }
     },
     "6|Epic|Common|Ultimate|damage": {
@@ -10262,6 +11288,15 @@
             "health": 482052
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 3,
+        "min": 10,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.720648,
+        "summary": "Passe Normal 10-3 en 7,1s"
       }
     },
     "6|Epic|Common|Ultimate|progress": {
@@ -10354,6 +11389,15 @@
             "health": 321368
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 6,
+        "min": 10,
+        "max": 6,
+        "difficulty": 0,
+        "score": 15.355722,
+        "summary": "Passe Normal 10-6 en 11,7s"
       }
     },
     "6|Epic|Common|Ultimate|survival": {
@@ -10446,6 +11490,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 6,
+        "min": 10,
+        "max": 6,
+        "difficulty": 0,
+        "score": 15.216325,
+        "summary": "Passe Normal 10-6 en 11,7s"
       }
     },
     "6|Epic|Epic|Epic|damage": {
@@ -10531,6 +11584,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 17,
+        "min": 9,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.009543,
+        "summary": "Passe Normal 9-17 en 8,5s"
       }
     },
     "6|Epic|Epic|Epic|progress": {
@@ -10623,6 +11685,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 12,
+        "min": 10,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.47119,
+        "summary": "Passe Normal 10-12 en 28,9s"
       }
     },
     "6|Epic|Epic|Epic|survival": {
@@ -10708,6 +11779,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 13,
+        "min": 10,
+        "max": 13,
+        "difficulty": 0,
+        "score": 14.041072,
+        "summary": "Passe Normal 10-13 en 45,2s"
       }
     },
     "6|Epic|Epic|Legendary|damage": {
@@ -10793,6 +11873,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 3,
+        "min": 10,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.015982,
+        "summary": "Passe Normal 10-3 en 11,4s"
       }
     },
     "6|Epic|Epic|Legendary|progress": {
@@ -10885,6 +11974,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 12,
+        "min": 10,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.758654,
+        "summary": "Passe Normal 10-12 en 21,5s"
       }
     },
     "6|Epic|Epic|Legendary|survival": {
@@ -10970,6 +12068,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.509137,
+        "summary": "Passe Normal 10-17 en 27,8s"
       }
     },
     "6|Epic|Epic|Ultimate|damage": {
@@ -11048,6 +12155,15 @@
             "health": 482052
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 10,
+        "min": 10,
+        "max": 10,
+        "difficulty": 0,
+        "score": 13.978421,
+        "summary": "Passe Normal 10-10 en 7,5s"
       }
     },
     "6|Epic|Epic|Ultimate|progress": {
@@ -11140,6 +12256,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 13,
+        "min": 10,
+        "max": 13,
+        "difficulty": 0,
+        "score": 15.355722,
+        "summary": "Passe Normal 10-13 en 11,7s"
       }
     },
     "6|Epic|Epic|Ultimate|survival": {
@@ -11225,6 +12350,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.196272,
+        "summary": "Passe Normal 10-17 en 11,7s"
       }
     },
     "6|Epic|Rare|Epic|damage": {
@@ -11310,6 +12444,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 11,
+        "min": 9,
+        "max": 11,
+        "difficulty": 0,
+        "score": 13.781378,
+        "summary": "Passe Normal 9-11 en 8,5s"
       }
     },
     "6|Epic|Rare|Epic|progress": {
@@ -11402,6 +12545,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 5,
+        "min": 10,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.568033,
+        "summary": "Passe Normal 10-5 en 26,1s"
       }
     },
     "6|Epic|Rare|Epic|survival": {
@@ -11487,6 +12639,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 5,
+        "min": 10,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.207851,
+        "summary": "Passe Normal 10-5 en 37,9s"
       }
     },
     "6|Epic|Rare|Legendary|damage": {
@@ -11579,6 +12740,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 3,
+        "min": 10,
+        "max": 3,
+        "difficulty": 0,
+        "score": 15.113224,
+        "summary": "Passe Normal 10-3 en 13,8s"
       }
     },
     "6|Epic|Rare|Legendary|progress": {
@@ -11671,6 +12841,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 5,
+        "min": 10,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.535284,
+        "summary": "Passe Normal 10-5 en 18,1s"
       }
     },
     "6|Epic|Rare|Legendary|survival": {
@@ -11756,6 +12935,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 5,
+        "min": 10,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.676625,
+        "summary": "Passe Normal 10-5 en 23,4s"
       }
     },
     "6|Epic|Rare|Ultimate|damage": {
@@ -11834,6 +13022,15 @@
             "health": 482052
           }
         ]
+      },
+      "battleReach": {
+        "age": 9,
+        "combat": 12,
+        "min": 9,
+        "max": 12,
+        "difficulty": 0,
+        "score": 14.544716,
+        "summary": "Passe Normal 9-12 en 5,5s"
       }
     },
     "6|Epic|Rare|Ultimate|progress": {
@@ -11926,6 +13123,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 4,
+        "min": 10,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.094082,
+        "summary": "Passe Normal 10-4 en 11,7s"
       }
     },
     "6|Epic|Rare|Ultimate|survival": {
@@ -12011,6 +13217,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 4,
+        "min": 10,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.524016,
+        "summary": "Passe Normal 10-4 en 11,7s"
       }
     },
     "6|Legendary|Common|Epic|damage": {
@@ -12096,6 +13311,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 4,
+        "min": 10,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.530421,
+        "summary": "Passe Normal 10-4 en 5,5s"
       }
     },
     "6|Legendary|Common|Epic|progress": {
@@ -12188,6 +13412,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.920376,
+        "summary": "Passe Normal 10-19 en 18,2s"
       }
     },
     "6|Legendary|Common|Epic|survival": {
@@ -12280,6 +13513,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.010852,
+        "summary": "Passe Normal 11-5 en 46,6s"
       }
     },
     "6|Legendary|Common|Legendary|damage": {
@@ -12365,6 +13607,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 7,
+        "min": 10,
+        "max": 7,
+        "difficulty": 0,
+        "score": 14.591309,
+        "summary": "Passe Normal 10-7 en 6,7s"
       }
     },
     "6|Legendary|Common|Legendary|progress": {
@@ -12457,6 +13708,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.185447,
+        "summary": "Passe Normal 10-19 en 13,9s"
       }
     },
     "6|Legendary|Common|Legendary|survival": {
@@ -12549,6 +13809,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.144088,
+        "summary": "Passe Normal 11-5 en 40,5s"
       }
     },
     "6|Legendary|Common|Ultimate|damage": {
@@ -12634,6 +13903,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 4,
+        "min": 10,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.384682,
+        "summary": "Passe Normal 10-4 en 5,6s"
       }
     },
     "6|Legendary|Common|Ultimate|progress": {
@@ -12726,6 +14004,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.953853,
+        "summary": "Passe Normal 11-2 en 17,6s"
       }
     },
     "6|Legendary|Common|Ultimate|survival": {
@@ -12818,6 +14105,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.598034,
+        "summary": "Passe Normal 11-5 en 25,3s"
       }
     },
     "6|Legendary|Epic|Epic|damage": {
@@ -12903,6 +14199,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 7,
+        "min": 10,
+        "max": 7,
+        "difficulty": 0,
+        "score": 14.325036,
+        "summary": "Passe Normal 10-7 en 6,7s"
       }
     },
     "6|Legendary|Epic|Epic|progress": {
@@ -12995,6 +14300,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 20,
+        "min": 10,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.691013,
+        "summary": "Passe Normal 10-20 en 23,0s"
       }
     },
     "6|Legendary|Epic|Epic|survival": {
@@ -13087,6 +14401,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.1336,
+        "summary": "Passe Normal 11-5 en 41,0s"
       }
     },
     "6|Legendary|Epic|Legendary|damage": {
@@ -13172,6 +14495,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 9,
+        "min": 10,
+        "max": 9,
+        "difficulty": 0,
+        "score": 14.079361,
+        "summary": "Passe Normal 10-9 en 7,0s"
       }
     },
     "6|Legendary|Epic|Legendary|progress": {
@@ -13264,6 +14596,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 13.170705,
+        "summary": "Passe Normal 11-2 en 16,8s"
       }
     },
     "6|Legendary|Epic|Legendary|survival": {
@@ -13356,6 +14697,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 6,
+        "min": 11,
+        "max": 6,
+        "difficulty": 0,
+        "score": 14.134196,
+        "summary": "Passe Normal 11-6 en 41,0s"
       }
     },
     "6|Legendary|Epic|Ultimate|damage": {
@@ -13441,6 +14791,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 7,
+        "min": 10,
+        "max": 7,
+        "difficulty": 0,
+        "score": 14.417754,
+        "summary": "Passe Normal 10-7 en 6,3s"
       }
     },
     "6|Legendary|Epic|Ultimate|progress": {
@@ -13533,6 +14892,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.724453,
+        "summary": "Passe Normal 11-5 en 22,3s"
       }
     },
     "6|Legendary|Epic|Ultimate|survival": {
@@ -13625,6 +14993,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.518307,
+        "summary": "Passe Normal 11-5 en 27,5s"
       }
     },
     "6|Legendary|Rare|Epic|damage": {
@@ -13710,6 +15087,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 4,
+        "min": 10,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.58229,
+        "summary": "Passe Normal 10-4 en 5,4s"
       }
     },
     "6|Legendary|Rare|Epic|progress": {
@@ -13802,6 +15188,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.927407,
+        "summary": "Passe Normal 10-19 en 18,1s"
       }
     },
     "6|Legendary|Rare|Epic|survival": {
@@ -13894,6 +15289,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.017315,
+        "summary": "Passe Normal 11-5 en 46,3s"
       }
     },
     "6|Legendary|Rare|Legendary|damage": {
@@ -13979,6 +15383,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 7,
+        "min": 10,
+        "max": 7,
+        "difficulty": 0,
+        "score": 14.613857,
+        "summary": "Passe Normal 10-7 en 6,6s"
       }
     },
     "6|Legendary|Rare|Legendary|progress": {
@@ -14071,6 +15484,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.204262,
+        "summary": "Passe Normal 10-19 en 13,6s"
       }
     },
     "6|Legendary|Rare|Legendary|survival": {
@@ -14163,6 +15585,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.14827,
+        "summary": "Passe Normal 11-5 en 40,4s"
       }
     },
     "6|Legendary|Rare|Ultimate|damage": {
@@ -14248,6 +15679,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 4,
+        "min": 10,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.440426,
+        "summary": "Passe Normal 10-4 en 5,5s"
       }
     },
     "6|Legendary|Rare|Ultimate|progress": {
@@ -14340,6 +15780,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.958389,
+        "summary": "Passe Normal 11-2 en 17,5s"
       }
     },
     "6|Legendary|Rare|Ultimate|survival": {
@@ -14432,6 +15881,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.518307,
+        "summary": "Passe Normal 11-5 en 27,5s"
       }
     },
     "6|Ultimate|Common|Epic|damage": {
@@ -14517,6 +15975,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 1,
+        "min": 11,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.590395,
+        "summary": "Passe Normal 11-1 en 3,5s"
       }
     },
     "6|Ultimate|Common|Epic|progress": {
@@ -14609,6 +16076,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.813771,
+        "summary": "Passe Normal 11-14 en 20,3s"
       }
     },
     "6|Ultimate|Common|Epic|survival": {
@@ -14701,6 +16177,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.275092,
+        "summary": "Passe Normal 11-19 en 35,4s"
       }
     },
     "6|Ultimate|Common|Legendary|damage": {
@@ -14786,6 +16271,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 1,
+        "min": 11,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.880681,
+        "summary": "Passe Normal 11-1 en 3,5s"
       }
     },
     "6|Ultimate|Common|Legendary|progress": {
@@ -14878,6 +16372,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.866986,
+        "summary": "Passe Normal 11-14 en 19,2s"
       }
     },
     "6|Ultimate|Common|Legendary|survival": {
@@ -14970,6 +16473,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.205374,
+        "summary": "Passe Normal 11-17 en 38,0s"
       }
     },
     "6|Ultimate|Common|Ultimate|damage": {
@@ -15055,6 +16567,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 1,
+        "min": 11,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.588317,
+        "summary": "Passe Normal 11-1 en 3,4s"
       }
     },
     "6|Ultimate|Common|Ultimate|progress": {
@@ -15147,6 +16668,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 15.067043,
+        "summary": "Passe Normal 11-14 en 15,7s"
       }
     },
     "6|Ultimate|Common|Ultimate|survival": {
@@ -15239,6 +16769,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.566319,
+        "summary": "Passe Normal 11-19 en 26,2s"
       }
     },
     "6|Ultimate|Epic|Epic|damage": {
@@ -15324,6 +16863,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 1,
+        "min": 11,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.879392,
+        "summary": "Passe Normal 11-1 en 3,4s"
       }
     },
     "6|Ultimate|Epic|Epic|progress": {
@@ -15416,6 +16964,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.847327,
+        "summary": "Passe Normal 11-14 en 19,6s"
       }
     },
     "6|Ultimate|Epic|Epic|survival": {
@@ -15508,6 +17065,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.16352,
+        "summary": "Passe Normal 11-17 en 39,7s"
       }
     },
     "6|Ultimate|Epic|Legendary|damage": {
@@ -15593,6 +17159,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 1,
+        "min": 11,
+        "max": 1,
+        "difficulty": 0,
+        "score": 15.106573,
+        "summary": "Passe Normal 11-1 en 3,4s"
       }
     },
     "6|Ultimate|Epic|Legendary|progress": {
@@ -15685,6 +17260,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.903098,
+        "summary": "Passe Normal 11-14 en 18,5s"
       }
     },
     "6|Ultimate|Epic|Legendary|survival": {
@@ -15777,6 +17361,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.23266,
+        "summary": "Passe Normal 11-17 en 37,0s"
       }
     },
     "6|Ultimate|Epic|Ultimate|damage": {
@@ -15862,6 +17455,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 1,
+        "min": 11,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.881538,
+        "summary": "Passe Normal 11-1 en 3,3s"
       }
     },
     "6|Ultimate|Epic|Ultimate|progress": {
@@ -15954,6 +17556,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 15.085525,
+        "summary": "Passe Normal 11-14 en 15,4s"
       }
     },
     "6|Ultimate|Epic|Ultimate|survival": {
@@ -16046,6 +17657,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.361106,
+        "summary": "Passe Normal 11-20 en 32,3s"
       }
     },
     "6|Ultimate|Rare|Epic|damage": {
@@ -16131,6 +17751,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 1,
+        "min": 11,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.605922,
+        "summary": "Passe Normal 11-1 en 3,5s"
       }
     },
     "6|Ultimate|Rare|Epic|progress": {
@@ -16223,6 +17852,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.815415,
+        "summary": "Passe Normal 11-14 en 20,3s"
       }
     },
     "6|Ultimate|Rare|Epic|survival": {
@@ -16315,6 +17953,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.276493,
+        "summary": "Passe Normal 11-19 en 35,3s"
       }
     },
     "6|Ultimate|Rare|Legendary|damage": {
@@ -16400,6 +18047,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 1,
+        "min": 11,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.892655,
+        "summary": "Passe Normal 11-1 en 3,4s"
       }
     },
     "6|Ultimate|Rare|Legendary|progress": {
@@ -16492,6 +18148,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.868582,
+        "summary": "Passe Normal 11-14 en 19,2s"
       }
     },
     "6|Ultimate|Rare|Legendary|survival": {
@@ -16584,6 +18249,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.206791,
+        "summary": "Passe Normal 11-17 en 38,0s"
       }
     },
     "6|Ultimate|Rare|Ultimate|damage": {
@@ -16669,6 +18343,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 1,
+        "min": 11,
+        "max": 1,
+        "difficulty": 0,
+        "score": 14.604093,
+        "summary": "Passe Normal 11-1 en 3,4s"
       }
     },
     "6|Ultimate|Rare|Ultimate|progress": {
@@ -16761,6 +18444,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 15.068667,
+        "summary": "Passe Normal 11-14 en 15,7s"
       }
     },
     "6|Ultimate|Rare|Ultimate|survival": {
@@ -16853,6 +18545,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.566998,
+        "summary": "Passe Normal 11-19 en 26,2s"
       }
     },
     "7|Epic|Common|Epic|damage": {
@@ -16938,6 +18639,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 4,
+        "min": 10,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.32947,
+        "summary": "Passe Normal 10-4 en 6,2s"
       }
     },
     "7|Epic|Common|Epic|progress": {
@@ -17030,6 +18740,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.947284,
+        "summary": "Passe Normal 10-17 en 17,7s"
       }
     },
     "7|Epic|Common|Epic|survival": {
@@ -17122,6 +18841,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.033976,
+        "summary": "Passe Normal 11-5 en 45,5s"
       }
     },
     "7|Epic|Common|Legendary|damage": {
@@ -17207,6 +18935,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 8,
+        "min": 10,
+        "max": 8,
+        "difficulty": 0,
+        "score": 13.916992,
+        "summary": "Passe Normal 10-8 en 7,2s"
       }
     },
     "7|Epic|Common|Legendary|progress": {
@@ -17299,6 +19036,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 1,
+        "min": 11,
+        "max": 1,
+        "difficulty": 0,
+        "score": 15.303975,
+        "summary": "Passe Normal 11-1 en 12,3s"
       }
     },
     "7|Epic|Common|Legendary|survival": {
@@ -17391,6 +19137,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 6,
+        "min": 11,
+        "max": 6,
+        "difficulty": 0,
+        "score": 14.097701,
+        "summary": "Passe Normal 11-6 en 42,6s"
       }
     },
     "7|Epic|Common|Ultimate|damage": {
@@ -17469,6 +19224,15 @@
             "health": 482052
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 15,
+        "min": 10,
+        "max": 15,
+        "difficulty": 0,
+        "score": 14.227187,
+        "summary": "Passe Normal 10-15 en 5,9s"
       }
     },
     "7|Epic|Common|Ultimate|progress": {
@@ -17561,6 +19325,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.640261,
+        "summary": "Passe Normal 11-5 en 24,3s"
       }
     },
     "7|Epic|Common|Ultimate|survival": {
@@ -17653,6 +19426,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.387543,
+        "summary": "Passe Normal 11-5 en 31,5s"
       }
     },
     "7|Epic|Epic|Epic|damage": {
@@ -17738,6 +19520,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 7,
+        "min": 10,
+        "max": 7,
+        "difficulty": 0,
+        "score": 14.346144,
+        "summary": "Passe Normal 10-7 en 7,0s"
       }
     },
     "7|Epic|Epic|Epic|progress": {
@@ -17830,6 +19621,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.753798,
+        "summary": "Passe Normal 11-2 en 21,6s"
       }
     },
     "7|Epic|Epic|Epic|survival": {
@@ -17922,6 +19722,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 13.922686,
+        "summary": "Passe Normal 11-8 en 51,2s"
       }
     },
     "7|Epic|Epic|Legendary|damage": {
@@ -18007,6 +19816,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 10,
+        "min": 10,
+        "max": 10,
+        "difficulty": 0,
+        "score": 13.857646,
+        "summary": "Passe Normal 10-10 en 7,2s"
       }
     },
     "7|Epic|Epic|Legendary|progress": {
@@ -18099,6 +19917,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.99606,
+        "summary": "Passe Normal 11-2 en 16,9s"
       }
     },
     "7|Epic|Epic|Legendary|survival": {
@@ -18191,6 +20018,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 13.879816,
+        "summary": "Passe Normal 11-14 en 53,5s"
       }
     },
     "7|Epic|Epic|Ultimate|damage": {
@@ -18269,6 +20105,15 @@
             "health": 482052
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.242775,
+        "summary": "Passe Normal 10-19 en 5,9s"
       }
     },
     "7|Epic|Epic|Ultimate|progress": {
@@ -18361,6 +20206,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.784123,
+        "summary": "Passe Normal 11-5 en 20,9s"
       }
     },
     "7|Epic|Epic|Ultimate|survival": {
@@ -18453,6 +20307,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.246029,
+        "summary": "Passe Normal 11-8 en 36,5s"
       }
     },
     "7|Epic|Rare|Epic|damage": {
@@ -18538,6 +20401,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 4,
+        "min": 10,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.394775,
+        "summary": "Passe Normal 10-4 en 6,1s"
       }
     },
     "7|Epic|Rare|Epic|progress": {
@@ -18630,6 +20502,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.960937,
+        "summary": "Passe Normal 10-17 en 17,5s"
       }
     },
     "7|Epic|Rare|Epic|survival": {
@@ -18722,6 +20603,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.044959,
+        "summary": "Passe Normal 11-5 en 45,0s"
       }
     },
     "7|Epic|Rare|Legendary|damage": {
@@ -18807,6 +20697,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 8,
+        "min": 10,
+        "max": 8,
+        "difficulty": 0,
+        "score": 13.954793,
+        "summary": "Passe Normal 10-8 en 7,2s"
       }
     },
     "7|Epic|Rare|Legendary|progress": {
@@ -18899,6 +20798,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 20,
+        "min": 10,
+        "max": 20,
+        "difficulty": 0,
+        "score": 13.625631,
+        "summary": "Passe Normal 10-20 en 16,8s"
       }
     },
     "7|Epic|Rare|Legendary|survival": {
@@ -18991,6 +20899,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 6,
+        "min": 11,
+        "max": 6,
+        "difficulty": 0,
+        "score": 14.105227,
+        "summary": "Passe Normal 11-6 en 42,2s"
       }
     },
     "7|Epic|Rare|Ultimate|damage": {
@@ -19069,6 +20986,15 @@
             "health": 482052
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 15,
+        "min": 10,
+        "max": 15,
+        "difficulty": 0,
+        "score": 14.254349,
+        "summary": "Passe Normal 10-15 en 5,9s"
       }
     },
     "7|Epic|Rare|Ultimate|progress": {
@@ -19161,6 +21087,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.648183,
+        "summary": "Passe Normal 11-5 en 24,1s"
       }
     },
     "7|Epic|Rare|Ultimate|survival": {
@@ -19253,6 +21188,15 @@
             "health": 160684
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 5,
+        "min": 11,
+        "max": 5,
+        "difficulty": 0,
+        "score": 14.39568,
+        "summary": "Passe Normal 11-5 en 31,2s"
       }
     },
     "7|Legendary|Common|Epic|damage": {
@@ -19352,6 +21296,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 14,
+        "min": 10,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.737257,
+        "summary": "Passe Normal 10-14 en 5,0s"
       }
     },
     "7|Legendary|Common|Epic|progress": {
@@ -19444,6 +21397,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.57733,
+        "summary": "Passe Normal 11-8 en 25,9s"
       }
     },
     "7|Legendary|Common|Epic|survival": {
@@ -19536,6 +21498,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.006509,
+        "summary": "Passe Normal 11-19 en 46,8s"
       }
     },
     "7|Legendary|Common|Legendary|damage": {
@@ -19635,6 +21606,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.479972,
+        "summary": "Passe Normal 10-19 en 5,4s"
       }
     },
     "7|Legendary|Common|Legendary|progress": {
@@ -19727,6 +21707,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.72667,
+        "summary": "Passe Normal 11-8 en 22,2s"
       }
     },
     "7|Legendary|Common|Legendary|survival": {
@@ -19819,6 +21808,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.109424,
+        "summary": "Passe Normal 11-19 en 42,0s"
       }
     },
     "7|Legendary|Common|Ultimate|damage": {
@@ -19918,6 +21916,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 14,
+        "min": 10,
+        "max": 14,
+        "difficulty": 0,
+        "score": 15.000725,
+        "summary": "Passe Normal 10-14 en 4,6s"
       }
     },
     "7|Legendary|Common|Ultimate|progress": {
@@ -20010,6 +22017,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.878647,
+        "summary": "Passe Normal 11-8 en 19,0s"
       }
     },
     "7|Legendary|Common|Ultimate|survival": {
@@ -20102,6 +22118,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.389102,
+        "summary": "Passe Normal 11-19 en 31,4s"
       }
     },
     "7|Legendary|Epic|Epic|damage": {
@@ -20187,6 +22212,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 15,
+        "min": 10,
+        "max": 15,
+        "difficulty": 0,
+        "score": 14.082685,
+        "summary": "Passe Normal 10-15 en 5,7s"
       }
     },
     "7|Legendary|Epic|Epic|progress": {
@@ -20279,6 +22313,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.687723,
+        "summary": "Passe Normal 11-8 en 23,1s"
       }
     },
     "7|Legendary|Epic|Epic|survival": {
@@ -20371,6 +22414,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.099533,
+        "summary": "Passe Normal 11-19 en 42,5s"
       }
     },
     "7|Legendary|Epic|Legendary|damage": {
@@ -20470,6 +22522,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.876029,
+        "summary": "Passe Normal 10-19 en 5,0s"
       }
     },
     "7|Legendary|Epic|Legendary|progress": {
@@ -20562,6 +22623,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.817952,
+        "summary": "Passe Normal 11-8 en 20,2s"
       }
     },
     "7|Legendary|Epic|Legendary|survival": {
@@ -20654,6 +22724,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.178194,
+        "summary": "Passe Normal 11-19 en 39,1s"
       }
     },
     "7|Legendary|Epic|Ultimate|damage": {
@@ -20753,6 +22832,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 17,
+        "min": 10,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.153585,
+        "summary": "Passe Normal 10-17 en 5,4s"
       }
     },
     "7|Legendary|Epic|Ultimate|progress": {
@@ -20845,6 +22933,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.964221,
+        "summary": "Passe Normal 11-8 en 17,4s"
       }
     },
     "7|Legendary|Epic|Ultimate|survival": {
@@ -20937,6 +23034,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.477676,
+        "summary": "Passe Normal 11-19 en 28,7s"
       }
     },
     "7|Legendary|Rare|Epic|damage": {
@@ -21036,6 +23142,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 14,
+        "min": 10,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.767018,
+        "summary": "Passe Normal 10-14 en 5,0s"
       }
     },
     "7|Legendary|Rare|Epic|progress": {
@@ -21128,6 +23243,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.583034,
+        "summary": "Passe Normal 11-8 en 25,7s"
       }
     },
     "7|Legendary|Rare|Epic|survival": {
@@ -21220,6 +23344,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.011314,
+        "summary": "Passe Normal 11-19 en 46,6s"
       }
     },
     "7|Legendary|Rare|Legendary|damage": {
@@ -21319,6 +23452,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 19,
+        "min": 10,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.529902,
+        "summary": "Passe Normal 10-19 en 5,2s"
       }
     },
     "7|Legendary|Rare|Legendary|progress": {
@@ -21411,6 +23553,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.730123,
+        "summary": "Passe Normal 11-8 en 22,1s"
       }
     },
     "7|Legendary|Rare|Legendary|survival": {
@@ -21503,6 +23654,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.112687,
+        "summary": "Passe Normal 11-19 en 41,9s"
       }
     },
     "7|Legendary|Rare|Ultimate|damage": {
@@ -21602,6 +23762,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 10,
+        "combat": 14,
+        "min": 10,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.790405,
+        "summary": "Passe Normal 10-14 en 4,9s"
       }
     },
     "7|Legendary|Rare|Ultimate|progress": {
@@ -21694,6 +23863,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.881445,
+        "summary": "Passe Normal 11-8 en 18,9s"
       }
     },
     "7|Legendary|Rare|Ultimate|survival": {
@@ -21786,6 +23964,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.391044,
+        "summary": "Passe Normal 11-19 en 31,4s"
       }
     },
     "7|Ultimate|Common|Epic|damage": {
@@ -21871,6 +24058,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 3,
+        "min": 11,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.452476,
+        "summary": "Passe Normal 11-3 en 4,3s"
       }
     },
     "7|Ultimate|Common|Epic|progress": {
@@ -21963,6 +24159,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.693473,
+        "summary": "Passe Normal 11-20 en 23,0s"
       }
     },
     "7|Ultimate|Common|Epic|survival": {
@@ -22055,6 +24260,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.278593,
+        "summary": "Passe Normal 11-20 en 35,2s"
       }
     },
     "7|Ultimate|Common|Legendary|damage": {
@@ -22154,6 +24368,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 3,
+        "min": 11,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.956453,
+        "summary": "Passe Normal 11-3 en 4,0s"
       }
     },
     "7|Ultimate|Common|Legendary|progress": {
@@ -22246,6 +24469,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.761562,
+        "summary": "Passe Normal 11-20 en 21,4s"
       }
     },
     "7|Ultimate|Common|Legendary|survival": {
@@ -22338,6 +24570,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.374454,
+        "summary": "Passe Normal 11-20 en 31,9s"
       }
     },
     "7|Ultimate|Common|Ultimate|damage": {
@@ -22437,6 +24678,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 3,
+        "min": 11,
+        "max": 3,
+        "difficulty": 0,
+        "score": 15.054269,
+        "summary": "Passe Normal 11-3 en 3,7s"
       }
     },
     "7|Ultimate|Common|Ultimate|progress": {
@@ -22529,6 +24779,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.029102,
+        "summary": "Passe Normal 11-20 en 16,3s"
       }
     },
     "7|Ultimate|Common|Ultimate|survival": {
@@ -22621,6 +24880,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.767285,
+        "summary": "Passe Normal 11-20 en 21,3s"
       }
     },
     "7|Ultimate|Epic|Epic|damage": {
@@ -22706,6 +24974,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 3,
+        "min": 11,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.689987,
+        "summary": "Passe Normal 11-3 en 4,2s"
       }
     },
     "7|Ultimate|Epic|Epic|progress": {
@@ -22798,6 +25075,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.725146,
+        "summary": "Passe Normal 11-20 en 22,2s"
       }
     },
     "7|Ultimate|Epic|Epic|survival": {
@@ -22890,6 +25176,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.310852,
+        "summary": "Passe Normal 11-20 en 34,1s"
       }
     },
     "7|Ultimate|Epic|Legendary|damage": {
@@ -22989,6 +25284,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 4,
+        "min": 11,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.485976,
+        "summary": "Passe Normal 11-4 en 4,5s"
       }
     },
     "7|Ultimate|Epic|Legendary|progress": {
@@ -23081,6 +25385,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.793469,
+        "summary": "Passe Normal 11-20 en 20,7s"
       }
     },
     "7|Ultimate|Epic|Legendary|survival": {
@@ -23173,6 +25486,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.399661,
+        "summary": "Passe Normal 11-20 en 31,1s"
       }
     },
     "7|Ultimate|Epic|Ultimate|damage": {
@@ -23272,6 +25594,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 4,
+        "min": 11,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.632356,
+        "summary": "Passe Normal 11-4 en 4,1s"
       }
     },
     "7|Ultimate|Epic|Ultimate|progress": {
@@ -23364,6 +25695,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.041623,
+        "summary": "Passe Normal 11-20 en 16,1s"
       }
     },
     "7|Ultimate|Epic|Ultimate|survival": {
@@ -23456,6 +25796,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.782693,
+        "summary": "Passe Normal 11-20 en 21,0s"
       }
     },
     "7|Ultimate|Rare|Epic|damage": {
@@ -23541,6 +25890,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 3,
+        "min": 11,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.46513,
+        "summary": "Passe Normal 11-3 en 4,3s"
       }
     },
     "7|Ultimate|Rare|Epic|progress": {
@@ -23633,6 +25991,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.695038,
+        "summary": "Passe Normal 11-20 en 22,9s"
       }
     },
     "7|Ultimate|Rare|Epic|survival": {
@@ -23725,6 +26092,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.280196,
+        "summary": "Passe Normal 11-20 en 35,2s"
       }
     },
     "7|Ultimate|Rare|Legendary|damage": {
@@ -23824,6 +26200,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 3,
+        "min": 11,
+        "max": 3,
+        "difficulty": 0,
+        "score": 14.965158,
+        "summary": "Passe Normal 11-3 en 4,0s"
       }
     },
     "7|Ultimate|Rare|Legendary|progress": {
@@ -23916,6 +26301,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.762956,
+        "summary": "Passe Normal 11-20 en 21,4s"
       }
     },
     "7|Ultimate|Rare|Legendary|survival": {
@@ -24008,6 +26402,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.375666,
+        "summary": "Passe Normal 11-20 en 31,9s"
       }
     },
     "7|Ultimate|Rare|Ultimate|damage": {
@@ -24107,6 +26510,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 3,
+        "min": 11,
+        "max": 3,
+        "difficulty": 0,
+        "score": 15.061294,
+        "summary": "Passe Normal 11-3 en 3,7s"
       }
     },
     "7|Ultimate|Rare|Ultimate|progress": {
@@ -24199,6 +26611,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.029842,
+        "summary": "Passe Normal 11-20 en 16,3s"
       }
     },
     "7|Ultimate|Rare|Ultimate|survival": {
@@ -24291,6 +26712,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.76746,
+        "summary": "Passe Normal 11-20 en 21,3s"
       }
     },
     "8|Legendary|Epic|Legendary|damage": {
@@ -24390,6 +26820,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.909189,
+        "summary": "Passe Normal 11-2 en 4,7s"
       }
     },
     "8|Legendary|Epic|Legendary|progress": {
@@ -24482,6 +26921,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.810834,
+        "summary": "Passe Normal 11-17 en 20,4s"
       }
     },
     "8|Legendary|Epic|Legendary|survival": {
@@ -24574,6 +27022,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.353109,
+        "summary": "Passe Normal 11-20 en 32,6s"
       }
     },
     "8|Legendary|Epic|Mythic|damage": {
@@ -24666,6 +27123,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 10,
+        "min": 11,
+        "max": 10,
+        "difficulty": 0,
+        "score": 15.379941,
+        "summary": "Passe Normal 11-10 en 9,5s"
       }
     },
     "8|Legendary|Epic|Mythic|progress": {
@@ -24765,6 +27231,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.201054,
+        "summary": "Passe Normal 11-20 en 13,7s"
       }
     },
     "8|Legendary|Epic|Mythic|survival": {
@@ -24864,6 +27339,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.200106,
+        "summary": "Passe Normal 11-20 en 13,7s"
       }
     },
     "8|Legendary|Epic|Ultimate|damage": {
@@ -24963,6 +27447,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 2,
+        "min": 11,
+        "max": 2,
+        "difficulty": 0,
+        "score": 14.758005,
+        "summary": "Passe Normal 11-2 en 4,6s"
       }
     },
     "8|Legendary|Epic|Ultimate|progress": {
@@ -25055,6 +27548,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 15.057268,
+        "summary": "Passe Normal 11-17 en 15,8s"
       }
     },
     "8|Legendary|Epic|Ultimate|survival": {
@@ -25147,6 +27649,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.570668,
+        "summary": "Passe Normal 11-20 en 26,1s"
       }
     },
     "8|Legendary|Legendary|Legendary|damage": {
@@ -25246,6 +27757,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 4,
+        "min": 11,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.544042,
+        "summary": "Passe Normal 11-4 en 5,0s"
       }
     },
     "8|Legendary|Legendary|Legendary|progress": {
@@ -25338,6 +27858,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.909394,
+        "summary": "Passe Normal 11-19 en 18,4s"
       }
     },
     "8|Legendary|Legendary|Legendary|survival": {
@@ -25430,6 +27959,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.559126,
+        "summary": "Passe Normal 11-20 en 26,4s"
       }
     },
     "8|Legendary|Legendary|Mythic|damage": {
@@ -25522,6 +28060,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 15,
+        "min": 11,
+        "max": 15,
+        "difficulty": 0,
+        "score": 15.299099,
+        "summary": "Passe Normal 11-15 en 9,7s"
       }
     },
     "8|Legendary|Legendary|Mythic|progress": {
@@ -25621,6 +28168,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.33117,
+        "summary": "Passe Normal 11-20 en 12,0s"
       }
     },
     "8|Legendary|Legendary|Mythic|survival": {
@@ -25720,6 +28276,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.190168,
+        "summary": "Passe Normal 11-20 en 13,8s"
       }
     },
     "8|Legendary|Legendary|Ultimate|damage": {
@@ -25819,6 +28384,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 4,
+        "min": 11,
+        "max": 4,
+        "difficulty": 0,
+        "score": 14.228552,
+        "summary": "Passe Normal 11-4 en 5,1s"
       }
     },
     "8|Legendary|Legendary|Ultimate|progress": {
@@ -25911,6 +28485,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.082821,
+        "summary": "Passe Normal 11-19 en 15,4s"
       }
     },
     "8|Legendary|Legendary|Ultimate|survival": {
@@ -26003,6 +28586,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.700765,
+        "summary": "Passe Normal 11-20 en 22,8s"
       }
     },
     "8|Legendary|Mythic|Legendary|damage": {
@@ -26102,6 +28694,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.594021,
+        "summary": "Passe Normal 11-17 en 5,5s"
       }
     },
     "8|Legendary|Mythic|Legendary|progress": {
@@ -26194,6 +28795,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.39677,
+        "summary": "Passe Normal 11-20 en 11,2s"
       }
     },
     "8|Legendary|Mythic|Legendary|survival": {
@@ -26286,6 +28896,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.102736,
+        "summary": "Passe Normal 11-20 en 15,1s"
       }
     },
     "8|Legendary|Mythic|Mythic|damage": {
@@ -26378,6 +28997,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.381659,
+        "summary": "Passe Normal 11-20 en 5,6s"
       }
     },
     "8|Legendary|Mythic|Mythic|progress": {
@@ -26477,6 +29105,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.465204,
+        "summary": "Passe Normal 11-20 en 10,5s"
       }
     },
     "8|Legendary|Mythic|Mythic|survival": {
@@ -26569,6 +29206,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.35871,
+        "summary": "Passe Normal 11-20 en 11,7s"
       }
     },
     "8|Legendary|Mythic|Ultimate|damage": {
@@ -26668,6 +29314,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.467636,
+        "summary": "Passe Normal 11-17 en 5,6s"
       }
     },
     "8|Legendary|Mythic|Ultimate|progress": {
@@ -26760,6 +29415,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.485699,
+        "summary": "Passe Normal 11-20 en 10,3s"
       }
     },
     "8|Legendary|Mythic|Ultimate|survival": {
@@ -26852,6 +29516,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.153971,
+        "summary": "Passe Normal 11-20 en 14,4s"
       }
     },
     "8|Legendary|Ultimate|Legendary|damage": {
@@ -26951,6 +29624,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 9,
+        "min": 11,
+        "max": 9,
+        "difficulty": 0,
+        "score": 14.187648,
+        "summary": "Passe Normal 11-9 en 5,6s"
       }
     },
     "8|Legendary|Ultimate|Legendary|progress": {
@@ -27043,6 +29725,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.94961,
+        "summary": "Passe Normal 11-20 en 17,7s"
       }
     },
     "8|Legendary|Ultimate|Legendary|survival": {
@@ -27135,6 +29826,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.839886,
+        "summary": "Passe Normal 11-20 en 19,8s"
       }
     },
     "8|Legendary|Ultimate|Mythic|damage": {
@@ -27227,6 +29927,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.887746,
+        "summary": "Passe Normal 11-20 en 10,3s"
       }
     },
     "8|Legendary|Ultimate|Mythic|progress": {
@@ -27326,6 +30035,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.433251,
+        "summary": "Passe Normal 11-20 en 10,8s"
       }
     },
     "8|Legendary|Ultimate|Mythic|survival": {
@@ -27425,6 +30143,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.200106,
+        "summary": "Passe Normal 11-20 en 13,7s"
       }
     },
     "8|Legendary|Ultimate|Ultimate|damage": {
@@ -27524,6 +30251,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.377571,
+        "summary": "Passe Normal 11-8 en 5,4s"
       }
     },
     "8|Legendary|Ultimate|Ultimate|progress": {
@@ -27616,6 +30352,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.114633,
+        "summary": "Passe Normal 11-20 en 14,9s"
       }
     },
     "8|Legendary|Ultimate|Ultimate|survival": {
@@ -27708,6 +30453,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.907025,
+        "summary": "Passe Normal 11-20 en 18,5s"
       }
     },
     "8|Mythic|Epic|Legendary|damage": {
@@ -27807,6 +30561,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.670583,
+        "summary": "Passe Normal 11-14 en 4,7s"
       }
     },
     "8|Mythic|Epic|Legendary|progress": {
@@ -27899,6 +30662,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.447997,
+        "summary": "Passe Normal 11-20 en 10,7s"
       }
     },
     "8|Mythic|Epic|Legendary|survival": {
@@ -27991,6 +30763,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.118367,
+        "summary": "Passe Normal 11-20 en 14,9s"
       }
     },
     "8|Mythic|Epic|Mythic|damage": {
@@ -28090,6 +30871,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 15.984148,
+        "summary": "Passe Normal 11-17 en 4,2s"
       }
     },
     "8|Mythic|Epic|Mythic|progress": {
@@ -28189,6 +30979,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.440767,
+        "summary": "Passe Normal 11-20 en 10,7s"
       }
     },
     "8|Mythic|Epic|Mythic|survival": {
@@ -28281,6 +31080,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.288965,
+        "summary": "Passe Normal 11-20 en 12,5s"
       }
     },
     "8|Mythic|Epic|Ultimate|damage": {
@@ -28380,6 +31188,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.429351,
+        "summary": "Passe Normal 11-14 en 4,8s"
       }
     },
     "8|Mythic|Epic|Ultimate|progress": {
@@ -28472,6 +31289,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.601942,
+        "summary": "Passe Normal 11-20 en 9,1s"
       }
     },
     "8|Mythic|Epic|Ultimate|survival": {
@@ -28564,6 +31390,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.170112,
+        "summary": "Passe Normal 11-20 en 14,1s"
       }
     },
     "8|Mythic|Legendary|Legendary|damage": {
@@ -28663,6 +31498,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.317218,
+        "summary": "Passe Normal 11-17 en 4,8s"
       }
     },
     "8|Mythic|Legendary|Legendary|progress": {
@@ -28755,6 +31599,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.556227,
+        "summary": "Passe Normal 11-20 en 9,6s"
       }
     },
     "8|Mythic|Legendary|Legendary|survival": {
@@ -28847,6 +31700,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.197473,
+        "summary": "Passe Normal 11-20 en 13,7s"
       }
     },
     "8|Mythic|Legendary|Mythic|damage": {
@@ -28946,6 +31808,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.938011,
+        "summary": "Passe Normal 11-19 en 4,2s"
       }
     },
     "8|Mythic|Legendary|Mythic|progress": {
@@ -29038,6 +31909,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.033355,
+        "summary": "Passe Normal 11-20 en 5,9s"
       }
     },
     "8|Mythic|Legendary|Mythic|survival": {
@@ -29130,6 +32010,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.361936,
+        "summary": "Passe Normal 11-20 en 11,6s"
       }
     },
     "8|Mythic|Legendary|Ultimate|damage": {
@@ -29229,6 +32118,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 15,
+        "min": 11,
+        "max": 15,
+        "difficulty": 0,
+        "score": 14.516861,
+        "summary": "Passe Normal 11-15 en 4,4s"
       }
     },
     "8|Mythic|Legendary|Ultimate|progress": {
@@ -29321,6 +32219,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.719451,
+        "summary": "Passe Normal 11-20 en 8,1s"
       }
     },
     "8|Mythic|Legendary|Ultimate|survival": {
@@ -29413,6 +32320,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.2342,
+        "summary": "Passe Normal 11-20 en 13,2s"
       }
     },
     "8|Mythic|Mythic|Legendary|damage": {
@@ -29512,6 +32428,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.289717,
+        "summary": "Passe Normal 11-19 en 4,5s"
       }
     },
     "8|Mythic|Mythic|Legendary|progress": {
@@ -29604,6 +32529,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.857358,
+        "summary": "Passe Normal 11-20 en 7,0s"
       }
     },
     "8|Mythic|Mythic|Legendary|survival": {
@@ -29696,6 +32630,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.345622,
+        "summary": "Passe Normal 11-20 en 11,8s"
       }
     },
     "8|Mythic|Mythic|Mythic|damage": {
@@ -29795,6 +32738,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.965993,
+        "summary": "Passe Normal 11-20 en 4,0s"
       }
     },
     "8|Mythic|Mythic|Mythic|progress": {
@@ -29887,6 +32839,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.10707,
+        "summary": "Passe Normal 11-20 en 5,5s"
       }
     },
     "8|Mythic|Mythic|Mythic|survival": {
@@ -29979,6 +32940,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.478021,
+        "summary": "Passe Normal 11-20 en 10,3s"
       }
     },
     "8|Mythic|Mythic|Ultimate|damage": {
@@ -30078,6 +33048,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.668981,
+        "summary": "Passe Normal 11-19 en 3,9s"
       }
     },
     "8|Mythic|Mythic|Ultimate|progress": {
@@ -30170,6 +33149,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.891517,
+        "summary": "Passe Normal 11-20 en 6,8s"
       }
     },
     "8|Mythic|Mythic|Ultimate|survival": {
@@ -30262,6 +33250,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.351962,
+        "summary": "Passe Normal 11-20 en 11,7s"
       }
     },
     "8|Mythic|Ultimate|Legendary|damage": {
@@ -30361,6 +33358,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.560304,
+        "summary": "Passe Normal 11-19 en 4,8s"
       }
     },
     "8|Mythic|Ultimate|Legendary|progress": {
@@ -30453,6 +33459,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.675377,
+        "summary": "Passe Normal 11-20 en 8,5s"
       }
     },
     "8|Mythic|Ultimate|Legendary|survival": {
@@ -30545,6 +33560,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.26254,
+        "summary": "Passe Normal 11-20 en 12,9s"
       }
     },
     "8|Mythic|Ultimate|Mythic|damage": {
@@ -30644,6 +33668,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.316942,
+        "summary": "Passe Normal 11-20 en 5,1s"
       }
     },
     "8|Mythic|Ultimate|Mythic|progress": {
@@ -30736,6 +33769,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.069139,
+        "summary": "Passe Normal 11-20 en 5,7s"
       }
     },
     "8|Mythic|Ultimate|Mythic|survival": {
@@ -30828,6 +33870,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.393113,
+        "summary": "Passe Normal 11-20 en 11,3s"
       }
     },
     "8|Mythic|Ultimate|Ultimate|damage": {
@@ -30927,6 +33978,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.299388,
+        "summary": "Passe Normal 11-19 en 5,1s"
       }
     },
     "8|Mythic|Ultimate|Ultimate|progress": {
@@ -31019,6 +34079,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.795505,
+        "summary": "Passe Normal 11-20 en 7,5s"
       }
     },
     "8|Mythic|Ultimate|Ultimate|survival": {
@@ -31111,6 +34180,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.285555,
+        "summary": "Passe Normal 11-20 en 12,6s"
       }
     },
     "8|Ultimate|Epic|Legendary|damage": {
@@ -31210,6 +34288,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 6,
+        "min": 11,
+        "max": 6,
+        "difficulty": 0,
+        "score": 14.616312,
+        "summary": "Passe Normal 11-6 en 4,7s"
       }
     },
     "8|Ultimate|Epic|Legendary|progress": {
@@ -31302,6 +34389,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.964422,
+        "summary": "Passe Normal 11-20 en 17,4s"
       }
     },
     "8|Ultimate|Epic|Legendary|survival": {
@@ -31394,6 +34490,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.828806,
+        "summary": "Passe Normal 11-20 en 20,0s"
       }
     },
     "8|Ultimate|Epic|Mythic|damage": {
@@ -31486,6 +34591,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.530806,
+        "summary": "Passe Normal 11-19 en 7,5s"
       }
     },
     "8|Ultimate|Epic|Mythic|progress": {
@@ -31585,6 +34699,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.434109,
+        "summary": "Passe Normal 11-20 en 10,8s"
       }
     },
     "8|Ultimate|Epic|Mythic|survival": {
@@ -31677,6 +34800,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.182296,
+        "summary": "Passe Normal 11-20 en 14,0s"
       }
     },
     "8|Ultimate|Epic|Ultimate|damage": {
@@ -31776,6 +34908,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 6,
+        "min": 11,
+        "max": 6,
+        "difficulty": 0,
+        "score": 14.746604,
+        "summary": "Passe Normal 11-6 en 4,4s"
       }
     },
     "8|Ultimate|Epic|Ultimate|progress": {
@@ -31868,6 +35009,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.123593,
+        "summary": "Passe Normal 11-20 en 14,8s"
       }
     },
     "8|Ultimate|Epic|Ultimate|survival": {
@@ -31960,6 +35110,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.898935,
+        "summary": "Passe Normal 11-20 en 18,6s"
       }
     },
     "8|Ultimate|Legendary|Legendary|damage": {
@@ -32059,6 +35218,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 9,
+        "min": 11,
+        "max": 9,
+        "difficulty": 0,
+        "score": 14.274498,
+        "summary": "Passe Normal 11-9 en 5,0s"
       }
     },
     "8|Ultimate|Legendary|Legendary|progress": {
@@ -32151,6 +35319,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.150359,
+        "summary": "Passe Normal 11-20 en 14,4s"
       }
     },
     "8|Ultimate|Legendary|Legendary|survival": {
@@ -32243,6 +35420,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.94642,
+        "summary": "Passe Normal 11-20 en 17,7s"
       }
     },
     "8|Ultimate|Legendary|Mythic|damage": {
@@ -32335,6 +35521,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.586854,
+        "summary": "Passe Normal 11-19 en 7,5s"
       }
     },
     "8|Ultimate|Legendary|Mythic|progress": {
@@ -32434,6 +35629,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.449691,
+        "summary": "Passe Normal 11-20 en 10,6s"
       }
     },
     "8|Ultimate|Legendary|Mythic|survival": {
@@ -32533,6 +35737,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.284413,
+        "summary": "Passe Normal 11-20 en 12,6s"
       }
     },
     "8|Ultimate|Legendary|Ultimate|damage": {
@@ -32632,6 +35845,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 8,
+        "min": 11,
+        "max": 8,
+        "difficulty": 0,
+        "score": 14.489839,
+        "summary": "Passe Normal 11-8 en 4,8s"
       }
     },
     "8|Ultimate|Legendary|Ultimate|progress": {
@@ -32724,6 +35946,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.238462,
+        "summary": "Passe Normal 11-20 en 13,2s"
       }
     },
     "8|Ultimate|Legendary|Ultimate|survival": {
@@ -32816,6 +36047,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.033298,
+        "summary": "Passe Normal 11-20 en 16,2s"
       }
     },
     "8|Ultimate|Mythic|Legendary|damage": {
@@ -32915,6 +36155,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.790038,
+        "summary": "Passe Normal 11-19 en 5,0s"
       }
     },
     "8|Ultimate|Mythic|Legendary|progress": {
@@ -33007,6 +36256,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.621771,
+        "summary": "Passe Normal 11-20 en 8,9s"
       }
     },
     "8|Ultimate|Mythic|Legendary|survival": {
@@ -33099,6 +36357,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.23484,
+        "summary": "Passe Normal 11-20 en 13,2s"
       }
     },
     "8|Ultimate|Mythic|Mythic|damage": {
@@ -33198,6 +36465,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.347908,
+        "summary": "Passe Normal 11-20 en 5,1s"
       }
     },
     "8|Ultimate|Mythic|Mythic|progress": {
@@ -33290,6 +36566,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.068639,
+        "summary": "Passe Normal 11-20 en 5,7s"
       }
     },
     "8|Ultimate|Mythic|Mythic|survival": {
@@ -33382,6 +36667,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.382424,
+        "summary": "Passe Normal 11-20 en 11,4s"
       }
     },
     "8|Ultimate|Mythic|Ultimate|damage": {
@@ -33481,6 +36775,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.544109,
+        "summary": "Passe Normal 11-19 en 5,3s"
       }
     },
     "8|Ultimate|Mythic|Ultimate|progress": {
@@ -33573,6 +36876,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.76153,
+        "summary": "Passe Normal 11-20 en 7,8s"
       }
     },
     "8|Ultimate|Mythic|Ultimate|survival": {
@@ -33665,6 +36977,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.265706,
+        "summary": "Passe Normal 11-20 en 12,8s"
       }
     },
     "8|Ultimate|Ultimate|Legendary|damage": {
@@ -33764,6 +37085,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.770894,
+        "summary": "Passe Normal 11-14 en 4,9s"
       }
     },
     "8|Ultimate|Ultimate|Legendary|progress": {
@@ -33856,6 +37186,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.363073,
+        "summary": "Passe Normal 11-20 en 11,6s"
       }
     },
     "8|Ultimate|Ultimate|Legendary|survival": {
@@ -33948,6 +37287,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.080749,
+        "summary": "Passe Normal 11-20 en 15,5s"
       }
     },
     "8|Ultimate|Ultimate|Mythic|damage": {
@@ -34047,6 +37395,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.609019,
+        "summary": "Passe Normal 11-19 en 5,1s"
       }
     },
     "8|Ultimate|Ultimate|Mythic|progress": {
@@ -34146,6 +37503,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.465104,
+        "summary": "Passe Normal 11-20 en 10,5s"
       }
     },
     "8|Ultimate|Ultimate|Mythic|survival": {
@@ -34238,6 +37604,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.213835,
+        "summary": "Passe Normal 11-20 en 13,5s"
       }
     },
     "8|Ultimate|Ultimate|Ultimate|damage": {
@@ -34337,6 +37712,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.801363,
+        "summary": "Passe Normal 11-14 en 4,8s"
       }
     },
     "8|Ultimate|Ultimate|Ultimate|progress": {
@@ -34429,6 +37813,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.35674,
+        "summary": "Passe Normal 11-20 en 11,7s"
       }
     },
     "8|Ultimate|Ultimate|Ultimate|survival": {
@@ -34521,6 +37914,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.139413,
+        "summary": "Passe Normal 11-20 en 14,6s"
       }
     },
     "9|Legendary|Epic|Legendary|damage": {
@@ -34620,6 +38022,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.317441,
+        "summary": "Passe Normal 11-14 en 6,0s"
       }
     },
     "9|Legendary|Epic|Legendary|progress": {
@@ -34712,6 +38123,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.16795,
+        "summary": "Passe Normal 11-20 en 14,2s"
       }
     },
     "9|Legendary|Epic|Legendary|survival": {
@@ -34804,6 +38224,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.983953,
+        "summary": "Passe Normal 11-20 en 17,1s"
       }
     },
     "9|Legendary|Epic|Mythic|damage": {
@@ -34896,6 +38325,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.983997,
+        "summary": "Passe Normal 11-20 en 10,2s"
       }
     },
     "9|Legendary|Epic|Mythic|progress": {
@@ -34995,6 +38433,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.448235,
+        "summary": "Passe Normal 11-20 en 10,7s"
       }
     },
     "9|Legendary|Epic|Mythic|survival": {
@@ -35087,6 +38534,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.19444,
+        "summary": "Passe Normal 11-20 en 13,8s"
       }
     },
     "9|Legendary|Epic|Ultimate|damage": {
@@ -35186,6 +38642,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.315322,
+        "summary": "Passe Normal 11-14 en 5,8s"
       }
     },
     "9|Legendary|Epic|Ultimate|progress": {
@@ -35278,6 +38743,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.257707,
+        "summary": "Passe Normal 11-20 en 12,9s"
       }
     },
     "9|Legendary|Epic|Ultimate|survival": {
@@ -35370,6 +38844,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.065216,
+        "summary": "Passe Normal 11-20 en 15,7s"
       }
     },
     "9|Legendary|Legendary|Legendary|damage": {
@@ -35469,6 +38952,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.925174,
+        "summary": "Passe Normal 11-14 en 5,2s"
       }
     },
     "9|Legendary|Legendary|Legendary|progress": {
@@ -35561,6 +39053,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.30537,
+        "summary": "Passe Normal 11-20 en 12,3s"
       }
     },
     "9|Legendary|Legendary|Legendary|survival": {
@@ -35653,6 +39154,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.084871,
+        "summary": "Passe Normal 11-20 en 15,4s"
       }
     },
     "9|Legendary|Legendary|Mythic|damage": {
@@ -35738,6 +39248,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.288555,
+        "summary": "Passe Normal 11-20 en 5,6s"
       }
     },
     "9|Legendary|Legendary|Mythic|progress": {
@@ -35837,6 +39356,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.465118,
+        "summary": "Passe Normal 11-20 en 10,5s"
       }
     },
     "9|Legendary|Legendary|Mythic|survival": {
@@ -35929,6 +39457,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.215335,
+        "summary": "Passe Normal 11-20 en 13,5s"
       }
     },
     "9|Legendary|Legendary|Ultimate|damage": {
@@ -36028,6 +39565,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 14,
+        "min": 11,
+        "max": 14,
+        "difficulty": 0,
+        "score": 14.951114,
+        "summary": "Passe Normal 11-14 en 5,1s"
       }
     },
     "9|Legendary|Legendary|Ultimate|progress": {
@@ -36120,6 +39666,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.320358,
+        "summary": "Passe Normal 11-20 en 12,1s"
       }
     },
     "9|Legendary|Legendary|Ultimate|survival": {
@@ -36212,6 +39767,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.141247,
+        "summary": "Passe Normal 11-20 en 14,5s"
       }
     },
     "9|Legendary|Mythic|Legendary|damage": {
@@ -36311,6 +39875,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.016544,
+        "summary": "Passe Normal 11-20 en 6,1s"
       }
     },
     "9|Legendary|Mythic|Legendary|progress": {
@@ -36403,6 +39976,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.697988,
+        "summary": "Passe Normal 11-20 en 8,3s"
       }
     },
     "9|Legendary|Mythic|Legendary|survival": {
@@ -36495,6 +40077,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.292019,
+        "summary": "Passe Normal 11-20 en 12,5s"
       }
     },
     "9|Legendary|Mythic|Mythic|damage": {
@@ -36594,6 +40185,15 @@
             "health": 3213640
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.877804,
+        "summary": "Passe Normal 11-20 en 4,3s"
       }
     },
     "9|Legendary|Mythic|Mythic|progress": {
@@ -36686,6 +40286,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.069363,
+        "summary": "Passe Normal 11-20 en 5,7s"
       }
     },
     "9|Legendary|Mythic|Mythic|survival": {
@@ -36778,6 +40387,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.462641,
+        "summary": "Passe Normal 11-20 en 10,5s"
       }
     },
     "9|Legendary|Mythic|Ultimate|damage": {
@@ -36877,6 +40495,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.176849,
+        "summary": "Passe Normal 11-19 en 5,0s"
       }
     },
     "9|Legendary|Mythic|Ultimate|progress": {
@@ -36969,6 +40596,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.804628,
+        "summary": "Passe Normal 11-20 en 7,4s"
       }
     },
     "9|Legendary|Mythic|Ultimate|survival": {
@@ -37061,6 +40697,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.308121,
+        "summary": "Passe Normal 11-20 en 12,3s"
       }
     },
     "9|Legendary|Ultimate|Legendary|damage": {
@@ -37160,6 +40805,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.355423,
+        "summary": "Passe Normal 11-19 en 5,7s"
       }
     },
     "9|Legendary|Ultimate|Legendary|progress": {
@@ -37252,6 +40906,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.473146,
+        "summary": "Passe Normal 11-20 en 10,4s"
       }
     },
     "9|Legendary|Ultimate|Legendary|survival": {
@@ -37344,6 +41007,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.176504,
+        "summary": "Passe Normal 11-20 en 14,0s"
       }
     },
     "9|Legendary|Ultimate|Mythic|damage": {
@@ -37443,6 +41115,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.251966,
+        "summary": "Passe Normal 11-20 en 5,6s"
       }
     },
     "9|Legendary|Ultimate|Mythic|progress": {
@@ -37542,6 +41223,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.491463,
+        "summary": "Passe Normal 11-20 en 10,2s"
       }
     },
     "9|Legendary|Ultimate|Mythic|survival": {
@@ -37634,6 +41324,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.35481,
+        "summary": "Passe Normal 11-20 en 11,7s"
       }
     },
     "9|Legendary|Ultimate|Ultimate|damage": {
@@ -37733,6 +41432,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.025878,
+        "summary": "Passe Normal 11-19 en 6,1s"
       }
     },
     "9|Legendary|Ultimate|Ultimate|progress": {
@@ -37825,6 +41533,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.656136,
+        "summary": "Passe Normal 11-20 en 8,6s"
       }
     },
     "9|Legendary|Ultimate|Ultimate|survival": {
@@ -37917,6 +41634,15 @@
             "health": 1606820
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.221603,
+        "summary": "Passe Normal 11-20 en 13,4s"
       }
     },
     "9|Mythic|Epic|Legendary|damage": {
@@ -38016,6 +41742,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.770367,
+        "summary": "Passe Normal 11-19 en 5,0s"
       }
     },
     "9|Mythic|Epic|Legendary|progress": {
@@ -38108,6 +41843,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.71388,
+        "summary": "Passe Normal 11-20 en 8,1s"
       }
     },
     "9|Mythic|Epic|Legendary|survival": {
@@ -38200,6 +41944,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.285355,
+        "summary": "Passe Normal 11-20 en 12,6s"
       }
     },
     "9|Mythic|Epic|Mythic|damage": {
@@ -38299,6 +42052,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.369149,
+        "summary": "Passe Normal 11-20 en 5,1s"
       }
     },
     "9|Mythic|Epic|Mythic|progress": {
@@ -38391,6 +42153,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.068278,
+        "summary": "Passe Normal 11-20 en 5,7s"
       }
     },
     "9|Mythic|Epic|Mythic|survival": {
@@ -38483,6 +42254,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.404387,
+        "summary": "Passe Normal 11-20 en 11,1s"
       }
     },
     "9|Mythic|Epic|Ultimate|damage": {
@@ -38582,6 +42362,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.794828,
+        "summary": "Passe Normal 11-19 en 4,9s"
       }
     },
     "9|Mythic|Epic|Ultimate|progress": {
@@ -38674,6 +42463,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.816979,
+        "summary": "Passe Normal 11-20 en 7,3s"
       }
     },
     "9|Mythic|Epic|Ultimate|survival": {
@@ -38766,6 +42564,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.304545,
+        "summary": "Passe Normal 11-20 en 12,3s"
       }
     },
     "9|Mythic|Legendary|Legendary|damage": {
@@ -38865,6 +42672,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.172294,
+        "summary": "Passe Normal 11-19 en 4,6s"
       }
     },
     "9|Mythic|Legendary|Legendary|progress": {
@@ -38957,6 +42773,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.808213,
+        "summary": "Passe Normal 11-20 en 7,4s"
       }
     },
     "9|Mythic|Legendary|Legendary|survival": {
@@ -39049,6 +42874,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.338917,
+        "summary": "Passe Normal 11-20 en 11,9s"
       }
     },
     "9|Mythic|Legendary|Mythic|damage": {
@@ -39148,6 +42982,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.80498,
+        "summary": "Passe Normal 11-20 en 4,3s"
       }
     },
     "9|Mythic|Legendary|Mythic|progress": {
@@ -39240,6 +43083,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.085831,
+        "summary": "Passe Normal 11-20 en 5,6s"
       }
     },
     "9|Mythic|Legendary|Mythic|survival": {
@@ -39332,6 +43184,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.476773,
+        "summary": "Passe Normal 11-20 en 10,4s"
       }
     },
     "9|Mythic|Legendary|Ultimate|damage": {
@@ -39431,6 +43292,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.575308,
+        "summary": "Passe Normal 11-19 en 3,9s"
       }
     },
     "9|Mythic|Legendary|Ultimate|progress": {
@@ -39523,6 +43393,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.865281,
+        "summary": "Passe Normal 11-20 en 7,0s"
       }
     },
     "9|Mythic|Legendary|Ultimate|survival": {
@@ -39615,6 +43494,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.346737,
+        "summary": "Passe Normal 11-20 en 11,8s"
       }
     },
     "9|Mythic|Mythic|Legendary|damage": {
@@ -39714,6 +43602,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.974041,
+        "summary": "Passe Normal 11-20 en 5,0s"
       }
     },
     "9|Mythic|Mythic|Legendary|progress": {
@@ -39806,6 +43703,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.035904,
+        "summary": "Passe Normal 11-20 en 5,9s"
       }
     },
     "9|Mythic|Mythic|Legendary|survival": {
@@ -39898,6 +43804,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.423403,
+        "summary": "Passe Normal 11-20 en 10,9s"
       }
     },
     "9|Mythic|Mythic|Mythic|damage": {
@@ -39997,6 +43912,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.123468,
+        "summary": "Passe Normal 11-20 en 3,8s"
       }
     },
     "9|Mythic|Mythic|Mythic|progress": {
@@ -40089,6 +44013,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.162945,
+        "summary": "Passe Normal 11-20 en 5,2s"
       }
     },
     "9|Mythic|Mythic|Mythic|survival": {
@@ -40181,6 +44114,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.734739,
+        "summary": "Passe Normal 11-20 en 8,0s"
       }
     },
     "9|Mythic|Mythic|Ultimate|damage": {
@@ -40280,6 +44222,15 @@
             "health": 51418248
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.123469,
+        "summary": "Passe Normal 11-20 en 4,9s"
       }
     },
     "9|Mythic|Mythic|Ultimate|progress": {
@@ -40372,6 +44323,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.011242,
+        "summary": "Passe Normal 11-20 en 6,0s"
       }
     },
     "9|Mythic|Mythic|Ultimate|survival": {
@@ -40464,6 +44424,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.427386,
+        "summary": "Passe Normal 11-20 en 10,9s"
       }
     },
     "9|Mythic|Ultimate|Legendary|damage": {
@@ -40563,6 +44532,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.210761,
+        "summary": "Passe Normal 11-20 en 5,6s"
       }
     },
     "9|Mythic|Ultimate|Legendary|progress": {
@@ -40655,6 +44633,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.896154,
+        "summary": "Passe Normal 11-20 en 6,8s"
       }
     },
     "9|Mythic|Ultimate|Legendary|survival": {
@@ -40747,6 +44734,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.374118,
+        "summary": "Passe Normal 11-20 en 11,5s"
       }
     },
     "9|Mythic|Ultimate|Mythic|damage": {
@@ -40846,6 +44842,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.96554,
+        "summary": "Passe Normal 11-20 en 4,0s"
       }
     },
     "9|Mythic|Ultimate|Mythic|progress": {
@@ -40938,6 +44943,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.108451,
+        "summary": "Passe Normal 11-20 en 5,5s"
       }
     },
     "9|Mythic|Ultimate|Mythic|survival": {
@@ -41030,6 +45044,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.472067,
+        "summary": "Passe Normal 11-20 en 10,4s"
       }
     },
     "9|Mythic|Ultimate|Ultimate|damage": {
@@ -41129,6 +45152,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.383831,
+        "summary": "Passe Normal 11-20 en 5,3s"
       }
     },
     "9|Mythic|Ultimate|Ultimate|progress": {
@@ -41221,6 +45253,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.911134,
+        "summary": "Passe Normal 11-20 en 6,7s"
       }
     },
     "9|Mythic|Ultimate|Ultimate|survival": {
@@ -41313,6 +45354,15 @@
             "health": 17139416
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.378271,
+        "summary": "Passe Normal 11-20 en 11,4s"
       }
     },
     "9|Ultimate|Epic|Legendary|damage": {
@@ -41412,6 +45462,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.473818,
+        "summary": "Passe Normal 11-17 en 5,5s"
       }
     },
     "9|Ultimate|Epic|Legendary|progress": {
@@ -41504,6 +45563,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.450693,
+        "summary": "Passe Normal 11-20 en 10,6s"
       }
     },
     "9|Ultimate|Epic|Legendary|survival": {
@@ -41596,6 +45664,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.147221,
+        "summary": "Passe Normal 11-20 en 14,5s"
       }
     },
     "9|Ultimate|Epic|Mythic|damage": {
@@ -41681,6 +45758,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.279367,
+        "summary": "Passe Normal 11-20 en 5,6s"
       }
     },
     "9|Ultimate|Epic|Mythic|progress": {
@@ -41780,6 +45866,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.486646,
+        "summary": "Passe Normal 11-20 en 10,2s"
       }
     },
     "9|Ultimate|Epic|Mythic|survival": {
@@ -41872,6 +45967,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.321065,
+        "summary": "Passe Normal 11-20 en 12,1s"
       }
     },
     "9|Ultimate|Epic|Ultimate|damage": {
@@ -41971,6 +46075,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 17,
+        "min": 11,
+        "max": 17,
+        "difficulty": 0,
+        "score": 14.221121,
+        "summary": "Passe Normal 11-17 en 5,8s"
       }
     },
     "9|Ultimate|Epic|Ultimate|progress": {
@@ -42063,6 +46176,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.60359,
+        "summary": "Passe Normal 11-20 en 9,1s"
       }
     },
     "9|Ultimate|Epic|Ultimate|survival": {
@@ -42155,6 +46277,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.199407,
+        "summary": "Passe Normal 11-20 en 13,7s"
       }
     },
     "9|Ultimate|Legendary|Legendary|damage": {
@@ -42254,6 +46385,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.433974,
+        "summary": "Passe Normal 11-19 en 5,3s"
       }
     },
     "9|Ultimate|Legendary|Legendary|progress": {
@@ -42346,6 +46486,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.557998,
+        "summary": "Passe Normal 11-20 en 9,5s"
       }
     },
     "9|Ultimate|Legendary|Legendary|survival": {
@@ -42438,6 +46587,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.222578,
+        "summary": "Passe Normal 11-20 en 13,4s"
       }
     },
     "9|Ultimate|Legendary|Mythic|damage": {
@@ -42537,6 +46695,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.284685,
+        "summary": "Passe Normal 11-20 en 5,3s"
       }
     },
     "9|Ultimate|Legendary|Mythic|progress": {
@@ -42629,6 +46796,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.747127,
+        "summary": "Passe Normal 11-20 en 7,9s"
       }
     },
     "9|Ultimate|Legendary|Mythic|survival": {
@@ -42721,6 +46897,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.368313,
+        "summary": "Passe Normal 11-20 en 11,6s"
       }
     },
     "9|Ultimate|Legendary|Ultimate|damage": {
@@ -42820,6 +47005,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.11799,
+        "summary": "Passe Normal 11-19 en 5,7s"
       }
     },
     "9|Ultimate|Legendary|Ultimate|progress": {
@@ -42912,6 +47106,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.720796,
+        "summary": "Passe Normal 11-20 en 8,1s"
       }
     },
     "9|Ultimate|Legendary|Ultimate|survival": {
@@ -43004,6 +47207,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.256339,
+        "summary": "Passe Normal 11-20 en 12,9s"
       }
     },
     "9|Ultimate|Mythic|Legendary|damage": {
@@ -43103,6 +47315,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.487127,
+        "summary": "Passe Normal 11-20 en 5,6s"
       }
     },
     "9|Ultimate|Mythic|Legendary|progress": {
@@ -43195,6 +47416,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.858844,
+        "summary": "Passe Normal 11-20 en 7,0s"
       }
     },
     "9|Ultimate|Mythic|Legendary|survival": {
@@ -43287,6 +47517,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.358566,
+        "summary": "Passe Normal 11-20 en 11,7s"
       }
     },
     "9|Ultimate|Mythic|Mythic|damage": {
@@ -43386,6 +47625,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.012199,
+        "summary": "Passe Normal 11-20 en 4,0s"
       }
     },
     "9|Ultimate|Mythic|Mythic|progress": {
@@ -43478,6 +47726,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 16.107193,
+        "summary": "Passe Normal 11-20 en 5,5s"
       }
     },
     "9|Ultimate|Mythic|Mythic|survival": {
@@ -43570,6 +47827,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.462767,
+        "summary": "Passe Normal 11-20 en 10,5s"
       }
     },
     "9|Ultimate|Mythic|Ultimate|damage": {
@@ -43669,6 +47935,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 14.531615,
+        "summary": "Passe Normal 11-20 en 5,4s"
       }
     },
     "9|Ultimate|Mythic|Ultimate|progress": {
@@ -43761,6 +48036,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.892572,
+        "summary": "Passe Normal 11-20 en 6,8s"
       }
     },
     "9|Ultimate|Mythic|Ultimate|survival": {
@@ -43853,6 +48137,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.363115,
+        "summary": "Passe Normal 11-20 en 11,6s"
       }
     },
     "9|Ultimate|Ultimate|Legendary|damage": {
@@ -43952,6 +48245,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 15.049066,
+        "summary": "Passe Normal 11-19 en 4,8s"
       }
     },
     "9|Ultimate|Ultimate|Legendary|progress": {
@@ -44044,6 +48346,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.677011,
+        "summary": "Passe Normal 11-20 en 8,5s"
       }
     },
     "9|Ultimate|Ultimate|Legendary|survival": {
@@ -44136,6 +48447,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.281927,
+        "summary": "Passe Normal 11-20 en 12,6s"
       }
     },
     "9|Ultimate|Ultimate|Mythic|damage": {
@@ -44235,6 +48555,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.423075,
+        "summary": "Passe Normal 11-20 en 5,1s"
       }
     },
     "9|Ultimate|Ultimate|Mythic|progress": {
@@ -44327,6 +48656,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.746567,
+        "summary": "Passe Normal 11-20 en 7,9s"
       }
     },
     "9|Ultimate|Ultimate|Mythic|survival": {
@@ -44419,6 +48757,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.406745,
+        "summary": "Passe Normal 11-20 en 11,1s"
       }
     },
     "9|Ultimate|Ultimate|Ultimate|damage": {
@@ -44518,6 +48865,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 19,
+        "min": 11,
+        "max": 19,
+        "difficulty": 0,
+        "score": 14.867971,
+        "summary": "Passe Normal 11-19 en 5,1s"
       }
     },
     "9|Ultimate|Ultimate|Ultimate|progress": {
@@ -44610,6 +48966,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.796516,
+        "summary": "Passe Normal 11-20 en 7,5s"
       }
     },
     "9|Ultimate|Ultimate|Ultimate|survival": {
@@ -44702,6 +49067,15 @@
             "health": 8034100
           }
         ]
+      },
+      "battleReach": {
+        "age": 11,
+        "combat": 20,
+        "min": 11,
+        "max": 20,
+        "difficulty": 0,
+        "score": 15.300945,
+        "summary": "Passe Normal 11-20 en 12,4s"
       }
     }
   }

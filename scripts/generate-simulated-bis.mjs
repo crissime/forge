@@ -191,6 +191,9 @@ export function exhaustiveCase(job, data, options = {}) {
   const reach = !options.smoke && winner.equipment.length && !(job.shardCount > 1)
     ? reachFor(profileFromWinner(job, data, winner), data, job.objective)
     : null;
+  const battleReach = !options.smoke && winner.equipment.length && !(job.shardCount > 1)
+    ? battleReachFor(profileFromWinner(job, data, winner), data, job.objective)
+    : null;
   return {
     key: job.key,
     checkpointKey: checkpointKey(job),
@@ -205,6 +208,7 @@ export function exhaustiveCase(job, data, options = {}) {
     },
     frontier,
     reach,
+    battleReach,
     lineCount: winner.stats.reduce((sum, stat) => sum + stat.count, 0),
     candidateCount,
     statAllocationCount,
@@ -600,6 +604,25 @@ function reachFor(profile, data, objective) {
   return best;
 }
 
+function battleReachFor(profile, data, objective) {
+  let best = null;
+  for (let age = 1; age <= 11; age += 1) {
+    for (let combat = 1; combat <= 20; combat += 1) {
+      const levelRange = { age, combat, min: age, max: combat, difficulty: 0 };
+      const result = evaluateProfileSnapshot(profile, data, objective, 60, { levelRange, model: BUILD_MODEL });
+      const gauntlet = result.scenarios.find((scenario) => scenario.id === "gauntlet");
+      if (gauntlet?.success) {
+        best = {
+          ...levelRange,
+          score: round(gauntlet.score, 6),
+          summary: gauntlet.summary
+        };
+      }
+    }
+  }
+  return best;
+}
+
 function applyStatCounts(base, stats, counts) {
   const profile = structuredClone(base);
   const totals = createEmptyStats();
@@ -812,6 +835,9 @@ function mergeShardResults(data, results, options) {
       top,
       reach: !options.smoke && winner.equipment.length
         ? reachFor(profileFromWinner(job, data, winner), data, first.objective)
+        : null,
+      battleReach: !options.smoke && winner.equipment.length
+        ? battleReachFor(profileFromWinner(job, data, winner), data, first.objective)
         : null
     });
   }
@@ -863,6 +889,7 @@ function compactCase(result) {
     access: result.access,
     frontier: result.frontier,
     reach: result.reach,
+    battleReach: result.battleReach,
     lineCount: result.lineCount,
     candidateCount: result.candidateCount,
     statAllocationCount: result.statAllocationCount,
