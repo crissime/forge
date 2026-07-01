@@ -50,7 +50,7 @@ type GeneratedCase = {
   reach?: { age: number; combat: number; successCount?: number; scenarioCount?: number };
   exhaustive?: boolean;
   v3?: boolean;
-  access?: { equipmentAge?: number };
+  access?: { equipmentAge?: number; petRarity?: string; mountRarity?: string; spellRarity?: string };
   winner?: {
     weaponStyle?: string;
     stats?: Array<{ stat: string; label: string; count: number; total: number }>;
@@ -70,6 +70,7 @@ type GeneratedResult = {
   reach?: FightPoint;
   pets: GeneratedPet[];
   weaponStyle?: string;
+  missing?: boolean;
   exhaustive: boolean;
   v3?: boolean;
 };
@@ -77,21 +78,21 @@ type GeneratedResult = {
 export function bisReferenceForAge(age: number, ageOptions: AgeOption[], objective: Objective = "progress"): BisReference {
   const cleanAge = Math.min(9, Math.max(0, Math.round(Number(age || 0))));
   const ageLabel = ageOptions.find((option) => option.value === cleanAge)?.label || `Age ${cleanAge}`;
-  const rarity = rarityForAge(cleanAge);
-  return referenceForCase(cleanAge, ageLabel, objective, rarity, rarity, rarity);
+  const access = defaultAccessForAge(cleanAge);
+  return referenceForCase(cleanAge, ageLabel, objective, access.petRarity, access.mountRarity, access.spellRarity);
 }
 
 export function bisReferenceForAccess(access: BisAccess, ageOptions: AgeOption[], objective: Objective = "progress"): BisReference {
   const age = highestNumber(access.equipmentAges || [], 0);
   const ageLabel = ageOptions.find((option) => option.value === age)?.label || `Age ${age}`;
-  const baselineRarity = rarityForAge(age);
+  const baseline = defaultAccessForAge(age);
   return referenceForCase(
     age,
     ageLabel,
     objective,
-    highestRarity(access.petRarities || [], baselineRarity),
-    highestRarity(access.mountRarities || [], baselineRarity),
-    highestRarity(access.spellRarities || [], baselineRarity)
+    highestRarity(access.petRarities || [], baseline.petRarity),
+    highestRarity(access.mountRarities || [], baseline.mountRarity),
+    highestRarity(access.spellRarities || [], baseline.spellRarity)
   );
 }
 
@@ -175,6 +176,18 @@ function referenceForCase(
   spellRarity: string
 ): BisReference {
   const result = simulatedResult(age, petRarity, mountRarity, spellRarity, objective);
+  if (result.missing) {
+    return {
+      age,
+      ageLabel,
+      phase: age <= 2 ? "Debut de progression" : age <= 4 ? "Debut de build" : age <= 6 ? "Milieu de progression" : "Fin de progression",
+      petRarity,
+      mountRarity,
+      spellRarity,
+      stats: [],
+      note: `Aucun BIS genere pour ce cas : equipement ${age}, pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, objectif ${objectiveLabel(result.objective)}.`
+    };
+  }
   const battle: FightPoint = result.frontier || { age: 1, combat: 1 };
   const reach: FightPoint = result.reach || battle;
   const stats = Array.isArray(result.stats) ? result.stats : [];
@@ -219,11 +232,7 @@ function simulatedResult(
   if (exhaustiveCase?.winner) return exhaustiveResult(exhaustiveCase, true);
 
   if (generated.schema === "forge-master-exhaustive-bis-v1") {
-    const cases = Object.values(generated.cases || {});
-    const fallback = cases.find((entry) =>
-      entry.objective === normalizedObjective && entry.access?.equipmentAge === age && entry.winner
-    ) || cases.find((entry) => entry.objective === normalizedObjective && entry.winner);
-    return fallback ? exhaustiveResult(fallback, false) : {
+    return {
       objective: normalizedObjective,
       lineCount: 0,
       stats: [],
@@ -231,6 +240,7 @@ function simulatedResult(
       reach: undefined,
       pets: [],
       weaponStyle: undefined,
+      missing: true,
       exhaustive: false
     };
   }
@@ -272,6 +282,12 @@ function inferredWeaponStyle(stats: GeneratedStat[]) {
 
 function weaponStyleLabel(style: string) {
   return style === "ranged" ? "distance" : style === "melee" ? "melee" : style;
+}
+
+function defaultAccessForAge(age: number) {
+  if (age <= 5) return { petRarity: "Epic", mountRarity: "Common", spellRarity: "Epic" };
+  if (age <= 7) return { petRarity: "Legendary", mountRarity: "Rare", spellRarity: "Legendary" };
+  return { petRarity: "Ultimate", mountRarity: "Legendary", spellRarity: "Ultimate" };
 }
 
 function rarityForAge(age: number) {

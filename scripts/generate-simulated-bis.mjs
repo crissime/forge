@@ -45,8 +45,17 @@ if (isMainThread && path.resolve(process.argv[1] || "") === SCRIPT) {
   await main();
 } else if (!isMainThread) {
   const data = await loadGameData();
-  for (const job of workerData.jobs) {
-    parentPort.postMessage({ type: "result", result: exhaustiveCase(job, data, workerData.options) });
+  if (Array.isArray(workerData.jobs)) {
+    for (const job of workerData.jobs) {
+      parentPort.postMessage({ type: "result", result: exhaustiveCase(job, data, workerData.options) });
+    }
+  } else {
+    parentPort.on("message", (message) => {
+      if (message?.type === "stop") process.exit(0);
+      if (message?.type !== "job") return;
+      parentPort.postMessage({ type: "result", result: exhaustiveCase(message.job, data, workerData.options) });
+    });
+    parentPort.postMessage({ type: "ready" });
   }
 }
 
@@ -75,9 +84,9 @@ async function main() {
     smoke: SMOKE
   };
   const results = new Map(completed);
-  const chunks = splitJobs(jobs, Math.min(WORKERS, jobs.length || 1));
+  const workerCount = Math.min(WORKERS, jobs.length || 1);
 
-  if (chunks.length <= 1) {
+  if (workerCount <= 1) {
     for (const job of jobs) {
       const result = exhaustiveCase(job, data, options);
       results.set(result.checkpointKey || result.key, result);
@@ -85,11 +94,11 @@ async function main() {
       console.log(`BIS ${result.key}: ${result.winner.score.toFixed(4)} from ${result.candidateCount} candidates`);
     }
   } else {
-    await Promise.all(chunks.map((chunk) => runWorker(chunk, options, async (result) => {
+    await runWorkerPool(jobs, workerCount, options, async (result) => {
       results.set(result.checkpointKey || result.key, result);
       if (CHECKPOINT) await appendCheckpoint(CHECKPOINT, result);
       console.log(`BIS ${result.key}: ${result.winner.score.toFixed(4)} from ${result.candidateCount} candidates`);
-    })));
+    });
   }
 
   const output = buildOutput(data, mergeShardResults(data, results, options), options);
@@ -884,24 +893,38 @@ async function appendCheckpoint(file, result) {
   await appendFile(file, `${JSON.stringify(result)}\n`);
 }
 
-function runWorker(jobs, options, onResult) {
+function runWorkerPool(jobs, workerCount, options, onResult) {
   return new Promise((resolve, reject) => {
-    const worker = new Worker(new URL(import.meta.url), { workerData: { jobs, options } });
+    let next = 0;
+    let exited = 0;
     const pending = [];
-    worker.on("message", (message) => {
-      if (message?.type === "result") pending.push(onResult(message.result));
-    });
-    worker.once("error", reject);
-    worker.once("exit", (code) => {
-      if (code) reject(new Error(`BIS worker exited with code ${code}`));
-      else Promise.all(pending).then(resolve, reject);
-    });
-  });
-}
 
-function splitJobs(jobs, workerCount) {
-  const size = Math.ceil(jobs.length / Math.max(1, workerCount));
-  return Array.from({ length: workerCount }, (_, index) => jobs.slice(index * size, (index + 1) * size)).filter((chunk) => chunk.length);
+    const assign = (worker) => {
+      const job = jobs[next++];
+      if (job) worker.postMessage({ type: "job", job });
+      else worker.postMessage({ type: "stop" });
+    };
+
+    for (let index = 0; index < workerCount; index += 1) {
+      const worker = new Worker(new URL(import.meta.url), { workerData: { options } });
+      worker.on("message", (message) => {
+        if (message?.type === "ready") assign(worker);
+        if (message?.type === "result") {
+          pending.push(onResult(message.result));
+          assign(worker);
+        }
+      });
+      worker.once("error", reject);
+      worker.once("exit", (code) => {
+        if (code) {
+          reject(new Error(`BIS worker exited with code ${code}`));
+          return;
+        }
+        exited += 1;
+        if (exited === workerCount) Promise.all(pending).then(resolve, reject);
+      });
+    }
+  });
 }
 
 function limited(values, limit = Infinity) {

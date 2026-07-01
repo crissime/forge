@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: crissime/forgemaster-api:3.1.0
+          image: crissime/forgemaster-api:3.1.0@sha256:39972b4e9cc9de681a0ce5f602394f0098b1da22cf6ff93af1018b78ae276011
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

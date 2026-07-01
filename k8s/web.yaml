@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: crissime/forgemaster-web:3.1.0
+          image: crissime/forgemaster-web:3.1.0@sha256:73119694bdc2a5a12881da74a5144ff8c7315ba8343a418db9622ce5fd49b4c3
           imagePullPolicy: IfNotPresent
           ports:
             - name: http

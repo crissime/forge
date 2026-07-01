@@ -23,24 +23,25 @@ const ages = [
 ].map((label, value) => ({ value, label }));
 
 describe("BIS progression guide", () => {
-  it("keeps Epic pets, mount and spells from Modern through Multiverse", () => {
-    for (const age of [3, 4, 5, 6]) {
-      expect(bisReferenceForAge(age, ages)).toMatchObject({
-        age,
-        petRarity: "Epic",
-        mountRarity: "Epic",
-        spellRarity: "Epic"
-      });
-    }
-  });
-
-  it("raises companion rarity on the final equipment ages", () => {
-    expect(bisReferenceForAge(0, ages).petRarity).toBe("Common");
-    expect(bisReferenceForAge(1, ages).petRarity).toBe("Rare");
-    expect(bisReferenceForAge(2, ages).petRarity).toBe("Rare");
-    expect(bisReferenceForAge(7, ages).petRarity).toBe("Legendary");
-    expect(bisReferenceForAge(8, ages).petRarity).toBe("Ultimate");
-    expect(bisReferenceForAge(9, ages).petRarity).toBe("Mythic");
+  it("uses the normal accessibility tier for each equipment age", () => {
+    expect(bisReferenceForAge(5, ages)).toMatchObject({
+      age: 5,
+      petRarity: "Epic",
+      mountRarity: "Common",
+      spellRarity: "Epic"
+    });
+    expect(bisReferenceForAge(7, ages)).toMatchObject({
+      age: 7,
+      petRarity: "Legendary",
+      mountRarity: "Rare",
+      spellRarity: "Legendary"
+    });
+    expect(bisReferenceForAge(9, ages)).toMatchObject({
+      age: 9,
+      petRarity: "Ultimate",
+      mountRarity: "Legendary",
+      spellRarity: "Ultimate"
+    });
   });
 
   it("reports current equipment and companion progress against a selected age", () => {
@@ -129,18 +130,18 @@ describe("BIS progression guide", () => {
 
   it("changes the simulated allocation with companion and spell access", () => {
     const reference = bisReferenceForAccess({
-      equipmentAges: [5],
-      petRarities: ["Common"],
+      equipmentAges: [4],
+      petRarities: ["Epic"],
       mountRarities: ["Common"],
-      spellRarities: ["Mythic"]
-    }, ages, "survival");
+      spellRarities: ["Legendary"]
+    }, ages, "damage");
 
     expect(reference.stats.some((stat) => stat.stat === "skillDamage")).toBe(true);
-    expect(reference.note).toContain("Pets Common, monture Common, sorts Mythic");
-    expect(reference.note).toContain("Dog (Degats)");
+    expect(reference.note).toContain("Pets Epic, monture Common, sorts Legendary");
+    expect(reference.note).toContain("Saber Tooth (Degats)");
   });
 
-  it("uses early-age generated cases from the full BIS run", () => {
+  it("reports no BIS for early ages filtered out of the generated run", () => {
     const reference = bisReferenceForAccess({
       equipmentAges: [0],
       petRarities: ["Common"],
@@ -148,21 +149,32 @@ describe("BIS progression guide", () => {
       spellRarities: ["Mythic"]
     }, ages, "damage");
 
-    expect(reference.stats.length).toBeGreaterThan(0);
-    expect(reference.note).toContain("BIS exhaustif");
-    expect(reference.note).toContain("Niveau de test");
+    expect(reference.stats).toEqual([]);
+    expect(reference.note).toContain("Aucun BIS genere");
   });
 
   it("counts the second lines unlocked by legendary companions", () => {
     const reference = bisReferenceForAccess({
       equipmentAges: [5],
       petRarities: ["Legendary"],
-      mountRarities: ["Legendary"],
+      mountRarities: ["Rare"],
       spellRarities: ["Epic"]
     }, ages, "progress");
 
-    expect(reference.stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0)).toBe(16);
-    expect(reference.note).toContain("16 lignes secondaires max");
+    expect(reference.stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0)).toBe(15);
+    expect(reference.note).toContain("15 lignes secondaires max");
+  });
+
+  it("reports no BIS when the exact accessibility case was not generated", () => {
+    const reference = bisReferenceForAccess({
+      equipmentAges: [10],
+      petRarities: ["Mythic"],
+      mountRarities: ["Mythic"],
+      spellRarities: ["Mythic"]
+    }, ages, "progress");
+
+    expect(reference.stats).toEqual([]);
+    expect(reference.note).toContain("Aucun BIS genere pour ce cas");
   });
 });
 
