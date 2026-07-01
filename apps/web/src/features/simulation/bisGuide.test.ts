@@ -121,7 +121,7 @@ describe("BIS progression guide", () => {
     expect(reference.stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0)).toBe(12);
     expect(reference.note).toContain("BIS exhaustif");
     expect(reference.note).toContain("lignes secondaires max");
-    expect(reference.note).toContain("Max bataille atteint");
+    expect(reference.note).toContain("Max progression du BIS theorique");
     expect(reference.note).toContain("Score progression max");
     expect(reference.note).toContain("Arme BIS");
     expect(reference.note).toContain("Pets BIS");

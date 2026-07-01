@@ -196,7 +196,7 @@ function referenceForCase(
   const stats = Array.isArray(result.stats) ? result.stats : [];
   const lineCount = Number(result.lineCount || stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0));
   const method = result.v3 ? "BIS v3 exhaustif controle" : result.exhaustive ? "BIS exhaustif" : "Repartition simulee";
-  const battleText = `Max bataille atteint : ${battleReach.age}-${battleReach.combat} normal.`;
+  const battleText = `Max progression du BIS theorique : ${battleReach.age}-${battleReach.combat} normal.`;
   const reachScenarios = reach.successCount
     ? ` (${reach.successCount}/${reach.scenarioCount} scenarios reussis)`
     : "";

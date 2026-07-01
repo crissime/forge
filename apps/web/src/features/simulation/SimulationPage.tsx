@@ -88,8 +88,8 @@ export function SimulationPage() {
 
       <section className={`${styles.verdict} ${success ? "" : styles.verdictFail}`}>
         <div>
-          <p className={ui.eyebrow}>Verdict principal</p>
-          <h2>{evaluation ? success ? "Build prêt pour le niveau testé" : "Build encore fragile" : "Calcul en cours…"}</h2>
+          <p className={ui.eyebrow}>Ton build actuel</p>
+          <h2>{evaluation ? success ? "Ton build passe le combat testé" : "Ton build ne passe pas encore" : "Calcul en cours…"}</h2>
           <p className={ui.muted}>
             {evaluation
               ? `${results.filter((result) => result.success).length}/${results.length} scénarios réussis · niveau ${scenarios.levelRange.age ?? scenarios.levelRange.min ?? 1}, combat ${scenarios.levelRange.combat ?? scenarios.levelRange.max ?? 1}, mode ${Number(scenarios.levelRange.difficulty || 0) ? "difficile" : "normal"}.`
@@ -141,7 +141,7 @@ export function SimulationPage() {
         <header className={styles.bisHeader}>
           <div>
             <p className={ui.eyebrow}>Optimisation avancée</p>
-            <h2 id="bis-title">Repères BIS accessibles</h2>
+            <h2 id="bis-title">BIS théorique accessible</h2>
             <p className={ui.muted}>
               {bisReference.phase} · repère {bisReference.ageLabel} : pets {rarityLabels[bisReference.petRarity]},
               monture {rarityLabels[bisReference.mountRarity]}, sorts {rarityLabels[bisReference.spellRarity]}.

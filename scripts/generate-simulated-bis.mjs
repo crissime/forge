@@ -611,13 +611,12 @@ function battleReachFor(profile, data, objective) {
       const levelRange = { age, combat, min: age, max: combat, difficulty: 0 };
       const result = evaluateProfileSnapshot(profile, data, objective, 60, { levelRange, model: BUILD_MODEL });
       const gauntlet = result.scenarios.find((scenario) => scenario.id === "gauntlet");
-      if (gauntlet?.success) {
-        best = {
-          ...levelRange,
-          score: round(gauntlet.score, 6),
-          summary: gauntlet.summary
-        };
-      }
+      if (!gauntlet?.success) return best;
+      best = {
+        ...levelRange,
+        score: round(gauntlet.score, 6),
+        summary: gauntlet.summary
+      };
     }
   }
   return best;
