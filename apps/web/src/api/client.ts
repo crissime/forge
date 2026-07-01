@@ -32,6 +32,7 @@ export async function request<T>(path: string, options: RequestOptions = {}): Pr
 export const api = {
   session: () => request<Session>("/api/session"),
   profiles: () => request<{ profiles: CloudProfile[] }>("/api/profiles"),
+  bisLatest: () => request<any>("/api/bis/latest"),
   gameData: () => request<GameDataInfo>("/api/game-data/current"),
   manualProfile: () =>
     request<{ normalized: NormalizedProfile }>("/api/profiles/manual", {

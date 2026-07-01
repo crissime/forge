@@ -6,7 +6,8 @@ import {
   bisProgress,
   bisReferenceForAccess,
   bisReferenceForAge,
-  equippedReferenceAge
+  equippedReferenceAge,
+  type GeneratedBisData
 } from "./bisGuide";
 
 const ages = [
@@ -21,6 +22,30 @@ const ages = [
   "Enfers",
   "Divin"
 ].map((label, value) => ({ value, label }));
+
+const generatedBis = {
+  schema: "forge-master-exhaustive-bis-v1",
+  assumptions: { companionLevel: 1, spellLevel: 1 },
+  cases: {
+    "5|Epic|Common|Epic|progress": generatedCase("progress", 12, [
+      ["attackSpeed", "Attack Speed", 5, 200],
+      ["doubleChance", "Double Chance", 3, 60],
+      ["damage", "Damage", 2, 30],
+      ["lifesteal", "Lifesteal", 2, 40]
+    ]),
+    "4|Epic|Common|Legendary|damage": generatedCase("damage", 12, [
+      ["skillDamage", "Skill Damage", 4, 120],
+      ["meleeDamage", "Melee Damage", 4, 200],
+      ["attackSpeed", "Attack Speed", 4, 160]
+    ]),
+    "5|Legendary|Rare|Epic|progress": generatedCase("progress", 15, [
+      ["lifesteal", "Lifesteal", 5, 100],
+      ["attackSpeed", "Attack Speed", 5, 200],
+      ["doubleChance", "Double Chance", 3, 60],
+      ["damage", "Damage", 2, 30]
+    ])
+  }
+} satisfies GeneratedBisData;
 
 describe("BIS progression guide", () => {
   it("uses the normal accessibility tier for each equipment age", () => {
@@ -115,8 +140,15 @@ describe("BIS progression guide", () => {
     expect(progress.mount).toBe(false);
   });
 
+  it("does not expose BIS while generated data is unavailable", () => {
+    const reference = bisReferenceForAge(5, ages);
+
+    expect(reference.stats).toEqual([]);
+    expect(reference.note).toContain("BIS indisponible");
+  });
+
   it("uses generated simulations and reports the audited context", () => {
-    const reference = bisReferenceForAge(5, ages, "progress");
+    const reference = bisReferenceForAge(5, ages, "progress", generatedBis);
 
     expect(reference.stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0)).toBe(12);
     expect(reference.note).toContain("BIS exhaustif");
@@ -134,7 +166,7 @@ describe("BIS progression guide", () => {
       petRarities: ["Epic"],
       mountRarities: ["Common"],
       spellRarities: ["Legendary"]
-    }, ages, "damage");
+    }, ages, "damage", generatedBis);
 
     expect(reference.stats.some((stat) => stat.stat === "skillDamage")).toBe(true);
     expect(reference.note).toContain("Pets Epic, monture Common, sorts Legendary");
@@ -147,7 +179,7 @@ describe("BIS progression guide", () => {
       petRarities: ["Common"],
       mountRarities: ["Common"],
       spellRarities: ["Mythic"]
-    }, ages, "damage");
+    }, ages, "damage", generatedBis);
 
     expect(reference.stats).toEqual([]);
     expect(reference.note).toContain("Aucun BIS genere");
@@ -159,7 +191,7 @@ describe("BIS progression guide", () => {
       petRarities: ["Legendary"],
       mountRarities: ["Rare"],
       spellRarities: ["Epic"]
-    }, ages, "progress");
+    }, ages, "progress", generatedBis);
 
     expect(reference.stats.reduce((sum, stat) => sum + Number(stat.count || 0), 0)).toBe(15);
     expect(reference.note).toContain("15 lignes secondaires max");
@@ -171,12 +203,33 @@ describe("BIS progression guide", () => {
       petRarities: ["Mythic"],
       mountRarities: ["Mythic"],
       spellRarities: ["Mythic"]
-    }, ages, "progress");
+    }, ages, "progress", generatedBis);
 
     expect(reference.stats).toEqual([]);
     expect(reference.note).toContain("Aucun BIS genere pour ce cas");
   });
 });
+
+function generatedCase(
+  objective: string,
+  lineCount: number,
+  stats: Array<[string, string, number, number]>
+): NonNullable<GeneratedBisData["cases"]>[string] {
+  return {
+    objective,
+    lineCount,
+    candidateCount: 123,
+    frontier: { age: 8, combat: 2 },
+    reach: { age: 9, combat: 2, successCount: 2, scenarioCount: 3 },
+    battleReach: { age: 8, combat: 15 },
+    exhaustive: true,
+    winner: {
+      weaponStyle: "ranged",
+      stats: stats.map(([stat, label, count, total]) => ({ stat, label, count, total })),
+      pets: [{ name: "Saber Tooth", type: "Damage" }]
+    }
+  };
+}
 
 function itemAt(age: number): NonNullable<NormalizedProfile["equipment"]["Weapon"]> {
   return {

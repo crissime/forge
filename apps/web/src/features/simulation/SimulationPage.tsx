@@ -1,7 +1,9 @@
 import { useEffect, type ReactNode } from "react";
+import { useQuery } from "@tanstack/react-query";
 import type { Recommendation, ScenarioResult } from "@forge-master/simulator";
 import { Crown, PawPrint, ScanLine, ShieldCheck, WandSparkles } from "lucide-react";
 import { useWorkshop } from "../../store/workshop";
+import { api } from "../../api/client";
 import { objectives } from "../../types";
 import { rarityLabels, rarityValues } from "../shared/gameData";
 import { NumericInput } from "../shared/NumericInput";
@@ -36,7 +38,8 @@ export function SimulationPage() {
   const success = results.length > 0 && results.filter((result) => result.success).length >= Math.ceil(results.length / 2);
   const priorities = evaluation?.recommendations.slice(0, 3) || [];
   const grouped = groupRecommendations(evaluation?.recommendations.slice(3) || []);
-  const bisReference = bisReferenceForAccess(effectiveBisAccess, ageOptions, objective);
+  const bisQuery = useQuery({ queryKey: ["bis-latest"], queryFn: api.bisLatest, retry: false, staleTime: 30_000 });
+  const bisReference = bisReferenceForAccess(effectiveBisAccess, ageOptions, objective, bisQuery.data);
   const currentBisProgress = bisProgress(profile, bisReference, spellOptions);
 
   useEffect(() => {

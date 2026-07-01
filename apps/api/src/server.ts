@@ -1,4 +1,6 @@
 import crypto from "node:crypto";
+import fs from "node:fs/promises";
+import path from "node:path";
 import Fastify, { type FastifyReply, type FastifyRequest } from "fastify";
 import cookie from "@fastify/cookie";
 import { PrismaClient, type User } from "@prisma/client";
@@ -19,6 +21,7 @@ import {
 const PORT = Number(process.env.PORT || 3001);
 const COOKIE_SECURE = String(process.env.COOKIE_SECURE || "").toLowerCase() === "true";
 const SESSION_TTL_MS = 1000 * 60 * 60 * 24 * 14;
+const BIS_FILE = path.resolve(process.env.FM_BIS_FILE || "/data/forge-master/simulatedBis.json");
 
 const usernameSchema = z.string().trim().toLowerCase().regex(/^[a-z0-9_-]{3,24}$/);
 const passwordSchema = z.string().min(8).max(256);
@@ -76,6 +79,22 @@ await app.register(cookie, {
 });
 
 app.get("/api/healthz", async () => ({ ok: true, dataVersion: gameData.normalized.version }));
+
+app.get("/api/bis/latest", async (_request, reply) => {
+  let parsed: any;
+  try {
+    parsed = JSON.parse(await fs.readFile(BIS_FILE, "utf8"));
+  } catch (error) {
+    const code = (error as NodeJS.ErrnoException).code;
+    return reply.code(code === "ENOENT" ? 404 : 503).send({ error: "BIS indisponible: generation en cours." });
+  }
+
+  if (!isCurrentBis(parsed)) {
+    return reply.code(404).send({ error: "BIS indisponible: generation en cours." });
+  }
+
+  return reply.header("Cache-Control", "no-cache").send(parsed);
+});
 
 app.get("/api/session", async (request) => {
   const user = await getUserFromRequest(request);
@@ -269,6 +288,14 @@ function normalizeForgeMasterExport(raw: any, name?: string): NormalizedProfile 
     spells: Array.isArray(candidate.spells) ? candidate.spells : [],
     audit: Array.isArray(candidate.audit) ? candidate.audit : []
   } as NormalizedProfile;
+}
+
+function isCurrentBis(data: any) {
+  return data?.schema === "forge-master-exhaustive-bis-v1" &&
+    Number(data?.assumptions?.companionLevel) === 1 &&
+    Number(data?.assumptions?.spellLevel) === 1 &&
+    data?.cases &&
+    typeof data.cases === "object";
 }
 
 app.setErrorHandler((error, _request, reply) => {

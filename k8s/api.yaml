@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: api
-          image: crissime/forgemaster-api:3.1.0@sha256:39972b4e9cc9de681a0ce5f602394f0098b1da22cf6ff93af1018b78ae276011
+          image: crissime/forgemaster-api:3.1.0@sha256:4577034f274092946e8a418a92d7dcc61e9e4cdb53a792c166b0edd29021499c
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
@@ -40,6 +40,11 @@ spec:
                 secretKeyRef:
                   name: forge-master-postgres
                   key: DATABASE_URL
+            - name: FM_BIS_FILE
+              value: /data/forge-master/simulatedBis.json
+          volumeMounts:
+            - name: bis-data
+              mountPath: /data/forge-master
           readinessProbe:
             httpGet:
               path: /api/healthz
@@ -59,6 +64,10 @@ spec:
             limits:
               cpu: 750m
               memory: 512Mi
+      volumes:
+        - name: bis-data
+          persistentVolumeClaim:
+            claimName: forge-master-bis
 ---
 apiVersion: v1
 kind: Service

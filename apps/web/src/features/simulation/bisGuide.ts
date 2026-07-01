@@ -1,7 +1,6 @@
 import type { NormalizedProfile, Objective, StatMap } from "@forge-master/simulator";
 import type { AgeOption, BisAccess } from "../../types";
 import { normalizeRarity, rarityValues } from "../shared/gameData";
-import simulatedBis from "./simulatedBis.json";
 
 export type BisStatTarget = {
   stat: keyof StatMap;
@@ -59,6 +58,12 @@ type GeneratedCase = {
   };
 };
 
+export type GeneratedBisData = {
+  schema?: string;
+  assumptions?: { companionLevel?: number; spellLevel?: number };
+  cases?: Record<string, GeneratedCase>;
+};
+
 type GeneratedStat = { stat: string; label: string; count: number; total: number };
 type GeneratedPet = { name: string; type?: string };
 type FightPoint = { age: number; combat: number; successCount?: number; scenarioCount?: number; summary?: string };
@@ -75,18 +80,29 @@ type GeneratedResult = {
   pets: GeneratedPet[];
   weaponStyle?: string;
   missing?: boolean;
+  unavailable?: boolean;
   exhaustive: boolean;
   v3?: boolean;
 };
 
-export function bisReferenceForAge(age: number, ageOptions: AgeOption[], objective: Objective = "progress"): BisReference {
+export function bisReferenceForAge(
+  age: number,
+  ageOptions: AgeOption[],
+  objective: Objective = "progress",
+  generatedBis?: GeneratedBisData | null
+): BisReference {
   const cleanAge = Math.min(9, Math.max(0, Math.round(Number(age || 0))));
   const ageLabel = ageOptions.find((option) => option.value === cleanAge)?.label || `Age ${cleanAge}`;
   const access = defaultAccessForAge(cleanAge);
-  return referenceForCase(cleanAge, ageLabel, objective, access.petRarity, access.mountRarity, access.spellRarity);
+  return referenceForCase(cleanAge, ageLabel, objective, access.petRarity, access.mountRarity, access.spellRarity, generatedBis);
 }
 
-export function bisReferenceForAccess(access: BisAccess, ageOptions: AgeOption[], objective: Objective = "progress"): BisReference {
+export function bisReferenceForAccess(
+  access: BisAccess,
+  ageOptions: AgeOption[],
+  objective: Objective = "progress",
+  generatedBis?: GeneratedBisData | null
+): BisReference {
   const age = highestNumber(access.equipmentAges || [], 0);
   const ageLabel = ageOptions.find((option) => option.value === age)?.label || `Age ${age}`;
   const baseline = defaultAccessForAge(age);
@@ -96,7 +112,8 @@ export function bisReferenceForAccess(access: BisAccess, ageOptions: AgeOption[]
     objective,
     highestRarity(access.petRarities || [], baseline.petRarity),
     highestRarity(access.mountRarities || [], baseline.mountRarity),
-    highestRarity(access.spellRarities || [], baseline.spellRarity)
+    highestRarity(access.spellRarities || [], baseline.spellRarity),
+    generatedBis
   );
 }
 
@@ -177,9 +194,10 @@ function referenceForCase(
   objective: Objective,
   petRarity: string,
   mountRarity: string,
-  spellRarity: string
+  spellRarity: string,
+  generatedBis?: GeneratedBisData | null
 ): BisReference {
-  const result = simulatedResult(age, petRarity, mountRarity, spellRarity, objective);
+  const result = simulatedResult(age, petRarity, mountRarity, spellRarity, objective, generatedBis);
   if (result.missing) {
     return {
       age,
@@ -189,7 +207,9 @@ function referenceForCase(
       mountRarity,
       spellRarity,
       stats: [],
-      note: `Aucun BIS genere pour ce cas : equipement ${age}, pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, objectif ${objectiveLabel(result.objective)}.`
+      note: result.unavailable
+        ? "BIS indisponible: generation niveau 1 en cours. Aucun conseil BIS affiche pour eviter une fausse info."
+        : `Aucun BIS genere pour ce cas : equipement ${age}, pets ${petRarity}, monture ${mountRarity}, sorts ${spellRarity}, objectif ${objectiveLabel(result.objective)}.`
     };
   }
   const battle: FightPoint = result.frontier || { age: 1, combat: 1 };
@@ -237,49 +257,47 @@ function simulatedResult(
   petRarity: string,
   mountRarity: string,
   spellRarity: string,
-  objective: Objective
+  objective: Objective,
+  generated?: GeneratedBisData | null
 ): GeneratedResult {
   const normalizedObjective = objective === "damage" || objective === "survival" ? objective : "progress";
   const key = [age, petRarity, mountRarity, spellRarity, normalizedObjective].join("|");
-  const generated = simulatedBis as {
-    schema?: string;
-    assumptions?: { companionLevel?: number; spellLevel?: number };
-    cases?: Record<string, GeneratedCase>;
-    templates?: any[];
-  };
-  const exhaustiveCase = generated.schema === "forge-master-exhaustive-bis-v1" ? generated.cases?.[key] : null;
-  if (exhaustiveCase?.winner) return exhaustiveResult(exhaustiveCase, true, generated.assumptions);
-
-  if (generated.schema === "forge-master-exhaustive-bis-v1") {
+  if (!isCurrentGeneratedBis(generated)) {
     return {
       objective: normalizedObjective,
       lineCount: 0,
-      companionLevel: generated.assumptions?.companionLevel,
-      spellLevel: generated.assumptions?.spellLevel,
       stats: [],
-      frontier: undefined,
-      reach: undefined,
-      battleReach: undefined,
       pets: [],
-      weaponStyle: undefined,
       missing: true,
+      unavailable: true,
       exhaustive: false
     };
   }
 
-  const templateId = generated.cases?.[key];
-  const template = generated.templates?.find((entry) => entry.id === templateId)
-    || generated.templates?.find((entry) => entry.objective === normalizedObjective)
-    || generated.templates?.[0];
+  const exhaustiveCase = generated.cases?.[key] || null;
+  if (exhaustiveCase?.winner) return exhaustiveResult(exhaustiveCase, true, generated.assumptions);
+
   return {
-    ...template,
+    objective: normalizedObjective,
+    lineCount: 0,
+    companionLevel: generated.assumptions?.companionLevel,
+    spellLevel: generated.assumptions?.spellLevel,
+    stats: [],
     frontier: undefined,
     reach: undefined,
     battleReach: undefined,
     pets: [],
     weaponStyle: undefined,
+    missing: true,
     exhaustive: false
   };
+}
+
+function isCurrentGeneratedBis(data?: GeneratedBisData | null): data is Required<Pick<GeneratedBisData, "schema" | "assumptions" | "cases">> {
+  return data?.schema === "forge-master-exhaustive-bis-v1" &&
+    Number(data.assumptions?.companionLevel) === 1 &&
+    Number(data.assumptions?.spellLevel) === 1 &&
+    Boolean(data.cases);
 }
 
 function exhaustiveResult(entry: GeneratedCase, exact: boolean, assumptions?: { companionLevel?: number; spellLevel?: number }) {
