@@ -753,8 +753,10 @@ function compareDropAtTarget(
   const healthMultiplier = dropTargetMultiplier(next, target, "health");
   const attackDelta = Number(drop.attack || 0) * attackMultiplier - Number(currentEntry?.attack || 0) * attackMultiplier;
   const healthDelta = Number(drop.health || 0) * healthMultiplier - Number(currentEntry?.health || 0) * healthMultiplier;
-  const nextStats = subtractStats(next.stats, statMapFromLines(currentEntry?.secondaryStats || []));
-  next.stats = sumStats(nextStats, statMapFromLines(dropLines));
+  const currentLineStats = statMapFromLines(currentEntry?.secondaryStats || []);
+  const dropLineStats = statMapFromLines(dropLines);
+  next.stats = sumStats(subtractStats(next.stats, currentLineStats), dropLineStats);
+  next.breakdown.secondaryStats = sumStats(subtractStats(next.breakdown.secondaryStats, currentLineStats), dropLineStats);
   next.base.attack += attackDelta;
   next.base.health += healthDelta;
   replaceDropTarget(next, drop, target, dropLines);

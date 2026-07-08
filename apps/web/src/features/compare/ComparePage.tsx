@@ -93,6 +93,7 @@ export function ComparePage() {
     ageOptions,
     target === "pet" ? petPreview.name : target === "mount" ? mountPreview.name : undefined
   );
+  const secondaryStats = [{ stat: form.stat, value: form.value }];
 
   const drop: DropInput = {
     target,
@@ -106,7 +107,7 @@ export function ComparePage() {
     level: preview.level,
     attack: preview.attack,
     health: preview.health,
-    secondaryStats: form.value ? [{ stat: form.stat, value: form.value }] : []
+    secondaryStats
   };
 
   const run = async () => {
@@ -133,7 +134,7 @@ export function ComparePage() {
   const equip = () => {
     if (!result) return;
     editProfile((draft) => {
-      const lines = form.value ? [{ stat: form.stat, sourceId: form.stat, value: form.value }] : [];
+      const lines = [{ stat: form.stat, sourceId: form.stat, value: form.value }];
       if (target === "equipment") {
         draft.equipment[slot] = {
           slot,

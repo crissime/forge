@@ -411,6 +411,25 @@ describe("simulator", () => {
     expect(profile.base.attack).toBe(before);
   });
 
+  it("keeps a zero-value secondary line when comparing a drop", async () => {
+    const data = await loadGameData();
+    const profile = normalizeOneVcianProfile(buildFixtureProfile(data), data);
+    const weapon = profile.equipment.Weapon!;
+    weapon.secondaryStats = [{ stat: "damage", sourceId: "DamageMulti", value: 100000 }];
+    profile.breakdown.secondaryStats.damage = 0;
+
+    const comparison = compareDrop(profile, {
+      slot: "Weapon",
+      name: "Same weapon without roll",
+      attack: weapon.attack,
+      health: weapon.health,
+      secondaryStats: [{ stat: "damage", value: 0 }]
+    }, data, "damage");
+
+    expect(comparison.verdict).toBe("worse");
+    expect(comparison.dropScore).toBeLessThan(comparison.currentScore);
+  });
+
   it("compares pet and mount drops without mutating the source profile", async () => {
     const data = await loadGameData();
     const profile = normalizeOneVcianProfile(buildFixtureProfile(data), data);
