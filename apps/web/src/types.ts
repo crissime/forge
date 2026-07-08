@@ -119,8 +119,7 @@ export const defaultScenarios: ScenarioState = {
 export const objectives: Array<{ id: Objective; label: string }> = [
   { id: "progress", label: "Progression" },
   { id: "damage", label: "DPS" },
-  { id: "survival", label: "Survie" },
-  { id: "balanced", label: "Équilibre" }
+  { id: "survival", label: "Survie" }
 ];
 
 export const defaultBisAccess: BisAccess = {

@@ -243,6 +243,7 @@ describe("simulator", () => {
     const raw = buildFixtureProfile(data);
     const profile = normalizeOneVcianProfile(raw, data);
     const result = evaluateProfile(profile, data, "progress");
+    const damageResult = evaluateProfile(profile, data, "damage");
     const snapshot = evaluateProfileSnapshot(profile, data, "progress");
 
     expect(profile.confidence).not.toBe("manual_required");
@@ -254,7 +255,7 @@ describe("simulator", () => {
     expect(result.profile.totalDps).toBeGreaterThan(0);
     expect(result.scenarios.map((scenario) => scenario.id)).toEqual(["endurance", "timeToKill", "gauntlet"]);
     expect(result.recommendations.length).toBeGreaterThan(0);
-    expect(result.recommendations.some((recommendation) => recommendation.source === "Sorts")).toBe(true);
+    expect(damageResult.recommendations.some((recommendation) => recommendation.source === "Sorts")).toBe(true);
     expect(snapshot.score).toBeCloseTo(result.score, 8);
     expect(Object.hasOwn(snapshot, "recommendations")).toBe(false);
   });
@@ -295,6 +296,49 @@ describe("simulator", () => {
     expect(new Set(recommendedPlacements).size).toBe(recommendedPlacements.length);
     expect(result.recommendations[0].gain).toBeGreaterThan(0);
     expect(result.recommendations[0].scenario).toBeTruthy();
+  });
+
+  it("scores progress from the selected gauntlet instead of raw DPS", async () => {
+    const data = await loadGameData();
+    data.raw["MainBattleLibrary.json"] = {
+      test: { BattleId: { AgeIdx: 0, BattleIdx: 0 }, Waves: [{ Enemies: [{ Id: 1, Count: 1 }] }] }
+    };
+    data.raw["EnemyAgeScalingLibrary.json"] = { 0: { Health: { Raw: 1_000 }, Damage: { Raw: 500 } } };
+    data.raw["EnemyLibrary.json"] = { 1: { WeaponId: { Age: 0, Idx: 0 } } };
+    data.raw["WeaponLibrary.json"] = {
+      melee: { ItemId: { Age: 0, Type: "Weapon", Idx: 0 }, AttackRange: 0, AttackDuration: 1 }
+    };
+
+    const fragile = manualProfile("Fragile DPS", data);
+    fragile.base.attack = 10_000;
+    fragile.base.health = 10;
+    fragile.breakdown.baseAttack = 10_000;
+    fragile.breakdown.baseHealth = 10;
+    fragile.base.weaponStyle = "ranged";
+    fragile.spells = [];
+
+    const durable = manualProfile("Durable progress", data);
+    durable.base.attack = 100;
+    durable.base.health = 1_000_000;
+    durable.breakdown.baseAttack = 100;
+    durable.breakdown.baseHealth = 1_000_000;
+    durable.base.weaponStyle = "ranged";
+    durable.spells = [];
+
+    const settings = {
+      levelRange: { age: 1, combat: 1, difficulty: 0 },
+      model: { blockMode: "average", trials: 1 }
+    };
+    const fragileResult = evaluateProfileSnapshot(fragile, data, "progress", 60, settings);
+    const durableResult = evaluateProfileSnapshot(durable, data, "progress", 60, settings);
+    const fragileGauntlet = fragileResult.scenarios.find((scenario) => scenario.id === "gauntlet")!;
+    const durableGauntlet = durableResult.scenarios.find((scenario) => scenario.id === "gauntlet")!;
+
+    expect(combatProfile(fragile, data).totalDps).toBeGreaterThan(combatProfile(durable, data).totalDps);
+    expect(durableGauntlet.score).toBeGreaterThan(fragileGauntlet.score);
+    expect(fragileResult.score).toBeCloseTo(fragileGauntlet.score, 8);
+    expect(durableResult.score).toBeCloseTo(durableGauntlet.score, 8);
+    expect(durableResult.score).toBeGreaterThan(fragileResult.score);
   });
 
   it("uses PvP timing and produces bounded chance", async () => {
@@ -428,6 +472,29 @@ describe("simulator", () => {
 
     expect(comparison.verdict).toBe("worse");
     expect(comparison.dropScore).toBeLessThan(comparison.currentScore);
+  });
+
+  it("compares drops against the selected progression battle", async () => {
+    const data = await loadGameData();
+    const profile = normalizeOneVcianProfile(buildFixtureProfile(data), data);
+    const weapon = profile.equipment.Weapon!;
+    const drop = {
+      slot: "Weapon" as const,
+      name: "Same weapon",
+      attack: weapon.attack,
+      health: weapon.health,
+      secondaryStats: weapon.secondaryStats.map(({ stat, value }) => ({ stat, value }))
+    };
+    const easy = compareDrop(profile, drop, data, "progress", 60, {
+      levelRange: { age: 1, combat: 1, difficulty: 0 },
+      model: { blockMode: "average", trials: 1 }
+    });
+    const hard = compareDrop(profile, drop, data, "progress", 60, {
+      levelRange: { age: 8, combat: 20, difficulty: 0 },
+      model: { blockMode: "average", trials: 1 }
+    });
+
+    expect(easy.currentScore).not.toBeCloseTo(hard.currentScore, 3);
   });
 
   it("compares pet and mount drops without mutating the source profile", async () => {

@@ -4,6 +4,7 @@ import {
   Download,
   GitCompareArrows,
   Hammer,
+  Crown,
   Network,
   Redo2,
   Swords,
@@ -20,6 +21,7 @@ const nav = [
   { to: "/build", label: "Build", icon: Hammer, end: true },
   { to: "/build/talents", label: "Talents", icon: Network },
   { to: "/simulate", label: "Simuler", icon: WandSparkles },
+  { to: "/bis", label: "BIS", icon: Crown },
   { to: "/compare", label: "Comparer", icon: GitCompareArrows },
   { to: "/pvp", label: "PvP", icon: Swords }
 ];

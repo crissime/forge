@@ -55,10 +55,10 @@ export const api = {
         opponent: objective === "pvp" || objective === "balanced" ? opponent : undefined
       }
     }),
-  compare: (profile: NormalizedProfile, objective: Objective, drop: DropInput) =>
+  compare: (profile: NormalizedProfile, objective: Objective, drop: DropInput, scenarios: ScenarioSettings) =>
     request<DropComparisonResult>("/api/simulations/drop-compare", {
       method: "POST",
-      body: { profile, objective, drop }
+      body: { profile, objective, drop, scenarios, fightDuration: 60 }
     }),
   createProfile: (profile: NormalizedProfile) =>
     request<{ profile: CloudProfile }>("/api/profiles", {

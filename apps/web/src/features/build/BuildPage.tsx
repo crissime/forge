@@ -93,6 +93,8 @@ export function BuildPage() {
   ];
   const completion = Math.round((complete.filter(Boolean).length / complete.length) * 100);
   const combat = evaluation?.profile;
+  const lineTotal = totalSecondaryLines(profile);
+  const alertCount = profile.audit.filter((issue) => issue.severity !== "info").length;
 
   return (
     <div className={ui.page}>
@@ -102,8 +104,8 @@ export function BuildPage() {
           <h1>{profile.name}</h1>
         </div>
         <button className={styles.quality} onClick={() => setSelected({ kind: "audit", id: 0 })}>
-          <span>Qualité des données</span>
-          <strong>{profile.audit.filter((issue) => issue.severity !== "info").length || "Bonne"}</strong>
+          <span>Alertes profil</span>
+          <strong>{alertCount ? `${alertCount} à vérifier` : "OK"}</strong>
           <ChevronRight size={18} />
         </button>
       </header>
@@ -111,13 +113,13 @@ export function BuildPage() {
       <section className={styles.summaryStrip} aria-label="Résumé du profil">
         <div className={styles.summaryLead}>
           <strong>{completion}% complété</strong>
-          <span>Confiance {confidenceLabel(profile.confidence)} · {complete.filter(Boolean).length}/{complete.length} éléments renseignés</span>
+          <span>{complete.filter(Boolean).length}/{complete.length} éléments renseignés · {lineTotal} lignes bonus</span>
           <div className={ui.bar}><span style={{ width: `${completion}%` }} /></div>
         </div>
         <SummaryMetric label="Attaque" value={format(profile.base.attack)} />
         <SummaryMetric label="PV" value={format(profile.base.health)} />
         <SummaryMetric label="DPS" value={format(combat?.totalDps)} />
-        <SummaryMetric label="Sustain" value={`${format(combat?.sustainWindow)} s`} />
+        <SummaryMetric label="Lignes" value={format(lineTotal)} />
       </section>
 
       <section className={styles.board} aria-label="Plateau d'équipement">
@@ -190,10 +192,11 @@ function EquipmentSlotButton({
   item: NormalizedItem | null;
   onClick: () => void;
 }) {
-  const lines = item?.secondaryStats.filter((line) => line.value).map((line) => `${line.stat} ${format(line.value, 1)}`).join(" · ");
+  const visible = item || primitiveDisplayItem(slot);
+  const lines = visible.secondaryStats.filter((line) => line.value).map((line) => `${line.stat} ${format(line.value, 1)}`).join(" · ");
   return (
     <button
-      className={`${styles.slot} ${item ? "" : styles.slotEmpty}`}
+      className={styles.slot}
       style={{ gridArea: gridAreas[slot] }}
       onClick={onClick}
     >
@@ -201,8 +204,8 @@ function EquipmentSlotButton({
         <span>{slotLabels[slot]}</span>
         <DomainIcon kind="equipment" />
       </div>
-      <strong>{item?.name || "Ajouter"}</strong>
-      <small>{item ? `Niv. ${item.level} · ATQ ${format(item.attack)} · PV ${format(item.health)}${lines ? `\n${lines}` : ""}` : "Emplacement vide"}</small>
+      <strong>{visible.name}</strong>
+      <small>{`Niv. ${visible.level} · ATQ ${format(visible.attack)} · PV ${format(visible.health)}${lines ? `\n${lines}` : ""}`}</small>
     </button>
   );
 }
@@ -329,18 +332,12 @@ function EquipmentEditor({
   itemBases: ItemBase[];
   itemConfig: ItemConfig;
 }) {
-  if (!item) {
-    return (
-      <button className={ui.primary} onClick={() => edit((draft) => {
-        applyItemSelection(draft, slot, ageOptions[0]?.value || 0, "ranged", 1, itemBases, itemConfig, ageOptions);
-      })}>Ajouter cet objet</button>
-    );
-  }
+  const current = item || primitiveDisplayItem(slot);
   const values = calculateItemValues(
     slot,
-    Number(item.age || 0),
-    Number(item.idx || 0),
-    Number(item.level || 1),
+    Number(current.age || 0),
+    Number(current.idx || 0),
+    Number(current.level || 1),
     itemBases,
     itemConfig
   );
@@ -375,10 +372,13 @@ function EquipmentEditor({
       </div>
       <CalculatedPreview attack={values.attack} health={values.health} recognized={Boolean(values.base)} />
       <SecondaryEditor
-        lines={item.secondaryStats}
+        lines={current.secondaryStats}
         stats={stats}
         maxLines={itemAllowsSecondLine(values.age) ? 2 : 1}
-        onChange={(lines) => edit((draft) => { draft.equipment[slot]!.secondaryStats = lines; })}
+        onChange={(lines) => edit((draft) => {
+          if (!draft.equipment[slot]) applyItemSelection(draft, slot, values.age, weaponKind, values.level, itemBases, itemConfig, ageOptions);
+          draft.equipment[slot]!.secondaryStats = lines;
+        })}
       />
       <details className={styles.expert}>
         <summary>Détails experts</summary>
@@ -630,6 +630,20 @@ function applyItemSelection(
   }
 }
 
+function primitiveDisplayItem(slot: EquipmentSlot): NormalizedItem {
+  return {
+    slot,
+    name: `${slotLabels[slot]} primitive`,
+    age: 0,
+    idx: slot === "Weapon" ? 1 : 0,
+    level: 1,
+    attack: 0,
+    health: 0,
+    secondaryStats: [],
+    recognized: false
+  };
+}
+
 function applyPetSelection(
   profile: NormalizedProfile,
   index: number,
@@ -689,13 +703,15 @@ function editorTitle(selected: NonNullable<ReturnType<typeof useWorkshop.getStat
   if (selected.kind === "pet") return `Pet ${selected.id + 1}`;
   if (selected.kind === "mount") return "Monture";
   if (selected.kind === "spell") return `Sort ${selected.id + 1}`;
-  return "Qualité des données";
+  return "Alertes profil";
 }
 
-function confidenceLabel(value: string) {
-  if (value === "complete") return "élevée";
-  if (value === "manual_required") return "à vérifier";
-  return "partielle";
+function totalSecondaryLines(profile: NormalizedProfile) {
+  return [
+    ...Object.values(profile.equipment),
+    ...profile.pets.slice(0, 3),
+    profile.mount
+  ].reduce((total, item) => total + (item?.secondaryStats.filter((line) => line.stat && Number(line.value) > 0).length || 0), 0);
 }
 
 function format(value: unknown, digits = 0) {

@@ -245,9 +245,18 @@ app.post("/api/simulations/drop-compare", async (request) => {
   const body = z.object({
     profile: z.any(),
     objective: objectiveSchema,
-    drop: z.any()
+    drop: z.any(),
+    fightDuration: z.number().min(5).max(600).default(60),
+    scenarios: scenarioSettingsSchema
   }).parse(request.body);
-  return compareDrop(body.profile as NormalizedProfile, body.drop as DropInput, gameData, body.objective as Objective);
+  return compareDrop(
+    body.profile as NormalizedProfile,
+    body.drop as DropInput,
+    gameData,
+    body.objective as Objective,
+    body.fightDuration,
+    body.scenarios as ScenarioSettings | undefined
+  );
 });
 
 app.get("/api/game-data/versions", async () => ({

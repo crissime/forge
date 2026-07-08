@@ -20,6 +20,9 @@ const TalentsPage = lazy(() =>
 const SimulationPage = lazy(() =>
   import("./features/simulation/SimulationPage").then((module) => ({ default: module.SimulationPage }))
 );
+const BisPage = lazy(() =>
+  import("./features/simulation/BisPage").then((module) => ({ default: module.BisPage }))
+);
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: { retry: 1, refetchOnWindowFocus: false, staleTime: 30_000 }
@@ -42,6 +45,7 @@ export default function App() {
             <Route path="/build" element={<BuildPage />} />
             <Route path="/build/talents" element={<Suspense fallback={null}><TalentsPage /></Suspense>} />
             <Route path="/simulate" element={<Suspense fallback={null}><SimulationPage /></Suspense>} />
+            <Route path="/bis" element={<Suspense fallback={null}><BisPage /></Suspense>} />
             <Route path="/compare" element={<ComparePage />} />
             <Route path="/pvp" element={<PvpPage />} />
             <Route path="/account" element={<AccountPage />} />

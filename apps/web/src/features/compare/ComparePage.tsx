@@ -47,6 +47,7 @@ const slotLabels: Record<EquipmentSlot, string> = {
 export function ComparePage() {
   const profile = useWorkshop((state) => state.profile);
   const objective = useWorkshop((state) => state.objective);
+  const scenarios = useWorkshop((state) => state.scenarios);
   const gameData = useWorkshop((state) => state.gameData);
   const history = useWorkshop((state) => state.comparisonHistory);
   const addComparison = useWorkshop((state) => state.addComparison);
@@ -117,7 +118,7 @@ export function ComparePage() {
     if (target === "mount" && !mountPreview.recognized) return notify("Les données de cette monture sont introuvables.");
     setLoading(true);
     try {
-      const next = await api.compare(profile, objective === "pvp" ? "progress" : objective, drop);
+      const next = await api.compare(profile, objective === "pvp" ? "progress" : objective, drop, scenarios);
       setResult(next);
       addComparison({
         at: new Date().toISOString(),

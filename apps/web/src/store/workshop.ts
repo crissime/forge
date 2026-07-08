@@ -4,6 +4,7 @@ import type {
   DropComparisonResult,
   EquipmentSlot,
   EvaluationResult,
+  NormalizedItem,
   NormalizedProfile,
   Objective,
   PvpResult,
@@ -32,6 +33,26 @@ const equipmentSlots: EquipmentSlot[] = [
   "Ring",
   "Shoe"
 ];
+const slotNames: Record<EquipmentSlot, string> = {
+  Weapon: "Arme",
+  Helmet: "Casque",
+  Body: "Armure",
+  Gloves: "Gants",
+  Belt: "Ceinture",
+  Necklace: "Collier",
+  Ring: "Anneau",
+  Shoe: "Bottes"
+};
+const primitiveFallback: Record<EquipmentSlot, { idx: number; attack: number; health: number; isRanged?: boolean }> = {
+  Weapon: { idx: 1, attack: 5, health: 0, isRanged: true },
+  Helmet: { idx: 0, attack: 0, health: 40 },
+  Body: { idx: 0, attack: 0, health: 40 },
+  Gloves: { idx: 0, attack: 5, health: 0 },
+  Belt: { idx: 0, attack: 0, health: 40 },
+  Necklace: { idx: 0, attack: 5, health: 0 },
+  Ring: { idx: 0, attack: 5, health: 0 },
+  Shoe: { idx: 0, attack: 0, health: 40 }
+};
 const itemTypeToSlot: EquipmentSlot[] = [
   "Helmet",
   "Body",
@@ -109,12 +130,17 @@ export const useWorkshop = create<WorkshopState>()(
       bisAccess: defaultBisAccess,
       toast: "",
       setProfile: (profile, record = false) =>
-        set((state) => ({
-          profile: clone(profile),
-          past: record && state.profile ? [...state.past, clone(state.profile)].slice(-50) : state.past,
-          future: record ? [] : state.future,
-          syncStatus: record ? "modified" : state.syncStatus
-        })),
+        set((state) => {
+          const next = clone(profile);
+          fillPrimitiveEquipment(next, state.gameData);
+          recalculateProfile(next, state.gameData);
+          return {
+            profile: next,
+            past: record && state.profile ? [...state.past, clone(state.profile)].slice(-50) : state.past,
+            future: record ? [] : state.future,
+            syncStatus: record ? "modified" : state.syncStatus
+          };
+        }),
       editProfile: (recipe) =>
         set((state) => {
           if (!state.profile) return state;
@@ -162,7 +188,14 @@ export const useWorkshop = create<WorkshopState>()(
       setObjective: (objective) => set({ objective }),
       setScenarios: (scenarios) => set({ scenarios }),
       setEvaluation: (evaluation) => set({ evaluation }),
-      setGameData: (gameData) => set({ gameData }),
+      setGameData: (gameData) =>
+        set((state) => {
+          if (!state.profile) return { gameData };
+          const profile = clone(state.profile);
+          fillPrimitiveEquipment(profile, gameData);
+          recalculateProfile(profile, gameData);
+          return { gameData, profile };
+        }),
       setSession: (session) => set({ session }),
       setCloudProfileId: (cloudProfileId) => set({ cloudProfileId }),
       setSyncStatus: (syncStatus) => set({ syncStatus }),
@@ -202,8 +235,8 @@ export function emptyProfile(): NormalizedProfile {
     source: "manual",
     dataVersion: "local",
     confidence: "partial",
-    base: { attack: 10, health: 80, weaponStyle: "ranged" },
-    equipment: Object.fromEntries(equipmentSlots.map((slot) => [slot, null])) as NormalizedProfile["equipment"],
+    base: { attack: 40, health: 240, weaponStyle: "ranged" },
+    equipment: primitiveEquipment(),
     pets: [],
     mount: null,
     spells: [],
@@ -212,8 +245,8 @@ export function emptyProfile(): NormalizedProfile {
     breakdown: {
       baseAttack: 10,
       baseHealth: 80,
-      equipmentAttack: 0,
-      equipmentHealth: 0,
+      equipmentAttack: 30,
+      equipmentHealth: 160,
       petAttack: 0,
       petHealth: 0,
       mountAttack: 0,
@@ -273,6 +306,7 @@ function prepareEditable(profile: NormalizedProfile, nodes: TechNode[]) {
 }
 
 function recalculateProfile(profile: NormalizedProfile, gameData: GameDataInfo) {
+  fillPrimitiveEquipment(profile, gameData);
   const effects = talentEffects(profile, gameData.normalized?.techNodes || []);
   const secondary = blankStats(profile.stats);
   let equipmentAttack = 0;
@@ -324,6 +358,44 @@ function recalculateProfile(profile: NormalizedProfile, gameData: GameDataInfo) 
   profile.base.health =
     Number(profile.breakdown.baseHealth || 0) + equipmentHealth + petHealth + mountHealth;
   profile.confidence = "partial";
+}
+
+function fillPrimitiveEquipment(profile: NormalizedProfile, gameData: GameDataInfo) {
+  const defaults = primitiveEquipment(gameData);
+  profile.equipment ||= {} as NormalizedProfile["equipment"];
+  for (const slot of equipmentSlots) {
+    profile.equipment[slot] ||= defaults[slot];
+  }
+  if (profile.equipment.Weapon?.recognized) {
+    profile.base.weaponStyle = profile.equipment.Weapon.idx === primitiveFallback.Weapon.idx ? "ranged" : profile.base.weaponStyle;
+  }
+}
+
+function primitiveEquipment(gameData: GameDataInfo = {}): NormalizedProfile["equipment"] {
+  return Object.fromEntries(equipmentSlots.map((slot) => [slot, primitiveItem(slot, gameData)])) as NormalizedProfile["equipment"];
+}
+
+function primitiveItem(slot: EquipmentSlot, gameData: GameDataInfo): NormalizedItem {
+  const fromData = gameData.normalized?.itemBases
+    ?.filter((item) => item.slot === slot && item.age === 0)
+    .sort((left, right) => left.idx - right.idx);
+  const base = slot === "Weapon"
+    ? fromData?.find((item) => item.isRanged) || fromData?.[0]
+    : fromData?.[0];
+  const fallback = primitiveFallback[slot];
+  const isMeleeWeapon = slot === "Weapon" && base?.isRanged === false;
+  const attack = Number(base?.attack ?? fallback.attack) * (isMeleeWeapon ? Number(gameData.normalized?.itemConfig.meleeDamageMultiplier || 1.6) : 1);
+  return {
+    slot,
+    name: `${slotNames[slot]} primitive`,
+    age: 0,
+    idx: base?.idx ?? fallback.idx,
+    level: 1,
+    attack,
+    health: Number(base?.health ?? fallback.health),
+    secondaryStats: [],
+    recognized: true
+  };
 }
 
 function talentEffects(profile: NormalizedProfile, nodes: TechNode[]) {

@@ -714,12 +714,19 @@ export function evaluatePvp(player: NormalizedProfile, opponent: NormalizedProfi
   };
 }
 
-export function compareDrop(profile: NormalizedProfile, drop: DropInput, data: GameDataBundle, objective: Objective = "progress"): DropComparisonResult {
+export function compareDrop(
+  profile: NormalizedProfile,
+  drop: DropInput,
+  data: GameDataBundle,
+  objective: Objective = "progress",
+  fightDuration = 60,
+  scenarioSettings?: ScenarioSettings
+): DropComparisonResult {
   const normalized = canonicalizeProfile(profile, data);
-  const current = evaluateProfile(normalized, data, objective).score;
+  const current = evaluateProfile(normalized, data, objective, fightDuration, scenarioSettings).score;
   if ((drop.target || "equipment") === "pet" && drop.petIndex === undefined) {
     const candidates = [0, 1, 2].map((petIndex) => {
-      const result = compareDropAtTarget(normalized, { ...drop, petIndex }, data, objective, current);
+      const result = compareDropAtTarget(normalized, { ...drop, petIndex }, data, objective, current, fightDuration, scenarioSettings);
       return {
         petIndex,
         currentScore: result.currentScore,
@@ -735,7 +742,7 @@ export function compareDrop(profile: NormalizedProfile, drop: DropInput, data: G
       candidates
     };
   }
-  return compareDropAtTarget(normalized, drop, data, objective, current);
+  return compareDropAtTarget(normalized, drop, data, objective, current, fightDuration, scenarioSettings);
 }
 
 function compareDropAtTarget(
@@ -743,7 +750,9 @@ function compareDropAtTarget(
   drop: DropInput,
   data: GameDataBundle,
   objective: Objective,
-  current: number
+  current: number,
+  fightDuration: number,
+  scenarioSettings?: ScenarioSettings
 ): DropComparisonResult & { petIndex?: number } {
   const next = cloneProfile(profile);
   const dropLines = (drop.secondaryStats || []).map((line) => ({ stat: line.stat, sourceId: reverseStatId(line.stat), value: Number(line.value || 0) }));
@@ -760,7 +769,7 @@ function compareDropAtTarget(
   next.base.attack += attackDelta;
   next.base.health += healthDelta;
   replaceDropTarget(next, drop, target, dropLines);
-  const dropScore = evaluateProfile(next, data, objective).score;
+  const dropScore = evaluateProfile(next, data, objective, fightDuration, scenarioSettings).score;
   const delta = dropScore - current;
   return {
     currentScore: current,
@@ -2527,6 +2536,7 @@ function scoreCombat(profile: CombatProfile, objective: Objective, scenarios?: S
   if (objective === "damage") return damageScore * 0.35 + killScore * 0.55 + gauntletScore * 0.1 + skillScore * 0.04;
   if (objective === "survival") return sustainScore * 0.25 + enduranceScore * 0.6 + gauntletScore * 0.15;
   if (objective === "pvp") return damageScore * 0.35 + sustainScore * 0.25 + enduranceScore * 0.2 + killScore * 0.2;
+  if (objective === "progress") return gauntletScore;
   return damageScore * 0.22 + sustainScore * 0.16 + enduranceScore * 0.22 + killScore * 0.25 + gauntletScore * 0.15 + skillScore * 0.04;
 }
 
