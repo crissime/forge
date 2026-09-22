@@ -15,7 +15,7 @@
     "allowedMountRarities": ["Mythic"],
     "allowedSpellRarities": []
   },
-  "styles": ["ranged", "melee", "melee_plus_health"],
+  "styles": ["ranged", "melee"],
   "fairies": ["Mira", "Tira", "Lora"],
   "petCompositions": ["damage", "balanced", "health"],
   "mountIds": [0, 1],

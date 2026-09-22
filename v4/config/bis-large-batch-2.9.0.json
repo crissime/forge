@@ -10,5 +10,5 @@
   "refinementRounds": 3, "refinementCandidates": 5000,
   "elitePerFamily": 5, "finalistsPerFamily": 2, "rngSeeds": 100,
   "buildRules": { "maxEquipmentAge": 9, "itemLevel": 100, "petLevel": 1, "mountLevel": 1, "spellLevel": 1, "allowedPetRarities": ["Mythic"], "allowedMountRarities": ["Mythic"], "allowedSpellRarities": [] },
-  "styles": ["ranged", "melee", "melee_plus_health"], "fairies": ["Mira", "Tira", "Lora"], "petCompositions": ["damage", "balanced", "health"], "mountIds": [0, 1], "allocationVariants": ["core", "hybrid"]
+  "styles": ["ranged", "melee"], "fairies": ["Mira", "Tira", "Lora"], "petCompositions": ["damage", "balanced", "health"], "mountIds": [0, 1], "allocationVariants": ["core", "hybrid"]
 }

@@ -20,7 +20,7 @@
   "profileAssumptions": {
     "equipmentAge": 9,
     "equipmentLevel": 100,
-    "equipmentBasePolicy": "collapse_equal_base_stats; styles: ranged, melee, melee_plus_health",
+    "equipmentBasePolicy": "collapse_equal_base_stats; styles: ranged, melee; attack+health weapon excluded: unavailable at divine rarity (user confirmed)",
     "petsLevel": 1,
     "mountLevel": 1,
     "spellsLevel": 1,

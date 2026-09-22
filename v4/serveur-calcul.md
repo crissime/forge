@@ -98,11 +98,10 @@ candidats retenus.
 Utiliser Node 22 ou plus recent. La commande suivante remplace les anciens
 `run-bis-large-shard.mjs` et `aggregate-bis-large-batch.mjs`.
 
-ATTENTION : la configuration a trois types d'armes reste bloquee tant que les
-statistiques primaires de l'arme melee attaque + PV ne sont pas identifiees
-dans le catalogue. Les anciens resultats de `melee_plus_health` ne representent
-pas cette arme et ne doivent pas etre reutilises. Ne pas lancer la campagne
-complete avant resolution de cette donnee.
+La configuration retient deux types d'armes divines, distance et melee, soit
+six familles avec les trois fees. L'arme attaque + PV est exclue : l'utilisateur
+confirme qu'elle n'existe pas en divin. Utiliser un nouveau dossier de sortie
+pour cette configuration; les anciens checkpoints ne sont pas compatibles.
 
 ```bash
 cd /home/debian/forge
@@ -111,19 +110,18 @@ npm ci
 mkdir -p artifacts
 nohup node --import tsx v4/tools/run-bis-batch.mjs \
   --config v4/config/bis-large-batch-2.9.0.json \
-  --workers 40 --output artifacts/bis-batch-v2 \
-  > artifacts/bis-batch-v2.log 2>&1 < /dev/null &
+  --workers 40 --output artifacts/bis-batch-divin \
+  > artifacts/bis-batch-divin.log 2>&1 < /dev/null &
 ```
 
-Suivi : `tail -f artifacts/bis-batch-v2.log`.
-Resultat : `artifacts/bis-batch-v2/report.json`.
+Suivi : `tail -f artifacts/bis-batch-divin.log`.
+Resultat : `artifacts/bis-batch-divin/report.json`.
 Le lanceur attend la fin de tous les workers et fusionne automatiquement.
 Ne pas lancer cette commande en parallele avec l'ancien batch.
 
 - Jusqu'a 100 000 profils de combat uniques apres resolution des fees, avec
   un plafond d'un million de propositions. Le rapport expose le nombre reel.
-- Corps a corps + PV selectionne une arme avec attaque et sante de base.
-  Aucune quantite de lignes Sante n'est imposee. Chaque porteur conserve deux
+- Aucune quantite de lignes Sante n'est imposee. Chaque porteur conserve deux
   statistiques secondaires differentes.
 - Evaluation moyenne sur Difficile 2-16, 2-17, 2-18 et 2-19; courbes par famille.
 - Conservation des cinq meilleurs par fee/style. Jusqu'a trois tours de

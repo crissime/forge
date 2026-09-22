@@ -9,7 +9,7 @@ import { buildBisProfile } from "../../packages/v4-bis/src/index.ts";
 
 const configPath = resolve("v4/config/bis-large-batch-2.9.0.json");
 const context = loadFamilyPilotContext(configPath, false);
-context.config.styles = ["ranged", "melee"];
+assert.deepEqual(context.config.styles, ["ranged", "melee"]);
 const templates = generateCandidates(context.config, context.data, context.season);
 
 test("weapon attack+health means primary stats, never forced secondary lines", () => {
