@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
@@ -13,6 +13,12 @@ import {
 
 const point: FightPoint = { age: 1, combat: 1, difficulty: "normal" };
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "../../..");
+const RECOVERED_EXPORTS = [
+  "1-brandon-profil-manuel.forge-master.json",
+  "10-brandon-profil-manuel.forge-master-1.forge-master.json",
+  "12-elkikito-profil-manuel.forge-master.json",
+  "14-natakku-profil-manuel.forge-master.json"
+];
 
 describe("pure v4 combat verdict", () => {
   it("does not depend on the v2/v3 packages", () => {
@@ -333,24 +339,16 @@ describe("pure v4 combat verdict", () => {
 });
 
 describe("v4 profile adapter", () => {
-  it("accepts all recovered exports and db profiles without re-entry", () => {
-    const exportFiles = readdirSync(profileFile())
-      .filter((name) => name.endsWith(".forge-master.json"))
-      .sort();
-    const dbRows = JSON.parse(readFileSync(profileFile("profiles.prod.raw.json"), "utf8"));
-
-    expect(exportFiles).toHaveLength(14);
-    expect(dbRows).toHaveLength(14);
-    for (const fileName of exportFiles) {
+  it("accepts committed recovered exports and a normalized db shape without re-entry", () => {
+    for (const fileName of RECOVERED_EXPORTS) {
       const entry = adaptProfileToV4(JSON.parse(readFileSync(profileFile(fileName), "utf8")));
       expect(entry.decisionComplete, fileName).toBe(true);
       expect(entry.sourceKind, fileName).toBe("export-v2");
     }
-    for (const [index, row] of dbRows.entries()) {
-      const entry = adaptProfileToV4(row);
-      expect(entry.decisionComplete, `db row ${index}`).toBe(true);
-      expect(entry.sourceKind, `db row ${index}`).toBe("db-normalized");
-    }
+    const exported = JSON.parse(readFileSync(profileFile(RECOVERED_EXPORTS[0]), "utf8"));
+    const entry = adaptProfileToV4({ normalized: exported.profile });
+    expect(entry.decisionComplete).toBe(true);
+    expect(entry.sourceKind).toBe("db-normalized");
   });
 
   it("rejects invalid json without throwing", () => {

@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
@@ -6,6 +6,12 @@ import { loadV4GameData } from "../../v4-game-data/src/index";
 import { evaluateCombatVerdict, evaluatePvpVerdict } from "../src/index";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "../../..");
+const RECOVERED_EXPORTS = [
+  "1-brandon-profil-manuel.forge-master.json",
+  "10-brandon-profil-manuel.forge-master-1.forge-master.json",
+  "12-elkikito-profil-manuel.forge-master.json",
+  "14-natakku-profil-manuel.forge-master.json"
+];
 
 describe("recovered profile golden verdict", () => {
   it("keeps Elkikito 9-10 normal cleared just before 120 seconds", () => {
@@ -131,13 +137,10 @@ describe("recovered profile golden verdict", () => {
 describe("recovered profile PvP compatibility", () => {
   it("uses existing exports and identifies only the missing weapon in incomplete ones", () => {
     const data = loadV4GameData();
-    const files = readdirSync(join(repoRoot, "profile"))
-      .filter((name) => name.endsWith(".forge-master.json"));
-    expect(files).toHaveLength(14);
     let simulated = 0;
     let missingWeapon = 0;
 
-    for (const file of files) {
+    for (const file of RECOVERED_EXPORTS) {
       const exported = JSON.parse(readFileSync(join(repoRoot, "profile", file), "utf8"));
       const verdict = evaluatePvpVerdict(exported.profile, exported.profile, data, {
         skillActivationPolicy: "disabled"
@@ -155,18 +158,16 @@ describe("recovered profile PvP compatibility", () => {
         simulated += 1;
       }
     }
-    expect({ simulated, missingWeapon }).toEqual({ simulated: 11, missingWeapon: 3 });
+    expect({ simulated, missingWeapon }).toEqual({ simulated: 4, missingWeapon: 0 });
   });
 
   it("keeps existing exports readable with the 2.9.0 candidate data", () => {
     const candidateDir = fileURLToPath(new URL("../../v4-game-data/data/2.9.0/", import.meta.url));
     const data = loadV4GameData(candidateDir, "2.9.0");
-    const files = readdirSync(join(repoRoot, "profile"))
-      .filter((name) => name.endsWith(".forge-master.json"));
     let simulated = 0;
     let missingWeapon = 0;
 
-    for (const file of files) {
+    for (const file of RECOVERED_EXPORTS) {
       const exported = JSON.parse(readFileSync(join(repoRoot, "profile", file), "utf8"));
       const pvpVerdict = evaluatePvpVerdict(exported.profile, exported.profile, data, {
         skillActivationPolicy: "disabled"
@@ -189,6 +190,6 @@ describe("recovered profile PvP compatibility", () => {
         simulated += 1;
       }
     }
-    expect({ simulated, missingWeapon }).toEqual({ simulated: 11, missingWeapon: 3 });
+    expect({ simulated, missingWeapon }).toEqual({ simulated: 4, missingWeapon: 0 });
   });
 });

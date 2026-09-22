@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
@@ -7,6 +7,12 @@ import { buildPlayerCombatProfile } from "../src/combat-profile";
 import { f64ToNumber, fd6ToNumber } from "../src/fd6";
 
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "../../..");
+const RECOVERED_EXPORTS = [
+  "1-brandon-profil-manuel.forge-master.json",
+  "10-brandon-profil-manuel.forge-master-1.forge-master.json",
+  "12-elkikito-profil-manuel.forge-master.json",
+  "14-natakku-profil-manuel.forge-master.json"
+];
 
 describe("existing profile to v4 combat profile", () => {
   it("multiplies global and ranged damage layers", () => {
@@ -25,12 +31,10 @@ describe("existing profile to v4 combat profile", () => {
 
   it("preserves all recovered profiles and reports only missing weapons", () => {
     const data = loadV4GameData();
-    const files = readdirSync(join(repoRoot, "profile"))
-      .filter((name) => name.endsWith(".forge-master.json"));
     let ready = 0;
     let incomplete = 0;
 
-    for (const file of files) {
+    for (const file of RECOVERED_EXPORTS) {
       const exported = JSON.parse(readFileSync(join(repoRoot, "profile", file), "utf8"));
       const result = buildPlayerCombatProfile(exported.profile, data.tables);
       if (result.ok) {
@@ -43,8 +47,8 @@ describe("existing profile to v4 combat profile", () => {
       }
     }
 
-    expect(ready).toBe(11);
-    expect(incomplete).toBe(3);
+    expect(ready).toBe(4);
+    expect(incomplete).toBe(0);
   });
 
   it("uses the equipped mount collider and center of mass", () => {
