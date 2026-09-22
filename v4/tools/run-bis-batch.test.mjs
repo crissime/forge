@@ -9,11 +9,23 @@ import { buildBisProfile } from "../../packages/v4-bis/src/index.ts";
 
 const configPath = resolve("v4/config/bis-large-batch-2.9.0.json");
 const context = loadFamilyPilotContext(configPath, false);
+context.config.styles = ["ranged", "melee"];
 const templates = generateCandidates(context.config, context.data, context.season);
 
-test("effective dedup ignores names but distinguishes health builds", () => {
+test("weapon attack+health means primary stats, never forced secondary lines", () => {
   const melee = templates.find((c) => c.dimensions.style === "melee");
-  const hp = templates.find((c) => c.dimensions.style === "melee_plus_health");
+  const config = { ...context.config, styles: ["melee_plus_health"] };
+  assert.throws(() => generateCandidates(config, context.data, context.season), /Missing base-stat catalog entry/);
+  const data = structuredClone(context.data);
+  const weapon = data.tables.ItemBalancingLibrary.find((entry) => entry.ItemId.Age === 9 && entry.ItemId.Type === "Weapon" && entry.ItemId.Idx === 1);
+  const health = structuredClone(weapon.EquipmentStats[0]);
+  health.StatNode.UniqueStat.StatType = "Health";
+  health.Value = 12345;
+  weapon.EquipmentStats.push(health);
+  const hp = generateCandidates(config, data, context.season)[0];
+  assert.equal(hp.build.equipment.Weapon.idx, 1);
+  assert.ok(hp.profile.base.health > melee.profile.base.health);
+  assert.deepEqual(hp.profile.stats, melee.profile.stats);
   assert.notEqual(combatKey(melee.profile, context.data), combatKey(hp.profile, context.data));
   const renamed = structuredClone(melee.profile);
   renamed.name = "another name";
@@ -25,10 +37,9 @@ test("effective dedup ignores names but distinguishes health builds", () => {
   assert.ok(rebuilt.ok);
   assert.equal(combatKey(rebuilt.profile, context.data), combatKey(melee.profile, context.data));
   for (let i = 1; i <= 200; i++) {
-    const candidate = variant(hp, i, context);
+    const candidate = variant(hp, i, { ...context, data });
     const carriers = [...Object.values(candidate.build.equipment), ...candidate.build.pets, candidate.build.mount];
     assert.ok(carriers.every((c) => c.secondaryStats[0].stat !== c.secondaryStats[1].stat));
-    assert.ok(carriers.filter((c) => c.secondaryStats.some((l) => l.stat === "HealthMulti")).length >= 6);
   }
 });
 
@@ -39,7 +50,7 @@ test("exploration is repeatable, unique, diverse and bounded", () => {
   explore(small, (c) => second.push(c.id));
   assert.deepEqual(first, second);
   assert.equal(new Set(first).size, 1000);
-  assert.equal(Object.keys(stats.coverage).length, 9);
+  assert.equal(Object.keys(stats.coverage).length, 6);
   assert.ok(Object.values(stats.coverage).every((n) => n > 50));
 });
 
@@ -58,7 +69,7 @@ test("two-process campaign replays, resumes, and refuses mixed configurations", 
   await run(path, output, 2);
   const first = JSON.parse(readFileSync(join(output, "report.json")));
   assert.equal(first.actualExploration, 216);
-  assert.equal(first.finalists.length, 9);
+  assert.equal(first.finalists.length, 6);
   assert.equal(first.uniqueEvaluated, first.history.reduce((sum, phase) => sum + phase.evaluated, 0));
   assert.equal(Object.values(first.history[0].curves).reduce((sum, stages) => sum + stages[0].passes + stages[0].failures, 0), 216);
   assert.ok(first.finalists.every((entry) => entry.verdicts.length === 4 && entry.rng.every((r) => r.seeds === 2)));

@@ -62,9 +62,8 @@ export function variant(template, index, context) {
     let value = rng() * choices.reduce((sum, entry) => sum + entry.weight, 0);
     return choices.find((entry) => (value -= entry.weight) < 0)?.line ?? choices.at(-1).line;
   }
-  carriers(build).forEach((carrier, offset) => {
-    const first = template.dimensions.style === "melee_plus_health" && offset < 6
-      ? pool.find((line) => line.stat === "HealthMulti") : pick();
+  carriers(build).forEach((carrier) => {
+    const first = pick();
     carrier.secondaryStats = [first, pick(first.stat)];
   });
   return rebuild(build, template.dimensions, context);
@@ -208,7 +207,6 @@ export async function run(configPath, output, workers) {
           const build = structuredClone(elite.candidate.build), carrier = carriers(build)[Math.floor(offset / 2)], slot = offset % 2;
           if (carrier.secondaryStats[1 - slot].stat === line.stat) continue;
           carrier.secondaryStats[slot] = line;
-          if (elite.candidate.dimensions.style === "melee_plus_health" && carriers(build).filter((c) => c.secondaryStats.some((l) => l.stat === "HealthMulti")).length < 6) continue;
           const candidate = rebuild(build, elite.candidate.dimensions, context);
           if (seen.has(candidate.id) || next.length >= cfg.refinementCandidates) continue;
           seen.add(candidate.id); next.push(candidate);

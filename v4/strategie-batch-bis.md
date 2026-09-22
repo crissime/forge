@@ -150,9 +150,12 @@ Les identifiants d'equipement ne sont pas enumeres: les donnees APK 2.9.0
 confirment une base identique a age 9 pour tous les casques et, plus largement,
 pour chaque emplacement non-arme. Les six armes ont aussi la meme attaque de
 base; deux sont a distance et quatre sont melee. Le pilote utilise donc trois
-styles: distance, melee et melee_plus_health. Le dernier est une allocation de
-secondaires orientee PV, pas un objet supplementaire. Une enumeration complete
-des identifiants est exclue.
+styles: distance, melee et melee_plus_health. Le dernier designe une arme
+melee dont les statistiques PRIMAIRES donnent attaque et sante. Il ne force
+aucune ligne secondaire Sante. Les tables normalisees actuelles ne contiennent
+pas cette variante a age 9 : son identification et ses valeurs restent a
+retrouver. Le generateur bloque explicitement si ce style est demande sans
+arme correspondante; il ne lui substitue pas une arme attaque seule.
 
 Chaque porteur a deux lignes et interdit une statistique dupliquee sur lui. La
 meme statistique reste autorisee sur deux porteurs distincts. Le pilote ne

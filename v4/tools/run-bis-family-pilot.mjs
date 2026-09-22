@@ -62,24 +62,26 @@ export function generateCandidates(config, data, season) {
     if (!(value > 0)) throw new Error(`Missing positive secondary stat: ${stat}`);
     return { stat, value };
   };
-  const item = (type, ranged) => tables.ItemBalancingLibrary.find((entry) => {
+  const item = (type, style) => tables.ItemBalancingLibrary.find((entry) => {
     const id = entry.ItemId;
     if (id.Age !== config.buildRules.maxEquipmentAge || id.Type !== type) return false;
     if (type !== "Weapon") return true;
-    return tables.WeaponLibrary.some((weapon) => weapon.ItemId.Age === id.Age && weapon.ItemId.Idx === id.Idx && weapon.IsRanged === ranged);
+    const hasHealth = entry.EquipmentStats.some((stat) => stat.StatNode.UniqueStat.StatType === "Health" && stat.Value > 0);
+    const hasAttack = entry.EquipmentStats.some((stat) => stat.StatNode.UniqueStat.StatType === "Damage" && stat.Value > 0);
+    return hasAttack && (style === "ranged" || hasHealth === (style === "melee_plus_health")) &&
+      tables.WeaponLibrary.some((weapon) => weapon.ItemId.Age === id.Age && weapon.ItemId.Idx === id.Idx && weapon.IsRanged === (style === "ranged"));
   });
   const pet = (type) => tables.PetLibrary.find((entry) => entry.PetId.Rarity === "Mythic" && entry.Type === type);
   const mount = (id) => tables.MountLibrary.find((entry) => entry.MountId.Rarity === "Mythic" && entry.MountId.Id === id);
   const candidates = [];
   for (const fairyId of config.fairies) for (const style of config.styles) for (const petStyle of config.petCompositions)
     for (const mountId of config.mountIds) for (const variant of config.allocationVariants) {
-      const ranged = style === "ranged";
       const samples = config.allocationSamples ?? 1;
       for (let sample = 0; sample < samples; sample++) {
       const pairs = allocation(fairyId, style, variant, sample).map(([left, right]) => [line(left), line(right)]);
       const equipment = Object.fromEntries(BIS_EQUIPMENT_SLOTS.map((slot, index) => {
-        const selected = item(slotType[slot], ranged);
-        if (!selected) throw new Error(`Missing canonical ${style} ${slot}`);
+        const selected = item(slotType[slot], style);
+        if (!selected) throw new Error(`Missing base-stat catalog entry: ${style} ${slot}, age ${config.buildRules.maxEquipmentAge}. melee_plus_health requires an actual melee weapon with positive Damage AND Health; secondary Health lines cannot substitute.`);
         return [slot, { age: selected.ItemId.Age, idx: selected.ItemId.Idx, level: config.buildRules.itemLevel, secondaryStats: pairs[index] }];
       }));
       const selectedPet = pet(petStyle[0].toUpperCase() + petStyle.slice(1));
@@ -120,7 +122,6 @@ function allocation(fairy, style, variant, sample) {
   const pool = [...new Set(selected.flat())];
   const pairs = [...selected, ...selected];
   return pairs.map(([left, right], index) => {
-    if (style === "melee_plus_health" && index < 6) return ["HealthMulti", right === "HealthMulti" ? weapon : right];
     if (sample === 0) return [left, right];
     const bytes = createHash("sha256").update(`${fairy}/${style}/${variant}/${sample}/${index}`).digest();
     const first = pool[bytes.readUInt32LE(0) % pool.length];
