@@ -69,6 +69,27 @@ Cette commande lance le pilote experimental livre avec le depot. Il ne produit
 pas un BIS publiable. Lire `verdictSpread`: si tous les candidats passent ou
 echouent, la cible ne departage pas les familles et doit etre relevee ou abaissee
 avant de comparer un gagnant.
+
+## Calibration graduelle
+
+La calibration conserve exactement les memes candidats, puis parcourt les
+combats APK dans l'ordre a partir de `Difficile 2-3`. Elle s'arrete au premier
+combat ou aucun candidat ne passe. Le rapport conserve chaque palier et les
+totaux par fee, style, pet, monture et allocation.
+
+Le numero de combat n'est pas necessairement une difficulte strictement
+croissante : les vagues peuvent changer. Lire la courbe complete et le champ
+`passCountsAreMonotonic`; le premier palier a zero reussite est un plafond de
+la campagne, pas une preuve qu'aucun combat suivant ne serait plus accessible.
+
+```bash
+node --import tsx v4/tools/run-bis-family-calibration.mjs \
+  --config v4/config/bis-family-calibration-2.9.0.json \
+  --output artifacts/bis-family-calibration.json
+```
+
+Ce rapport est experimental : il selectionne une zone de comparaison, il ne
+publie pas un BIS.
 Le pilote devra tracer le commit, le fingerprint, la cible `hard 2-3`, les
 regles de construction, les seeds, tous les verdicts et les replays des
 candidats retenus.

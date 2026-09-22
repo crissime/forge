@@ -1,0 +1,8 @@
+{
+  "schema": "forge-master-v4-bis-family-calibration-v1",
+  "gameVersion": "2.9.0",
+  "pilotConfig": "v4/config/bis-family-pilot-2.9.0.json",
+  "startPoint": { "age": 2, "combat": 3, "difficulty": "hard" },
+  "maxStages": 1000,
+  "stopWhenAllFail": true
+}

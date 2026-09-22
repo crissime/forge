@@ -13,15 +13,7 @@ const sha = (value) => createHash("sha256").update(value).digest("hex");
 const slotType = { Weapon: "Weapon", Helmet: "Helmet", Body: "Armour", Gloves: "Gloves", Belt: "Belt", Necklace: "Necklace", Ring: "Ring", Shoe: "Shoes" };
 
 export function runFamilyPilot(configPath, outputPath) {
-  const configBytes = readFileSync(configPath);
-  const config = JSON.parse(configBytes);
-  assert.equal(config.schema, "forge-master-v4-bis-family-pilot-v1");
-  assert.equal(config.gameVersion, "2.9.0");
-  const seasonBytes = readFileSync(resolve(root, config.seasonConfig));
-  const season = JSON.parse(seasonBytes);
-  const loaded = loadV4GameData(join(root, "packages/v4-game-data/data/2.9.0"), "2.9.0");
-  const data = { version: loaded.version, tables: { ...loaded.tables, FairySeasonConfig: season } };
-  const candidates = generateCandidates(config, data, season);
+  const { configBytes, config, seasonBytes, season, data, candidates } = loadFamilyPilotContext(configPath);
   assert.ok(candidates.length > 0 && candidates.length <= config.maxCandidates, "candidate budget exceeded");
   const result = searchBis({
     context: { kind: "family_pilot_not_publishable", configSha256: sha(configBytes), seasonId: season.seasonId },
@@ -50,7 +42,19 @@ export function runFamilyPilot(configPath, outputPath) {
   return { report, output: outputPath };
 }
 
-function generateCandidates(config, data, season) {
+export function loadFamilyPilotContext(configPath) {
+  const configBytes = readFileSync(configPath);
+  const config = JSON.parse(configBytes);
+  assert.equal(config.schema, "forge-master-v4-bis-family-pilot-v1");
+  assert.equal(config.gameVersion, "2.9.0");
+  const seasonBytes = readFileSync(resolve(root, config.seasonConfig));
+  const season = JSON.parse(seasonBytes);
+  const loaded = loadV4GameData(join(root, "packages/v4-game-data/data/2.9.0"), "2.9.0");
+  const data = { version: loaded.version, tables: { ...loaded.tables, FairySeasonConfig: season } };
+  return { configBytes, config, seasonBytes, season, data, candidates: generateCandidates(config, data, season) };
+}
+
+export function generateCandidates(config, data, season) {
   const tables = data.tables;
   const definitions = new Map(tables.SecondaryStatLibrary.map((entry) => [entry.Stat, entry.UpperRange * 100]));
   const line = (stat) => {
@@ -88,7 +92,10 @@ function generateCandidates(config, data, season) {
       };
       const built = buildBisProfile(build, data, config.buildRules);
       if (!built.ok) throw new Error(`${build.name}: ${built.issue.code} at ${built.issue.path}`);
-      candidates.push({ id: build.name, build, profile: built.profile });
+      candidates.push({
+        id: build.name, build, profile: built.profile,
+        dimensions: { fairy: fairyId, style, petComposition: petStyle, mountId, allocation: variant }
+      });
     }
   return candidates;
 }
