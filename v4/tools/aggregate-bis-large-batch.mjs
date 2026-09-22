@@ -1,0 +1,20 @@
+import assert from "node:assert/strict";
+import { mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
+const args = process.argv.slice(2);
+const value = (flag, fallback) => args.includes(flag) ? args[args.indexOf(flag) + 1] : fallback;
+const input = resolve(root, value("--input", "artifacts/bis-large-batch"));
+const output = resolve(root, value("--output", "artifacts/bis-large-batch-report.json"));
+const files = readdirSync(input).filter((name) => /^shard-\d+-of-\d+\.json$/.test(name)).sort();
+assert.ok(files.length > 0, "no shard result found");
+const shards = files.map((name) => JSON.parse(readFileSync(resolve(input, name))));
+const total = shards[0].shards;
+assert.equal(files.length, total, "missing shard result");
+const results = shards.flatMap((entry) => entry.results);
+results.sort((a, b) => score(b) - score(a) || a.id.localeCompare(b.id));
+const report = { schema: "forge-master-v4-bis-large-report-v1", candidateCount: results.length, shardCount: total, top: results.slice(0, 500), note: "Exploratory ranking only. Rebuild and replay finalists before publishing a BIS." };
+mkdirSync(dirname(output), { recursive: true }); writeFileSync(`${output}.tmp`, `${JSON.stringify(report, null, 2)}\n`); renameSync(`${output}.tmp`, output);
+console.log(JSON.stringify({ candidateCount: results.length, shardCount: total, output }));
+function score(entry) { return entry.verdicts.reduce((sum, verdict, index) => sum + (verdict.passed ? 1_000_000 / (index + 1) - verdict.timeSeconds : verdict.clearedWaves), 0); }

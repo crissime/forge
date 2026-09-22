@@ -1,0 +1,24 @@
+import assert from "node:assert/strict";
+import { mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import { evaluateCombatVerdict } from "../../packages/v4-core/src/index.ts";
+import { loadFamilyPilotContext } from "./run-bis-family-pilot.mjs";
+
+const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
+const args = process.argv.slice(2);
+const value = (flag, fallback) => args.includes(flag) ? args[args.indexOf(flag) + 1] : fallback;
+const configPath = resolve(root, value("--config", "v4/config/bis-large-batch-2.9.0.json"));
+const output = resolve(root, value("--output", "artifacts/bis-large-batch"));
+const shard = Number(value("--shard", "0"));
+const shards = Number(value("--shards", "1"));
+assert.ok(Number.isInteger(shard) && shard >= 0 && Number.isInteger(shards) && shard < shards, "invalid shard");
+const { config, candidates, data } = loadFamilyPilotContext(configPath);
+const mine = candidates.filter((_, index) => index % shards === shard);
+const points = config.points ?? [config.point];
+const results = mine.map((candidate) => ({ id: candidate.id, dimensions: candidate.dimensions, verdicts: points.map((point) => evaluateCombatVerdict(candidate.profile, data, point, config.options)) }));
+mkdirSync(output, { recursive: true });
+const path = resolve(output, `shard-${String(shard).padStart(2, "0")}-of-${shards}.json`);
+writeFileSync(`${path}.tmp`, `${JSON.stringify({ schema: "forge-master-v4-bis-large-shard-v1", shard, shards, candidateCount: mine.length, points, results }, null, 2)}\n`);
+renameSync(`${path}.tmp`, path);
+console.log(JSON.stringify({ shard, shards, candidateCount: mine.length, output: path }));

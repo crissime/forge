@@ -74,7 +74,9 @@ export function generateCandidates(config, data, season) {
   for (const fairyId of config.fairies) for (const style of config.styles) for (const petStyle of config.petCompositions)
     for (const mountId of config.mountIds) for (const variant of config.allocationVariants) {
       const ranged = style === "ranged";
-      const pairs = allocation(fairyId, style, variant).map(([left, right]) => [line(left), line(right)]);
+      const samples = config.allocationSamples ?? 1;
+      for (let sample = 0; sample < samples; sample++) {
+      const pairs = allocation(fairyId, style, variant, sample).map(([left, right]) => [line(left), line(right)]);
       const equipment = Object.fromEntries(BIS_EQUIPMENT_SLOTS.map((slot, index) => {
         const selected = item(slotType[slot], ranged);
         if (!selected) throw new Error(`Missing canonical ${style} ${slot}`);
@@ -84,7 +86,7 @@ export function generateCandidates(config, data, season) {
       const selectedMount = mount(mountId);
       if (!selectedPet || !selectedMount) throw new Error(`Missing mythic ${petStyle} pet or mount ${mountId}`);
       const build = {
-        name: `${fairyId}/${style}/${petStyle}/mount-${mountId}/${variant}`,
+        name: `${fairyId}/${style}/${petStyle}/mount-${mountId}/${variant}/sample-${sample}`,
         equipment,
         pets: [0, 1, 2].map((offset) => ({ id: selectedPet.PetId.Id, rarity: "Mythic", level: config.buildRules.petLevel, secondaryStats: pairs[8 + offset] })),
         mount: { id: selectedMount.MountId.Id, rarity: "Mythic", level: config.buildRules.mountLevel, secondaryStats: pairs[11] },
@@ -96,11 +98,12 @@ export function generateCandidates(config, data, season) {
         id: build.name, build, profile: built.profile,
         dimensions: { fairy: fairyId, style, petComposition: petStyle, mountId, allocation: variant }
       });
+      }
     }
-  return candidates;
+  return candidates.slice(0, config.maxCandidates);
 }
 
-function allocation(fairy, style, variant) {
+function allocation(fairy, style, variant, sample) {
   const weapon = style === "ranged" ? "RangedDamageMulti" : "MeleeDamageMulti";
   const core = {
     Mira: [["SkillDamageMulti", "CriticalChance"], ["SkillDamageMulti", "CriticalMulti"], ["SkillDamageMulti", weapon], ["AttackSpeed", "DoubleDamageChance"], ["DamageMulti", "LifeSteal"], ["HealthMulti", "HealthRegen"]],
@@ -114,7 +117,18 @@ function allocation(fairy, style, variant) {
   };
   const selected = (variant === "hybrid" ? hybrid : core)[fairy];
   if (!selected) throw new Error(`Unknown family: ${fairy}/${variant}`);
-  return [...selected, ...selected];
+  const pool = selected.flat();
+  const pairs = [...selected, ...selected];
+  if (sample === 0) return pairs;
+  let state = sample;
+  return pairs.map(([left, right], index) => {
+    state = (state * 1664525 + 1013904223 + index) >>> 0;
+    const first = pool[state % pool.length];
+    state = (state * 1664525 + 1013904223) >>> 0;
+    let second = pool[state % pool.length];
+    if (second === first) second = pool[(pool.indexOf(second) + 1) % pool.length];
+    return [first, second];
+  });
 }
 
 function summary(entry) {
