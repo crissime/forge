@@ -42,7 +42,7 @@ export function runFamilyPilot(configPath, outputPath) {
   return { report, output: outputPath };
 }
 
-export function loadFamilyPilotContext(configPath) {
+export function loadFamilyPilotContext(configPath, generate = true) {
   const configBytes = readFileSync(configPath);
   const config = JSON.parse(configBytes);
   assert.equal(config.schema, "forge-master-v4-bis-family-pilot-v1");
@@ -51,7 +51,7 @@ export function loadFamilyPilotContext(configPath) {
   const season = JSON.parse(seasonBytes);
   const loaded = loadV4GameData(join(root, "packages/v4-game-data/data/2.9.0"), "2.9.0");
   const data = { version: loaded.version, tables: { ...loaded.tables, FairySeasonConfig: season } };
-  return { configBytes, config, seasonBytes, season, data, candidates: generateCandidates(config, data, season) };
+  return { configBytes, config, seasonBytes, season, data, candidates: generate ? generateCandidates(config, data, season) : [] };
 }
 
 export function generateCandidates(config, data, season) {
@@ -117,17 +117,15 @@ function allocation(fairy, style, variant, sample) {
   };
   const selected = (variant === "hybrid" ? hybrid : core)[fairy];
   if (!selected) throw new Error(`Unknown family: ${fairy}/${variant}`);
-  const pool = selected.flat();
+  const pool = [...new Set(selected.flat())];
   const pairs = [...selected, ...selected];
-  if (sample === 0) return pairs;
-  let state = sample;
   return pairs.map(([left, right], index) => {
-    state = (state * 1664525 + 1013904223 + index) >>> 0;
-    const first = pool[state % pool.length];
-    state = (state * 1664525 + 1013904223) >>> 0;
-    let second = pool[state % pool.length];
-    if (second === first) second = pool[(pool.indexOf(second) + 1) % pool.length];
-    return [first, second];
+    if (style === "melee_plus_health" && index < 6) return ["HealthMulti", right === "HealthMulti" ? weapon : right];
+    if (sample === 0) return [left, right];
+    const bytes = createHash("sha256").update(`${fairy}/${style}/${variant}/${sample}/${index}`).digest();
+    const first = pool[bytes.readUInt32LE(0) % pool.length];
+    const remaining = pool.filter((stat) => stat !== first);
+    return [first, remaining[bytes.readUInt32LE(4) % remaining.length]];
   });
 }
 

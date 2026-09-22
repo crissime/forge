@@ -54,10 +54,9 @@ Le probe de fees est synthetique et non publiable. Il controle le cablage des
 fees, paliers, plafonds et le replay; il ne cherche pas un BIS et ne remplace
 pas le futur batch de familles.
 
-## Commande du futur pilote de familles
+## Pilote de familles
 
-La commande de batch ne doit etre ajoutee qu'avec son generateur dedie et sa
-configuration figee. Elle utilisera le meme repertoire et devra recevoir:
+Le pilote utilise son generateur et sa configuration dedies:
 
 ```bash
 node --import tsx v4/tools/run-bis-family-pilot.mjs \
@@ -93,3 +92,55 @@ publie pas un BIS.
 Le pilote devra tracer le commit, le fingerprint, la cible `hard 2-3`, les
 regles de construction, les seeds, tous les verdicts et les replays des
 candidats retenus.
+
+## Batch parallele avec affinement
+
+Utiliser Node 22 ou plus recent. La commande suivante remplace les anciens
+`run-bis-large-shard.mjs` et `aggregate-bis-large-batch.mjs`.
+
+```bash
+cd /home/debian/forge
+git pull --ff-only
+npm ci
+mkdir -p artifacts
+nohup node --import tsx v4/tools/run-bis-batch.mjs \
+  --config v4/config/bis-large-batch-2.9.0.json \
+  --workers 40 --output artifacts/bis-batch-v2 \
+  > artifacts/bis-batch-v2.log 2>&1 < /dev/null &
+```
+
+Suivi : `tail -f artifacts/bis-batch-v2.log`.
+Resultat : `artifacts/bis-batch-v2/report.json`.
+Le lanceur attend la fin de tous les workers et fusionne automatiquement.
+Ne pas lancer cette commande en parallele avec l'ancien batch.
+
+- Jusqu'a 100 000 profils de combat uniques apres resolution des fees, avec
+  un plafond d'un million de propositions. Le rapport expose le nombre reel.
+- Corps a corps + PV impose au moins six lignes Sante sur des porteurs
+  distincts. Chaque porteur conserve deux statistiques differentes.
+- Evaluation moyenne sur Difficile 2-16, 2-17, 2-18 et 2-19; courbes par famille.
+- Conservation des cinq meilleurs par fee/style. Jusqu'a trois tours de
+  5 000 mutations de lignes legales; arret anticipe si les elites ne changent plus.
+- Les deux finalistes par famille sont reconstruits et rejoues a l'identique,
+  puis testes sur 100 graines par combat, avec taux de reussite et intervalle a 95 %.
+- Classement exploratoire : nombre de combats passes, puis verdicts du dernier
+  au premier combat (reussite, temps/PV ou vagues/degats). Pas de score de combat
+  alternatif au verdict officiel. Les taux RNG sont exposes pour comparaison.
+
+Le parent genere les candidats une seule fois; chaque worker ne charge que sa
+tranche. Checkpoint tous les 100 candidats, puis par finaliste RNG. Relancer la
+meme commande reprend les checkpoints si le code, les donnees, la configuration
+et le nombre de workers sont identiques. Une modification exige un autre dossier.
+Apres un arret brutal, un fichier `running.lock` peut rester : verifier qu'aucun
+processus de cette campagne ne tourne avant de retirer ce fichier uniquement.
+Un echec d'un worker interrompt le lanceur sans publier de rapport final.
+
+Limites du scenario : objets divins niveau 100, lignes au roll maximum,
+armes canoniques du pilote, trois pets du meme type parmi les compositions
+configurees, montures mythiques configurees, fees niveau 20. Pas de sorts,
+talents ou skins. Pas d'elimination par dominance supposee : seules les
+equivalences de profil de combat sont supprimees. L'affinement local et les
+graines RNG n'etablissent ni optimalite globale ni validation en jeu.
+
+Test du lanceur :
+`node --import tsx --test v4/tools/run-bis-batch.test.mjs`.

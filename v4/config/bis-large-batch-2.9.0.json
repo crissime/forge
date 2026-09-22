@@ -3,9 +3,12 @@
   "gameVersion": "2.9.0",
   "seasonConfig": "v4/config/fairy-season-2.9.0.candidate.json",
   "point": { "age": 2, "combat": 18, "difficulty": "hard" },
-  "points": [{ "age": 2, "combat": 16, "difficulty": "hard" }, { "age": 2, "combat": 18, "difficulty": "hard" }],
+  "points": [{ "age": 2, "combat": 16, "difficulty": "hard" }, { "age": 2, "combat": 17, "difficulty": "hard" }, { "age": 2, "combat": 18, "difficulty": "hard" }, { "age": 2, "combat": 19, "difficulty": "hard" }],
   "options": { "maxSeconds": 900, "blockMode": "average", "skillActivationPolicy": "disabled" },
-  "maxCandidates": 100000, "allocationSamples": 926,
+  "maxCandidates": 100000, "allocationSamples": 1,
+  "seed": 29042, "maxAttempts": 1000000,
+  "refinementRounds": 3, "refinementCandidates": 5000,
+  "elitePerFamily": 5, "finalistsPerFamily": 2, "rngSeeds": 100,
   "buildRules": { "maxEquipmentAge": 9, "itemLevel": 100, "petLevel": 1, "mountLevel": 1, "spellLevel": 1, "allowedPetRarities": ["Mythic"], "allowedMountRarities": ["Mythic"], "allowedSpellRarities": [] },
   "styles": ["ranged", "melee", "melee_plus_health"], "fairies": ["Mira", "Tira", "Lora"], "petCompositions": ["damage", "balanced", "health"], "mountIds": [0, 1], "allocationVariants": ["core", "hybrid"]
 }
