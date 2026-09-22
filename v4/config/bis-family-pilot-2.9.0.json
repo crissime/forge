@@ -1,0 +1,23 @@
+{
+  "schema": "forge-master-v4-bis-family-pilot-v1",
+  "gameVersion": "2.9.0",
+  "seasonConfig": "v4/config/fairy-season-2.9.0.candidate.json",
+  "point": { "age": 2, "combat": 3, "difficulty": "hard" },
+  "options": { "maxSeconds": 900, "blockMode": "average", "skillActivationPolicy": "disabled" },
+  "maxCandidates": 200,
+  "buildRules": {
+    "maxEquipmentAge": 9,
+    "itemLevel": 100,
+    "petLevel": 1,
+    "mountLevel": 1,
+    "spellLevel": 1,
+    "allowedPetRarities": ["Mythic"],
+    "allowedMountRarities": ["Mythic"],
+    "allowedSpellRarities": []
+  },
+  "styles": ["ranged", "melee", "melee_plus_health"],
+  "fairies": ["Mira", "Tira", "Lora"],
+  "petCompositions": ["damage", "balanced", "health"],
+  "mountIds": [0, 1],
+  "allocationVariants": ["core", "hybrid"]
+}

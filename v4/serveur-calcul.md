@@ -65,8 +65,10 @@ node --import tsx v4/tools/run-bis-family-pilot.mjs \
   --output artifacts/bis-family-pilot
 ```
 
-Cette commande est volontairement indicative: `run-bis-family-pilot.mjs` et sa
-configuration n'existent pas encore. Ne pas la lancer avant leur livraison.
+Cette commande lance le pilote experimental livre avec le depot. Il ne produit
+pas un BIS publiable. Lire `verdictSpread`: si tous les candidats passent ou
+echouent, la cible ne departage pas les familles et doit etre relevee ou abaissee
+avant de comparer un gagnant.
 Le pilote devra tracer le commit, le fingerprint, la cible `hard 2-3`, les
 regles de construction, les seeds, tous les verdicts et les replays des
 candidats retenus.
