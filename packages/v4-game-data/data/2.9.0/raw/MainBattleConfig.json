@@ -1,0 +1,23 @@
+{
+  "value": {
+    "1": {
+      "value": {
+        "raw": 25769803776000000,
+        "value": 6000000.0
+      },
+      "wire": "F64"
+    },
+    "2": {
+      "value": {
+        "raw": 25769803776000000,
+        "value": 6000000.0
+      },
+      "wire": "F64"
+    },
+    "3": {
+      "value": 1,
+      "wire": "VarInt"
+    }
+  },
+  "wire": "NullableStruct"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "DamageMultiplier": 1.0,
+    "HealthMultiplier": 1.0,
+    "Type": "Balanced"
+  },
+  {
+    "DamageMultiplier": 1.5,
+    "HealthMultiplier": 0.5,
+    "Type": "Damage"
+  },
+  {
+    "DamageMultiplier": 0.5,
+    "HealthMultiplier": 1.5,
+    "Type": "Health"
+  }
+]

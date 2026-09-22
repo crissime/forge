@@ -1,0 +1,32 @@
+{
+  "schema": "forge-master-v4-bis-reference-scenario-v1",
+  "gameVersion": "2.9.0",
+  "fairy": {
+    "selection": "exactly_one",
+    "allowed": ["Mira", "Tira", "Lora"],
+    "level": 20,
+    "seasonId": "user-confirmed-2026-09-22",
+    "eventState": "active",
+    "statsState": "excluded"
+  },
+  "skins": {
+    "policy": "excluded_from_reference",
+    "reason": "Bonus aleatoires hors statistiques de reference, decision utilisateur 2026-09-22."
+  },
+  "sets": {
+    "policy": "excluded_with_skins",
+    "reason": "Les sets regroupent des skins et leurs bonus de palier; exclus avec les skins par decision utilisateur 2026-09-22."
+  },
+  "profileAssumptions": {
+    "equipmentAge": 9,
+    "equipmentLevel": 100,
+    "equipmentBasePolicy": "collapse_equal_base_stats; styles: ranged, melee, melee_plus_health",
+    "petsLevel": 1,
+    "mountLevel": 1,
+    "spellsLevel": 1,
+    "talents": "fixed_per_case_not_optimized",
+    "secondaryDuplicatePolicy": "forbid_per_carrier",
+    "secondaryRollValues": "continuous_bounds_only_until_discrete_roll_grid_is_verified",
+    "itemLevelCalibration": "user scenario uses UI level 100; APK ItemBaseMaxLevel is 98 and mapping must be verified before publication"
+  }
+}

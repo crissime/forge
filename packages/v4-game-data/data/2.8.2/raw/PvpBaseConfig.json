@@ -1,0 +1,52 @@
+{
+  "value": {
+    "1": {
+      "value": {
+        "raw": 4294967296,
+        "value": 1.0
+      },
+      "wire": "F64"
+    },
+    "10": {
+      "value": 60,
+      "wire": "VarInt"
+    },
+    "11": {
+      "value": 5,
+      "wire": "VarInt"
+    },
+    "12": {
+      "value": 120,
+      "wire": "VarInt"
+    },
+    "13": {
+      "value": {
+        "raw": 11166914970,
+        "value": 2.6000000000931323
+      },
+      "wire": "F64"
+    },
+    "2": {
+      "value": {
+        "raw": 2147483648,
+        "value": 0.5
+      },
+      "wire": "F64"
+    },
+    "3": {
+      "value": {
+        "raw": 2147483648,
+        "value": 0.5
+      },
+      "wire": "F64"
+    },
+    "4": {
+      "value": {
+        "raw": 8589934592,
+        "value": 2.0
+      },
+      "wire": "F64"
+    }
+  },
+  "wire": "NullableStruct"
+}

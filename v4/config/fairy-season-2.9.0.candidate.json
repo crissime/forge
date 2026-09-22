@@ -1,0 +1,14 @@
+{
+  "gameVersion": "2.9.0",
+  "seasonId": "user-confirmed-2026-09-22",
+  "provenance": {
+    "source": "confirmation utilisateur dans cette tache; valeurs initialement recoupees avec v4/fees-2.9.0.md",
+    "observedAt": "2026-09-22",
+    "status": "user_confirmed"
+  },
+  "fairies": {
+    "Mira": { "divisor": 15, "baseBonus": 1, "gainPerLevel": 1, "cap": 80, "maxLevel": 20 },
+    "Tira": { "divisor": 1, "baseBonus": 0.25, "gainPerLevel": 0.25, "cap": 30, "maxLevel": 20 },
+    "Lora": { "divisor": 10, "baseBonus": 0.75, "gainPerLevel": 0.75, "cap": 30, "maxLevel": 20 }
+  }
+}

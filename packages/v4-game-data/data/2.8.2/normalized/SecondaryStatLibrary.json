@@ -1,0 +1,341 @@
+[
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "CriticalChance",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "CriticalChance"
+        }
+      }
+    ],
+    "UpperRange": 0.12000000011175871
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "CriticalMulti",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "CriticalDamage"
+        }
+      }
+    ],
+    "UpperRange": 0.8000000000465661
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "BlockChance",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "BlockChance"
+        }
+      }
+    ],
+    "UpperRange": 0.05000000004656613
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "HealthRegen",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "HealthRegen"
+        }
+      }
+    ],
+    "UpperRange": 0.0400000000372529
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "LifeSteal",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "LifeSteal"
+        }
+      }
+    ],
+    "UpperRange": 0.19999999995343387
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "DoubleDamageChance",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "DoubleDamageChance"
+        }
+      }
+    ],
+    "UpperRange": 0.19999999995343387
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "DamageMulti",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "Damage"
+        }
+      },
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "ActiveSkill",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "Damage"
+        }
+      }
+    ],
+    "UpperRange": 0.14999999990686774
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "MeleeDamageMulti",
+    "StatNodes": [
+      {
+        "Condition": "Melee",
+        "Layer": "GeneralCompounding",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "Damage"
+        }
+      }
+    ],
+    "UpperRange": 0.5
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "RangedDamageMulti",
+    "StatNodes": [
+      {
+        "Condition": "Ranged",
+        "Layer": "GeneralCompounding",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "Damage"
+        }
+      }
+    ],
+    "UpperRange": 0.14999999990686774
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "AttackSpeed",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "AttackSpeed"
+        }
+      }
+    ],
+    "UpperRange": 0.39999999990686774
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "SkillDamageMulti",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "GeneralCompounding",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "ActiveSkill",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "Damage"
+        }
+      },
+      {
+        "Condition": "None",
+        "Layer": "GeneralCompounding",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "ActiveSkill",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "Health"
+        }
+      }
+    ],
+    "UpperRange": 0.30000000004656613
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "SkillCooldownMulti",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "ActiveSkill",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "OneMinusMultiplier",
+          "StatType": "TimerSpeed"
+        }
+      }
+    ],
+    "UpperRange": 0.07000000006519258
+  },
+  {
+    "LowerRange": 0.010000000009313226,
+    "Stat": "HealthMulti",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "Health"
+        }
+      },
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "ActiveSkill",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "Health"
+        }
+      }
+    ],
+    "UpperRange": 0.14999999990686774
+  },
+  {
+    "LowerRange": 0.0,
+    "Stat": "MoveSpeed",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Multiplier",
+          "StatType": "MoveSpeed"
+        }
+      }
+    ],
+    "UpperRange": 0.0
+  },
+  {
+    "LowerRange": 0.0,
+    "Stat": "AttackRange",
+    "StatNodes": [
+      {
+        "Condition": "None",
+        "Layer": "None",
+        "LegacyTarget": null,
+        "Target": {
+          "Kind": "Player",
+          "Qualifiers": []
+        },
+        "UniqueStat": {
+          "StatNature": "Additive",
+          "StatType": "AttackRange"
+        }
+      }
+    ],
+    "UpperRange": 0.0
+  }
+]

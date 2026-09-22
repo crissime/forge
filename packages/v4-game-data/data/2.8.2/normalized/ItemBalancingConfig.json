@@ -1,0 +1,11 @@
+{
+  "EnemyRangedDamageMultiplier": 0.6699999999254942,
+  "ItemBaseMaxLevel": 98.0,
+  "LevelScalingBase": 1.0100000000093132,
+  "PlayerBaseCritDamage": 0.19999999995343387,
+  "PlayerBaseDamage": 10.0,
+  "PlayerBaseHealth": 80.0,
+  "PlayerMeleeDamageMultiplier": 1.6000000000931323,
+  "PlayerPowerDamageMultiplier": 8.0,
+  "SellBasePrice": 20.0
+}

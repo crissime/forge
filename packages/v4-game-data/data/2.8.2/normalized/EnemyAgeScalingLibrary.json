@@ -1,0 +1,123 @@
+[
+  {
+    "AgeIdx": 0,
+    "Damage": {
+      "Raw": 500,
+      "Value": 5.0
+    },
+    "Health": {
+      "Raw": 3500,
+      "Value": 35.0
+    }
+  },
+  {
+    "AgeIdx": 1,
+    "Damage": {
+      "Raw": 1000,
+      "Value": 10.0
+    },
+    "Health": {
+      "Raw": 8000,
+      "Value": 80.0
+    }
+  },
+  {
+    "AgeIdx": 2,
+    "Damage": {
+      "Raw": 4000,
+      "Value": 40.0
+    },
+    "Health": {
+      "Raw": 32000,
+      "Value": 320.0
+    }
+  },
+  {
+    "AgeIdx": 3,
+    "Damage": {
+      "Raw": 16000,
+      "Value": 160.0
+    },
+    "Health": {
+      "Raw": 128000,
+      "Value": 1280.0
+    }
+  },
+  {
+    "AgeIdx": 4,
+    "Damage": {
+      "Raw": 64000,
+      "Value": 640.0
+    },
+    "Health": {
+      "Raw": 512000,
+      "Value": 5120.0
+    }
+  },
+  {
+    "AgeIdx": 5,
+    "Damage": {
+      "Raw": 256000,
+      "Value": 2560.0
+    },
+    "Health": {
+      "Raw": 2048000,
+      "Value": 20480.0
+    }
+  },
+  {
+    "AgeIdx": 6,
+    "Damage": {
+      "Raw": 1024000,
+      "Value": 10240.0
+    },
+    "Health": {
+      "Raw": 8192000,
+      "Value": 81920.0
+    }
+  },
+  {
+    "AgeIdx": 7,
+    "Damage": {
+      "Raw": 4096000,
+      "Value": 40960.0
+    },
+    "Health": {
+      "Raw": 32768000,
+      "Value": 327680.0
+    }
+  },
+  {
+    "AgeIdx": 8,
+    "Damage": {
+      "Raw": 16384000,
+      "Value": 163840.0
+    },
+    "Health": {
+      "Raw": 131072000,
+      "Value": 1310720.0
+    }
+  },
+  {
+    "AgeIdx": 9,
+    "Damage": {
+      "Raw": 98304000,
+      "Value": 983040.0
+    },
+    "Health": {
+      "Raw": 786432000,
+      "Value": 7864320.0
+    }
+  },
+  {
+    "AgeIdx": 10,
+    "Damage": {
+      "Raw": 786432000,
+      "Value": 7864320.0
+    },
+    "Health": {
+      "Raw": 6291456000,
+      "Value": 62914560.0
+    }
+  }
+]

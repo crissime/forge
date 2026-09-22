@@ -1,0 +1,7644 @@
+[
+  {
+    "BattleId": {
+      "AgeIdx": 0,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 0,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 0,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 0,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 0,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 0,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 0,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 0,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 0,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 0,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 0
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 10
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 11
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 12
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 13
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 14
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 2
+          },
+          {
+            "Count": 1,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 15
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 1
+          },
+          {
+            "Count": 2,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 1
+          },
+          {
+            "Count": 2,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 2
+          },
+          {
+            "Count": 2,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 16
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 17
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 1
+          },
+          {
+            "Count": 2,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 1
+          },
+          {
+            "Count": 2,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 2
+          },
+          {
+            "Count": 3,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 18
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 1
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 2
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 1,
+      "BattleIdx": 19
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 1
+          },
+          {
+            "Count": 2,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 1
+          },
+          {
+            "Count": 3,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 2
+          },
+          {
+            "Count": 4,
+            "Id": 3
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 10
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 11
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 12
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 13
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 14
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 5
+          },
+          {
+            "Count": 2,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 15
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 4
+          },
+          {
+            "Count": 2,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 4
+          },
+          {
+            "Count": 2,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 5
+          },
+          {
+            "Count": 2,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 16
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 17
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 4
+          },
+          {
+            "Count": 2,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 4
+          },
+          {
+            "Count": 2,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 5
+          },
+          {
+            "Count": 3,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 18
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 4
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 5
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 2,
+      "BattleIdx": 19
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 4
+          },
+          {
+            "Count": 2,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 4
+          },
+          {
+            "Count": 3,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 5
+          },
+          {
+            "Count": 4,
+            "Id": 6
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 10
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 11
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 12
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 13
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 14
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          },
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 15
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          },
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          },
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 8
+          },
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 16
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 17
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          },
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 7
+          },
+          {
+            "Count": 2,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 8
+          },
+          {
+            "Count": 3,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 18
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 7
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 8
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 3,
+      "BattleIdx": 19
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          },
+          {
+            "Count": 2,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 7
+          },
+          {
+            "Count": 3,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 8
+          },
+          {
+            "Count": 4,
+            "Id": 9
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 10
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 11
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 12
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 13
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 14
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 11
+          },
+          {
+            "Count": 3,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 15
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 10
+          },
+          {
+            "Count": 3,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 10
+          },
+          {
+            "Count": 3,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 11
+          },
+          {
+            "Count": 3,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 16
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 17
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 10
+          },
+          {
+            "Count": 3,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 10
+          },
+          {
+            "Count": 3,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 11
+          },
+          {
+            "Count": 4,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 18
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 10
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 7,
+            "Id": 11
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 4,
+      "BattleIdx": 19
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 10
+          },
+          {
+            "Count": 3,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 10
+          },
+          {
+            "Count": 4,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 11
+          },
+          {
+            "Count": 5,
+            "Id": 12
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 10
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 11
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 12
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 13
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 14
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 14
+          },
+          {
+            "Count": 3,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 15
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 13
+          },
+          {
+            "Count": 3,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 13
+          },
+          {
+            "Count": 3,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 14
+          },
+          {
+            "Count": 3,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 16
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 17
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 13
+          },
+          {
+            "Count": 3,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 13
+          },
+          {
+            "Count": 3,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 14
+          },
+          {
+            "Count": 4,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 18
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 13
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 7,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 5,
+      "BattleIdx": 19
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 13
+          },
+          {
+            "Count": 3,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 13
+          },
+          {
+            "Count": 4,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 14
+          },
+          {
+            "Count": 5,
+            "Id": 14
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 10
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 11
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 12
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 13
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 14
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 17
+          },
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 15
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          },
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          },
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 17
+          },
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 16
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 17
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          },
+          {
+            "Count": 3,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 16
+          },
+          {
+            "Count": 3,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 17
+          },
+          {
+            "Count": 4,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 18
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 16
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 7,
+            "Id": 17
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 6,
+      "BattleIdx": 19
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          },
+          {
+            "Count": 3,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 16
+          },
+          {
+            "Count": 4,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 17
+          },
+          {
+            "Count": 5,
+            "Id": 18
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 10
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 11
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 12
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 13
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 14
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 20
+          },
+          {
+            "Count": 4,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 15
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 19
+          },
+          {
+            "Count": 4,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 19
+          },
+          {
+            "Count": 4,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 20
+          },
+          {
+            "Count": 4,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 16
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 17
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 19
+          },
+          {
+            "Count": 4,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 19
+          },
+          {
+            "Count": 4,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 20
+          },
+          {
+            "Count": 5,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 18
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 19
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 8,
+            "Id": 20
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 7,
+      "BattleIdx": 19
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 19
+          },
+          {
+            "Count": 4,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 19
+          },
+          {
+            "Count": 5,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 20
+          },
+          {
+            "Count": 6,
+            "Id": 21
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 10
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 11
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 12
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 13
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 14
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 23
+          },
+          {
+            "Count": 4,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 15
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 22
+          },
+          {
+            "Count": 4,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 22
+          },
+          {
+            "Count": 4,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 23
+          },
+          {
+            "Count": 4,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 16
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 17
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 22
+          },
+          {
+            "Count": 4,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 22
+          },
+          {
+            "Count": 4,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 23
+          },
+          {
+            "Count": 5,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 18
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 22
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 8,
+            "Id": 23
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 8,
+      "BattleIdx": 19
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 22
+          },
+          {
+            "Count": 4,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 22
+          },
+          {
+            "Count": 5,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 23
+          },
+          {
+            "Count": 6,
+            "Id": 24
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 10
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 11
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 12
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 13
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 14
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 26
+          },
+          {
+            "Count": 4,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 15
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          },
+          {
+            "Count": 4,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          },
+          {
+            "Count": 4,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 26
+          },
+          {
+            "Count": 4,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 16
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 17
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          },
+          {
+            "Count": 4,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 25
+          },
+          {
+            "Count": 4,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 26
+          },
+          {
+            "Count": 5,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 18
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 25
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 8,
+            "Id": 26
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 9,
+      "BattleIdx": 19
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          },
+          {
+            "Count": 4,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 25
+          },
+          {
+            "Count": 5,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 26
+          },
+          {
+            "Count": 6,
+            "Id": 27
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 0
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 1
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 1
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 2
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 3
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 1,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 4
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 5
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 6
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 2,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 7
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 8
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 9
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 3,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 10
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 11
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 12
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 13
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 14
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 29
+          },
+          {
+            "Count": 4,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 15
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          },
+          {
+            "Count": 4,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          },
+          {
+            "Count": 4,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 29
+          },
+          {
+            "Count": 4,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 16
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 17
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          },
+          {
+            "Count": 4,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 28
+          },
+          {
+            "Count": 4,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 29
+          },
+          {
+            "Count": 5,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 18
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 5,
+            "Id": 28
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 8,
+            "Id": 29
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  },
+  {
+    "BattleId": {
+      "AgeIdx": 10,
+      "BattleIdx": 19
+    },
+    "Waves": [
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          },
+          {
+            "Count": 4,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 0
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 4,
+            "Id": 28
+          },
+          {
+            "Count": 5,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 1
+      },
+      {
+        "Enemies": [
+          {
+            "Count": 6,
+            "Id": 29
+          },
+          {
+            "Count": 6,
+            "Id": 30
+          }
+        ],
+        "WaveIdx": 2
+      }
+    ]
+  }
+]

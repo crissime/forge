@@ -1,0 +1,489 @@
+{
+  "value": [
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 4294967296,
+          "value": 1.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 4294967296,
+          "value": 1.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 4294967296,
+          "value": 1.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 4294967296,
+          "value": 1.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 4294967296,
+          "value": 1.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 17,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 4294967296,
+          "value": 1.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 12,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 4294967296,
+          "value": 1.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 14,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 15,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 4294967296,
+          "value": 1.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 11,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 13,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 16,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 10,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 18,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": {
+          "1": {
+            "value": 21,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "2": {
+        "value": {
+          "raw": 0,
+          "value": 0.0
+        },
+        "wire": "F64"
+      }
+    }
+  ],
+  "wire": "ObjectTable"
+}

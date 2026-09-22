@@ -1,0 +1,785 @@
+{
+  "value": [
+    {
+      "1": {
+        "value": 0,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": [
+          {
+            "1": {
+              "value": 30,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 150000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 42,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 300000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 59,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 600000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 82,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 1200000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 115,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 2400000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          }
+        ],
+        "wire": "ValueCollection"
+      }
+    },
+    {
+      "1": {
+        "value": 1,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": [
+          {
+            "1": {
+              "value": 161,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 4800000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 226,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 9600000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 316,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 19200000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 443,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 38400000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 620,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 42240000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          }
+        ],
+        "wire": "ValueCollection"
+      }
+    },
+    {
+      "1": {
+        "value": 2,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": [
+          {
+            "1": {
+              "value": 868,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 46464000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 1007,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 51110500000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 1168,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 56221500000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 1354,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 61843500000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 1571,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 68028000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          }
+        ],
+        "wire": "ValueCollection"
+      }
+    },
+    {
+      "1": {
+        "value": 3,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": [
+          {
+            "1": {
+              "value": 1823,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 74830500000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 2114,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 82314000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 2452,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 90545000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 2845,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 99599500000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 3300,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 109559500000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          }
+        ],
+        "wire": "ValueCollection"
+      }
+    },
+    {
+      "1": {
+        "value": 4,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": [
+          {
+            "1": {
+              "value": 3828,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 120515500000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 4441,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 132567000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 5151,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 145824000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 5975,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 160406500000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          },
+          {
+            "1": {
+              "value": 6931,
+              "wire": "VarInt"
+            },
+            "2": {
+              "value": {
+                "1": {
+                  "value": {
+                    "1": {
+                      "value": {
+                        "1": {
+                          "value": 176447000000,
+                          "wire": "VarInt"
+                        },
+                        "2": {
+                          "value": 0,
+                          "wire": "VarInt"
+                        }
+                      },
+                      "wire": "Struct"
+                    }
+                  },
+                  "wire": "Struct"
+                }
+              },
+              "wire": "Struct"
+            }
+          }
+        ],
+        "wire": "ValueCollection"
+      }
+    }
+  ],
+  "wire": "ObjectTable"
+}

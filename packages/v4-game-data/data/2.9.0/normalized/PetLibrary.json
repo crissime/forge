@@ -1,0 +1,177 @@
+[
+  {
+    "PetId": {
+      "Id": 0,
+      "Rarity": "Common"
+    },
+    "Type": "Balanced"
+  },
+  {
+    "PetId": {
+      "Id": 1,
+      "Rarity": "Common"
+    },
+    "Type": "Damage"
+  },
+  {
+    "PetId": {
+      "Id": 2,
+      "Rarity": "Common"
+    },
+    "Type": "Balanced"
+  },
+  {
+    "PetId": {
+      "Id": 3,
+      "Rarity": "Common"
+    },
+    "Type": "Health"
+  },
+  {
+    "PetId": {
+      "Id": 4,
+      "Rarity": "Common"
+    },
+    "Type": "Balanced"
+  },
+  {
+    "PetId": {
+      "Id": 5,
+      "Rarity": "Common"
+    },
+    "Type": "Health"
+  },
+  {
+    "PetId": {
+      "Id": 0,
+      "Rarity": "Rare"
+    },
+    "Type": "Health"
+  },
+  {
+    "PetId": {
+      "Id": 1,
+      "Rarity": "Rare"
+    },
+    "Type": "Health"
+  },
+  {
+    "PetId": {
+      "Id": 2,
+      "Rarity": "Rare"
+    },
+    "Type": "Balanced"
+  },
+  {
+    "PetId": {
+      "Id": 3,
+      "Rarity": "Rare"
+    },
+    "Type": "Damage"
+  },
+  {
+    "PetId": {
+      "Id": 4,
+      "Rarity": "Rare"
+    },
+    "Type": "Damage"
+  },
+  {
+    "PetId": {
+      "Id": 0,
+      "Rarity": "Epic"
+    },
+    "Type": "Health"
+  },
+  {
+    "PetId": {
+      "Id": 1,
+      "Rarity": "Epic"
+    },
+    "Type": "Damage"
+  },
+  {
+    "PetId": {
+      "Id": 2,
+      "Rarity": "Epic"
+    },
+    "Type": "Balanced"
+  },
+  {
+    "PetId": {
+      "Id": 3,
+      "Rarity": "Epic"
+    },
+    "Type": "Damage"
+  },
+  {
+    "PetId": {
+      "Id": 4,
+      "Rarity": "Epic"
+    },
+    "Type": "Health"
+  },
+  {
+    "PetId": {
+      "Id": 0,
+      "Rarity": "Legendary"
+    },
+    "Type": "Damage"
+  },
+  {
+    "PetId": {
+      "Id": 1,
+      "Rarity": "Legendary"
+    },
+    "Type": "Balanced"
+  },
+  {
+    "PetId": {
+      "Id": 2,
+      "Rarity": "Legendary"
+    },
+    "Type": "Damage"
+  },
+  {
+    "PetId": {
+      "Id": 0,
+      "Rarity": "Ultimate"
+    },
+    "Type": "Damage"
+  },
+  {
+    "PetId": {
+      "Id": 1,
+      "Rarity": "Ultimate"
+    },
+    "Type": "Health"
+  },
+  {
+    "PetId": {
+      "Id": 2,
+      "Rarity": "Ultimate"
+    },
+    "Type": "Balanced"
+  },
+  {
+    "PetId": {
+      "Id": 0,
+      "Rarity": "Mythic"
+    },
+    "Type": "Balanced"
+  },
+  {
+    "PetId": {
+      "Id": 1,
+      "Rarity": "Mythic"
+    },
+    "Type": "Health"
+  },
+  {
+    "PetId": {
+      "Id": 2,
+      "Rarity": "Mythic"
+    },
+    "Type": "Damage"
+  }
+]

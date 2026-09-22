@@ -1,0 +1,62 @@
+{
+  "schema": "forge-master-v4-bis-gates-v1",
+  "gameVersion": "2.9.0",
+  "gates": [
+    {
+      "id": "candidate_aggregation",
+      "status": "partial",
+      "owner": "Tess/Oren",
+      "detail": "Le constructeur v4 reconstruit bases item/pet/monture et secondaires depuis les catalogues APK. Les talents et autres bonus fixes restent a fournir explicitement par cas; aucun total importe n'est reutilise.",
+      "evidence": ["packages/v4-bis/src/build.ts", "packages/v4-bis/test/build.test.ts"]
+    },
+    {
+      "id": "legal_search_space",
+      "status": "partial",
+      "owner": "Vega/Oren",
+      "detail": "Les deblocages APK des lignes, bornes et absence de doublon sur un porteur sont verifies par constructeur. Le scenario fixe age 9 et niveau UI 100; la correspondance avec ItemBaseMaxLevel 98 de l'APK, ainsi que la granularite discrete des rolls, reste a calibrer.",
+      "evidence": ["packages/v4-game-data/data/2.9.0/normalized/SecondaryStatItemUnlockLibrary.json", "packages/v4-game-data/data/2.9.0/normalized/SecondaryStatPetUnlockLibrary.json", "packages/v4-bis/src/build.ts"]
+    },
+    {
+      "id": "all_stat_sources",
+      "status": "partial",
+      "owner": "Oren/Tess",
+      "detail": "Items, pets, monture et secondaires sont reconstruits. Les talents et bonus permanents restent fixes par cas tant que leur jointure APK n'est pas normalisee; skins et leurs sets sont exclus par la configuration de reference.",
+      "evidence": ["packages/v4-bis/src/build.ts", "v4/config/bis-reference-2.9.0.json"]
+    },
+    {
+      "id": "fairy_season",
+      "status": "verified",
+      "owner": "Milo/utilisateur",
+      "detail": "Valeurs confirmees par l'utilisateur pour le scenario BIS: niveau 20, Mira 20/15 cap 80, Tira 5/1 cap 30, Lora 15/10 cap 30.",
+      "evidence": ["v4/config/fairy-season-2.9.0.candidate.json", "v4/config/bis-reference-2.9.0.json"]
+    },
+    {
+      "id": "fairy_access_and_aggregation",
+      "status": "partial",
+      "owner": "Tess/Oren/Noor",
+      "detail": "Le constructeur fournit les totaux secondaires reels item/pet/monture avant fee et refuse un etat fee invalide. Il reste a raccorder les talents fixes au meme total lorsque le scenario les utilise.",
+      "evidence": ["packages/v4-bis/src/build.ts", "packages/v4-bis/test/build.test.ts", "v4/config/bis-reference-2.9.0.json"]
+    },
+    {
+      "id": "search_hypotheses",
+      "status": "pending",
+      "owner": "Vega",
+      "detail": "Mesurer les pertes des heuristiques contre de petits espaces exhaustifs et sur des cas de controle non utilises pour regler la recherche.",
+      "evidence": ["v4/plan-calculateur-bis.md"]
+    },
+    {
+      "id": "batch_replay_and_cost",
+      "status": "pending",
+      "owner": "Vega",
+      "detail": "Mesurer le cout des vrais candidats; verifier reprise, invalidation par hashes et replay des gagnants avant lancement long.",
+      "evidence": ["v4/plan-calculateur-bis.md"]
+    },
+    {
+      "id": "in_game_validation",
+      "status": "pending",
+      "owner": "Milo",
+      "detail": "Comparer des combats reels reproductibles; des tests locaux passes ne prouvent pas la fidelite au jeu.",
+      "evidence": ["v4/analyse-xapk-2.9.0.md"]
+    }
+  ]
+}

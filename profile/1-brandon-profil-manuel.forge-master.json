@@ -1,0 +1,368 @@
+{
+  "schema": "forge-master-v2-profile",
+  "exportedAt": "2026-07-08T09:13:06.426Z",
+  "source": "prod-postgres",
+  "profileId": "cmqqh4g2v0003c601e9pvtzny",
+  "userId": "cmqjgwcrd0001c601h8hxl18a",
+  "username": "brandon",
+  "name": "Profil manuel",
+  "dataVersion": "2026_05_23_14_08",
+  "confidence": "partial",
+  "createdAt": "2026-06-23T10:00:32.358",
+  "updatedAt": "2026-06-23T10:00:32.358",
+  "profile": {
+    "base": {
+      "attack": 48896.52128843567,
+      "health": 485748.9896333021,
+      "weaponStyle": "ranged"
+    },
+    "name": "Profil manuel",
+    "pets": [
+      {
+        "name": "Pet 1",
+        "level": 1,
+        "attack": 23100,
+        "health": 63000,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "attackSpeed",
+            "value": 18.2,
+            "sourceId": "attackSpeed"
+          }
+        ]
+      },
+      {
+        "name": "Pet 2",
+        "level": 1,
+        "attack": 7650,
+        "health": 187000,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "rangedDamage",
+            "value": 4.54,
+            "sourceId": "rangedDamage"
+          }
+        ]
+      },
+      {
+        "name": "Pet 3",
+        "level": 1,
+        "attack": 7800,
+        "health": 187000,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "skillDamage",
+            "value": 17.1,
+            "sourceId": "skillDamage"
+          }
+        ]
+      }
+    ],
+    "audit": [
+      {
+        "code": "manual_profile",
+        "message": "Profil renseigné manuellement: les totaux sont reconstruits depuis objets, pets, monture et talents.",
+        "severity": "info"
+      }
+    ],
+    "mount": {
+      "name": "Monture",
+      "level": 1,
+      "attack": 306,
+      "health": 2.44,
+      "skills": [],
+      "recognized": true,
+      "secondaryStats": [
+        {
+          "stat": "regen",
+          "value": 3.65,
+          "sourceId": "regen"
+        }
+      ]
+    },
+    "stats": {
+      "block": 0,
+      "regen": 26.04,
+      "damage": 0,
+      "health": 20.70000000745058,
+      "cooldown": 0,
+      "lifesteal": 0,
+      "critChance": 0,
+      "critDamage": 0,
+      "attackSpeed": 18.2,
+      "meleeDamage": 0,
+      "skillDamage": 25.10000000745058,
+      "doubleChance": 0,
+      "rangedDamage": 19.54
+    },
+    "source": "manual",
+    "spells": [
+      {
+        "id": "RainOfArrows",
+        "level": 1,
+        "rarity": "Epic"
+      },
+      {
+        "id": "Thorns",
+        "level": 1,
+        "rarity": "Epic"
+      },
+      {
+        "id": "Shuriken",
+        "level": 1,
+        "rarity": "Rare"
+      }
+    ],
+    "breakdown": {
+      "petAttack": 40092.0000014361,
+      "petHealth": 454480.0000162795,
+      "baseAttack": 10,
+      "baseHealth": 80,
+      "mountAttack": 312.1200000056997,
+      "mountHealth": 2.488800000045448,
+      "talentStats": {
+        "block": 0,
+        "regen": 0,
+        "damage": 0,
+        "health": 8.00000000745058,
+        "cooldown": 0,
+        "lifesteal": 0,
+        "critChance": 0,
+        "critDamage": 0,
+        "attackSpeed": 0,
+        "meleeDamage": 0,
+        "skillDamage": 8.00000000745058,
+        "doubleChance": 0,
+        "rangedDamage": 0
+      },
+      "secondaryStats": {
+        "block": 0,
+        "regen": 26.04,
+        "damage": 0,
+        "health": 12.7,
+        "cooldown": 0,
+        "lifesteal": 0,
+        "critChance": 0,
+        "critDamage": 0,
+        "attackSpeed": 18.2,
+        "meleeDamage": 0,
+        "skillDamage": 17.1,
+        "doubleChance": 0,
+        "rangedDamage": 19.54
+      },
+      "equipmentAttack": 8482.401286993867,
+      "equipmentHealth": 31186.50081702256
+    },
+    "equipment": {
+      "Belt": {
+        "age": 4,
+        "idx": 0,
+        "name": "Belt",
+        "slot": "Belt",
+        "level": 2,
+        "attack": 0,
+        "health": 10342.40000009537,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "health",
+            "value": 12.7,
+            "sourceId": "health"
+          }
+        ]
+      },
+      "Body": {
+        "age": 3,
+        "idx": 0,
+        "name": "Body",
+        "slot": "Body",
+        "level": 101,
+        "attack": 0,
+        "health": 6924.323409704037,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.29,
+            "sourceId": "regen"
+          }
+        ]
+      },
+      "Ring": {
+        "age": 4,
+        "idx": 0,
+        "name": "Ring",
+        "slot": "Ring",
+        "level": 18,
+        "attack": 1515.909672394987,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.47,
+            "sourceId": "regen"
+          }
+        ]
+      },
+      "Shoe": {
+        "age": 3,
+        "idx": 0,
+        "name": "Shoe",
+        "slot": "Shoe",
+        "level": 97,
+        "attack": 0,
+        "health": 6654.138695322382,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.96,
+            "sourceId": "regen"
+          }
+        ]
+      },
+      "Gloves": {
+        "age": 3,
+        "idx": 0,
+        "name": "Gloves",
+        "slot": "Gloves",
+        "level": 98,
+        "attack": 840.0850102921971,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.94,
+            "sourceId": "regen"
+          }
+        ]
+      },
+      "Helmet": {
+        "age": 3,
+        "idx": 0,
+        "name": "Helmet",
+        "slot": "Helmet",
+        "level": 97,
+        "attack": 0,
+        "health": 6654.138695322382,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.85,
+            "sourceId": "regen"
+          }
+        ]
+      },
+      "Weapon": {
+        "age": 5,
+        "idx": 1,
+        "name": "Weapon",
+        "slot": "Weapon",
+        "level": 1,
+        "attack": 5120,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "rangedDamage",
+            "value": 15,
+            "sourceId": "rangedDamage"
+          }
+        ]
+      },
+      "Necklace": {
+        "age": 3,
+        "idx": 0,
+        "name": "Necklace",
+        "slot": "Necklace",
+        "level": 98,
+        "attack": 840.0850102921971,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.88,
+            "sourceId": "regen"
+          }
+        ]
+      }
+    },
+    "confidence": "partial",
+    "talentTree": {
+      "Forge": {
+        "0": 4,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 4,
+        "7": 2,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "18": 1,
+        "19": 1,
+        "20": 1
+      },
+      "Power": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "18": 5,
+        "19": 5
+      },
+      "SkillsPetTech": {
+        "0": 5,
+        "1": 2,
+        "2": 1,
+        "3": 1,
+        "4": 5,
+        "5": 2,
+        "6": 2,
+        "7": 2,
+        "8": 5,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 5,
+        "15": 1,
+        "16": 1,
+        "17": 2,
+        "18": 1
+      }
+    },
+    "dataVersion": "2026_05_23_14_08"
+  }
+}

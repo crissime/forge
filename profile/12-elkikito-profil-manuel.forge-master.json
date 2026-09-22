@@ -1,0 +1,310 @@
+{
+  "schema": "forge-master-v2-profile",
+  "exportedAt": "2026-07-08T09:13:06.438Z",
+  "source": "prod-postgres",
+  "profileId": "cmqthufq9000a8k01de2v5rp9",
+  "userId": "cmqthub0g00068k01xvn3fbv2",
+  "username": "elkikito",
+  "name": "Profil manuel",
+  "dataVersion": "2026_05_23_14_08",
+  "confidence": "partial",
+  "createdAt": "2026-06-25T12:44:03.489",
+  "updatedAt": "2026-06-25T12:55:43.918",
+  "profile": {
+    "base": {
+      "attack": 45076.37006479196,
+      "health": 668658.0544120921,
+      "weaponStyle": "ranged"
+    },
+    "name": "Profil manuel",
+    "pets": [
+      {
+        "id": 0,
+        "name": "Griffin",
+        "type": "Health",
+        "level": 8,
+        "attack": 8041,
+        "health": 192984,
+        "rarity": "Epic",
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "cooldown",
+            "value": 3.79,
+            "sourceId": "cooldown"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Panda",
+        "type": "Health",
+        "level": 1,
+        "attack": 7500,
+        "health": 180000,
+        "rarity": "Epic",
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "cooldown",
+            "value": 3.32,
+            "sourceId": "cooldown"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Panda",
+        "type": "Health",
+        "level": 1,
+        "attack": 7500,
+        "health": 180000,
+        "rarity": "Epic",
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.96,
+            "sourceId": "regen"
+          }
+        ]
+      }
+    ],
+    "audit": [],
+    "mount": {
+      "id": 0,
+      "name": "Monture",
+      "level": 48,
+      "attack": 397,
+      "health": 3176,
+      "rarity": "Common",
+      "skills": [],
+      "recognized": true,
+      "secondaryStats": [
+        {
+          "stat": "regen",
+          "value": 3.7,
+          "sourceId": "regen"
+        }
+      ]
+    },
+    "stats": {
+      "block": 0,
+      "regen": 28.89,
+      "damage": 0,
+      "health": 0,
+      "cooldown": 10.18,
+      "lifesteal": 0,
+      "critChance": 0,
+      "critDamage": 0,
+      "attackSpeed": 0,
+      "meleeDamage": 0,
+      "skillDamage": 22.5,
+      "doubleChance": 0,
+      "rangedDamage": 0
+    },
+    "source": "manual",
+    "spells": [
+      {
+        "id": "Thorns",
+        "level": 5,
+        "rarity": "Epic"
+      },
+      {
+        "id": "RainOfArrows",
+        "level": 6,
+        "rarity": "Epic"
+      },
+      {
+        "id": "Buff",
+        "level": 4,
+        "rarity": "Epic"
+      }
+    ],
+    "breakdown": {
+      "petAttack": 23041,
+      "petHealth": 552984,
+      "baseAttack": 10,
+      "baseHealth": 80,
+      "mountAttack": 397,
+      "mountHealth": 3176,
+      "talentStats": {
+        "block": 0,
+        "regen": 0,
+        "damage": 0,
+        "health": 0,
+        "cooldown": 0,
+        "lifesteal": 0,
+        "critChance": 0,
+        "critDamage": 0,
+        "attackSpeed": 0,
+        "meleeDamage": 0,
+        "skillDamage": 0,
+        "doubleChance": 0,
+        "rangedDamage": 0
+      },
+      "secondaryStats": {
+        "block": 0,
+        "regen": 28.89,
+        "damage": 0,
+        "health": 0,
+        "cooldown": 10.18,
+        "lifesteal": 0,
+        "critChance": 0,
+        "critDamage": 0,
+        "attackSpeed": 0,
+        "meleeDamage": 0,
+        "skillDamage": 22.5,
+        "doubleChance": 0,
+        "rangedDamage": 0
+      },
+      "equipmentAttack": 21628.37006479196,
+      "equipmentHealth": 112418.054412092
+    },
+    "equipment": {
+      "Belt": {
+        "age": 4,
+        "idx": 0,
+        "name": "Ceinture",
+        "slot": "Belt",
+        "level": 98,
+        "attack": 0,
+        "health": 26882.72032935031,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.95,
+            "sourceId": "regen"
+          }
+        ]
+      },
+      "Body": {
+        "age": 4,
+        "idx": 0,
+        "name": "Armure",
+        "slot": "Body",
+        "level": 98,
+        "attack": 0,
+        "health": 26882.72032935031,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.64,
+            "sourceId": "regen"
+          }
+        ]
+      },
+      "Ring": {
+        "age": 4,
+        "idx": 0,
+        "name": "Anneau",
+        "slot": "Ring",
+        "level": 97,
+        "attack": 3327.069347661191,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.62,
+            "sourceId": "regen"
+          }
+        ]
+      },
+      "Shoe": {
+        "age": 0,
+        "idx": 0,
+        "name": "Bottes",
+        "slot": "Shoe",
+        "level": 20,
+        "attack": 0,
+        "health": 48.32435802620765,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.79,
+            "sourceId": "regen"
+          }
+        ]
+      },
+      "Gloves": {
+        "age": 5,
+        "idx": 0,
+        "name": "Gants",
+        "slot": "Gloves",
+        "level": 10,
+        "attack": 5599.66859660864,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "skillDamage",
+            "value": 22.5,
+            "sourceId": "skillDamage"
+          }
+        ]
+      },
+      "Helmet": {
+        "age": 5,
+        "idx": 0,
+        "name": "Casque",
+        "slot": "Helmet",
+        "level": 37,
+        "attack": 0,
+        "health": 58604.28939536521,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 2.7,
+            "sourceId": "regen"
+          }
+        ]
+      },
+      "Weapon": {
+        "age": 5,
+        "idx": 1,
+        "name": "Arme",
+        "slot": "Weapon",
+        "level": 28,
+        "attack": 6698.029457627041,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "cooldown",
+            "value": 3.07,
+            "sourceId": "cooldown"
+          }
+        ]
+      },
+      "Necklace": {
+        "age": 5,
+        "idx": 0,
+        "name": "Collier",
+        "slot": "Necklace",
+        "level": 17,
+        "attack": 6003.602662895086,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "regen",
+            "value": 3.53,
+            "sourceId": "regen"
+          }
+        ]
+      }
+    },
+    "confidence": "partial",
+    "talentTree": {
+      "Forge": {},
+      "Power": {},
+      "SkillsPetTech": {}
+    },
+    "dataVersion": "2026_05_23_14_08"
+  }
+}

@@ -1,0 +1,149 @@
+[
+  {
+    "DefaultValue": 1.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "Damage"
+    }
+  },
+  {
+    "DefaultValue": 1.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "Health"
+    }
+  },
+  {
+    "DefaultValue": 1.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "Experience"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "OneMinusMultiplier",
+      "StatType": "Cost"
+    }
+  },
+  {
+    "DefaultValue": 1.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "SellPrice"
+    }
+  },
+  {
+    "DefaultValue": 1.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "Bonus"
+    }
+  },
+  {
+    "DefaultValue": 1.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "AttackSpeed"
+    }
+  },
+  {
+    "DefaultValue": 1.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "CriticalDamage"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "HealthRegen"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "LifeSteal"
+    }
+  },
+  {
+    "DefaultValue": 1.0,
+    "UniqueStat": {
+      "StatNature": "Divisor",
+      "StatType": "TimerSpeed"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "CriticalChance"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "BlockChance"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "DoubleDamageChance"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Multiplier",
+      "StatType": "FreebieChance"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Additive",
+      "StatType": "MaxLevel"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Additive",
+      "StatType": "MaxCount"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Additive",
+      "StatType": "Damage"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Additive",
+      "StatType": "Health"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "Additive",
+      "StatType": "MoveSpeed"
+    }
+  },
+  {
+    "DefaultValue": 0.0,
+    "UniqueStat": {
+      "StatNature": "OneMinusMultiplier",
+      "StatType": "TimerSpeed"
+    }
+  }
+]

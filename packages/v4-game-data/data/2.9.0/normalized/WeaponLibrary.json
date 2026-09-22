@@ -1,0 +1,2333 @@
+[
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 5,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 5,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.9499999999534339
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7833334000315517
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 1.0
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.31666669994592667
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.31666669994592667
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 6,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.9333333000540733
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 6,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.9333333000540733
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 7,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7666666998993605
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 7,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7666666998993605
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 8,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 8,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 9,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.9333333000540733
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 9,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.9333333000540733
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 10,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 10,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 11,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7333333001006395
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 11,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7333333001006395
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 12,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.19999999995343387
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 12,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.19999999995343387
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 13,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 13,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 14,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7333333001006395
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 14,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7333333001006395
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 15,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 15,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 17,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 17,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 16,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.916664999909699
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 16,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.916664999909699
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 20,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7666666998993605
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 20,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7666666998993605
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 19,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.9666665999684483
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 19,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.9666666390839964
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 18,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 18,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 21,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7166665999684483
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 21,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7166665999684483
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 22,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7166665999684483
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 22,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7166665999684483
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 23,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 23,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 24,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7833334000315517
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 24,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7833334000315517
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 25,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 25,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": -1000,
+      "Idx": 26,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.5666666999459267
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": -1001,
+      "Idx": 26,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.5666666999459267
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.5175996420439333,
+      "Y": 0.8225679399911314
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 10000,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7166666390839964
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.16499984310939908,
+      "Y": 0.40281254099681973
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 0,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7666666510049254
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.48200000007636845,
+      "Y": 0.7720000001136214
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 0,
+      "Idx": 1,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.6200000639073551,
+      "Y": -7.380731403827667e-08
+    },
+    "ProjectileId": 0,
+    "WindupTime": 0.4666666688863188
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.27863289997912943,
+      "Y": 0.43912965105846524
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 0,
+      "Idx": 2,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7833333609160036
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.16790097998455167,
+      "Y": 0.4266180000267923
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 0,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.9333333370741457
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": -0.5800000000745058,
+      "Y": 0.8600000001024455
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 0,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": 1,
+    "WindupTime": 0.6833333370741457
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.5800000000745058,
+      "Y": 0.4899999999906868
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 0,
+      "Idx": 5,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0009999999310821295,
+      "Y": 0.6019999999552965
+    },
+    "ProjectileId": 2,
+    "WindupTime": 1.0833333700429648
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.23943164898082614,
+      "Y": 0.3909810190089047
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 0,
+      "Idx": 6,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6000000000931323
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": -0.2527265250682831,
+      "Y": 0.31215050001628697
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 1,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.5666666629258543
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": -0.2023603320121765,
+      "Y": 0.3610124590341002
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 1,
+      "Idx": 1,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6499999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.06544915004633367,
+      "Y": 0.39057254791259766
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 1,
+      "Idx": 2,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.5666666629258543
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.09365504002198577,
+      "Y": 0.4520908589474857
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 1,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7833333609160036
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.8700000001117587,
+      "Y": 0.6999999999534339
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 1,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.004999999888241291,
+      "Y": -0.01799999992363155
+    },
+    "ProjectileId": 3,
+    "WindupTime": 1.0833333700429648
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.20120006799697876,
+      "Y": 0.4220002288930118
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 1,
+      "Idx": 5,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": -0.511841099942103,
+      "Y": 0.563164948951453
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 1,
+      "Idx": 6,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": 4,
+    "WindupTime": 0.6833333370741457
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": -0.10700000007636845,
+      "Y": 0.48799999989569187
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 2,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 1.1080000000074506,
+      "Y": 0.1980000000912696
+    },
+    "ProjectileId": 5,
+    "WindupTime": 0.5666666629258543
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.02000000001862645,
+      "Y": 0.5400000000372529
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 2,
+      "Idx": 1,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": -0.018000001087784767,
+      "Y": -0.004999998491257429
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.22238992201164365,
+      "Y": 0.3974200999364257
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 2,
+      "Idx": 2,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.11899999994784594,
+      "Y": 0.5209999999497086
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 2,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": -0.018000001087784767,
+      "Y": -0.004999998491257429
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8333332999609411
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.17368260002695024,
+      "Y": 0.38375500007532537
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 2,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7666666510049254
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.1438802001066506,
+      "Y": 0.5853534999769181
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 2,
+      "Idx": 5,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.3470000000670552,
+      "Y": 0.5239999999757856
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 3,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": -0.018000001087784767,
+      "Y": -0.004999998491257429
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.5
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.2287418539635837,
+      "Y": 0.33655393100343645
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 3,
+      "Idx": 1,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.5833332999609411
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.6407822000328451,
+      "Y": 0.7378402350004762
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 3,
+      "Idx": 2,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.4708751440048218,
+      "Y": 0.5973078610841185
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 3,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": -0.018594784662127495,
+      "Y": -0.001798367127776146
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.5
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.6822740999050438,
+      "Y": 0.5868400998879224
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 3,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7333333489950746
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.3300000000745058,
+      "Y": 0.6000000000931323
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 3,
+      "Idx": 5,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": -0.018000001087784767,
+      "Y": -0.004999998491257429
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8333332999609411
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.5571646690368652,
+      "Y": 0.5013655419461429
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 3,
+      "Idx": 6,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": -0.0182382483035326,
+      "Y": -0.004045533481985331
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.33333334303461015
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.3239010269753635,
+      "Y": 0.27925494289956987
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 3,
+      "Idx": 7,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7833333609160036
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.2890000001061708,
+      "Y": 0.5309999999590218
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 4,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.1820000261068344,
+      "Y": 0.007999979890882969
+    },
+    "ProjectileId": 6,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": -0.17999999993480742,
+      "Y": 0.4299999999348074
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 4,
+      "Idx": 1,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7666666510049254
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.35085937404073775,
+      "Y": 0.3648047000169754
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 4,
+      "Idx": 2,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7833333609160036
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.40357625507749617,
+      "Y": 0.5970980999991298
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 4,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": -0.018367290031164885,
+      "Y": -0.0034121659118682146
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7166666390839964
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.40046486305072904,
+      "Y": 0.44679734110832214
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 4,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.7011198999825865,
+      "Y": 0.13139323890209198
+    },
+    "ProjectileId": 7,
+    "WindupTime": 0.9166667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.2798840699251741,
+      "Y": 0.4611383380834013
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 5,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.75
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.787999999942258,
+      "Y": 0.44999999995343387
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 5,
+      "Idx": 1,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": -0.018000001087784767,
+      "Y": -0.004999998491257429
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.00058736652135849,
+      "Y": 0.5413132309913635
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 5,
+      "Idx": 2,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7166666390839964
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.044372595846652985,
+      "Y": 0.46238607191480696
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 5,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.75
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.14400000008754432,
+      "Y": 0.3359999998938292
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 5,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 1.330000160029158,
+      "Y": -0.005000158911570907
+    },
+    "ProjectileId": 8,
+    "WindupTime": 0.8333332999609411
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.5190000000875443,
+      "Y": 0.5200000000186265
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 5,
+      "Idx": 5,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.6230001449584961,
+      "Y": 0.1549999420531094
+    },
+    "ProjectileId": 9,
+    "WindupTime": 0.9666666390839964
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.15806892490945756,
+      "Y": 0.18894235789775848
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 6,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6999999999534339
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": -0.0374983474612236,
+      "Y": 0.43680825806222856
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 6,
+      "Idx": 1,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6999999999534339
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.17869864404201508,
+      "Y": 0.7056450000964105
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 6,
+      "Idx": 2,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6999999999534339
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.8700000001117587,
+      "Y": 0.6999999999534339
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 6,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.004999999888241291,
+      "Y": -0.01799999992363155
+    },
+    "ProjectileId": 10,
+    "WindupTime": 1.0833333700429648
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.05199999990873039,
+      "Y": 0.3600000001024455
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 6,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": -0.018000001087784767,
+      "Y": -0.004999998491257429
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8333332999609411
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.35912135196849704,
+      "Y": 0.2514594499953091
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 6,
+      "Idx": 5,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8833333000075072
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.8700000001117587,
+      "Y": 0.6999999999534339
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 7,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.004999999888241291,
+      "Y": -0.01799999992363155
+    },
+    "ProjectileId": 11,
+    "WindupTime": 0.8333332999609411
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.4648674998898059,
+      "Y": 0.54960733698681
+    },
+    "IsAiming": true,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 7,
+      "Idx": 1,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": -0.017495732754468918,
+      "Y": -0.0065497723408043385
+    },
+    "ProjectileId": -1,
+    "WindupTime": 1.0
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.21554854488931596,
+      "Y": 0.4392434658948332
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 7,
+      "Idx": 2,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 1.1000000000931323
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.40604960010387003,
+      "Y": 0.5181880590971559
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 7,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.5776619999669492,
+      "Y": 0.5216383999213576
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 7,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 1.1945625499356538,
+      "Y": -0.11454922007396817
+    },
+    "ProjectileId": 12,
+    "WindupTime": 0.9499999999534339
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": -0.48313441895879805,
+      "Y": 0.38245984888635576
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 7,
+      "Idx": 5,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.5666666629258543
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.5073186999652535,
+      "Y": 0.6266001460608095
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 8,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 1.103000279981643,
+      "Y": -0.005000395700335503
+    },
+    "ProjectileId": 13,
+    "WindupTime": 1.0
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": -0.13011397398076952,
+      "Y": 0.9410308001097292
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 8,
+      "Idx": 1,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.7071432468947023,
+      "Y": 1.5723069999366999
+    },
+    "ProjectileId": 14,
+    "WindupTime": 0.8166666629258543
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.6167283649556339,
+      "Y": 0.1909381600562483
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 8,
+      "Idx": 2,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8166666629258543
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.2605079000350088,
+      "Y": 0.31296637700870633
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 8,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.8999999999068677
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.43790596700273454,
+      "Y": 0.2375675740186125
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 8,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.3833333249203861
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.7169999999459833,
+      "Y": 0.75
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 9,
+      "Idx": 0,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.6666667000390589
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.38718100008554757,
+      "Y": 0.3088704999536276
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 9,
+      "Idx": 1,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7333333489950746
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": 0.4111275998875499,
+      "Y": 0.28841486596502364
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 9,
+      "Idx": 2,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7333333489950746
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 0.30000000004656613,
+    "Hand": {
+      "X": -0.2143200000282377,
+      "Y": 0.6328799999319017
+    },
+    "IsAiming": false,
+    "IsRanged": false,
+    "ItemId": {
+      "Age": 9,
+      "Idx": 3,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0,
+      "Y": 0.0
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.3166666629258543
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.5776619999669492,
+      "Y": 0.5216383999213576
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 9,
+      "Idx": 4,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 1.2149343499913812,
+      "Y": -0.08822457492351532
+    },
+    "ProjectileId": 15,
+    "WindupTime": 0.8333332999609411
+  },
+  {
+    "AttackDuration": 1.5,
+    "AttackRange": 7.0,
+    "Hand": {
+      "X": 0.45968738198280334,
+      "Y": 0.5115630999207497
+    },
+    "IsAiming": false,
+    "IsRanged": true,
+    "ItemId": {
+      "Age": 9,
+      "Idx": 5,
+      "Type": "Weapon"
+    },
+    "Offset": {
+      "X": 0.0034602531231939793,
+      "Y": -0.01835828460752964
+    },
+    "ProjectileId": -1,
+    "WindupTime": 0.7166666390839964
+  }
+]

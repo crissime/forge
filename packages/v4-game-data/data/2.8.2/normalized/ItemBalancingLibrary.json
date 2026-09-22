@@ -1,0 +1,5914 @@
+[
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 0.0
+      },
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 0.0
+      }
+    ],
+    "ItemId": {
+      "Age": 10000,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 0,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 1,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 2,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 3,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 0,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 1,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 0,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 1,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 0,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 1,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 0,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 1,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 1,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 2,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 3,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 4,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 5,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 6,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 0,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 1,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 0,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40.0
+      }
+    ],
+    "ItemId": {
+      "Age": 0,
+      "Idx": 1,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 0,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 1,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 2,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 3,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 4,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 0,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 1,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 0,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 1,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 0,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 1,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 0,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 1,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 10.0
+      },
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 10.0
+      },
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 1,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 2,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 3,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 4,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 5,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 6,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 0,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 1,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 0,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 160.0
+      }
+    ],
+    "ItemId": {
+      "Age": 1,
+      "Idx": 1,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 0,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 1,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 2,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 3,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 4,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 0,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 1,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 0,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 1,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 0,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 1,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 0,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 1,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 1,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 2,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 3,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 4,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 80.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 5,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 0,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 1,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 0,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 640.0
+      }
+    ],
+    "ItemId": {
+      "Age": 2,
+      "Idx": 1,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 0,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 1,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 2,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 3,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 4,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 5,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 6,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 0,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 1,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 0,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 1,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 0,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 1,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 0,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 1,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 1,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 2,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 3,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 160.0
+      },
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 4,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 5,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 6,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 320.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 7,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 0,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 1,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 0,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2560.0
+      }
+    ],
+    "ItemId": {
+      "Age": 3,
+      "Idx": 1,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10240.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 0,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10240.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 1,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10240.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 2,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10240.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 3,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10240.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 0,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10240.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 1,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 0,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 1,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 0,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 1,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 0,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 1,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 1,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 2,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 3,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1280.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 4,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10240.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 0,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10240.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 1,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10240.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 0,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10240.0
+      }
+    ],
+    "ItemId": {
+      "Age": 4,
+      "Idx": 1,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 0,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 1,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 2,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 3,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 4,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 5,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 0,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 1,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 0,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 1,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 0,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 1,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 0,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 1,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 1,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 2,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 2560.0
+      },
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 3,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 4,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 5120.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 5,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 0,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 1,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 0,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 40960.0
+      }
+    ],
+    "ItemId": {
+      "Age": 5,
+      "Idx": 1,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 163840.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 0,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 163840.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 1,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 163840.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 2,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 163840.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 3,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 163840.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 0,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 163840.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 1,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 0,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 1,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 0,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 1,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 0,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 1,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 10240.0
+      },
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 1,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 2,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 3,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 4,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 20480.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 5,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 163840.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 0,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 163840.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 1,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 163840.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 0,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 163840.0
+      }
+    ],
+    "ItemId": {
+      "Age": 6,
+      "Idx": 1,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 0,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 1,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 2,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 3,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 4,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 0,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 1,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 0,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 1,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 0,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 1,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 0,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 1,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 1,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 2,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 3,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 81920.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 4,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 40960.0
+      },
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 5,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 0,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 1,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 0,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 655360.0
+      }
+    ],
+    "ItemId": {
+      "Age": 7,
+      "Idx": 1,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 0,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 1,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 2,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 3,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 0,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 1,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 2,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 0,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 1,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 0,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 1,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 0,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 1,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 1,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 2,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 3,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 327680.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 4,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 0,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 1,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 0,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 2621440.0
+      }
+    ],
+    "ItemId": {
+      "Age": 8,
+      "Idx": 1,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10485760.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 0,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10485760.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 1,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10485760.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 2,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10485760.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 3,
+      "Type": "Helmet"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10485760.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 0,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10485760.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 1,
+      "Type": "Armour"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 0,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 1,
+      "Type": "Gloves"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 0,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 1,
+      "Type": "Necklace"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 0,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 1,
+      "Type": "Ring"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 0,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 1,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 2,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 3,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 4,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Damage"
+          }
+        },
+        "Value": 1310720.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 5,
+      "Type": "Weapon"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10485760.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 0,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10485760.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 1,
+      "Type": "Shoes"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10485760.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 0,
+      "Type": "Belt"
+    }
+  },
+  {
+    "EquipmentStats": [
+      {
+        "StatNode": {
+          "Condition": "None",
+          "Layer": "None",
+          "LegacyTarget": null,
+          "Target": {
+            "Kind": "Player",
+            "Qualifiers": []
+          },
+          "UniqueStat": {
+            "StatNature": "Additive",
+            "StatType": "Health"
+          }
+        },
+        "Value": 10485760.0
+      }
+    ],
+    "ItemId": {
+      "Age": 9,
+      "Idx": 1,
+      "Type": "Belt"
+    }
+  }
+]

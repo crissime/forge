@@ -1,0 +1,65 @@
+{
+  "value": [
+    {
+      "1": {
+        "value": 0,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "raw": 4294967296,
+          "value": 1.0
+        },
+        "wire": "F64"
+      },
+      "3": {
+        "value": {
+          "raw": 4294967296,
+          "value": 1.0
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": 1,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "raw": 6442450944,
+          "value": 1.5
+        },
+        "wire": "F64"
+      },
+      "3": {
+        "value": {
+          "raw": 2147483648,
+          "value": 0.5
+        },
+        "wire": "F64"
+      }
+    },
+    {
+      "1": {
+        "value": 2,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "raw": 2147483648,
+          "value": 0.5
+        },
+        "wire": "F64"
+      },
+      "3": {
+        "value": {
+          "raw": 6442450944,
+          "value": 1.5
+        },
+        "wire": "F64"
+      }
+    }
+  ],
+  "wire": "ObjectTable"
+}

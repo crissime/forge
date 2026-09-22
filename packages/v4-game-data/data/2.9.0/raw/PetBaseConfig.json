@@ -1,0 +1,25 @@
+{
+  "value": {
+    "1": {
+      "value": 3,
+      "wire": "VarInt"
+    },
+    "2": {
+      "value": 2,
+      "wire": "VarInt"
+    },
+    "3": {
+      "value": 4,
+      "wire": "VarInt"
+    },
+    "4": {
+      "value": 200,
+      "wire": "VarInt"
+    },
+    "5": {
+      "value": 400,
+      "wire": "VarInt"
+    }
+  },
+  "wire": "NullableStruct"
+}

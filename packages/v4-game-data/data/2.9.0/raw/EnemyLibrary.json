@@ -1,0 +1,3498 @@
+{
+  "value": [
+    {
+      "1": {
+        "value": 0,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 10000,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 4,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 5,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 6,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 5,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 7,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 5,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 8,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 9,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 10,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 7,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 11,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 6,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 12,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 13,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 14,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 16,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 17,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 5,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 18,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 5,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 19,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 5,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 20,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 21,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 22,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 23,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 24,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 25,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 26,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 27,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 28,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 29,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 30,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1001,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1002,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1003,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 6,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1004,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1005,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1006,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 7,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1007,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1008,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1009,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1010,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1011,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1012,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1013,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1014,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1015,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 1016,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2001,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2002,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2003,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 6,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2004,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 5,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2005,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2006,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2007,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2008,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2009,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2010,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 2011,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": null,
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3001,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3002,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3003,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3004,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3005,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 2,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3006,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 5,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 3,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3007,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 3,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 4,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3008,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3009,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 6,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3010,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 5,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3011,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 7,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3012,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 4,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3013,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": null,
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 8,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3014,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 2,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    },
+    {
+      "1": {
+        "value": 3015,
+        "wire": "VarInt"
+      },
+      "2": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 5,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 0,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "3": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 0,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      },
+      "4": {
+        "value": {
+          "1": {
+            "value": 9,
+            "wire": "VarInt"
+          },
+          "2": {
+            "value": 1,
+            "wire": "VarInt"
+          },
+          "3": {
+            "value": 1,
+            "wire": "VarInt"
+          }
+        },
+        "wire": "NullableStruct"
+      }
+    }
+  ],
+  "wire": "ObjectTable"
+}

@@ -1,0 +1,381 @@
+{
+  "schema": "forge-master-v2-profile",
+  "exportedAt": "2026-07-08T09:13:06.437Z",
+  "source": "prod-postgres",
+  "profileId": "cmqtfx47q00058k01mjkuc905",
+  "userId": "cmqjgwcrd0001c601h8hxl18a",
+  "username": "brandon",
+  "name": "profil-manuel.forge-master(1)",
+  "dataVersion": "2026_05_23_14_08",
+  "confidence": "partial",
+  "createdAt": "2026-06-25T11:50:09.3",
+  "updatedAt": "2026-07-08T07:40:16.969",
+  "profile": {
+    "base": {
+      "attack": 87592.79654381455,
+      "health": 309763.617086968,
+      "weaponStyle": "ranged"
+    },
+    "name": "profil-manuel.forge-master(1)",
+    "pets": [
+      {
+        "id": 3,
+        "name": "Tiger",
+        "type": "Damage",
+        "level": 1,
+        "attack": 22500,
+        "health": 60000,
+        "rarity": "Epic",
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "attackSpeed",
+            "value": 40,
+            "sourceId": "attackSpeed"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Tiger",
+        "type": "Damage",
+        "level": 2,
+        "attack": 22725,
+        "health": 60600,
+        "rarity": "Epic",
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "attackSpeed",
+            "value": 40,
+            "sourceId": "attackSpeed"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Tiger",
+        "type": "Damage",
+        "level": 7,
+        "attack": 23884.5,
+        "health": 63692,
+        "rarity": "Epic",
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "doubleChance",
+            "value": 20,
+            "sourceId": "doubleChance"
+          }
+        ]
+      }
+    ],
+    "audit": [
+      {
+        "code": "manual_profile",
+        "message": "Profil renseigné manuellement: les totaux sont reconstruits depuis objets, pets, monture et talents.",
+        "severity": "info"
+      }
+    ],
+    "mount": {
+      "id": 2,
+      "name": "Brown Leaf",
+      "level": 1,
+      "attack": 300,
+      "health": 2400,
+      "rarity": "Common",
+      "skills": [],
+      "recognized": true,
+      "secondaryStats": [
+        {
+          "stat": "doubleChance",
+          "value": 20,
+          "sourceId": "doubleChance"
+        }
+      ]
+    },
+    "stats": {
+      "block": 0,
+      "regen": 0,
+      "damage": 30,
+      "health": 18.00000001676381,
+      "cooldown": 0,
+      "lifesteal": 40,
+      "critChance": 0,
+      "critDamage": 0,
+      "attackSpeed": 174,
+      "meleeDamage": 0,
+      "skillDamage": 18.00000001676381,
+      "doubleChance": 60,
+      "rangedDamage": 0
+    },
+    "source": "manual",
+    "spells": [
+      {
+        "id": "RainOfArrows",
+        "level": 1,
+        "rarity": "Epic"
+      },
+      {
+        "id": "Thorns",
+        "level": 1,
+        "rarity": "Epic"
+      },
+      {
+        "id": "Buff",
+        "level": 1,
+        "rarity": "Epic"
+      }
+    ],
+    "breakdown": {
+      "petAttack": 73256.0700038618,
+      "petHealth": 195349.5200102981,
+      "baseAttack": 10,
+      "baseHealth": 80,
+      "mountAttack": 306.0000000055879,
+      "mountHealth": 2448.000000044703,
+      "talentStats": {
+        "block": 0,
+        "regen": 0,
+        "damage": 0,
+        "health": 18.00000001676381,
+        "cooldown": 0,
+        "lifesteal": 0,
+        "critChance": 0,
+        "critDamage": 0,
+        "attackSpeed": 0,
+        "meleeDamage": 0,
+        "skillDamage": 18.00000001676381,
+        "doubleChance": 0,
+        "rangedDamage": 0
+      },
+      "secondaryStats": {
+        "block": 0,
+        "regen": 0,
+        "damage": 30,
+        "health": 0,
+        "cooldown": 0,
+        "lifesteal": 40,
+        "critChance": 0,
+        "critDamage": 0,
+        "attackSpeed": 174,
+        "meleeDamage": 0,
+        "skillDamage": 0,
+        "doubleChance": 60,
+        "rangedDamage": 0
+      },
+      "equipmentAttack": 14020.72653994716,
+      "equipmentHealth": 111886.0970766252
+    },
+    "equipment": {
+      "Belt": {
+        "age": 4,
+        "idx": 0,
+        "name": "Ceinture",
+        "slot": "Belt",
+        "level": 100,
+        "attack": 0,
+        "health": 27423.06300847599,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "attackSpeed",
+            "value": 40,
+            "sourceId": "attackSpeed"
+          }
+        ]
+      },
+      "Body": {
+        "age": 4,
+        "idx": 0,
+        "name": "Armure",
+        "slot": "Body",
+        "level": 100,
+        "attack": 0,
+        "health": 27423.06300847599,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "lifesteal",
+            "value": 20,
+            "sourceId": "lifesteal"
+          }
+        ]
+      },
+      "Ring": {
+        "age": 4,
+        "idx": 0,
+        "name": "Anneau",
+        "slot": "Ring",
+        "level": 100,
+        "attack": 3427.882876059498,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "attackSpeed",
+            "value": 14,
+            "sourceId": "attackSpeed"
+          }
+        ]
+      },
+      "Shoe": {
+        "age": 4,
+        "idx": 0,
+        "name": "Bottes",
+        "slot": "Shoe",
+        "level": 100,
+        "attack": 0,
+        "health": 27423.06300847599,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "attackSpeed",
+            "value": 40,
+            "sourceId": "attackSpeed"
+          }
+        ]
+      },
+      "Gloves": {
+        "age": 4,
+        "idx": 0,
+        "name": "Gants",
+        "slot": "Gloves",
+        "level": 100,
+        "attack": 3427.882876059498,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "doubleChance",
+            "value": 20,
+            "sourceId": "doubleChance"
+          }
+        ]
+      },
+      "Helmet": {
+        "age": 4,
+        "idx": 0,
+        "name": "Casque",
+        "slot": "Helmet",
+        "level": 100,
+        "attack": 0,
+        "health": 27423.06300847599,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "damage",
+            "value": 15,
+            "sourceId": "damage"
+          }
+        ]
+      },
+      "Weapon": {
+        "age": 4,
+        "idx": 0,
+        "name": "Arme",
+        "slot": "Weapon",
+        "level": 100,
+        "attack": 3427.882876059498,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "lifesteal",
+            "value": 20,
+            "sourceId": "lifesteal"
+          }
+        ]
+      },
+      "Necklace": {
+        "age": 4,
+        "idx": 0,
+        "name": "Collier",
+        "slot": "Necklace",
+        "level": 101,
+        "attack": 3462.161704852018,
+        "health": 0,
+        "recognized": true,
+        "secondaryStats": [
+          {
+            "stat": "damage",
+            "value": 15,
+            "sourceId": "damage"
+          }
+        ]
+      }
+    },
+    "confidence": "partial",
+    "talentTree": {
+      "Forge": {
+        "0": 4,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 4,
+        "7": 2,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "18": 1,
+        "19": 1,
+        "20": 1
+      },
+      "Power": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 1,
+        "15": 1,
+        "16": 1,
+        "17": 1,
+        "18": 5,
+        "19": 5
+      },
+      "SkillsPetTech": {
+        "0": 5,
+        "1": 4,
+        "2": 3,
+        "3": 3,
+        "4": 5,
+        "5": 3,
+        "6": 3,
+        "7": 2,
+        "8": 5,
+        "9": 4,
+        "10": 1,
+        "11": 1,
+        "12": 1,
+        "13": 1,
+        "14": 5,
+        "15": 1,
+        "16": 1,
+        "17": 2,
+        "18": 1,
+        "19": 1,
+        "20": 1
+      }
+    },
+    "dataVersion": "2026_05_23_14_08"
+  }
+}
