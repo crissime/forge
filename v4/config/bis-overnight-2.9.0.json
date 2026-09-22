@@ -1,0 +1,18 @@
+{
+  "schema": "forge-master-v4-bis-campaign-v1",
+  "baseConfig": "v4/config/bis-large-batch-2.9.0.json",
+  "hours": 8,
+  "workers": 40,
+  "start": { "age": 2, "combat": 16, "difficulty": "hard" },
+  "end": { "age": 3, "combat": 20, "difficulty": "hard" },
+  "waveCandidates": 100000,
+  "maxWaves": 1000,
+  "seed": 2900000,
+  "refinementRounds": 8,
+  "refinementCandidates": 20000,
+  "elitePerFamily": 40,
+  "finalistsPerFamily": 20,
+  "rngScreenSeeds": 64,
+  "finalRngPerFamily": 4,
+  "rngSeeds": 512
+}

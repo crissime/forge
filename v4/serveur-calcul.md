@@ -149,3 +149,68 @@ graines RNG n'etablissent ni optimalite globale ni validation en jeu.
 
 Test du lanceur :
 `node --import tsx --test v4/tools/run-bis-batch.test.mjs`.
+
+## Campagne huit heures jusqu'a Difficile 3-20
+
+```bash
+cd /home/debian/forge
+git pull --ff-only
+npm ci
+mkdir -p artifacts
+nohup node --import tsx v4/tools/run-bis-campaign.mjs \
+  --config v4/config/bis-overnight-2.9.0.json \
+  --output artifacts/bis-overnight \
+  --seed-report artifacts/bis-batch-divin/report.json \
+  >> artifacts/bis-overnight.log 2>&1 < /dev/null &
+```
+
+Le rapport initial est optionnel : omettre `--seed-report` s'il n'existe pas.
+Ne pas lancer deux campagnes simultanees sur la VM.
+Suivi : `tail -f artifacts/bis-overnight.log`.
+
+La campagne parcourt les 25 combats APK dans l'ordre, de hard 2-16 a hard 3-20.
+Un echec ne supprime pas les combats suivants, dont les vagues peuvent etre
+plus accessibles. Chaque vague explore 100 000 profils dedupliques, avec un
+nouveau seed; les champions precedents sont reinjectes et reconstruits.
+Toutes les six armes divines et les dix compositions non ordonnees de trois
+pets mythiques sont ouvertes, ainsi que les deux montures mythiques. Les
+niveaux restent ceux du scenario de reference, pets/montures niveau 1,
+fees niveau 20, objets niveau 100; sorts, talents et skins restent exclus.
+
+Chaque vague conserve 40 elites moyennes par fee/type d'arme, puis effectue
+jusqu'a huit tours de 20 000 voisins inedits. Les 20 meilleurs par famille
+passent un filtre de 64 graines; les quatre retenus par famille sont controles
+sur 512 graines distinctes (100001 a 100512). Les etapes RNG utilisent aussi
+les workers paralleles. Le classement RNG privilegie d'abord le nombre de
+combats consecutifs dont la borne inferieure a 95 % de reussite atteint 90 %,
+puis le nombre total de combats fiables, puis la somme des bornes inferieures.
+Cela reste une estimation selectionnee parmi beaucoup de candidats : pas une
+preuve statistique d'optimalite, ni une validation en jeu.
+
+Le budget est de huit heures ecoulees depuis le premier lancement, arrets
+compris. A expiration, la vague en cours s'arrete entre evaluations; la duree
+peut depasser legerement huit heures pour terminer une evaluation et fermer les
+workers. Les vagues terminees restent exploitables. Une vague interrompue est
+signalee comme partielle, jamais fusionnee comme un resultat complet. Le plafond
+de 1000 vagues est un garde-fou supplementaire. Le nombre de candidats reellement
+traites depend de la VM; le total multi-vagues n'est pas un compte global de
+profils uniques, car les champions sont retestes.
+
+Fichiers utiles :
+- `artifacts/bis-overnight/report.json` : bilan actualise apres chaque vague,
+  avec `bestByFairy` pour Mira, Tira et Lora, jusqu'a huit candidats par fee.
+- `artifacts/bis-overnight/pvp-candidates.json` : builds complets et preuves PvE
+  pour la suite PvP. Ils ne sont pas encore evalues en PvP.
+- `wave-NNNN/report.json` : courbes, affinement et finalistes de chaque vague.
+- `campaign.json` : etat persistant et budget temporel.
+
+Les fichiers d'entree temporaires des vagues terminees sont supprimes pour
+borner l'espace disque; configurations, checkpoints et rapports restent.
+Relancer la meme commande avant expiration reprend la vague interrompue, sans
+changer le code ni la configuration. Apres un arret brutal, verifier que tous
+les processus de la campagne sont arretes avant d'enlever les seuls verrous
+`campaign.lock` et `wave-NNNN/running.lock` restants. Apres les huit heures,
+une nouvelle campagne exige un nouveau dossier; son `--seed-report` peut viser
+le rapport de campagne precedent.
+
+Tests : `node --import tsx --test v4/tools/run-bis-batch.test.mjs v4/tools/run-bis-campaign.test.mjs`.
