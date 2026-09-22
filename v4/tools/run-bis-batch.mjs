@@ -174,6 +174,7 @@ async function phase(candidates, directory, context, workers, runId, configPath)
 }
 
 export async function run(configPath, output, workers) {
+  console.log(`[${new Date().toISOString()}] Batch starting: pid=${process.pid}, workers=${workers}, output=${output}`);
   assert.ok(Number.isInteger(workers) && workers > 0 && workers <= 40, "workers must be 1..40");
   const context = loadFamilyPilotContext(configPath, false);
   const cfg = context.config;
@@ -192,7 +193,11 @@ export async function run(configPath, output, workers) {
     if (existsSync(manifestPath)) assert.equal(read(manifestPath).runId, runId, "Code/config changed: use a new output directory");
     save(manifestPath, { runId, config: cfg, workers, publishableBis: false });
     const candidates = [];
-    const exploration = explore(context, (candidate) => candidates.push(candidate));
+    console.log(`Generating up to ${cfg.maxCandidates} unique combat profiles...`);
+    const exploration = explore(context, (candidate) => {
+      candidates.push(candidate);
+      if (candidates.length % 10000 === 0) console.log(`Generation: ${candidates.length}/${cfg.maxCandidates}`);
+    });
     console.log(`Exploration: ${candidates.length} unique combat profiles / ${exploration.attempts} attempts`);
     assert.ok(candidates.length > 0);
     const initial = await phase(candidates, join(output, "exploration"), context, workers, runId, configPath);
