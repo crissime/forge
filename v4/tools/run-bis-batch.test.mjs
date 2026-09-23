@@ -6,11 +6,25 @@ import { tmpdir } from "node:os";
 import { loadFamilyPilotContext, generateCandidates } from "./run-bis-family-pilot.mjs";
 import { combatKey, explore, variant, compare, run } from "./run-bis-batch.mjs";
 import { buildBisProfile } from "../../packages/v4-bis/src/index.ts";
+import { evaluateCombatVerdict } from "../../packages/v4-core/src/index.ts";
 
 const configPath = resolve("v4/config/bis-large-batch-2.9.0.json");
 const context = loadFamilyPilotContext(configPath, false);
 assert.deepEqual(context.config.styles, ["ranged", "melee"]);
 const templates = generateCandidates(context.config, context.data, context.season);
+
+test("probabilities above 100 percent do not add extra damage in average or RNG mode", () => {
+  for (const stat of ["doubleChance", "critChance", "block"]) for (const blockMode of ["average", "rng"]) {
+    const profile = structuredClone(templates[0].profile);
+    profile.fairy = null;
+    profile.stats[stat] = 100;
+    const options = { ...context.config.options, blockMode, seed: 42 };
+    const capped = evaluateCombatVerdict(profile, context.data, context.config.point, options);
+    assert.ok(!["invalid_input", "missing_data"].includes(capped.reason));
+    profile.stats[stat] = 120;
+    assert.deepEqual(evaluateCombatVerdict(profile, context.data, context.config.point, options), capped, `${stat}/${blockMode}`);
+  }
+});
 
 test("weapon attack+health means primary stats, never forced secondary lines", () => {
   const melee = templates.find((c) => c.dimensions.style === "melee");

@@ -363,7 +363,7 @@ function simulateCombat(
 
       const target = activeUnits.find((candidate) => candidate.id === unit.targetId);
       if (!target) continue;
-      const weight = options.mode === "average" && wasDoubleAttack ? unit.doubleAttackChance : FD6_SCALE;
+      const weight = options.mode === "average" && wasDoubleAttack ? max(0n, min(FD6_SCALE, unit.doubleAttackChance)) : FD6_SCALE;
       attacks += 1;
       if (unit.weapon.projectile) {
         projectiles.push(createProjectile(nextEntityId++, unit, target, weight));
@@ -664,8 +664,8 @@ function simulateCombat(
       return { damage: resolved, reflectedDamage: reflected ? resolved : 0n };
     }
 
-    const avoidance = fd6Mul(FD6_SCALE - target.dodgeChance, FD6_SCALE - target.blockChance);
-    const criticalBonus = fd6Mul(attack.criticalChance, attack.criticalMultiplier - FD6_SCALE);
+    const avoidance = fd6Mul(FD6_SCALE - max(0n, min(FD6_SCALE, target.dodgeChance)), FD6_SCALE - max(0n, min(FD6_SCALE, target.blockChance)));
+    const criticalBonus = fd6Mul(max(0n, min(FD6_SCALE, attack.criticalChance)), attack.criticalMultiplier - FD6_SCALE);
     const damage = fd6Mul(fd6Mul(fd6Mul(attack.damage, FD6_SCALE + criticalBonus), avoidance), weight);
     return {
       damage,
