@@ -214,3 +214,24 @@ une nouvelle campagne exige un nouveau dossier; son `--seed-report` peut viser
 le rapport de campagne precedent.
 
 Tests : `node --import tsx --test v4/tools/run-bis-batch.test.mjs v4/tools/run-bis-campaign.test.mjs`.
+
+## Tournoi PvP des finalistes
+
+```bash
+node --import tsx v4/tools/run-pvp-finalists.mjs \
+  --input artifacts/bis-overnight/report.json \
+  --output artifacts/pvp-finalists --workers 40 --seeds 256
+```
+
+Accepte aussi `pvp-candidates.json`. Les builds sont reconstruits avant le
+tournoi avec les donnees v4 actuelles. Chaque paire joue 256 graines (a partir
+de 200001) dans les deux positions. Pour 24 finalistes : 276 paires, 141312
+combats; victoire = 1, nul = 0.5, defaite = 0. Les adversaires ont le meme poids.
+Le rapport contient classement, victoires/defaites/nuls, meilleurs par fee et
+matrice des rencontres avec detail des positions. Le timer et les multiplicateurs
+PvP viennent exclusivement du moteur officiel. Scenario sans sorts conserve.
+Checkpoint par paire, reprise avec memes entrees/code/graines, verrou pour eviter
+les doubles lancements. Le resultat concerne ce groupe de finalistes PvE et
+reste non valide en jeu; ce n'est pas une optimisation complete du BIS PvP.
+
+Test : `node --import tsx --test v4/tools/run-pvp-finalists.test.mjs`.
